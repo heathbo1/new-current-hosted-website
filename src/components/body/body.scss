@@ -1,0 +1,33 @@
+.flexContainer {
+  color: #ffffff;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //   height: calc(100vh - 96px);
+  position: relative;
+  padding: 20px;
+  align-content: flex-start;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.hbColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hbRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sectionHeader {
+  color: #ffaf19;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
+}

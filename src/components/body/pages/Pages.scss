@@ -1,0 +1,51 @@
+.panels {
+  width: 45% !important;
+  margin-top: 0px !important;
+}
+
+#testTitle {
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  padding-left: 15px;
+
+  #testText {
+    background-color: #000000d4;
+    font-weight: bold;
+    color: #ffaf19;
+    font-size: 1.25em;
+  }
+}
+
+.dataRows {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 610px) {
+  #resumeData {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    #resBP2,
+    #resBP3,
+    #resBP4,
+    #resBP5,
+    #resBP6,
+    #resBP7,
+    #resBP8 {
+      width: 100% !important;
+    }
+  }
+  #abSide {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    #abBP2,
+    #abBP3,
+    #abBP4,
+    #abBP5 {
+      width: 100% !important;
+    }
+  }
+}

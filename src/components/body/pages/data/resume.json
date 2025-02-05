@@ -1,0 +1,309 @@
+{
+  "Profile": "With two decades of experience in front-end development, critical thinking, and problem-solving, I bring a wealth of knowledge and expertise to the table. My proficiency spans many UI frameworks, libraries, and languages, including React, HTML, JavaScript, TypeScript, CSS, and Sass. I have a proven track record of creating mobile-friendly websites with and without Bootstrap, Material, or Tailwind. My experience and ability to work with large and small teams, my desire for quality, and my ability to think creatively when standard methods fail have been instrumental in my success in developing large-scale consumer websites. I thrive in high-pressure environments, handling multiple responsibilities with ease, and I am adept at interacting with individuals at all levels. As a passionate learner, I constantly seek to broaden my knowledge and grow as a developer.",
+  "Technologies": {
+    "Languages": "TypeScript, JavaScript, HTML, HTML5, CSS3, Sass, Less, JSON, XML",
+    "Tools / Libraries": "React, Redux, Next, AngularJS, Material, Bootstrap, Tailwind, jQuery, ESLint, Node, NPM, Express, Webpack, Jest, GIT, GitLab, GraphQL, Bitbucket, Jasmine, Jenkins, Agile, Scrum, Kanban Methodologies",
+    "Software": "WebStorm, Visual Studio Code, Eclipse, IntelliJ, Fiddler, Postman, Adobe Photoshop, Adobe Illustrator, Adobe XD, Confluence, JIRA, Figma",
+    "Operating Systems": "Windows, Mac OS"
+  },
+  "IndustryExperience": "Energy, Restaurant, Communication, Commodity Trading, Sports, Healthcare, Pharmacy Tech, Insurance, Integrated Digital Technologies, Marketing, Financial, Education, Automotive, Railroad, and Beverage",
+  "Competencies": "My competencies encompass a broad spectrum of UI Design and Development, UI Architecture, Project Design and Development, Framework Development, Object-Oriented Programming, User Experience (UX), and Usability. This comprehensive skill set enables me to deliver high-quality solutions across various projects.",
+  "Experience": [
+    {
+      "company": "",
+      "position": "Freelance Web Developer and Designer",
+      "location": "St. Louis, MO",
+      "date": "Octover 2023 - Present",
+      "description": "Led the redesign and development of their Prayer Cards website.",
+      "details": [
+        "My development experience allowed me to redesign their prayer cards site with development in mind.  It was immediately approved and I built it.",
+        "Easier to use – user-focused.",
+        "Mobile friendly",
+        "Designed and built with accessibility.",
+        "Helped the developers to understand class-based components. Most new how to build function components, but not class components.",
+        "Taught React best practices.",
+        "Taught basic and advanced CSS. Most didn’t know CSS because they relied on UI libraries to do the CSS work."
+      ],
+      "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
+    },
+    {
+      "company": "Lutheran Church Missouri Synod",
+      "position": "Product Designer",
+      "location": "St. Louis, MO",
+      "date": "June 2023 - October 2023",
+      "description": "Led the redesign and development of their Prayer Cards website.",
+      "details": [
+        "My development experience allowed me to redesign their prayer cards site with development in mind.  It was immediately approved and I built it.",
+        "Easier to use – user-focused.",
+        "Mobile friendly",
+        "Designed and built with accessibility.",
+        "Helped the developers to understand class-based components. Most new how to build function components, but not class components.",
+        "Taught React best practices.",
+        "Taught basic and advanced CSS. Most didn’t know CSS because they relied on UI libraries to do the CSS work."
+      ],
+      "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
+    },
+    {
+      "company": "Charter Spectrum",
+      "position": "Senior Software Engineer 1 (Contract)",
+      "location": "St. Louis, MO",
+      "date": "November 2022 - December 2022",
+      "description": "Led and mentored a team of software engineers to update an older class based Reactjs project with new functionality and better performance.",
+      "details": [
+        "Led and mentored a team of mid and junior level engineers.",
+        "Helped the developers to understand class-based components. Most new how to build function components, but not class components.",
+        "Taught React best practices.",
+        "Taught basic and advanced CSS. Most didn’t know CSS because they relied on UI libraries to do the CSS work."
+      ],
+      "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
+    },
+    {
+      "company": "FLASHPOINT",
+      "position": "Senior Software Engineer",
+      "location": "St. Louis, MO",
+      "date": "July 2022 - September 2022",
+      "description": "Led multiple teams of software engineers to build a new Reactjs-based library and a new Reactjs product that will replace their outdated product.",
+      "details": [
+        "Led a team of junior and mid UI engineers to build a Reactjs-based NPM library that all the company’s teams will use.",
+        "Created multiple components for the NPM library using Reactjs, Typescript, module.css, and Storybook.",
+        "Led a team to build a new Reactjs product that will replace their old product.",
+        "Developed multiple Reactjs pages and custom components using TypeScript, ESLint, and Prettier.",
+        "Worked side by side with the designers and UX specialists to ensure the quality of the product we were building."
+      ],
+      "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Storybook"
+    },
+    {
+      "company": "QUES",
+      "position": "Senior UI Engineer",
+      "location": "St. Louis, MO",
+      "date": "October 2021 - July 2022",
+      "description": "I worked with a team of developers to build and maintain different SAAS projects.",
+      "details": ["I worked with a team of developers to build a new SAAS product using React.", "I fixed bugs and maintained an older Angular product while the new SAAS product was in development."],
+      "used": "Agile Development, React, Angular, Webpack, Node.js, Sass, HTML, CSS, TypeScript, ESLint, Prettier"
+    },
+    {
+      "company": "Edward Jones",
+      "position": "Senior Front End Developer",
+      "location": "St. Louis, MO",
+      "date": "March 2020 - October 2021",
+      "description": "I worked with a team of Senior developers to mentor and aid other UI development teams using React.",
+      "details": ["Worked with a variety of teams that needed React mentorship and development.", "Helped establish common components used by multiple projects."],
+      "used": "Agile Development, React, Redux, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint"
+    },
+    {
+      "company": "Signature Consultants",
+      "position": "Senior Front-end Developer",
+      "location": "St. Louis, MO",
+      "date": "May 2018 - March 2020",
+      "description": "Worked with a variety of teams to acomplish a variety of goals",
+      "details": "",
+      "clients": [
+        {
+          "company": "RGA",
+          "description": "Led a team of software engineers to update the Aurora project from AngularJS to Reactjs and Redux, and give it a modern look using Material design.",
+          "details": [
+            "Lead the charge to improve User Experience by bringing to light potential usability issues and offering solutions before they became a problem.",
+            "Lead the team to improve accessibility by running international accessibility compliance tests and fixing all found issues.",
+            "Sped up development by teaching the other developers React, CSS, and good coding practices.",
+            "Sped up development by updating all obsolete NPM packages and upgrading to a multithreaded version of Nodejs."
+          ],
+          "used": "Agile Development, React, AngularJS, TypeScript, Jasmine, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint, TSLint"
+        },
+        {
+          "company": "NECES",
+          "description": "Led a team of onshore and offshore UI software engineers to build the AUROS Command and AUROS Site Manger projects.",
+          "details": [
+            "Sped up development by bringing in standards, good practices, tools to enforce them, and documentation to improve onboarding.",
+            "Reduced the number of bugs by adding end to end and unit tests.",
+            "Reduced the development and QA time by adding a functional review process to our development process.  The functional review process is an automated step that allows the product owner to see changes before code is ever committed.  This significantly reduced the amount of changes required after the code went to production.",
+            "Led the team through many milestones such as Architecture upgrades, Angular 7 upgrades, and Material implementation."
+          ],
+          "used": "Agile Development, Angular, TypeScript, Jasmine, Karma, Protractor, Webpack, Node.js, Sass, HTML, CSS, JavaScript"
+        },
+        {
+          "company": "Panera Bread",
+          "description": "Rebuilding Panera's in-house technologies.",
+          "details": ["I worked as a team member rebuilding Panera's point of sale and back of house system.", "I lead the effort to bring code quality and intuitive code organization to the projects."],
+          "used": "React.js, Redux,js, Axios.js, Saga.js, Jest, JavaScript, JSON, HTML, CSS, LESS, Webpack, Node.js, Intellij"
+        }
+      ]
+    },
+    {
+      "company": "Daugherty Business Solutions",
+      "position": "Software Engineer",
+      "location": "St. Louis, MO",
+      "date": "August 2013 - March 2018",
+      "description": "Member of the Software Architecture and Engineering Line of Service.",
+      "details": "",
+      "clients": [
+        {
+          "company": "Charter Communications",
+          "description": "Redeveloped Customer Service Management website.",
+          "details": ["I worked as a team member to rewrite the main Gateway Project that is used by all 26 projects", "I worked as a team member to build the Point of Sale system used by all Charter Stores."],
+          "used": "Agile Development, React.js, JavaScript, HTML, CSS, JAVA, Spring, Intellij, Mongo, Node, Webpack, NPM, Bootstrap, JSON"
+        },
+        {
+          "company": "Metal Exchange Corporation",
+          "description": "Redeveloped Trading System.",
+          "details": [
+            "I worked as a team member to rewrite two major components of the Trading System, the Pricing Engine and Broker Invoice Engine.  I rewrote multiple SQL stored procedures to move business logic from SQL to managed .Net code.  I built unit test and / or integration test for new and existing code."
+          ],
+          "used": "Agile Development, Dependency Injection, Design Patterns, Moq, MVC, C#, VB, MS SQL, ASP, HTML, JavaScript, Visual Studio 2010, MS SQL Server Management Studio, Fiddler"
+        },
+        {
+          "company": "Express Scripts",
+          "description": "Redeveloped their Automated Prescription Processing System.",
+          "details": ["Developed key functionality for the new system."],
+          "used": "Agile development, dependency injection, design patterns, C#, WPF, ASP, HTML, Oracle, Visual Studio"
+        }
+      ]
+    },
+    {
+      "company": "FleishmanHilliard Inc.",
+      "position": "Contracted Front End Developer",
+      "location": "St. Louis, MO",
+      "date": "May 2013 - July 2013",
+      "description": "Built and updated client websites.",
+      "details": "",
+      "clients": [
+        {
+          "company": "Goldcorp Inc.",
+          "description": "Redeveloped the Career section of their current website.",
+          "details": [
+            "Co-developed the strategy to migrate the existing pages from an obsolete CMS to ASP.Net",
+            "Developed the front-end master page and content pages using C# and ASP.Net.",
+            "Developed the logic and wrote the ASP code that linked to the MS SQL database and processed and displayed the data based on user interactions."
+          ],
+          "used": "C#, ASP, HTML, CSS, JavaScript, jQuery"
+        },
+        {
+          "company": "AT&T Inc",
+          "description": "Rebuilt the Sustainability pages of their website.  Helped develop the driving simulator portion of the “It can wait” campaign.",
+          "details": ["Rebuilt the People and Community, Environment, and Technology web pages based on artist wireframes and comps.", "Debugged the Web and Unity engine portion of the driving simulator."],
+          "used": "HTML, CSS, JavaScript, jQuery, Adobe Flash"
+        },
+        {
+          "company": "Chevrolet",
+          "description": "Built the MyLink simulator that appeared on Chevy’s Facebook page.",
+          "details": ["Built the simulator based on artist designs and Facebook requirements."],
+          "used": "HTML, CSS, JavaScript, jQuery, Facebook API"
+        },
+        {
+          "company": "Panda Power Funds",
+          "description": "Rebuilt the career page on their current site.",
+          "details": ["Rebuilt the career page of their website to be more flexible and accommodate their new design."],
+          "used": "HTML, CSS, JavaScript, jQuery"
+        }
+      ]
+    },
+    {
+      "company": "Freelance Developer",
+      "position": "Software Consultant",
+      "location": "St. Louis, MO",
+      "date": "2010 - May 2013",
+      "description": "Designed and developed a variety of software, and e-Learning products for clients.",
+      "details": "",
+      "clients": [
+        {
+          "company": "CSX Transportation.",
+          "description": "Developed an e-Learning module to educate their work force on the proper safety procedures.",
+          "details": ["Developed the module to include video and a quiz."],
+          "used": "Adobe Flash, XML, HTML, SCORM"
+        },
+        {
+          "company": "Coca-Cola",
+          "description": "Developed a PC and iOS application that is used by their sales force.",
+          "details": ["Developed the logic and the strategy to move the project forward.", "Developed the framework to support the application.", "Programmed the application to run in Windows and the iOS."],
+          "used": "Adobe Flash, Adobe Air, XML, HTML, JavaScript"
+        },
+        {
+          "company": "University of Missouri – Columbia",
+          "description": "Team leader to design and development of software on genetics for elementary age children.",
+          "details": ["Was responsible for the design and development of the game portion that incorporated a physics engine."],
+          "used": "Adobe Flash, XML, HTML"
+        },
+        {
+          "company": "Fiat Chrysler ",
+          "description": "Developed an e-Learning module to educate their sales force about towing requirements.",
+          "details": ["Developed the module to include video and a quiz."],
+          "used": "Adobe Flash, XML, HTML, SCORM"
+        },
+        {
+          "company": "Callaway Golf Company",
+          "description": "Developed an e-Learning module to educate customers on their new line of RAZR irons and woods.",
+          "details": ["Developed the framework to support the module and server communication using SOAP.", "Developed the module to include video, animations, a quiz, and quiz reporting"],
+          "used": "Adobe Flash, XML, HTML, SOAP"
+        },
+        {
+          "company": "United Health Systems",
+          "description": "Developed two e-Learning modules to educate managers about how handle policy changes.",
+          "details": ["Developed the framework to be scalable and reusable.", "Developed the modules to incorporate videos, a quiz, and to include reporting back to a .NET back end."],
+          "used": "Adobe Flash, XML, HTML, SCORM, SOAP"
+        }
+      ]
+    },
+    {
+      "company": "Edward Jones Investments",
+      "position": "Contracted eLearning Developer",
+      "location": "St. Louis, MO",
+      "date": "May 2011 - November 2011",
+      "description": "Designed and developed e-Learning content.",
+      "details": ["Upgraded an obsolete Flash framework in order to make it more flexible and efficient.", "Designed and developed various Flash and XML based e-Learning content that integrated with an existing LMS system."],
+      "used": "Adobe Flash, XML, SCORM"
+    },
+    {
+      "company": "Motivation Technologies",
+      "position": "Flash ActionScript 3 Developer",
+      "location": "St. Louis, MO",
+      "date": "August 2010 - February 2011",
+      "description": "Designed and developed an entire Flash framework for Intel.",
+      "details": ["Developed a framework for to integrate with a SCORM compliant .Net LMS using SOAP.", "Developed multiple e-Learning modules that supported multiple languages and included quizzes and quiz reporting."],
+      "used": "Adobe Flash, XML, HTML, SCORM, SOAP"
+    },
+    {
+      "company": "Laird Technologies",
+      "position": "Contracted Web Developer",
+      "location": "St. Louis, MO",
+      "date": "June 2010 - July 2010",
+      "description": "Helped manage an HTML and CSS based Content Management System.",
+      "details": ["Updated HTML code to add and remove products from online catalog."],
+      "used": "HTML, CSS"
+    },
+    {
+      "company": "Real Estate Educate",
+      "position": "Flash ActionScript 3 Developer",
+      "location": "St. Louis, MO",
+      "date": "August 2009 - May 2010",
+      "description": "Designed and developed an e-Learning content.",
+      "details": [
+        "Rebuilt an obsolete ActionScript 2 framework into ActionScript 3 in order to make it more flexible and speed up development.",
+        "Designed and developed Flash and XML based e-Learning courses to teach various topics related to the real estate market.",
+        "Designed and developed websites for a variety of high profile clients."
+      ],
+      "used": "Adobe Flash, XML, HTML, CSS"
+    },
+    {
+      "company": "MasterKey Consulting",
+      "position": "Interactive Designer / Developer",
+      "location": "St. Louis, MO",
+      "date": "December 2008 - April 2009",
+      "description": "Designed and developed interactive media.",
+      "details": ["Designed and developed HTML, CSS, and JavaScript based websites for commercial clients and the Department of Defense’s Privacy and Civil Liberties Office.", "Developed medical education software for Elsevier."],
+      "used": "HTML, CSS, JavaScript, Adobe Flash, XML"
+    }
+  ],
+  "Education": {
+    "M.F.A. Interactive Media": {
+      "name": "Memphis College of Art",
+      "location": "Memphis Tennessee (2004)"
+    },
+    "B.F.A. Graphic Design": {
+      "name": "University of Missouri Saint Louis",
+      "location": "Saint Louis, Missouri (2002)"
+    }
+  },
+  "Achievements": {
+    "a1": "Eagle Scout, Boy Scouts of America, (1993)",
+    "a2": "Chair of the Emerging Professionals Group, (2017-2018)"
+  }
+}

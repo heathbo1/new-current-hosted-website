@@ -1,0 +1,19 @@
+body {
+  background-color: #000;
+  width: 100vw;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Verdana, Geneva, sans-serif;
+  letter-spacing: 1px;
+}
+
+#pageContainer {
+  z-index: 2;
+  position: fixed;
+  height: calc(100vh - 96px);
+  width: 100vw;
+  overflow-y: auto;
+}
+
+// height: 'calc(100vh - 96px', width: '100vw'

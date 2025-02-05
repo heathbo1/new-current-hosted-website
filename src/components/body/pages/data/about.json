@@ -1,0 +1,39 @@
+{
+  "About": {
+    "Me": {
+      "part1": "I am an experienced front-end developer with a proven track record in front-end development, critical thinking, and problem-solving. I have successfully architected and built numerous advanced, mobile-friendly, and scalable user interfaces using a wide variety of technologies.",
+      "part2": "My experience and ability to work with large and small teams, my desire for quality, and my ability to think creatively when standard methods fail have been instrumental in my success in developing large-scale consumer websites. I thrive in high-pressure environments, handling multiple responsibilities with ease, and I am adept at interacting with individuals at all levels.",
+      "part3": "As a passionate learner, I constantly seek to broaden my knowledge and grow. My career highlights include completely redesigning, re-architecting, and rebuilding existing websites, graphic designing, architecting, and building new web products, and inventing new solutions to fix limitations in current UI libraries."
+    }
+  },
+  "Testimonials": {
+    "ChandlerPrince": {
+      "name": "Chandler Prince",
+      "quote": "Heath is a great person to have on your project. He's willing to share information, he's proactive, and he's passionate about his work. I hope I have the opportunity to work with him again in the future.",
+      "company": "Charter"
+    },
+    "AmandaPozzo": {
+      "name": "Amanda Pozzo",
+      "quote": "It is a genuine pleasure and honor for me to recommend Heath Bishop. Heath worked in the Visual Design department at Real Estate Educate. He began here as Junior Flash Developer and rapidly mastered the skills required to develop first-rate online training courses.  Heath is an excellent coder, able to work well in a demanding environment. He independently completes projects to the highest standard and on time. He effectively collaborates with his team, implementing object-oriented design to improve our course development.  I have no hesitation in recommending Heath Bishop for any position pertaining to web development. I feel confident he would be an asset to any employer.  Sincerely,  Amanda Pozzo SVP/Director of Operations, Real Estate Educate",
+      "company": "Real Estate Educate"
+    },
+
+    "JamesJervis": {
+      "name": "James Jervis",
+      "quote": "I had the pleasure of knowing Heath Bishop for 7 months.  During that time he worked for Real Estate Educate, as a Junior Flash AS2/AS3 Developer.  Heath has great coding skills and is willing to work to find the appropriate solution for the project at hand.  His work on our core coding structures has pushed us forward by providing a better, cleaner and more usable AS3 framework.  Heath has a genuine interest in coding.  He takes to new concepts quickly and readily implements them where they are needed and/or useful.  He is always interested in learning new coding techniques and grasps the concepts quickly.  I would recommend him for any position or career that he may now choose to pursue.  Sincerely,  Jame Jervis VP/Director Development and Production Real Estate Educate",
+      "company": "Real Estate Educate"
+    },
+
+    "RobertWade": {
+      "name": "Robert Wade",
+      "quote": "It was a pleasure to work together with Heath, who was an efficient ActionScript Developer. During Heath's time with the company he created customized components, interactions, and built our class structure using ActionScript 3.0. Heath demonstrated excellent coding practices utilizing proper OOP methods and UML. Heath is an extremely fast learner. If there was something that Heath did not know, he was very prompt in figuring out a way to solve anything we threw his way. Heath would be an excellent asset to any company therefore, I would recommend Heath to anyone looking for an Web Developer.  Robert Wade Team Leader of Visual Design Department Real Estate Educate.",
+      "company": "Real Estate Educate"
+    },
+
+    "StevenWilliams": {
+      "name": "Steven Williams",
+      "quote": "It has been my pleasure and high honor to work with Heath Bishop.  He has shown himself professional and above reproach in all his performance and duties as a software developer.  Heath has been eager to learn and always held a positive attitude.  I have no doubt he will be an incredible asset wherever he finds himself.  Steven C. Williams President Master Key Interactive",
+      "company": "Master Key Interactive"
+    }
+  }
+}

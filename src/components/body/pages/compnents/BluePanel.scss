@@ -1,0 +1,33 @@
+.bluePanel {
+  color: white;
+  width: 100%;
+  min-width: 260px;
+  margin: auto;
+  //   margin-right: auto;
+  position: relative;
+  padding: 20px;
+  font-size: 1em;
+  line-height: 150%;
+  background: linear-gradient(-45deg, rgb(0, 32, 48), rgba(0, 92, 138, 0.9) 40%, rgba(0, 88, 133, 0.85) 65%, rgba(0, 32, 48, 0.95));
+  border: 4px solid rgb(0, 31, 84);
+  border-radius: 5px;
+  text-shadow:
+    2px 2px 3px #004669,
+    2px 2px 5px #000000;
+  min-height: 178px;
+}
+
+.bluePanel:after {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 1px solid rgb(39, 186, 233);
+  border-radius: 5px;
+  box-shadow:
+    inset 0 0 2px 1px rgb(39, 186, 233),
+    0 0 3px 0 rgb(39, 186, 233);
+  pointer-events: none;
+}
