@@ -8,12 +8,35 @@ body {
   letter-spacing: 1px;
 }
 
+#fullContainer {
+  margin: 0 auto;
+  position: relative;
+  min-height: 633px;
+  max-width: 1782px;
+  width: 100vw;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+}
+
 #pageContainer {
   z-index: 2;
-  position: fixed;
+  position: absolute;
   height: calc(100vh - 96px);
   width: 100vw;
   overflow-y: auto;
+  max-width: 1782px;
 }
 
+footer span {
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+
+footer span:hover {
+  color: #ffaf19;
+}
 // height: 'calc(100vh - 96px', width: '100vw'

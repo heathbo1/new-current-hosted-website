@@ -1,9 +1,42 @@
+import { useEffect, useState } from 'react'
 import '../body.scss'
-import './Pages.scss'
 import BluePanel from './compnents/BluePanel'
 import Data from './data/resume.json'
+import './Pages.scss'
+
+interface iClients {
+  company: string
+  description: string
+  details: string[]
+  used: string
+}
+
+interface iExperience {
+  company: string
+  position: string
+  location: string
+  date: string
+  description: string
+  details: string[]
+  used: string
+  clients: iClients[]
+}
 
 const Resume = () => {
+  const [experience, setExperience] = useState<iExperience[]>([])
+
+  useEffect(() => {
+    if (Data.Experience.length > 0) {
+      const tempExp: iExperience[] = []
+      Data.Experience.forEach((ext) => {
+        tempExp.push(ext)
+      })
+      setExperience(tempExp)
+    }
+  }, [])
+
+  const headerStyle = { color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700' }
+
   return (
     <div id="resumeBody" className="flexContainer">
       <div id="resumeMain" className="hbColumn">
@@ -38,9 +71,45 @@ const Resume = () => {
           <div>{Data.Technologies['Operating Systems']}</div>
         </BluePanel>
         <BluePanel id="resBP8" width="98%">
-          <div className="sectionHeader">Experience</div>
+          <div className="sectionHeader">Competencies</div>
           <div>{Data.Competencies}</div>
         </BluePanel>
+        <div id="sectionTitle">
+          <span id="sectionText">EXPERIENCE</span>
+        </div>
+        <div id="experience" className="hbRow dataRows">
+          {experience.map((exp) => {
+            console.log('exp = ', exp.details.length)
+            console.log('type test = ', Array.isArray(exp.details))
+            console.log('')
+            return (
+              <BluePanel id={exp.company} className="bluePanelExper">
+                <div className="hbRow">
+                  <div className="expColumn" style={headerStyle}>
+                    {exp.position}
+                  </div>
+                  <div className="expColumn" style={{ textAlign: 'right', ...headerStyle }}>
+                    {exp.company}
+                  </div>
+                </div>
+                <div className="hbRow" style={{ marginBottom: '20px' }}>
+                  <div className="expColumn">{exp.date}</div>
+                  <div className="expColumn" style={{ textAlign: 'right' }}>
+                    {exp.location}
+                  </div>
+                </div>
+
+                {exp.details.map((det) => (
+                  <div className="hbRow">&#x2022; {det}</div>
+                ))}
+
+                <div className="hbRow" style={{ marginTop: '20px' }}>
+                  Skills:{exp.used}
+                </div>
+              </BluePanel>
+            )
+          })}
+        </div>
       </div>
     </div>
   )

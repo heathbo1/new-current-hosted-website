@@ -13,7 +13,7 @@
       "company": "",
       "position": "Freelance Web Developer and Designer",
       "location": "St. Louis, MO",
-      "date": "Octover 2023 - Present",
+      "date": "October 2023 - Present",
       "description": "Led the redesign and development of their Prayer Cards website.",
       "details": [
         "My development experience allowed me to redesign their prayer cards site with development in mind.  It was immediately approved and I built it.",
@@ -24,6 +24,7 @@
         "Taught React best practices.",
         "Taught basic and advanced CSS. Most didn’t know CSS because they relied on UI libraries to do the CSS work."
       ],
+      "clients": [],
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
     },
     {
@@ -41,6 +42,7 @@
         "Taught React best practices.",
         "Taught basic and advanced CSS. Most didn’t know CSS because they relied on UI libraries to do the CSS work."
       ],
+      "clients": [],
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
     },
     {
@@ -55,6 +57,7 @@
         "Taught React best practices.",
         "Taught basic and advanced CSS. Most didn’t know CSS because they relied on UI libraries to do the CSS work."
       ],
+      "clients": [],
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
     },
     {
@@ -70,6 +73,7 @@
         "Developed multiple Reactjs pages and custom components using TypeScript, ESLint, and Prettier.",
         "Worked side by side with the designers and UX specialists to ensure the quality of the product we were building."
       ],
+      "clients": [],
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Storybook"
     },
     {
@@ -79,6 +83,7 @@
       "date": "October 2021 - July 2022",
       "description": "I worked with a team of developers to build and maintain different SAAS projects.",
       "details": ["I worked with a team of developers to build a new SAAS product using React.", "I fixed bugs and maintained an older Angular product while the new SAAS product was in development."],
+      "clients": [],
       "used": "Agile Development, React, Angular, Webpack, Node.js, Sass, HTML, CSS, TypeScript, ESLint, Prettier"
     },
     {
@@ -88,6 +93,7 @@
       "date": "March 2020 - October 2021",
       "description": "I worked with a team of Senior developers to mentor and aid other UI development teams using React.",
       "details": ["Worked with a variety of teams that needed React mentorship and development.", "Helped establish common components used by multiple projects."],
+      "clients": [],
       "used": "Agile Development, React, Redux, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint"
     },
     {
@@ -96,7 +102,8 @@
       "location": "St. Louis, MO",
       "date": "May 2018 - March 2020",
       "description": "Worked with a variety of teams to acomplish a variety of goals",
-      "details": "",
+      "details": [],
+      "used": "",
       "clients": [
         {
           "company": "RGA",
@@ -134,7 +141,8 @@
       "location": "St. Louis, MO",
       "date": "August 2013 - March 2018",
       "description": "Member of the Software Architecture and Engineering Line of Service.",
-      "details": "",
+      "details": [],
+      "used": "",
       "clients": [
         {
           "company": "Charter Communications",
@@ -164,7 +172,8 @@
       "location": "St. Louis, MO",
       "date": "May 2013 - July 2013",
       "description": "Built and updated client websites.",
-      "details": "",
+      "details": [],
+      "used": "",
       "clients": [
         {
           "company": "Goldcorp Inc.",
@@ -202,7 +211,8 @@
       "location": "St. Louis, MO",
       "date": "2010 - May 2013",
       "description": "Designed and developed a variety of software, and e-Learning products for clients.",
-      "details": "",
+      "details": [],
+      "used": "",
       "clients": [
         {
           "company": "CSX Transportation.",
@@ -249,6 +259,7 @@
       "date": "May 2011 - November 2011",
       "description": "Designed and developed e-Learning content.",
       "details": ["Upgraded an obsolete Flash framework in order to make it more flexible and efficient.", "Designed and developed various Flash and XML based e-Learning content that integrated with an existing LMS system."],
+      "clients": [],
       "used": "Adobe Flash, XML, SCORM"
     },
     {
@@ -258,6 +269,7 @@
       "date": "August 2010 - February 2011",
       "description": "Designed and developed an entire Flash framework for Intel.",
       "details": ["Developed a framework for to integrate with a SCORM compliant .Net LMS using SOAP.", "Developed multiple e-Learning modules that supported multiple languages and included quizzes and quiz reporting."],
+      "clients": [],
       "used": "Adobe Flash, XML, HTML, SCORM, SOAP"
     },
     {
@@ -267,6 +279,7 @@
       "date": "June 2010 - July 2010",
       "description": "Helped manage an HTML and CSS based Content Management System.",
       "details": ["Updated HTML code to add and remove products from online catalog."],
+      "clients": [],
       "used": "HTML, CSS"
     },
     {
@@ -280,6 +293,7 @@
         "Designed and developed Flash and XML based e-Learning courses to teach various topics related to the real estate market.",
         "Designed and developed websites for a variety of high profile clients."
       ],
+      "clients": [],
       "used": "Adobe Flash, XML, HTML, CSS"
     },
     {
@@ -289,6 +303,7 @@
       "date": "December 2008 - April 2009",
       "description": "Designed and developed interactive media.",
       "details": ["Designed and developed HTML, CSS, and JavaScript based websites for commercial clients and the Department of Defense’s Privacy and Civil Liberties Office.", "Developed medical education software for Elsevier."],
+      "clients": [],
       "used": "HTML, CSS, JavaScript, Adobe Flash, XML"
     }
   ],

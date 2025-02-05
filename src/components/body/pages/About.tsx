@@ -39,8 +39,8 @@ const About = () => {
           </div>
         </BluePanel>
       </div>
-      <div id="testTitle">
-        <span id="testText">TESTIMONIALS</span>
+      <div id="sectionTitle">
+        <span id="sectionText">TESTIMONIALS</span>
       </div>
       <div id="abSide" className="hbRow dataRows">
         <BluePanel className="panels" id="abBP2">

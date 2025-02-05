@@ -1,20 +1,19 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import Comet from './comets/comet'
-import SateliteFactory from './sateliteFactory'
+import Comet from './comets/Comet'
+// import SateliteFactory from './sateliteFactory'
 import GenerateNewStar from './starFactory'
 
-const Space = () => {
+const Space = ({ city }) => {
   const [width, setWidth] = useState(window.innerWidth)
   const [height, setHeight] = useState(window.innerHeight - 98) // 170 = header and city height
   const [stars, setStars] = useState([])
 
   const sateliteCanvas = useRef(null)
   const starsCanvas = useRef(null)
-  const cityTemp = document.getElementById('cityContainer')
 
   useEffect(() => {
     const cityTimeOut = setTimeout(() => {
-      const spaceUnder = window.innerHeight - (98 + cityTemp.current.offsetHeight)
+      const spaceUnder = window.innerHeight - (98 + city.current.offsetHeight)
       setHeight(window.innerHeight - (98 + spaceUnder))
 
       drawStars()
@@ -26,18 +25,10 @@ const Space = () => {
     generateStars()
     generateSatellite()
 
-    setInterval(drawSatelite, 75)
+    // setInterval(drawSatelite, 75)
   }, [])
 
-  interface iSatelite {
-    y: number
-    X: number
-    vx: number
-    radius: number
-    draw(): null
-  }
-
-  let satelite: iSatelite | null = null
+  let satelite = null
 
   const generateStars = () => {
     const hmTimes = Math.round((width + height) * 1.5)
@@ -62,25 +53,21 @@ const Space = () => {
   }
 
   const generateSatellite = () => {
-    satelite = SateliteFactory.generateSatellite()
+    // satelite = SateliteFactory.generateSatellite()
   }
 
   const drawSatelite = () => {
-    // @ts-ignore
-    const sateliteCtx = sateliteCanvas.current.getContext('2d')
-
-    sateliteCtx.globalCompositeOperation = 'destination-over'
-    sateliteCtx.clearRect(0, 0, width, height)
-
-    sateliteCtx.fillStyle = 'rgba(0, 0, 0, 0.15)'
-    sateliteCtx.fillRect(0, 0, width, height)
-    sateliteCtx.filter = 'none'
-
-    satelite.x += satelite.vx
-    satelite.draw(sateliteCtx)
-    if (satelite.x > width + width * 0.25) {
-      generateSatellite()
-    }
+    // const sateliteCtx = sateliteCanvas.current.getContext('2d')
+    // sateliteCtx.globalCompositeOperation = 'destination-over'
+    // sateliteCtx.clearRect(0, 0, width, height)
+    // sateliteCtx.fillStyle = 'rgba(0, 0, 0, 0.15)'
+    // sateliteCtx.fillRect(0, 0, width, height)
+    // sateliteCtx.filter = 'none'
+    // satelite.x += satelite.vx
+    // satelite.draw(sateliteCtx)
+    // if (satelite.x > width + width * 0.25) {
+    //   generateSatellite()
+    // }
   }
 
   return (

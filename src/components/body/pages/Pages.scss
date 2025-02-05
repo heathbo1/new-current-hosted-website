@@ -3,13 +3,13 @@
   margin-top: 0px !important;
 }
 
-#testTitle {
+#sectionTitle {
   width: 100%;
   border-bottom: 1px solid #ffffff;
   padding-left: 15px;
 
-  #testText {
-    background-color: #000000d4;
+  #sectionText {
+    text-shadow: 2px 2px 5px #000000;
     font-weight: bold;
     color: #ffaf19;
     font-size: 1.25em;
@@ -20,6 +20,17 @@
   display: flex;
   gap: 15px;
   flex-direction: row;
+}
+
+.expColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 49%;
+}
+
+#experience {
+  width: 100%;
 }
 
 @media screen and (max-width: 610px) {
@@ -48,4 +59,30 @@
       width: 100% !important;
     }
   }
+}
+
+.bluePanelScroll {
+  max-height: calc(100vh - 165px);
+  //   height: 88%;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(39, 186, 233);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
 }

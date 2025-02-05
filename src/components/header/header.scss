@@ -42,6 +42,10 @@ $hover-orange: #ffaf19;
       flex-direction: row;
     }
 
+    a {
+      transition: margin-top 225ms ease-in;
+    }
+
     #dropDownMenu {
       padding-right: 20px;
       margin-top: 20px;
@@ -129,7 +133,10 @@ $hover-orange: #ffaf19;
       }
     }
   }
-
+  .headerNavigation .headerButtonsRow a:hover {
+    margin-top: -5px;
+    transition: margin-top 225ms ease-in;
+  }
   canvas {
     position: absolute !important;
   }
