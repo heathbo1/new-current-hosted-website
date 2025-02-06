@@ -9,6 +9,7 @@
 
 #space {
   position: relative;
+  margin-top: -5px;
 }
 
 #cityContainer {
@@ -16,7 +17,7 @@
   min-height: 633px;
   min-width: 1102px;
   width: 100vw;
-  border-bottom: 2px solid rgb(39, 186, 233);
+  //   border-bottom: 2px solid rgb(39, 186, 233);
   align-self: flex-end;
   display: flex;
   justify-content: center;

@@ -28,12 +28,13 @@ body {
   max-width: 1782px;
 }
 
-footer span {
+footer div {
   color: #ffffff;
   font-size: 14px;
   cursor: pointer;
   z-index: 3;
   position: relative;
+  border-top: 2px solid rgb(39, 186, 233);
 }
 
 footer span:hover {
