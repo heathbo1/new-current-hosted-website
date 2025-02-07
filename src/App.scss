@@ -28,13 +28,17 @@ body {
   max-width: 1782px;
 }
 
-footer div {
+footer {
+  background: linear-gradient(rgb(0 0 0 / 2%) 25%, rgb(0 0 0 / 79%)) 95%;
+  padding: 0px 5px;
+}
+
+footer span {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 11px;
   cursor: pointer;
   z-index: 3;
   position: relative;
-  border-top: 2px solid rgb(39, 186, 233);
 }
 
 footer span:hover {

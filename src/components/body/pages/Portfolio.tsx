@@ -1,8 +1,8 @@
-import '../body.scss';
+import '../body.scss'
 
 const Portfolio = () => {
   return (
-    <div style={{ height: 'calc(100vh-96px' }} className="temptx">
+    <div className="temptx pages">
       <div>This is the Portfolio page</div>
     </div>
   )

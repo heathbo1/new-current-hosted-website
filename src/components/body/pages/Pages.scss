@@ -3,6 +3,10 @@
   margin-top: 0px !important;
 }
 
+.pages {
+  min-height: calc(100vh - 120.25px);
+}
+
 #sectionTitle {
   width: 100%;
   border-bottom: 1px solid #ffffff;
@@ -62,7 +66,7 @@
 }
 
 .bluePanelScroll {
-  max-height: calc(100vh - 165px);
+  //   max-height: calc(100vh - 165px);
   //   height: 88%;
 }
 

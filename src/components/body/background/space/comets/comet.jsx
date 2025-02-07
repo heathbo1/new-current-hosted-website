@@ -29,7 +29,7 @@ const Comet = ({ height, width, cometNumber }) => {
   const drawComets = () => {
     if (cometCanvas.current) {
       const cometsCtx = cometCanvas.current.getContext('2d')
-      cometsCtx.clearRect(comet.x - 5, comet.y - 10, 50, 10)
+      cometsCtx.clearRect(comet.x - 5, comet.y - 12, 50, 10)
       cometsCtx.filter = 'blur(.5px)'
       comet.x -= comet.vx
       comet.y += comet.vy

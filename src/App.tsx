@@ -23,10 +23,10 @@ const App = () => {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/connect" element={<Connect />} />
           </Routes>
+          <Footer />
         </div>
         <Background />
       </div>
-      <Footer />
     </BrowserRouter>
   )
 }

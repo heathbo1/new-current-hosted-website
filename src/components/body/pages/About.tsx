@@ -25,7 +25,7 @@ const Testimonials = ({ Name }: TestInt) => {
 
 const About = () => {
   return (
-    <div id="aboutBody" className="flexContainer">
+    <div id="aboutBody" className="flexContainer pages">
       <div id="aboutMain" className="hbColumn">
         <BluePanel id="abBP1">
           <div>

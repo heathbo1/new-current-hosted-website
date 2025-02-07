@@ -38,7 +38,7 @@ const Resume = () => {
   const headerStyle = { color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700' }
 
   return (
-    <div id="resumeBody" className="flexContainer">
+    <div id="resumeBody" className="flexContainer pages">
       <div id="resumeMain" className="hbColumn">
         <BluePanel id="resBP1">
           <div className="sectionHeader">PROFILE</div>
