@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Comet from './comets/Comet'
-// import SateliteFactory from './sateliteFactory'
+import SateliteFactory from './sateliteFactory'
+import './space.scss'
 import GenerateNewStar from './starFactory'
 
 const Space = ({ city }) => {
@@ -24,17 +25,16 @@ const Space = ({ city }) => {
   useLayoutEffect(() => {
     generateStars()
     generateSatellite()
-
-    // setInterval(drawSatelite, 75)
+    setInterval(drawSatelite, 75)
   }, [])
 
   let satelite = null
 
   const generateStars = () => {
-    const hmTimes = Math.round((width + height) * 1.5)
+    const hmTimes = Math.round((1782 + height) * 1.5)
     const newStars = []
     for (let i = 0; i < hmTimes; i++) {
-      const newStar = GenerateNewStar(width, height)
+      const newStar = GenerateNewStar(1782, height)
       newStars.push(newStar)
     }
     setStars(newStars)
@@ -53,34 +53,34 @@ const Space = ({ city }) => {
   }
 
   const generateSatellite = () => {
-    // satelite = SateliteFactory.generateSatellite()
+    satelite = SateliteFactory.generateSatellite()
   }
 
   const drawSatelite = () => {
-    // const sateliteCtx = sateliteCanvas.current.getContext('2d')
-    // sateliteCtx.globalCompositeOperation = 'destination-over'
-    // sateliteCtx.clearRect(0, 0, width, height)
-    // sateliteCtx.fillStyle = 'rgba(0, 0, 0, 0.15)'
-    // sateliteCtx.fillRect(0, 0, width, height)
-    // sateliteCtx.filter = 'none'
-    // satelite.x += satelite.vx
-    // satelite.draw(sateliteCtx)
-    // if (satelite.x > width + width * 0.25) {
-    //   generateSatellite()
-    // }
+    const sateliteCtx = sateliteCanvas.current.getContext('2d')
+    sateliteCtx.globalCompositeOperation = 'destination-over'
+    sateliteCtx.clearRect(0, 0, 1782, height)
+    sateliteCtx.fillStyle = 'rgba(0, 0, 0, 0.15)'
+    sateliteCtx.fillRect(0, 0, 1782, height)
+    sateliteCtx.filter = 'none'
+    satelite.x += satelite.vx
+    satelite.draw(sateliteCtx)
+    if (satelite.x > 1782 + 1782 * 0.25) {
+      generateSatellite()
+    }
   }
 
   return (
     <div id="space">
-      <Comet cometNumber={1} width={width} height={height} />
-      <Comet cometNumber={2} width={width} height={height} />
-      <Comet cometNumber={3} width={width} height={height} />
-      <Comet cometNumber={4} width={width} height={height} />
-      <Comet cometNumber={5} width={width} height={height} />
-      <Comet cometNumber={6} width={width} height={height} />
-      <Comet cometNumber={7} width={width} height={height} />
-      <canvas id="satellite" ref={sateliteCanvas} width={width} height={height} style={{ width: '100vw', minWidth: '1102px', position: 'absolute', maxWidth: '1782px' }} />
-      <canvas id="starsCanvas" ref={starsCanvas} width={width} height={height} style={{ width: '100vw', minWidth: '1102px', position: 'absolute', maxWidth: '1782px' }} />
+      <Comet cometNumber={1} width={1782} height={height} />
+      <Comet cometNumber={2} width={1782} height={height} />
+      <Comet cometNumber={3} width={1782} height={height} />
+      <Comet cometNumber={4} width={1782} height={height} />
+      <Comet cometNumber={5} width={1782} height={height} />
+      <Comet cometNumber={6} width={1782} height={height} />
+      <Comet cometNumber={7} width={1782} height={height} />
+      <canvas id="satellite" ref={sateliteCanvas} width="1782px" height={height} />
+      <canvas id="starsCanvas" ref={starsCanvas} width="1782px" height={height} />
     </div>
   )
 }

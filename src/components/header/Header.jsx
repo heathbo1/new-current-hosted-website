@@ -36,7 +36,6 @@ const Header = (scrollDist) => {
             to={link}
             style={{ lineHeight: headerMin ? '60px' : '110px' }}
             className={({ isActive }) => {
-              console.log('isActive = ', isActive)
               if (isActive) {
                 return 'navLinkActive'
               } else {
@@ -115,7 +114,7 @@ const Header = (scrollDist) => {
 
   return (
     <Navbar className="header navbar-expand-lg" style={{ height: headerMin ? '50px' : '75px' }}>
-      <Container fluid style={{ marginLeft: '0px', height: headerMin ? '50px' : '96px', lineHeight: '50px' }}>
+      <Container fluid style={{ maxWidth: '1786px', height: headerMin ? '50px' : '96px', lineHeight: '50px' }}>
         <NavLink className={'navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
             <img id="HBLogo" style={{ display: headerMin ? 'none' : 'block' }} src={Logo} alt="Logo" />

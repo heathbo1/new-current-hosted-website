@@ -1,10 +1,6 @@
 #background {
   position: relative;
-  //   height: calc(100vw - 94vh);
-  //   min-height: calc(100vh - 145px);
-  /*716px*/
   display: flex;
-  //   overflow: hidden;
   max-width: 1782px;
   height: 100vh;
 }
@@ -12,6 +8,13 @@
 #space {
   position: relative;
   margin-top: -72px;
+  //   width: 100vw;
+  //   align-self: flex-end;
+  display: flex;
+  //   justify-content: center;
+  //   text-align: center;
+  //   margin: 0 auto;
+  //   overflow: hidden;
 }
 
 #cityContainer {
@@ -26,16 +29,13 @@
   text-align: center;
   margin: 0 auto;
   overflow: hidden;
+  //   z-index: 2;
 }
 
 #city {
   display: block;
-  //   min-height: 660px;
-  //   min-width: 1497px;
   max-height: 786px;
-  //   width: 110%;
   filter: brightness(1.25) contrast(1.1);
-  //   margin-left: calc((1030px - 100vw) / 2 * -1);
 }
 
 #signFlash {
