@@ -10,26 +10,8 @@
   "Competencies": "My competencies encompass a broad spectrum of UI Design and Development, UI Architecture, Project Design and Development, Framework Development, Object-Oriented Programming, User Experience (UX), and Usability. This comprehensive skill set enables me to deliver high-quality solutions across various projects.",
   "Experience": [
     {
-      "company": "",
-      "position": "Freelance Web Developer and Designer",
-      "location": "St. Louis, MO",
-      "date": "October 2023 - Present",
-      "description": "Led the redesign and development of their Prayer Cards website.",
-      "details": [
-        "My development experience allowed me to redesign their prayer cards site with development in mind.  It was immediately approved and I built it.",
-        "Easier to use – user-focused.",
-        "Mobile friendly",
-        "Designed and built with accessibility.",
-        "Helped the developers to understand class-based components. Most new how to build function components, but not class components.",
-        "Taught React best practices.",
-        "Taught basic and advanced CSS. Most didn’t know CSS because they relied on UI libraries to do the CSS work."
-      ],
-      "clients": [],
-      "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
-    },
-    {
       "company": "Lutheran Church Missouri Synod",
-      "position": "Product Designer",
+      "position": "Product Designer/Developer",
       "location": "St. Louis, MO",
       "date": "June 2023 - October 2023",
       "description": "Led the redesign and development of their Prayer Cards website.",

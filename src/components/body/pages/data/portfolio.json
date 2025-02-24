@@ -1,0 +1,115 @@
+{
+  "Portfolio": [
+    {
+      "ID": "LCMS",
+      "title": "Lutheran Church Missouri Synod",
+      "client": "Lutheran Church Missouri Synod",
+      "technology": "React, Material, SCSS, HTML5",
+      "description": "This is redesign of the Prayer Cards website that allows users to find the missionaries they want to support.",
+      "paths": [
+        "images/LCMS/LCMS1.png",
+        "images/LCMS/LCMS2.png"
+      ],
+      "url": ""
+    },
+    {
+      "ID": "EdwardJones",
+      "title": "Edward Jones",
+      "client": "Edward Jones",
+      "technology": "React, Material, Sass, HTML5",
+      "description": "This is part of an internal SAAS application that the local offices use.",
+      "paths": [
+        "images/EdwardJones/EdwardJones1.png",
+        "images/EdwardJones/EdwardJones2.png",
+        "images/EdwardJones/EdwardJones3.png"
+      ],
+      "url": ""
+    },
+    {
+      "ID": "ATTSustainability",
+      "title": "ATT: Sustainability",
+      "client": "ATT",
+      "technology": "HTML5, Javascript, jQuery",
+      "description": "This is a website for ATT that I helped build while working at Fleishman Hillard",
+      "paths": [
+        "images/ATT_Sustainability.jpg"
+      ],
+      "url": ""
+    },
+    {
+      "ID": "BaconBrains",
+      "title": "Bacon Brains",
+      "client": "University of Missouri",
+      "technology": "Adobe Flash",
+      "description": "A shooter game that utilizes a physics engine and teaches children about genetics and chromosomes.",
+      "paths": [
+        "images/BaconBrains.jpg"
+      ],
+      "url": ""
+    },
+    {
+      "ID": "ChevyMyLink",
+      "title": "Chevy MyLink Simulator",
+      "client": "Chevy",
+      "technology": "HTML5, Javascript, jQuery",
+      "description": "MyLink Simulator that I helped build while working at Fleishman Hillard. It ran on Chevy's Facebook page.",
+      "paths": [
+        "images/MyLink.jpg"
+      ],
+      "url": ""
+    },
+    {
+      "ID": "GoldCorp",
+      "title": "Gold Corp: Career",
+      "client": "Gold Corp",
+      "technology": "HTML5, Javascript, ASP.NET",
+      "description": "This a site that I built while working at Fleishman Hillard.",
+      "paths": [
+        "images/GoldCorp/GoldCorp1.jpg",
+        "images/GoldCorp/GoldCorp2.jpg",
+        "images/GoldCorp/GoldCorp3.jpg",
+        "images/GoldCorp/GoldCorp4.jpg"
+      ],
+      "url": ""
+    },
+    {
+      "ID": "InteractiveEquipmentSelectionTool",
+      "title": "Interactive Equipment Selection Tool",
+      "client": "Coca-Cola",
+      "technology": "Adobe Flash, Adobe Air",
+      "description": "An iPad and Windows application designed to help Coco-Cola's salesforce find the right equipment to meet their customer's needs.",
+      "paths": [
+        "images/Coke/Coke1.jpg",
+        "images/Coke/Coke2.jpg",
+        "images/Coke/Coke3.jpg",
+        "images/Coke/Coke4.jpg"
+      ],
+      "url": ""
+    },
+    {
+      "ID": "PandaPowerFunds",
+      "title": "Panda Power Funds: careers",
+      "client": "Panda Power Funds",
+      "technology": "HTML5, Javascript, jQuery",
+      "description": "This is a site that I help build while working at Fleishman Hillard.",
+      "paths": [
+        "images/PandaFunds.jpg"
+      ],
+      "url": "http://www.pandafunds.com/about/careers/"
+    },
+    {
+      "ID": "RAZORClubs",
+      "title": "RAZOR Clubs",
+      "client": "Callaway",
+      "technology": "Adobe Flash, HTML",
+      "description": "An e-Learning course that educates customers on the qualities of Callaway's Razor line of clubs.",
+      "paths": [
+        "images/Callaway/Callaway1.jpg",
+        "images/Callaway/Callaway2.jpg",
+        "images/Callaway/Callaway3.jpg",
+        "images/Callaway/Callaway4.jpg"
+      ],
+      "url": ""
+    }
+  ]
+}

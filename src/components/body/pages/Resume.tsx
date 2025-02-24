@@ -35,8 +35,6 @@ const Resume = () => {
     }
   }, [])
 
-  const headerStyle = { color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700' }
-
   return (
     <div id="resumeBody" className="flexContainer pages">
       <div id="resumeMain" className="hbColumn">
@@ -79,16 +77,14 @@ const Resume = () => {
         </div>
         <div id="experience" className="hbRow dataRows">
           {experience.map((exp) => {
-            console.log('exp = ', exp.details.length)
-            console.log('type test = ', Array.isArray(exp.details))
-            console.log('')
+            const clients = exp.clients.length >= 1
             return (
               <BluePanel id={exp.company} className="bluePanelExper">
                 <div className="hbRow">
-                  <div className="expColumn" style={headerStyle}>
+                  <div className="expColumn" style={{ color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700' }}>
                     {exp.position}
                   </div>
-                  <div className="expColumn" style={{ textAlign: 'right', ...headerStyle }}>
+                  <div className="expColumn" style={{ textAlign: 'right', color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700' }}>
                     {exp.company}
                   </div>
                 </div>
@@ -98,14 +94,13 @@ const Resume = () => {
                     {exp.location}
                   </div>
                 </div>
-
-                {exp.details.map((det) => (
-                  <div className="hbRow">&#x2022; {det}</div>
-                ))}
-
-                <div className="hbRow" style={{ marginTop: '20px' }}>
-                  Skills:{exp.used}
-                </div>
+                // NEED TO ADD THE SECTION FOR THE JOBS THAT HAD CLIENTS
+                {!clients && exp.details.map((det) => <div className="hbRow">&#x2022; {det}</div>)}
+                {!clients && (
+                  <div className="hbRow" style={{ marginTop: '20px' }}>
+                    Skills:{exp.used}
+                  </div>
+                )}
               </BluePanel>
             )
           })}

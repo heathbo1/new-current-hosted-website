@@ -79,8 +79,8 @@ const Space = ({ city }) => {
       <Comet cometNumber={5} width={width} height={height} />
       <Comet cometNumber={6} width={width} height={height} />
       <Comet cometNumber={7} width={width} height={height} />
-      <canvas id="satellite" ref={sateliteCanvas} width={width} height={height} style={{ width: '100vw', minWidth: '1102px', position: 'absolute' }} />
-      <canvas id="starsCanvas" ref={starsCanvas} width={width} height={height} style={{ width: '100vw', minWidth: '1102px', position: 'absolute' }} />
+      <canvas id="satellite" ref={sateliteCanvas} width={width} height={height} style={{ width: '100vw', minWidth: '1102px', position: 'absolute', maxWidth: '1782px' }} />
+      <canvas id="starsCanvas" ref={starsCanvas} width={width} height={height} style={{ width: '100vw', minWidth: '1102px', position: 'absolute', maxWidth: '1782px' }} />
     </div>
   )
 }

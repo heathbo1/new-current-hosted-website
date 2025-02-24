@@ -4,12 +4,14 @@
   //   min-height: calc(100vh - 145px);
   /*716px*/
   display: flex;
-  overflow: hidden;
+  //   overflow: hidden;
+  max-width: 1782px;
+  height: 100vh;
 }
 
 #space {
   position: relative;
-  margin-top: -5px;
+  margin-top: -72px;
 }
 
 #cityContainer {

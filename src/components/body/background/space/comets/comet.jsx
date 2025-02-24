@@ -22,8 +22,8 @@ const Comet = ({ height, width, cometNumber }) => {
   let comet = null
 
   const generateComet = () => {
-    const newComet = GenerateNewComet(width, height)
-    comet = newComet
+    comet = GenerateNewComet(width, height)
+    // comet = newComet
   }
 
   const drawComets = () => {
@@ -47,7 +47,7 @@ const Comet = ({ height, width, cometNumber }) => {
     }
   }
 
-  return <canvas id={cometNumb} ref={cometCanvas} width={width} height={height} style={{ width: '100vw', minWidth: '1102px', position: 'absolute' }} />
+  return <canvas id={cometNumb} ref={cometCanvas} width={width} height={height} style={{ width: '100vw', minWidth: '1102px', position: 'absolute', maxWidth: '1782px' }} />
 }
 
 export default Comet
