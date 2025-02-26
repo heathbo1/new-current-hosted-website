@@ -4,15 +4,15 @@ class SateliteFactory {
 
     satellite.y = window.innerHeight / 3
     satellite.x = 0
-    satellite.vx = 0.9
-    satellite.radius = 1.75
+    satellite.vx = 0.5
+    satellite.radius = 1.9
     let flashStatus = 0
 
     const getFlashState = () => {
       flashStatus++
       let flashWait = 25
-      if (flashStatus > flashWait && flashStatus < flashWait + 3) {
-        return 'rgba(255,0,0, 1)'
+      if (flashStatus > flashWait && flashStatus < flashWait + 4) {
+        return 'rgb(255, 0, 0)'
       } else {
         if (flashStatus > flashWait + 3) {
           flashStatus = 0

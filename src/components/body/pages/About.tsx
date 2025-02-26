@@ -14,7 +14,7 @@ interface TestInt {
 const Testimonials = ({ Name }: TestInt) => {
   return (
     <div>
-      <div className="sectionHeader">{Name.name}</div>
+      <div className="sectionHeader-Line">{Name.name}</div>
       <div>{Name.quote}</div>
       <br />
       <div>{Name.name}</div>
@@ -25,7 +25,7 @@ const Testimonials = ({ Name }: TestInt) => {
 
 const About = () => {
   return (
-    <div id="aboutBody" className="flexContainer pages">
+    <div id="aboutBody" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
       <div id="aboutMain" className="hbColumn">
         <BluePanel id="abBP1">
           <div>
