@@ -2,11 +2,10 @@ const GenerateNewStar = (canvasWidth, canvasHeight) => {
   let star = {}
   star.randomX = Math.floor(Math.random() * canvasWidth + 1)
   star.randomY = Math.floor(Math.random() * canvasHeight + 1)
-  star.randomSize = Math.floor(Math.random() * 2 + 0.55)
+  star.randomSize = Math.floor(Math.random() * 2.25 + 0.55)
   star.randomHue = Math.floor(Math.random() * 360 + 1)
-  star.randomLightness = getRandomIntInclusive(10, 90)
-  star.randomAlpha = '.' + getRandomIntInclusive(1, 75)
-  // console.log('randomSize = ', star.randomSize);
+  star.randomLightness = getRandomIntInclusive(10, 100)
+  star.randomAlpha = '.' + getRandomIntInclusive(1, 100)
   return star
 }
 

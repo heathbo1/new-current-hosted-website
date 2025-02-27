@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../../Body.scss'
 import '../Pages.scss'
 import dataJSON from './data.json'
@@ -7,11 +7,15 @@ import Project from './Project'
 
 const Portfolio = () => {
   const [selected, useSelected] = useState(null)
-  const data = []
+  const [data, setData] = useState([])
 
-  for (const key in dataJSON) {
-    data.push(dataJSON[key])
-  }
+  useEffect(() => {
+    const temp = []
+    for (const key in dataJSON) {
+      temp.push(dataJSON[key])
+    }
+    setData(temp)
+  }, [])
 
   return (
     <div className="flexContainer pages">

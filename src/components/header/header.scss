@@ -16,6 +16,7 @@ $hover-orange: #ffaf19;
   border-bottom-style: solid;
   border-bottom-width: 2px;
   transition: height 250ms;
+  transition: opacity 225ms ease-in;
 }
 
 .header {
