@@ -1,0 +1,62 @@
+{
+  "1": {
+    "name": "Prayer Cards website",
+    "client": "Lutheran Church Missouri Synod",
+    "technology": "React, Material, TypeScript, SCSS, HTML5",
+    "description": "This is redesign of the Prayer Cards website that allows users to find the missionaries they want to support."
+  },
+  "2": {
+    "name": "Point Of Sale UI",
+    "client": "Panera",
+    "technology": "React, Bootstrap, JavaScript, SCSS, HTML5",
+    "description": "This is the user interface for the Point Of Sale machines used behind the counter by their employees in the Panera restaurants."
+  },
+  "3": {
+    "name": "Account Portfolio Application",
+    "client": "Edward Jones",
+    "technology": "React, Material, SCSS, HTML5, JavaScript",
+    "description": "This is part of an internal SAAS application that the local offices use to manage client account portfolios."
+  },
+  "4": {
+    "name": "ATT: Sustainability ",
+    "client": "ATT",
+    "technology": "HTML5, Javascript, jQuery, CSS",
+    "description": "This is a website for ATT that I helped build while working at Fleishman Hillard"
+  },
+  "5": {
+    "name": "Bacon Brains",
+    "client": "University of Missouri",
+    "technology": "Adobe Flash",
+    "description": "A shooter game that utilizes a physics engine and teaches children about genetics and chromosomes."
+  },
+  "6": {
+    "name": "Chevy MyLink Simulator",
+    "client": "Chevy",
+    "technology": "HTML5, Javascript, jQuery, CSS",
+    "description": "MyLink Simulator that I helped build while working at Fleishman Hillard. It ran on Chevy's Facebook page."
+  },
+  "7": {
+    "name": "Gold Corp: Simulator",
+    "client": "Gold Corp",
+    "technology": "HTML5, CSS, Javascript, ASP.NET",
+    "description": "This a site that I built while working at Fleishman Hillard."
+  },
+  "8": {
+    "name": "Interactive Equipment Selection Tool",
+    "client": "Coca-Cola",
+    "technology": "Adobe Flash, Adobe Air",
+    "description": "An iPad and Windows application designed to help Coco-Cola's salesforce find the right equipment to meet their customer's needs."
+  },
+  "9": {
+    "name": "Panda Power Funds: Careers",
+    "client": "Panda Power Funds",
+    "technology": "HTML5, CSS, Javascript, jQuery",
+    "description": "This is a site that I help build while working at Fleishman Hillard."
+  },
+  "10": {
+    "name": "Razor Clubs",
+    "client": "Callaway",
+    "technology": "Adobe Flash, HTML",
+    "description": "An e-Learning course that educates customers on the qualities of Callaway's Razor line of clubs."
+  }
+}

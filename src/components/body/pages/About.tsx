@@ -1,4 +1,4 @@
-import '../body.scss'
+import '../Body.scss'
 import './Pages.scss'
 import BluePanel from './compnents/BluePanel'
 import Data from './data/about.json'
@@ -39,8 +39,8 @@ const About = () => {
           </div>
         </BluePanel>
       </div>
-      <div id="sectionTitle">
-        <span id="sectionText">TESTIMONIALS</span>
+      <div className="sectionTitle">
+        <span className="sectionText">TESTIMONIALS</span>
       </div>
       <div id="abSide" className="hbRow dataRows">
         <BluePanel className="panels" id="abBP2">

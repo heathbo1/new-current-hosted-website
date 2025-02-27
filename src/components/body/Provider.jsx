@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 export const ScrollContext = React.createContext(null)
 
@@ -9,12 +9,12 @@ export const ScrollContext = React.createContext(null)
 const Provider = ({ children }) => {
   const [scrollDist, setScrollDist] = useState(0)
 
-  useEffect(() => {
-    console.log('scrollDist = ', scrollDist)
-  }, [scrollDist])
+  //   useEffect(() => {
+  //     console.log('scrollDist = ', scrollDist)
+  //   }, [scrollDist])
 
   const updateScroll = (e) => {
-    console.log('updateScroll = ', e)
+    // console.log('updateScroll = ', e)
     setScrollDist(e)
   }
 

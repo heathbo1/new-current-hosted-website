@@ -55,7 +55,7 @@ const Header = (scrollDist) => {
     const headerCanvas = document.getElementById('headerCanvas')
     if (headerCanvas) {
       if (show == true) {
-        headerCanvas.style.display = 'block'
+        headerCanvas.style.opacity = 1
         const ctx = headerCanvas.getContext('2d')
 
         const style = ctx.createRadialGradient(600, 800, 50, 515, 800, 700)
@@ -82,7 +82,7 @@ const Header = (scrollDist) => {
           setHeaderMin(true)
         }
       } else {
-        headerCanvas.style.display = 'none'
+        headerCanvas.style.opacity = 0
 
         if (headerMin === true) {
           setHeaderMin(false)
@@ -141,7 +141,7 @@ const Header = (scrollDist) => {
           </div>
           <CollapseMenu headermin={headerMin} />
         </div>
-        <canvas id="headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '50px' : '87px', position: 'fixed', left: '0px', top: '0px', display: 'none' }} />
+        <canvas id="headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '50px' : '87px', position: 'fixed', left: '0px', top: '0px', opacity: '0' }} />
       </Container>
     </Navbar>
   )

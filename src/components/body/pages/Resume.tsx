@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import '../body.scss'
+import '../Body.scss'
 import BluePanel from './compnents/BluePanel'
 import Data from './data/resume.json'
 import './Pages.scss'
@@ -72,8 +72,8 @@ const Resume = () => {
           <div className="sectionHeader-Line">Competencies</div>
           <div>{Data.Competencies}</div>
         </BluePanel>
-        <div id="sectionTitle">
-          <span id="sectionText">EXPERIENCE</span>
+        <div className="sectionTitle">
+          <span className="sectionText">EXPERIENCE</span>
         </div>
         <div id="experience" className="hbRow dataRows">
           {experience.map((exp) => {

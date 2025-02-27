@@ -3,16 +3,12 @@
   margin-top: 0px !important;
 }
 
-.pages {
-  //   min-height: calc(87.6vh);
-}
-
-#sectionTitle {
+.sectionTitle {
   width: 100%;
   border-bottom: 1px solid #ffffff;
   padding-left: 15px;
 
-  #sectionText {
+  .sectionText {
     text-shadow: 2px 2px 5px #000000;
     font-weight: bold;
     color: #ffaf19;
@@ -98,10 +94,10 @@
   }
 }
 
-.bluePanelScroll {
-  //   max-height: calc(100vh - 165px);
-  //   height: 88%;
-}
+// .bluePanelScroll {
+//   //   max-height: calc(100vh - 165px);
+//   //   height: 88%;
+// }
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
