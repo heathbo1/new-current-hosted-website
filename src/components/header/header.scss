@@ -1,5 +1,9 @@
 $hover-orange: #ffaf19;
 
+#headerContainer {
+  background-image: radial-gradient(circle at bottom, rgba(0, 92, 138, 1), #00070a);
+}
+
 .navbarIcon {
   display: inline-block;
   width: 1.5em;
@@ -15,8 +19,7 @@ $hover-orange: #ffaf19;
   border-bottom-color: rgb(39, 186, 233);
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  transition: height 250ms;
-  transition: opacity 225ms ease-in;
+  //   transition: opacity 225ms ease-in;
 }
 
 .header {
@@ -170,8 +173,8 @@ $hover-orange: #ffaf19;
 .navLink {
   background: none;
   color: #ffffff;
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 1.25em;
+  font-weight: 200;
   letter-spacing: 2px;
   line-height: 96px;
   transition: line-height 200ms linear;

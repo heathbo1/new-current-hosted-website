@@ -5,7 +5,7 @@ import './collapseMenu'
 import CollapseMenu from './collapseMenu'
 import './header.scss'
 import Icon from './images/HBIcon.svg'
-import Logo from './images/NewHeathBishopLogo.svg'
+import Logo from './images/NewHeathBishopLogo2.svg'
 
 // interface HeaderBtn {
 //   maxw: string
@@ -56,28 +56,6 @@ const Header = (scrollDist) => {
     if (headerCanvas) {
       if (show == true) {
         headerCanvas.style.opacity = 1
-        const ctx = headerCanvas.getContext('2d')
-
-        const style = ctx.createRadialGradient(600, 800, 50, 515, 800, 700)
-        style.addColorStop(0, 'rgba(0, 92, 138,1)')
-        style.addColorStop(1, '#00070A')
-
-        const rectW = 1030
-        const rectH = 150
-
-        const rx = rectW / Math.sqrt(2)
-        const ry = rectH / Math.sqrt(2) + 10
-
-        const scaleX = 1
-        const scaleY = ry / rx
-
-        const invScaleX = 1
-        const invScaleY = rx / ry
-
-        ctx.setTransform(scaleX, 0, 0, scaleY, 0, 0)
-        ctx.fillStyle = style
-        ctx.fillRect(0, 0, rectW * invScaleX, rectH * invScaleY)
-
         if (headerMin === false) {
           setHeaderMin(true)
         }
@@ -92,7 +70,31 @@ const Header = (scrollDist) => {
   }
 
   useEffect(() => {
-    // updateHeader()
+    const fillHeader = () => {
+      const ctx = headerCanvas.getContext('2d')
+
+      const style = ctx.createRadialGradient(600, 800, 50, 515, 800, 700)
+      style.addColorStop(0, 'rgba(0, 92, 138,1)')
+      style.addColorStop(1, '#00070A')
+
+      const rectW = 1030
+      const rectH = 150
+
+      const rx = rectW / Math.sqrt(2)
+      const ry = rectH / Math.sqrt(2) + 10
+
+      const scaleX = 1
+      const scaleY = ry / rx
+
+      const invScaleX = 1
+      const invScaleY = rx / ry
+
+      ctx.setTransform(scaleX, 0, 0, scaleY, 0, 0)
+      ctx.fillStyle = style
+      ctx.fillRect(0, 0, rectW * invScaleX, rectH * invScaleY)
+    }
+    fillHeader()
+
     const logo = document.getElementById('logoBtn')
     logo.onclick = () => {
       btnClick('')
@@ -111,10 +113,26 @@ const Header = (scrollDist) => {
     fontSize: '1.5em',
     fontWeight: '500',
   }
+  //rgb(39, 186, 233)
+  const minStyle = {
+    height: '50px',
+    maxWidth: '1786px',
+    lineHeight: '50px',
+    borderBottom: '2px solid rgb(39, 186, 233)',
+    backgroundColor: '#000000',
+    position: 'relative',
+  }
+
+  const normStyle = {
+    maxWidth: '1786px',
+    height: '96px',
+    lineHeight: '50px',
+    position: 'relative',
+  }
 
   return (
     <Navbar className="header navbar-expand-lg" style={{ height: headerMin ? '50px' : '75px' }}>
-      <Container fluid style={{ maxWidth: '1786px', height: headerMin ? '50px' : '96px', lineHeight: '50px' }}>
+      <Container fluid style={headerMin ? minStyle : normStyle}>
         <NavLink className={'navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
             <img id="HBLogo" style={{ display: headerMin ? 'none' : 'block' }} src={Logo} alt="Logo" />
