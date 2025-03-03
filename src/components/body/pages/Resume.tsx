@@ -94,7 +94,6 @@ const Resume = () => {
                     {exp.location}
                   </div>
                 </div>
-                {/* // NEED TO ADD THE SECTION FOR THE JOBS THAT HAD CLIENTS */}
                 <div style={{ padding: '10px' }}>{!clients && exp.details.map((det) => <div className="hbRow">&#x2022; {det}</div>)}</div>
                 {!clients && (
                   <div className="hbRow" style={{ marginTop: '20px' }}>

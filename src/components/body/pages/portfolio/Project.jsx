@@ -3,6 +3,7 @@ import '../Pages.scss'
 import './portfolio.scss'
 
 const Project = (project) => {
+  console.log('project = ', project)
   const data = project.data
 
   return (
@@ -23,6 +24,3 @@ const Project = (project) => {
 }
 
 export default Project
-// /src/components/body/pages/portfolio/images/
-// /src/components/body/pages/portfolio/images/LCMS/LCMS1.png
-// /src/components/header/images/NewHeathBishopLogo.svg

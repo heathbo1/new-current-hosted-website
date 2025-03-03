@@ -5,51 +5,12 @@ import './collapseMenu'
 import CollapseMenu from './collapseMenu'
 import './header.scss'
 import Icon from './images/HBIcon.svg'
+import Name from './images/HeathBishop.svg'
 import Logo from './images/NewHeathBishopLogo2.svg'
-
-// interface HeaderBtn {
-//   maxw: string
-//   minw: string
-//   title: string
-//   id: string
-//   link: string
-//   clasName: string
-// }
 
 const Header = (scrollDist) => {
   const [btn, btnClick] = useState('')
   const [headerMin, setHeaderMin] = useState(false)
-
-  const HeaderButton = ({ maxw, minw, title, id, link, clasName }) => {
-    const maxWidth = maxw ? maxw : '370'
-    const minWidth = minw ? minw : '200'
-
-    const handleClick = (title) => {
-      btnClick(title)
-    }
-
-    if (link) {
-      return (
-        <Container className="headerButtonContainer" style={{ maxWidth: `${maxWidth}px`, minWidth: `${minWidth}px` }}>
-          <NavLink
-            id={id}
-            to={link}
-            style={{ lineHeight: headerMin ? '60px' : '110px' }}
-            className={({ isActive }) => {
-              if (isActive) {
-                return 'navLinkActive'
-              } else {
-                return 'navLink'
-              }
-            }}
-          >
-            {title}
-          </NavLink>
-        </Container>
-      )
-    }
-  }
-  // --------------------------------------------------------------------
 
   const updateHeader = (show) => {
     const headerCanvas = document.getElementById('headerCanvas')
@@ -101,25 +62,55 @@ const Header = (scrollDist) => {
     }
   }, [])
 
-  if (scrollDist.scrollDist >= 15) {
-    updateHeader(true)
-  } else {
-    updateHeader(false)
+  useEffect(() => {
+    if (scrollDist.scrollDist >= 15) {
+      updateHeader(true)
+    } else {
+      updateHeader(false)
+    }
+  }, [scrollDist])
+
+  // --------------------------------------------------------------------
+  const HeaderButton = ({ maxw, minw, title, id, link, clasName }) => {
+    const maxWidth = maxw ? maxw : '370'
+    const minWidth = minw ? minw : '200'
+
+    const handleClick = (title) => {
+      btnClick(title)
+    }
+
+    if (link) {
+      return (
+        <Container className="headerButtonContainer" style={{ maxWidth: `${maxWidth}px`, minWidth: `${minWidth}px` }}>
+          <NavLink
+            id={id}
+            to={link}
+            style={{ lineHeight: headerMin ? '60px' : '110px' }}
+            className={({ isActive }) => {
+              if (isActive) {
+                return 'navLinkActive'
+              } else {
+                return 'navLink'
+              }
+            }}
+          >
+            {title}
+          </NavLink>
+        </Container>
+      )
+    }
   }
+  // --------------------------------------------------------------------
 
   const nameStyle = {
     width: '342px',
-    lineHeight: '58px',
-    fontSize: '1.5em',
-    fontWeight: '500',
+    lineHeight: '50px',
   }
-  //rgb(39, 186, 233)
+
   const minStyle = {
     height: '50px',
     maxWidth: '1786px',
     lineHeight: '50px',
-    borderBottom: '2px solid rgb(39, 186, 233)',
-    backgroundColor: '#000000',
     position: 'relative',
   }
 
@@ -136,9 +127,9 @@ const Header = (scrollDist) => {
         <NavLink className={'navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
             <img id="HBLogo" style={{ display: headerMin ? 'none' : 'block' }} src={Logo} alt="Logo" />
-            <div style={headerMin ? nameStyle : { display: 'none' }}>
-              <img src={Icon} alt="Logo" style={{ height: '39px', margin: '-10px 10px 0 0' }} />
-              Heath Bishop
+            <div className="logoNameContainer" style={headerMin ? nameStyle : { display: 'none' }}>
+              <img src={Icon} alt="Logo" style={{ height: '39px' }} />
+              <img src={Name} alt="Name" />
             </div>
           </div>
         </NavLink>
@@ -159,7 +150,7 @@ const Header = (scrollDist) => {
           </div>
           <CollapseMenu headermin={headerMin} />
         </div>
-        <canvas id="headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '50px' : '87px', position: 'fixed', left: '0px', top: '0px', opacity: '0' }} />
+        <canvas id="headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: '0' }} />
       </Container>
     </Navbar>
   )
