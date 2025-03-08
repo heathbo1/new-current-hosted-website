@@ -5,13 +5,13 @@ interface WrapperProps {
   children: ReactNode
   size?: string
   width?: string
-  id?: string
+  key?: string
   className?: string
 }
 
-const BluePanel: React.FC<WrapperProps> = ({ children, width, id, className }) => {
+const BluePanel: React.FC<WrapperProps> = ({ children, width, key, className }) => {
   return (
-    <div id={id} style={width ? { width: width } : {}} className={`bluePanel bluePanelScroll ${className}`}>
+    <div key={key} style={width ? { width: width } : {}} className={`bluePanel bluePanelScroll ${className}`}>
       {children}
     </div>
   )

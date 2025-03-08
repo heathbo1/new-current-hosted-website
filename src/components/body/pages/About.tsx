@@ -25,9 +25,9 @@ const Testimonials = ({ Name }: TestInt) => {
 
 const About = () => {
   return (
-    <div id="aboutBody" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
-      <div id="aboutMain" className="hbColumn">
-        <BluePanel id="abBP1">
+    <div key="aboutBody" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
+      <div key="aboutMain" className="hbColumn">
+        <BluePanel key="abBP1">
           <div>
             {Data.About.Me.part1}
             <br />
@@ -42,20 +42,20 @@ const About = () => {
       <div className="sectionTitle">
         <span className="sectionText">TESTIMONIALS</span>
       </div>
-      <div id="abSide" className="hbRow dataRows">
-        <BluePanel className="panels" id="abBP2">
+      <div key="abSide" className="hbRow dataRows">
+        <BluePanel className="panels" key="abBP2">
           <Testimonials Name={Data.Testimonials.ChandlerPrince} />
         </BluePanel>
-        <BluePanel className="panels" id="abBP4">
+        <BluePanel className="panels" key="abBP4">
           <Testimonials Name={Data.Testimonials.StevenWilliams} />
         </BluePanel>
-        <BluePanel className="panels" id="abBP3">
+        <BluePanel className="panels" key="abBP3">
           <Testimonials Name={Data.Testimonials.AmandaPozzo} />
         </BluePanel>
-        <BluePanel className="panels" id="abBP4">
+        <BluePanel className="panels" key="abBP4">
           <Testimonials Name={Data.Testimonials.RobertWade} />
         </BluePanel>
-        <BluePanel className="panels" id="abBP5">
+        <BluePanel className="panels" key="abBP5">
           <Testimonials Name={Data.Testimonials.JamesJervis} />
         </BluePanel>
       </div>

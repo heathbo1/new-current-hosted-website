@@ -7,23 +7,19 @@ import Project from './Project'
 
 const Portfolio = () => {
   const [selected, useSelected] = useState(null)
-  const [data, setData] = useState([])
+  const [projects, setProjects] = useState([])
 
   useEffect(() => {
     const temp = []
     for (const key in dataJSON) {
-      temp.push(dataJSON[key])
+      temp.push(<Project key={key} data={dataJSON[key]} />)
     }
-    setData(temp)
+    setProjects(temp)
   }, [])
 
   return (
     <div className="flexContainer pages">
-      <div className="hbRow dataRows">
-        {data.map((i) => {
-          return <Project data={i} />
-        })}
-      </div>
+      <div className="hbRow dataRows">{projects}</div>
     </div>
   )
 }
