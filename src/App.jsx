@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.scss'
 import Background from './components/body/background/Background'
@@ -18,17 +18,19 @@ const App = () => {
     setScrollDist(e.target.scrollTop)
   }
 
+  const ref = useRef()
+
   return (
     <BrowserRouter basename="/">
       <Provider>
         <Header scrollDist={scrollDist} />
         <div id="fullContainer">
-          <div id="pageContainer" onScroll={scrolling}>
+          <div id="pageContainer" ref={ref} onScroll={scrolling}>
             <Routes>
               <Route index element={<Home />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/about" element={<About appRef={ref} />} />
               <Route path="/resume" element={<Resume />} />
-              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/portfolio" element={<Portfolio appRef={ref} />} />
               <Route path="/connect" element={<Connect />} />
             </Routes>
             {/* <Footer /> */}

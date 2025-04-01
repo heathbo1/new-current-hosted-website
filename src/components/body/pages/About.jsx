@@ -1,17 +1,10 @@
+import { useEffect } from 'react'
 import '../Body.scss'
 import './Pages.scss'
 import BluePanel from './compnents/BluePanel'
 import Data from './data/about.json'
 
-interface TestInt {
-  Name: {
-    name: string
-    quote: string
-    company: string
-  }
-}
-
-const Testimonials = ({ Name }: TestInt) => {
+const Testimonials = ({ Name }) => {
   return (
     <div>
       <div className="sectionHeader-Line">{Name.name}</div>
@@ -23,7 +16,13 @@ const Testimonials = ({ Name }: TestInt) => {
   )
 }
 
-const About = () => {
+const About = ({ appRef }) => {
+  console.log('about')
+  useEffect(() => {
+    console.log('AR = ', appRef.current)
+    appRef.current.scrollIntoView({ behavior: 'smooth' })
+  }, [])
+
   return (
     <div key="aboutBody" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
       <div key="aboutMain" className="hbColumn">

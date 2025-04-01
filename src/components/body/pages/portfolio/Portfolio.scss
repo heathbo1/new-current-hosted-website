@@ -1,4 +1,39 @@
 .portImages {
-  width: 50px;
-  height: 50px;
+  height: 150px;
+  box-shadow: 5px 5px 5px #00000047;
+  //   max-width: 100%;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.photoHalf {
+  width: 50%;
+  display: grid;
+  grid-template-columns: calc(45vw - 300px) 35%;
+}
+
+.photoPlacer {
+  display: grid;
+  grid-template-columns: repeat(4, 10px [col-start]);
+  grid-column-start: 2;
+}
+
+.infoHalf {
+  width: 50%;
+  display: inline-block;
+}
+
+.portImageContainer {
+  display: flex;
+}
+
+// 1300px or less
+@media screen and (max-width: 618px) {
+  .infoHalf {
+    width: 100%;
+  }
 }

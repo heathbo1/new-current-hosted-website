@@ -37,9 +37,11 @@ const Resume = () => {
       tempExp.forEach((exp) => {
         const clients = exp.clients.length >= 1
 
+        console.log('clients = ', clients)
+
         tempExpDom.push(
           <BluePanel key={exp.company} className="bluePanelExper">
-            <div className="hbRow">
+            <div className="expRow">
               <div className="expColumn" style={{ color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700' }}>
                 {exp.position}
               </div>
@@ -47,18 +49,35 @@ const Resume = () => {
                 {exp.company}
               </div>
             </div>
-            <div className="hbRow" style={{ marginBottom: '20px', borderBottom: '1px solid #ffffff' }}>
+            <div className="expRow" style={{ marginBottom: '20px', borderBottom: '1px solid #ffffff' }}>
               <div className="expColumn">{exp.date}</div>
               <div className="expColumn" style={{ textAlign: 'right' }}>
                 {exp.location}
               </div>
             </div>
+            <div>{exp.description}</div>
             <div style={{ padding: '10px' }}>{!clients && exp.details.map((det) => <div className="hbRow">&#x2022; {det}</div>)}</div>
             {!clients && (
               <div className="hbRow" style={{ marginTop: '20px' }}>
-                Skills:{exp.used}
+                Skills: {exp.used}
               </div>
             )}
+            {exp.clients.map((c) => (
+              <div style={{ marginBottom: '20px' }} className="clients">
+                <div className="hbRow nameDescription">
+                  <span style={{ fontWeight: '700', color: '#ffaf19' }}>{c.company}</span>
+                  <span style={{ paddingLeft: '10px' }}>{c.description}</span>
+                </div>
+                <div style={{ padding: '10px' }}>
+                  {c.details.map((det) => (
+                    <div className="hbRow">&#x2022; {det}</div>
+                  ))}
+                </div>
+                <div className="hbRow" style={{ marginTop: '20px' }}>
+                  Skills: {c.used}
+                </div>
+              </div>
+            ))}
           </BluePanel>
         )
       })
@@ -67,7 +86,7 @@ const Resume = () => {
   }, [])
 
   return (
-    <div key="resumeBody" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
+    <div id="resume" key="resumeBody" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
       <div key="resumeMain" className="hbColumn">
         <BluePanel key="resBP1">
           <div className="sectionHeader-Line">PROFILE</div>

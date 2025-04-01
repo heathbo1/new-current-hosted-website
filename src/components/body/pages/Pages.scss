@@ -1,3 +1,5 @@
+@import '../../body/body.scss';
+
 .panels {
   width: 45% !important;
   margin-top: 0px !important;
@@ -15,8 +17,11 @@
     color: #ffaf19;
     font-size: 1.25em;
     background-color: #0000004a;
-    padding: 1px 2px;
     box-shadow: 0px 0px 10px 6px #0000004a;
+    background-color: #005580;
+    border: 1px solid #27bae9;
+    padding: 2px 4px 3px 4px;
+    border-bottom: 1px solid #ffffff;
   }
 }
 
@@ -26,11 +31,28 @@
   flex-direction: row;
 }
 
-.expColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 49%;
+#resume {
+  .expRow {
+    @extend .hbRow;
+    flex-wrap: nowrap;
+  }
+  .expColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 49%;
+  }
+
+  .clients {
+    border: 1px solid rgb(39, 186, 233);
+    border-radius: 5px;
+    padding: 10px;
+
+    .nameDescription {
+      flex-wrap: nowrap;
+      border-bottom: 0.75px solid #ffffff;
+    }
+  }
 }
 
 #experience {
