@@ -31,6 +31,10 @@
   flex-direction: row;
 }
 
+.aboutPanels {
+  @extend .panels;
+}
+
 #resume {
   .expRow {
     @extend .hbRow;
@@ -114,6 +118,9 @@
     #abBP5 {
       width: 100% !important;
     }
+  }
+  .aboutPanels {
+    width: 100% !important;
   }
 }
 

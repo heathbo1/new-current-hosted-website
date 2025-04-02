@@ -18,17 +18,29 @@ $hover-orange: #ffaf19;
 .logoNameContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 4px;
-  height: 50px;
+  gap: 8px;
+  height: 98px;
+  line-height: 26px;
+  width: 340px;
+
+  #logo {
+    width: 69px;
+    transition: width 200ms;
+  }
+
+  #text {
+    text-align: left;
+  }
 }
 
 #headerCanvas {
   border-bottom-color: rgb(39, 186, 233);
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  //   transition: opacity 225ms ease-in;
+  transition: opacity 5000ms ease-in;
+  transition: height 150ms ease-in;
 }
 
 .header {

@@ -24,7 +24,7 @@ const About = ({ appRef }) => {
   }, [])
 
   return (
-    <div key="aboutBody" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
+    <div key="aboutBody" id="about" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
       <div key="aboutMain" className="hbColumn">
         <BluePanel key="abBP1">
           <div>
@@ -42,19 +42,19 @@ const About = ({ appRef }) => {
         <span className="sectionText">TESTIMONIALS</span>
       </div>
       <div key="abSide" className="hbRow dataRows">
-        <BluePanel className="panels" key="abBP2">
+        <BluePanel className="aboutPanels" key="abBP2">
           <Testimonials Name={Data.Testimonials.ChandlerPrince} />
         </BluePanel>
-        <BluePanel className="panels" key="abBP4">
+        <BluePanel className="aboutPanels" key="abBP4">
           <Testimonials Name={Data.Testimonials.StevenWilliams} />
         </BluePanel>
-        <BluePanel className="panels" key="abBP3">
+        <BluePanel className="aboutPanels" key="abBP3">
           <Testimonials Name={Data.Testimonials.AmandaPozzo} />
         </BluePanel>
-        <BluePanel className="panels" key="abBP4">
+        <BluePanel className="aboutPanels" key="abBP4">
           <Testimonials Name={Data.Testimonials.RobertWade} />
         </BluePanel>
-        <BluePanel className="panels" key="abBP5">
+        <BluePanel className="aboutPanels" key="abBP5">
           <Testimonials Name={Data.Testimonials.JamesJervis} />
         </BluePanel>
       </div>

@@ -4,24 +4,25 @@ import { NavLink } from 'react-router'
 import './collapseMenu'
 import CollapseMenu from './collapseMenu'
 import './header.scss'
-import Icon from './images/HBIcon.svg'
-import Name from './images/HeathBishop.svg'
-import Logo from './images/NewHeathBishopLogo2.svg'
+import { Logo } from './images/Logo'
 
 const Header = (scrollDist) => {
   const [btn, btnClick] = useState('')
   const [headerMin, setHeaderMin] = useState(false)
+  const [canvOpacity, setcanvOpacity] = useState(false)
 
   const updateHeader = (show) => {
     const headerCanvas = document.getElementById('headerCanvas')
     if (headerCanvas) {
       if (show == true) {
-        headerCanvas.style.opacity = 1
+        // headerCanvas.style.opacity = 1
+        setcanvOpacity(true)
         if (headerMin === false) {
           setHeaderMin(true)
         }
       } else {
-        headerCanvas.style.opacity = 0
+        // headerCanvas.style.opacity = 0
+        setcanvOpacity(false)
 
         if (headerMin === true) {
           setHeaderMin(false)
@@ -63,7 +64,7 @@ const Header = (scrollDist) => {
   }, [])
 
   useEffect(() => {
-    if (scrollDist.scrollDist >= 15) {
+    if (scrollDist.scrollDist >= 10) {
       updateHeader(true)
     } else {
       updateHeader(false)
@@ -126,11 +127,12 @@ const Header = (scrollDist) => {
       <Container fluid style={headerMin ? minStyle : normStyle}>
         <NavLink className={'navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
-            <img id="HBLogo" style={{ display: headerMin ? 'none' : 'block' }} src={Logo} alt="Logo" />
-            <div className="logoNameContainer" style={headerMin ? nameStyle : { display: 'none' }}>
+            <Logo scrollDist={scrollDist.scrollDist} />
+            {/* <img id="HBLogo" style={{ display: headerMin ? 'none' : 'block' }} src={LogoName} alt="Logo" /> */}
+            {/* <div className="logoNameContainer" style={headerMin ? nameStyle : { display: 'none' }}>
               <img src={Icon} alt="Logo" style={{ height: '39px' }} />
               <img src={Name} alt="Name" />
-            </div>
+            </div> */}
           </div>
         </NavLink>
         <div className="headerNavigation">
@@ -150,7 +152,7 @@ const Header = (scrollDist) => {
           </div>
           <CollapseMenu headermin={headerMin} />
         </div>
-        <canvas id="headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: '0' }} />
+        <canvas id="headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: canvOpacity ? 1 : 0 }} />
       </Container>
     </Navbar>
   )
