@@ -94,27 +94,27 @@ const Resume = () => {
         </BluePanel>
       </div>
       <div key="resumeData" className="hbRow dataRows">
-        <BluePanel key="resBP2" className="panels" width="30%">
+        <BluePanel key="resBP2" className="panels">
           <div className="sectionHeader-Line">Industry Experience</div>
           <div>{Data.IndustryExperience}</div>
         </BluePanel>
-        <BluePanel key="resBP3" className="panels" width="30%">
+        <BluePanel key="resBP3" className="panels">
           <div className="sectionHeader-Line">Competencies</div>
           <div>{Data.Competencies}</div>
         </BluePanel>
-        <BluePanel key="resBP4" className="panels" width="30%">
+        <BluePanel key="resBP4" className="panels">
           <div className="sectionHeader-Line">Languages</div>
           <div>{Data.Technologies.Languages}</div>
         </BluePanel>
-        <BluePanel key="resBP5" className="panels" width="30%">
+        <BluePanel key="resBP5" className="panels">
           <div className="sectionHeader-Line">Tools / Libraries</div>
           <div>{Data.Technologies['Tools / Libraries']}</div>
         </BluePanel>
-        <BluePanel key="resBP6" className="panels" width="30%">
+        <BluePanel key="resBP6" className="panels">
           <div className="sectionHeader-Line">Software</div>
           <div>{Data.Technologies.Software}</div>
         </BluePanel>
-        <BluePanel key="resBP7" className="panels" width="30%">
+        <BluePanel key="resBP7" className="panels">
           <div className="sectionHeader-Line">Operating Systems</div>
           <div>{Data.Technologies['Operating Systems']}</div>
         </BluePanel>

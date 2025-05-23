@@ -25,12 +25,10 @@ const Project = ({ key, data }) => {
   }, [])
 
   return (
-    <BluePanel key={key}>
-      <div className="">
-        <div className="sectionHeader-Line" style={{ display: 'flex' }}>
-          <div style={{ width: '50%' }}>{data.name}</div>
-          <div style={{ width: '50%', textAlign: 'right', color: '#ffffff' }}>{data.client}</div>
-        </div>
+    <BluePanel key={key} className="panels">
+      <div className="sectionHeader-Line" style={{ display: 'flex' }}>
+        <div style={{ width: '50%' }}>{data.name}</div>
+        <div style={{ width: '50%', textAlign: 'right', color: '#ffffff' }}>{data.client}</div>
       </div>
       <div className="infoContainer">
         <div className="infoHalf">

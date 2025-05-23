@@ -10,6 +10,16 @@
   "Competencies": "My competencies encompass a broad spectrum of UI Design and Development, UI Architecture, Project Design and Development, Framework Development, Object-Oriented Programming, User Experience (UX), and Usability. This comprehensive skill set enables me to deliver high-quality solutions across various projects.",
   "Experience": [
     {
+      "company": "Optum",
+      "position": "Front-end Developer (Contract)",
+      "location": "St. Louis, MO",
+      "date": "February 2025 - Present",
+      "description": "Led the building of the front end for an AI project.",
+      "details": ["I will fill this in."],
+      "clients": [],
+      "used": "Agile Development, React, Nextjs, TypeScript, ESLINT, Prettier, Tailwind, MSW, Storybook, and Playright"
+    },
+    {
       "company": "Lutheran Church Missouri Synod",
       "position": "Product Designer/Developer",
       "location": "St. Louis, MO",

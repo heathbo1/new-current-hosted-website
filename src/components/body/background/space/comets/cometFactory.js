@@ -1,5 +1,6 @@
 const GenerateNewComet = (canvasWidth, canvasHeight) => {
   let comet = {}
+
   if (coinFlip() === 'top') {
     comet.start = 'top'
     comet.y = 0
@@ -37,7 +38,7 @@ function getRandomFillStyle() {
 }
 
 function addVelocity(comet) {
-  comet.vx = getRandomIntInclusive(1.25, 2.5)
+  comet.vx = getRandomIntInclusive(1, 2.25)
   comet.vy = comet.vx + 1
 }
 
