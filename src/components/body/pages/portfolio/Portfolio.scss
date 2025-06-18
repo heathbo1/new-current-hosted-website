@@ -12,14 +12,16 @@
 
 .photoHalf {
   width: 50%;
-  display: grid;
+  //   display: grid;
   grid-template-columns: calc(45vw - 300px) 35%;
+  display: inline-block;
 }
 
 .photoPlacer {
   display: grid;
   grid-template-columns: repeat(4, 10px [col-start]);
-  grid-column-start: 2;
+  //   grid-column-start: 2;
+  width: 100%;
 }
 
 .infoHalf {
@@ -31,9 +33,21 @@
   display: flex;
 }
 
+.portPanel {
+  //   min-width: 735px;
+}
+
 // 1300px or less
-@media screen and (max-width: 618px) {
+@media screen and (max-width: 1300px) {
   .infoHalf {
     width: 100%;
+  }
+  .photoHalf {
+    width: 100%;
+  }
+
+  .photoPlacer {
+    padding-left: 0px;
+    padding-top: 10px;
   }
 }

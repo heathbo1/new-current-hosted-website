@@ -14,7 +14,7 @@ const Home = () => {
   }, [])
 
   return (
-    <div style={{ height: 'calc(100vh-96px' }} className="temptx pages">
+    <div id="homePage" className="pages">
       <div className="homeTextStyle">
         <p className="titleStyle" style={{ opacity: opacity1 }}>
           <span className="boldText">BROAD</span>

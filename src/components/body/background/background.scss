@@ -3,38 +3,99 @@
   display: flex;
   max-width: 1782px;
   height: 100vh;
-}
-
-#space {
-  position: relative;
-  margin-top: -72px;
-  display: flex;
-}
-
-#cityContainer {
-  position: relative;
-  min-height: 633px;
-  min-width: 1102px;
-  width: 100vw;
-  //   border-bottom: 2px solid rgb(39, 186, 233);
-  align-self: flex-end;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
   overflow: hidden;
-  //   z-index: 2;
-}
 
-#city {
-  display: block;
-  max-height: 786px;
-  filter: brightness(1.25) contrast(1.1);
+  #spaceContainer {
+    position: relative;
+    margin-top: -72px;
+    // display: flex;
+    // z-index: 0;
+    #spac-align {
+      position: absolute;
+    }
+  }
+
+  #cityContainer {
+    position: relative;
+    min-height: 633px;
+    min-width: 1102px;
+    width: 100vw;
+    //   border-bottom: 2px solid rgb(39, 186, 233);
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+
+    #citWrapper {
+      width: 1782px;
+      position: relative;
+    }
+
+    #cityIMG {
+      position: relative;
+      max-height: 786px;
+      filter: brightness(1.25) contrast(1.1);
+    }
+
+    #towerFlash {
+      background: #ffffff;
+      width: 5px;
+      height: 5px;
+      left: 511px;
+      position: absolute;
+      top: 153px;
+      animation-name: towerFlashing;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-delay: 2s;
+      border-radius: 5px;
+      filter: blur(1px);
+      rotate: 45deg;
+    }
+
+    #towerFlash:after {
+      background: #ffdcb0;
+      width: 30px;
+      height: 30px;
+      top: -13px;
+      left: -13px;
+      position: relative;
+      display: block;
+      content: '';
+      border-radius: 5px;
+      filter: blur(15px);
+      z-index: -1;
+    }
+  }
+
+  @keyframes towerFlashing {
+    0% {
+      opacity: 0;
+    }
+
+    65% {
+      opacity: 0;
+    }
+
+    75% {
+      opacity: 100;
+    }
+
+    85% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
 }
 
 // 1300px or less
-@media screen and (max-width: 1500px) {
-  #background {
-    // margin-left: calc((1290px - 100vw) / 2 * -1);
-  }
-}
+// @media screen and (max-width: 1500px) {
+//   #background {
+//     // margin-left: calc((1290px - 100vw) / 2 * -1);
+//   }
+// }

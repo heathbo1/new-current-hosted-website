@@ -14,7 +14,7 @@
   .sectionText {
     text-shadow: 2px 2px 5px #000000;
     font-weight: bold;
-    color: #ffaf19;
+    color: #ffffff;
     font-size: 1.25em;
     background-color: #0000004a;
     box-shadow: 0px 0px 10px 6px #0000004a;
@@ -63,9 +63,13 @@
   width: 100%;
 }
 
+#homePage {
+  height: calc(100vh - 102px);
+  padding-top: calc((100vh - 850px) / 2);
+}
+
 .homeTextStyle {
   flex-wrap: wrap;
-  margin-top: 21px;
   display: flex;
   justify-content: space-around;
 
@@ -84,11 +88,14 @@
     .titleText {
       color: #ffffff;
       background-color: #000000c7;
+      align-self: flex-end;
     }
 
     .boldText {
       color: #ffaf19;
       font-weight: bold;
+      font-size: 1.5em;
+      align-self: flex-end;
     }
   }
 }

@@ -12,7 +12,7 @@ const GenerateNewComet = (canvasWidth, canvasHeight) => {
   }
 
   addVelocity(comet)
-  comet.radius = getRandomIntInclusive(1, 2)
+  comet.radius = getRandomIntInclusive(4, 5)
   let fillStyle = getRandomFillStyle()
 
   comet.draw = (ctx) => {
@@ -28,8 +28,8 @@ const GenerateNewComet = (canvasWidth, canvasHeight) => {
 
 function getRandomFillStyle() {
   const colorList = [
-    'rgb(255, 153, 0)', // white Orange
-    'rgb(247, 189, 0)', // white yellow
+    'rgb(255, 192, 99)', // white Orange
+    'rgb(237, 216, 149)', // white yellow
     'rgb(255, 255, 255)', // white
     'rgb(195, 148, 91)', // brownish
   ]
@@ -38,7 +38,7 @@ function getRandomFillStyle() {
 }
 
 function addVelocity(comet) {
-  comet.vx = getRandomIntInclusive(1, 2.25)
+  comet.vx = getRandomIntInclusive(0.25, 0.5)
   comet.vy = comet.vx + 1
 }
 

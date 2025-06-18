@@ -1,5 +1,3 @@
-//minWidth: '1102px', position: 'absolute', maxWidth: '1782px'
-
 #satellite {
   min-width: 1102px;
   position: absolute;
@@ -10,4 +8,21 @@
   min-width: 1102px;
   position: absolute;
   max-width: 1782px;
+}
+
+.comets {
+  width: 100vw;
+  min-width: 1102px;
+  position: absolute;
+  //   max-width: 1782px;
+}
+
+#spaceContainer {
+  position: relative;
+  margin-top: -72px;
+  // display: flex;
+  // z-index: 0;
+  #spac-align {
+    position: absolute;
+  }
 }
