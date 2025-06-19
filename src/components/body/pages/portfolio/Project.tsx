@@ -3,24 +3,43 @@ import BluePanel from '../compnents/BluePanel'
 import '../Pages.scss'
 import './portfolio.scss'
 
-const Project = ({ key, data }) => {
+interface idata {
+  name: string
+  client: string
+  technology: string
+  description: string
+  images: Array<unknown>
+}
+
+interface iProject {
+  key: string
+  data: idata
+  modalOpen: () => void
+}
+
+const Project = ({ key, data, modalOpen }: iProject) => {
   const [images, setImages] = useState([])
+
+  const openModal = () => {
+    console.log('modalOpen = ', modalOpen)
+    modalOpen()
+  }
 
   useEffect(() => {
     const temp = []
 
     for (const key in data.images) {
-      const margin = key === '0' ? '0px' : '-150px'
       const style = {
         zIndex: Object.keys(data.images).length - Number(key),
         position: 'relative',
       }
       temp.push(
         <div className="portImageContainer">
-          <img key={key} className="portImages" src={'/src/components/body/pages/portfolio/images/' + data.images[key]} style={style} />
+          <img key={key} className="portImages" onClick={openModal} src={'/src/components/body/pages/portfolio/images/' + data.images[key]} style={style} />
         </div>
       )
     }
+    // @ts-ignore
     setImages(temp)
   }, [])
 

@@ -1,8 +1,8 @@
 {
-  "Profile": "With two decades of experience in front-end development, critical thinking, and problem-solving, I bring a wealth of knowledge and expertise to the table. My proficiency spans many UI frameworks, libraries, and languages, including React, HTML, JavaScript, TypeScript, CSS, and Sass. I have a proven track record of creating mobile-friendly websites with and without Bootstrap, Material, or Tailwind. My experience and ability to work with large and small teams, my desire for quality, and my ability to think creatively when standard methods fail have been instrumental in my success in developing large-scale consumer websites. I thrive in high-pressure environments, handling multiple responsibilities with ease, and I am adept at interacting with individuals at all levels. As a passionate learner, I constantly seek to broaden my knowledge and grow as a developer.",
+  "Profile": "Seasoned Front-End Web Developer with over 20 years of experience delivering high-quality, user-centered digital solutions across diverse industries including healthcare, finance, education, and technology. Proven expertise in React, JavaScript, TypeScript, HTML/CSS, and modern UI frameworks such as Next.js and AngularJS. Skilled in building scalable, accessible interfaces, leading development teams, and implementing reusable component libraries. Adept at driving performance, mentoring junior engineers, and streamlining development through Agile methodologies and testing best practices. Passionate about continuous learning, innovation, and delivering seamless user experiences across platforms.",
   "Technologies": {
     "Languages": "TypeScript, JavaScript, HTML, HTML5, CSS3, JSON, XML",
-    "Tools / Libraries": "React, Redux, Next.js, AngularJS, Material, Bootstrap, Tailwind, jQuery, ESLint, Node, NPM, Express, Webpack, Jest, GIT, GitLab, GraphQL, Bitbucket, Jasmine, Jenkins, Agile, Scrum, Kanban Methodologies",
+    "Tools / Libraries": "React, Redux, Next.js, AngularJS, Material, Bootstrap, SCSS, Tailwind, jQuery, ESLint, Node, NPM, Express, Webpack, Jest, GIT, GitLab, GraphQL, Bitbucket, Jasmine, Jenkins, Agile, Scrum, Kanban Methodologies",
     "Software": "WebStorm, Visual Studio Code, Eclipse, IntelliJ, Fiddler, Postman, Adobe Photoshop, Adobe Illustrator, Adobe XD, Confluence, JIRA, Figma",
     "Operating Systems": "Windows, Mac OS"
   },
@@ -11,124 +11,149 @@
   "Experience": [
     {
       "company": "Optum",
-      "position": "Front-end Developer (Contract)",
+      "contract": true,
+      "position": "Front-end Developer",
       "location": "St. Louis, MO",
-      "date": "February 2025 - Present",
+      "date": "February 2025 - June 2025",
       "description": "Led the building of the front end for an AI project.",
-      "details": ["I will fill this in."],
+      "details": [
+        "Collaborated with a team of UI developers to design and implement a user interface for an AI-driven application using Agile methodologies.",
+        "Mentored and supported junior developers, providing guidance on best practices and code reviews.",
+        "Developed custom, reusable UI components to enhance consistency and efficiency across the engineering team.",
+        "Engineered a creative solution to integrate a non-native dropdown menu with the Formik library, demonstrating problem-solving and adaptability."
+      ],
       "clients": [],
       "used": "Agile Development, React, Nextjs, TypeScript, ESLINT, Prettier, Tailwind, MSW, Storybook, and Playright"
     },
     {
       "company": "Lutheran Church Missouri Synod",
+      "contract": false,
       "position": "Product Designer/Developer",
       "location": "St. Louis, MO",
       "date": "June 2023 - October 2023",
       "description": "Led the redesign and development of their Prayer Cards website.",
       "details": [
-        "My development experience allowed me to redesign their prayer cards site with development in mind.  It was immediately approved and I built it.",
-        "Easier to use – user-focused.",
-        "Mobile friendly",
-        "Designed and built with accessibility.",
-        "Helped the developers to understand class-based components. Most new how to build function components, but not class components.",
-        "Taught React best practices.",
-        "Taught basic and advanced CSS. Most didn’t know CSS because they relied on UI libraries to do the CSS work."
+        "Led the redesign of the Prayer Cards website, significantly improving usability and visual design; presented to stakeholders and received strong approval.",
+        "Resolved major Bootstrap and mobile compatibility issues across four public-facing websites, boosting accessibility and user experience.",
+        "Refactored and updated Bootstrap codebase while creating custom CSS to fix grid-related bugs, ensuring consistent performance across devices",
+        "Utilized design tools like Adobe XD, Illustrator, and Photoshop to align UI/UX improvements with brand and accessibility standards."
       ],
       "clients": [],
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
     },
     {
       "company": "Charter Spectrum",
-      "position": "Senior Software Engineer 1 (Contract)",
+      "contract": true,
+      "position": "Senior Software Engineer 1",
       "location": "St. Louis, MO",
       "date": "November 2022 - December 2022",
       "description": "Led and mentored a team of software engineers to update an older class based Reactjs project with new functionality and better performance.",
       "details": [
-        "Led and mentored a team of mid and junior level engineers.",
-        "Helped the developers to understand class-based components. Most new how to build function components, but not class components.",
-        "Taught React best practices.",
-        "Taught basic and advanced CSS. Most didn’t know CSS because they relied on UI libraries to do the CSS work."
+        "Led a development team at Spectrum to optimize React.js and Next.js applications, cutting development time by 32% through testing strategies and adoption of best practices.",
+        "Mentored developers by teaching modern workflows, CSS fundamentals, and legacy React concepts to revive and accelerate a stalled project.",
+        "Improved code quality and consistency by integrating tools like ESLint, Prettier, and Jest into the development pipeline.",
+        "Applied Agile methodologies to enhance team collaboration, increase productivity, and ensure timely project delivery."
       ],
       "clients": [],
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
     },
     {
       "company": "FLASHPOINT",
+      "contract": false,
       "position": "Senior Software Engineer",
       "location": "St. Louis, MO",
       "date": "July 2022 - September 2022",
       "description": "Led multiple teams of software engineers to build a new Reactjs-based library and a new Reactjs product that will replace their outdated product.",
       "details": [
-        "Led a team of junior and mid UI engineers to build a Reactjs-based NPM library that all the company’s teams will use.",
-        "Created multiple components for the NPM library using Reactjs, Typescript, module.css, and Storybook.",
-        "Led a team to build a new Reactjs product that will replace their old product.",
-        "Developed multiple Reactjs pages and custom components using TypeScript, ESLint, and Prettier.",
-        "Worked side by side with the designers and UX specialists to ensure the quality of the product we were building."
+        "Led multiple teams at FlashPoint through full project lifecycles, from concept to successful implementation.",
+        "Spearheaded the creation of a reusable front-end component library, accelerating development across teams.",
+        "Ensured code quality and consistency by enforcing standards with ESLint, Prettier, and Jest.",
+        "Employed Agile methodologies and modern technologies such as Next.js, TypeScript, and CSS Modules to deliver scalable solutions."
       ],
       "clients": [],
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Storybook"
     },
     {
       "company": "QUES",
+      "contract": false,
       "position": "Senior UI Engineer",
       "location": "St. Louis, MO",
       "date": "October 2021 - July 2022",
       "description": "I worked with a team of developers to build and maintain different SAAS projects.",
-      "details": ["I worked with a team of developers to build a new SAAS product using React.", "I fixed bugs and maintained an older Angular product while the new SAAS product was in development."],
+      "details": [
+        "Spearheaded the development of a React-based UML display tool, allowing users to build, edit, and save diagrams efficiently.",
+        "Contributed to the architecture of a new React project, enhancing overall system functionality and scalability.",
+        "Maintained and upgraded legacy AngularJS applications to ensure smooth integration with new React-based components.",
+        "Implemented performance and UX improvements through strategic upgrades, maintaining high code quality with ESLint and Jest."
+      ],
       "clients": [],
       "used": "Agile Development, React, Angular, Webpack, Node.js, Sass, HTML, CSS, TypeScript, ESLint, Prettier"
     },
     {
       "company": "Edward Jones",
+      "contract": false,
       "position": "Senior Front End Developer",
       "location": "St. Louis, MO",
       "date": "March 2020 - October 2021",
       "description": "I worked with a team of Senior developers to mentor and aid other UI development teams using React.",
-      "details": ["Worked with a variety of teams that needed React mentorship and development.", "Helped establish common components used by multiple projects."],
+      "details": [
+        "Spearheaded the development of reusable animated components, enhancing UI consistency and promoting code efficiency across multiple teams.",
+        "Delivered training on React accessibility standards, improving inclusivity and usability in codebases.",
+        "Led workshops on React best practices, driving performance optimizations, and elevating code quality.",
+        "Designed screen architectures and established testing standards, reducing redundant code while increasing test coverage and reliability."
+      ],
       "clients": [],
       "used": "Agile Development, React, Redux, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint"
     },
     {
-      "company": "Signature Consultants",
-      "position": "Senior Front-end Developer",
+      "company": "RGA",
+      "contract": true,
+      "position": "Senior Front End Developer",
       "location": "St. Louis, MO",
-      "date": "May 2018 - March 2020",
-      "description": "Worked with a variety of teams to acomplish a variety of goals",
-      "details": [],
-      "used": "",
-      "clients": [
-        {
-          "company": "RGA",
-          "description": "Led a team of software engineers to update the Aurora project from AngularJS to Reactjs and Redux, and give it a modern look using Material design.",
-          "details": [
-            "Lead the charge to improve User Experience by bringing to light potential usability issues and offering solutions before they became a problem.",
-            "Lead the team to improve accessibility by running international accessibility compliance tests and fixing all found issues.",
-            "Sped up development by teaching the other developers React, CSS, and good coding practices.",
-            "Sped up development by updating all obsolete NPM packages and upgrading to a multithreaded version of Nodejs."
-          ],
-          "used": "Agile Development, React, AngularJS, TypeScript, Jasmine, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint, TSLint"
-        },
-        {
-          "company": "NECES",
-          "description": "Led a team of onshore and offshore UI software engineers to build the AUROS Command and AUROS Site Manger projects.",
-          "details": [
-            "Sped up development by bringing in standards, good practices, tools to enforce them, and documentation to improve onboarding.",
-            "Reduced the number of bugs by adding end to end and unit tests.",
-            "Reduced the development and QA time by adding a functional review process to our development process.  The functional review process is an automated step that allows the product owner to see changes before code is ever committed.  This significantly reduced the amount of changes required after the code went to production.",
-            "Led the team through many milestones such as Architecture upgrades, Angular 7 upgrades, and Material implementation."
-          ],
-          "used": "Agile Development, Angular, TypeScript, Jasmine, Karma, Protractor, Webpack, Node.js, Sass, HTML, CSS, JavaScript"
-        },
-        {
-          "company": "Panera Bread",
-          "description": "Rebuilding Panera's in-house technologies.",
-          "details": ["I worked as a team member rebuilding Panera's point of sale and back of house system.", "I lead the effort to bring code quality and intuitive code organization to the projects."],
-          "used": "React.js, Redux,js, Axios.js, Saga.js, Jest, JavaScript, JSON, HTML, CSS, LESS, Webpack, Node.js, Intellij"
-        }
-      ]
+      "date": "July 2019 - March 2020",
+      "description": "Led a team of software engineers to update the Aurora project from AngularJS to Reactjs and Redux, and give it a modern look using Material design.",
+      "details": [
+        "Lead the charge to improve User Experience by bringing to light potential usability issues and offering solutions before they became a problem.",
+        "Lead the team to improve accessibility by running international accessibility compliance tests and fixing all found issues.",
+        "Sped up development by teaching the other developers React, CSS, and good coding practices.",
+        "Sped up development by updating all obsolete NPM packages and upgrading to a multithreaded version of Nodejs."
+      ],
+      "clients": [],
+      "used": "Agile Development, React, AngularJS, TypeScript, Jasmine, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint, TSLint"
+    },
+    {
+      "company": "NECES",
+      "contract": true,
+      "position": "Senior UI Developer",
+      "location": "St. Louis, MO",
+      "date": "March 2019 - July 2019",
+      "description": "Led a team of onshore and offshore UI software engineers to build the AUROS Command and AUROS Site Manger projects.",
+      "details": [
+        "Led the UI team to enhance AUROS projects by establishing standards and comprehensive documentation, boosting development efficiency.",
+        "Implemented testing frameworks such as Jest, Jasmine, and Karma to reduce bugs and improve overall software quality.",
+        "Conducted operational reviews to streamline development processes, significantly decreasing post-production changes.",
+        "Guided the team through architecture improvements and Angular 7 upgrades, successfully achieving key project milestones."
+      ],
+      "clients": [],
+      "used": "Agile Development, Angular, TypeScript, Jasmine, Karma, Protractor, Webpack, Node.js, Sass, HTML, CSS, JavaScript"
+    },
+    {
+      "company": "Panera Bread",
+      "contract": true,
+      "position": "Senior UI Developer",
+      "location": "St. Louis, MO",
+      "date": "March 2018 - March 2019",
+      "description": "Rebuilding Panera's Point-of-Sale devices.",
+      "details": [
+        "Collaborated on developing the UI, enhancing usability and efficiency for the Point-of-Sale system used in their restaurants.",
+        "Led the initiative to reorganize the code, standardize code patterns, and implement Jest to increase code coverage."
+      ],
+      "clients": [],
+      "used": "React.js, Redux,js, Axios.js, Saga.js, Jest, JavaScript, JSON, HTML, CSS, LESS, Webpack, Node.js, Intellij"
     },
     {
       "company": "Daugherty Business Solutions",
+      "contract": false,
       "position": "Software Engineer",
       "location": "St. Louis, MO",
       "date": "August 2013 - March 2018",
@@ -139,14 +164,21 @@
         {
           "company": "Charter Communications",
           "description": "Redeveloped Customer Service Management website.",
-          "details": ["I worked as a team member to rewrite the main Gateway Project that is used by all 26 projects", "I worked as a team member to build the Point of Sale system used by all Charter Stores."],
+          "details": [
+            "Redeveloped the Customer Service Management website as part of the Gateway Project, improving functionality and user experience.",
+            "Resolved a complex Bootstrap dropdown menu bug by implementing a unique solution that enhanced UI reliability.",
+            "Developed a custom event-based library for global state management using React, JavaScript, and HTML, demonstrating strong front-end expertise",
+            "Collaborated on rewriting critical Trading System components, migrating business logic to managed .NET code to boost system efficiency and maintainability"
+          ],
           "used": "Agile Development, React.js, JavaScript, HTML, CSS, JAVA, Spring, Intellij, Mongo, Node, Webpack, NPM, Bootstrap, JSON"
         },
         {
           "company": "Metal Exchange Corporation",
           "description": "Redeveloped Trading System.",
           "details": [
-            "I worked as a team member to rewrite two major components of the Trading System, the Pricing Engine and Broker Invoice Engine.  I rewrote multiple SQL stored procedures to move business logic from SQL to managed .Net code.  I built unit test and / or integration test for new and existing code."
+            "Collaborated to rewrite two major components of the Trading System, the Pricing Engine and Broker Invoice Engine.",
+            "Rewrote multiple SQL stored procedures to move business logic from SQL to managed .Net code.",
+            "Built unit test and / or integration test for new and existing code."
           ],
           "used": "Agile Development, Dependency Injection, Design Patterns, Moq, MVC, C#, VB, MS SQL, ASP, HTML, JavaScript, Visual Studio 2010, MS SQL Server Management Studio, Fiddler"
         },
@@ -160,7 +192,8 @@
     },
     {
       "company": "FleishmanHilliard Inc.",
-      "position": "Contracted Front End Developer",
+      "contract": true,
+      "position": "Front End Developer",
       "location": "St. Louis, MO",
       "date": "May 2013 - July 2013",
       "description": "Built and updated client websites.",
@@ -199,6 +232,7 @@
     },
     {
       "company": "Freelance Developer",
+      "contract": false,
       "position": "Software Consultant",
       "location": "St. Louis, MO",
       "date": "2010 - May 2013",
@@ -246,7 +280,8 @@
     },
     {
       "company": "Edward Jones Investments",
-      "position": "Contracted eLearning Developer",
+      "contract": true,
+      "position": "eLearning Developer",
       "location": "St. Louis, MO",
       "date": "May 2011 - November 2011",
       "description": "Designed and developed e-Learning content.",
@@ -256,6 +291,7 @@
     },
     {
       "company": "Motivation Technologies",
+      "contract": false,
       "position": "Flash ActionScript 3 Developer",
       "location": "St. Louis, MO",
       "date": "August 2010 - February 2011",
@@ -266,7 +302,8 @@
     },
     {
       "company": "Laird Technologies",
-      "position": "Contracted Web Developer",
+      "contract": true,
+      "position": "Web Developer",
       "location": "St. Louis, MO",
       "date": "June 2010 - July 2010",
       "description": "Helped manage an HTML and CSS based Content Management System.",
@@ -276,6 +313,7 @@
     },
     {
       "company": "Real Estate Educate",
+      "contract": false,
       "position": "Flash ActionScript 3 Developer",
       "location": "St. Louis, MO",
       "date": "August 2009 - May 2010",
@@ -290,6 +328,7 @@
     },
     {
       "company": "MasterKey Consulting",
+      "contract": false,
       "position": "Interactive Designer / Developer",
       "location": "St. Louis, MO",
       "date": "December 2008 - April 2009",

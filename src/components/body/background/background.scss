@@ -41,9 +41,9 @@
 
     #towerFlash {
       background: #ffffff;
-      width: 5px;
-      height: 5px;
-      left: 511px;
+      width: 7px;
+      height: 7px;
+      left: 510px;
       position: absolute;
       top: 153px;
       animation-name: towerFlashing;
@@ -56,16 +56,16 @@
     }
 
     #towerFlash:after {
-      background: #ffdcb0;
-      width: 30px;
-      height: 30px;
-      top: -13px;
-      left: -13px;
+      background: #ffffffda;
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: -25px;
       position: relative;
       display: block;
       content: '';
       border-radius: 5px;
-      filter: blur(15px);
+      filter: blur(20px);
       z-index: -1;
     }
   }
@@ -83,7 +83,7 @@
       opacity: 100;
     }
 
-    85% {
+    95% {
       opacity: 0;
     }
 

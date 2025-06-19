@@ -31,10 +31,23 @@
 
 .portImageContainer {
   display: flex;
+  cursor: pointer;
 }
 
 .portPanel {
   //   min-width: 735px;
+}
+
+.modalBackdrop {
+  z-index: 1050;
+  background-color: #000000;
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  transition: opacity 0.15s linear;
+  position: fixed;
 }
 
 // 1300px or less

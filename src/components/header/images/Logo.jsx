@@ -13,7 +13,6 @@ export const Logo = (scrollDist) => {
 
   useEffect(() => {
     if (scrollDist.scrollDist >= 10) {
-      console.log('testing123 = ', true)
       setMin(true)
     } else {
       setMin(false)

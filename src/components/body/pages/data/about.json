@@ -1,9 +1,10 @@
 {
   "About": {
     "Me": {
-      "part1": "I am an experienced front-end developer with a proven track record in front-end development, critical thinking, and problem-solving. I have successfully architected and built numerous advanced, mobile-friendly, and scalable user interfaces using a wide variety of technologies.",
-      "part2": "My experience and ability to work with large and small teams, my desire for quality, and my ability to think creatively when standard methods fail have been instrumental in my success in developing large-scale consumer websites. I thrive in high-pressure environments, handling multiple responsibilities with ease, and I am adept at interacting with individuals at all levels.",
-      "part3": "As a passionate learner, I constantly seek to broaden my knowledge and grow. My career highlights include completely redesigning, re-architecting, and rebuilding existing websites, web designing, architecting, and building new SaaS products, and inventing new solutions to fix limitations in current UI libraries."
+      "part1": "Heath Bishop is a seasoned Front-End Web Development leader with over two decades of experience architecting and delivering innovative, high-performance digital solutions across industries, including healthcare, finance, education, and technology. Recognized for his deep technical expertise in React, JavaScript, TypeScript, and modern frameworks such as Next.js and AngularJS, Heath has consistently driven engineering excellence, user-focused design, and scalable front-end architectures in both startup and enterprise environments.",
+      "part2": "Throughout his career, Heath has served in strategic engineering roles where he not only built mission-critical applications, but also mentored development teams, established coding standards, and championed accessibility and usability. From leading multi-disciplinary teams at firms like Edward Jones, FlashPoint, and Kforce, to spearheading UI modernization projects using cutting-edge technologies and Agile practices, Heath has earned a reputation for transforming vision into execution while elevating team capabilities and user experience outcomes.",
+      "part3": "Heath’s unique blend of artistic training—holding an MFA in Interactive Media and a BFA in Graphic Design—and technical mastery allows him to bridge the gap between design and engineering, consistently delivering front-end experiences that are not only functional but intuitive and engaging. His leadership in building reusable component libraries, streamlining CI/CD pipelines, and advocating for test-driven development has resulted in faster releases, reduced defects, and improved team productivity.",
+      "part4": "Passionate about mentorship, continuous learning, and clean code, Heath remains at the forefront of front-end innovation, regularly pushing the boundaries of what digital products can deliver. A lifelong Eagle Scout, he brings the same dedication and discipline to his professional career—grounded in integrity, creativity, and an unwavering commitment to excellence."
     }
   },
   "Testimonials": {
@@ -32,7 +33,7 @@
 
     "StevenWilliams": {
       "name": "Steven Williams",
-      "quote": "It has been my pleasure and high honor to work with Heath Bishop.  He has shown himself professional and above reproach in all his performance and duties as a software developer.  Heath has been eager to learn and always held a positive attitude.  I have no doubt he will be an incredible asset wherever he finds himself.  Steven C. Williams President Master Key Interactive",
+      "quote": "It has been my pleasure and high honor to work with Heath Bishop.  He has shown himself professional and above reproach in all his performance and duties as a software developer.  Heath has been eager to learn and always held a positive attitude.  I have no doubt he will be an incredible asset wherever he finds himself.",
       "company": "Master Key Interactive"
     }
   }

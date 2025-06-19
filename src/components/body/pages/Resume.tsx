@@ -13,6 +13,7 @@ interface iClients {
 
 interface iExperience {
   company: string
+  contract: boolean
   position: string
   location: string
   date: string
@@ -43,27 +44,31 @@ const Resume = () => {
           <BluePanel key={exp.company} className="bluePanelExper">
             <div className="expRow">
               <div className="expColumn" style={{ color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700' }}>
-                {exp.position}
+                <span>{exp.position}</span>
               </div>
-              <div className="expColumn" style={{ textAlign: 'right', color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700' }}>
+              <div className="">| {exp.date}</div>
+            </div>
+            <div className="expRow" style={{ borderBottom: '1px solid #ffffff' }}>
+              <div className="expColumn" style={{ textAlign: 'right', textTransform: 'uppercase', fontWeight: '700' }}>
                 {exp.company}
               </div>
-            </div>
-            <div className="expRow" style={{ marginBottom: '20px', borderBottom: '1px solid #ffffff' }}>
-              <div className="expColumn">{exp.date}</div>
               <div className="expColumn" style={{ textAlign: 'right' }}>
-                {exp.location}
+                - {exp.location}
               </div>
+              <div style={{ display: exp.contract ? 'inline' : 'none' }}> - Contract</div>
             </div>
-            <div>{exp.description}</div>
-            <div style={{ padding: '10px' }}>{!clients && exp.details.map((det) => <div className="hbRow">&#x2022; {det}</div>)}</div>
-            {!clients && (
-              <div className="hbRow" style={{ marginTop: '20px' }}>
-                Skills: {exp.used}
-              </div>
-            )}
+            <div className="clients">
+              <div>{exp.description}</div>
+              <div style={{ padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' }}>{!clients && exp.details.map((det) => <div className="hbRow">&#x2022; {det}</div>)}</div>
+              {!clients && (
+                <div className="hbRow" style={{ marginTop: '20px' }}>
+                  Skills: {exp.used}
+                </div>
+              )}
+            </div>
+
             {exp.clients.map((c) => (
-              <div style={{ marginBottom: '20px' }} className="clients">
+              <div className="clients">
                 <div className="hbRow nameDescription">
                   <span style={{ fontWeight: '700', color: '#ffaf19' }}>{c.company}</span>
                   <span style={{ paddingLeft: '10px' }}>{c.description}</span>
@@ -117,10 +122,6 @@ const Resume = () => {
         <BluePanel key="resBP7" className="panels">
           <div className="sectionHeader-Line">Operating Systems</div>
           <div>{Data.Technologies['Operating Systems']}</div>
-        </BluePanel>
-        <BluePanel key="resBP8" width="98%">
-          <div className="sectionHeader-Line">Competencies</div>
-          <div>{Data.Competencies}</div>
         </BluePanel>
         <div className="sectionTitle">
           <span className="sectionText">EXPERIENCE</span>

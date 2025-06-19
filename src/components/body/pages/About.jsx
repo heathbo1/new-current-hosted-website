@@ -35,6 +35,9 @@ const About = ({ appRef }) => {
             <br />
             <br />
             {Data.About.Me.part3}
+            <br />
+            <br />
+            {Data.About.Me.part4}
           </div>
         </BluePanel>
       </div>
