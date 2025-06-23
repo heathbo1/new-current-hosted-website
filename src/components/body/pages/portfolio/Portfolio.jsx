@@ -7,14 +7,13 @@ import './Portfolio.scss'
 import Project from './Project'
 
 const Portfolio = ({ appRef }) => {
-  const [selected, setSelected] = useState(null)
+  const [selectedProj, setSelectedProj] = useState(null)
   const [selectedPictIndex, setSelectedPicIndex] = useState(0)
   const [projects, setProjects] = useState([])
 
   const setModal = (project) => {
-    console.log('project = ', project)
-    if (selected) {
-      setSelected(null)
+    if (selectedProj) {
+      setSelectedProj(null)
       setSelectedPicIndex(0)
     } else {
       const prod = {
@@ -27,9 +26,9 @@ const Portfolio = ({ appRef }) => {
       Object.values(project.images).forEach((value) => {
         prod.images.push(value)
       })
-      console.log('prod = ', prod)
-      setSelected(prod)
+      setSelectedProj(prod)
     }
+    window.getSelection().removeAllRanges() // Prevent auto selecting the main image.  Otherwise it might turn blue because it's selected.
   }
 
   useEffect(() => {
@@ -41,41 +40,59 @@ const Portfolio = ({ appRef }) => {
     setProjects(temp)
   }, [])
 
-  const selectImage = (e) => {
-    console.log('test = ', e.target.id)
-    if (e.target.id !== selectedPictIndex) {
-      setSelectedPicIndex(e.target.id)
+  const nextPreviousImage = (direction) => {
+    const imgLength = selectedProj.images.length - 1
+    const index = Number(selectedPictIndex)
+
+    if (direction === 'next') {
+      if (index + 1 <= imgLength) {
+        setSelectedPicIndex(index + 1)
+      } else {
+        setSelectedPicIndex(0)
+      }
     }
+    if (direction === 'previous') {
+      if (index - 1 >= 0) {
+        setSelectedPicIndex(index - 1)
+      } else {
+        setSelectedPicIndex(imgLength)
+      }
+    }
+  }
+
+  const selectImage = (e) => {
+    const index = Number(e.target.id)
+    setSelectedPicIndex(index)
   }
 
   return (
     <>
       <Modal
-        open={selected !== null}
+        open={selectedProj !== null}
         openClose={setModal}
         title={
-          selected && (
+          selectedProj && (
             <span>
-              <span>{`${selected.name}: `} </span>
-              <span style={{ color: '#ffffff' }}>{selected.client}</span>
+              <span>{`${selectedProj.name}: `} </span>
+              <span style={{ color: '#ffffff' }}>{selectedProj.client}</span>
             </span>
           )
         }
       >
-        {selected ? (
+        {selectedProj ? (
           <div className="imageDisplayContainer">
-            <div className="arrows left" />
-            <img className="portImageDisplay" src={'/src/components/body/pages/portfolio/images/' + selected.images[selectedPictIndex]} />
-            <div className="arrows right" />
+            <div className="arrows left" onClick={() => nextPreviousImage('previous')} />
+            <img id="mainPortImage" className="portImageDisplay" src={'/src/components/body/pages/portfolio/images/' + selectedProj.images[selectedPictIndex]} />
+            <div className="arrows right" onClick={() => nextPreviousImage('next')} />
           </div>
         ) : (
           <div />
         )}
 
         <div className="snapshots">
-          {selected &&
-            selected.images.length > 1 &&
-            selected.images.map((value, i) => {
+          {selectedProj &&
+            selectedProj.images.length > 1 &&
+            selectedProj.images.map((value, i) => {
               return (
                 <img id={i} onClick={selectImage} style={Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' }} className="snapshot" src={'/src/components/body/pages/portfolio/images/' + value} />
               )

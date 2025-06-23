@@ -26,9 +26,21 @@
 
   .left {
     border-color: transparent #ffffff transparent transparent;
+    cursor: pointer;
+    text-shadow: 5px 5px 5px #00000047;
+    filter: drop-shadow(2px 4px 6px black);
   }
+  .left:hover {
+    border-color: transparent #ffaf19 transparent transparent;
+  }
+
   .right {
     border-color: transparent transparent transparent #ffffff;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+  .right:hover {
+    border-color: transparent transparent transparent #ffaf19;
   }
 }
 
@@ -46,9 +58,15 @@
   width: 100%;
 }
 
-.infoHalf {
-  width: 50%;
-  display: inline-block;
+.infoContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .infoHalf {
+    width: 50%;
+    display: inline-block;
+  }
 }
 
 .portImageContainer {
@@ -128,7 +146,7 @@
           background-color: rgba(0, 0, 0, 0);
           color: #ffffff;
           border: none;
-          font-size: 1.5em;
+          font-size: 2em;
         }
         .closeBtn:hover {
           color: #ffaf19;
