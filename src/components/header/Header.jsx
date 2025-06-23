@@ -124,15 +124,10 @@ const Header = (scrollDist) => {
 
   return (
     <Navbar className="header navbar-expand-lg" style={{ height: headerMin ? '50px' : '75px' }}>
-      <Container fluid style={headerMin ? minStyle : normStyle}>
+      <Container id="header-container" fluid style={headerMin ? minStyle : normStyle}>
         <NavLink className={'navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
             <Logo scrollDist={scrollDist.scrollDist} />
-            {/* <img id="HBLogo" style={{ display: headerMin ? 'none' : 'block' }} src={LogoName} alt="Logo" /> */}
-            {/* <div className="logoNameContainer" style={headerMin ? nameStyle : { display: 'none' }}>
-              <img src={Icon} alt="Logo" style={{ height: '39px' }} />
-              <img src={Name} alt="Name" />
-            </div> */}
           </div>
         </NavLink>
         <div className="headerNavigation">
@@ -151,7 +146,12 @@ const Header = (scrollDist) => {
             </Col>
           </div>
           <CollapseMenu headermin={headerMin} />
+          <button className="info-icon">
+            <i>i</i>
+            <span class="tooltiptext">About this site</span>
+          </button>
         </div>
+
         <canvas id="headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: canvOpacity ? 1 : 0 }} />
       </Container>
     </Navbar>

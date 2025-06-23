@@ -10,7 +10,7 @@ const Comet = ({ height, width, cometNumber }) => {
   let comet = null
 
   useEffect(() => {
-    setInterval(drawComets, 50)
+    setInterval(drawComets, 25)
     // const delay = Math.random() * 1000
 
     // setTimeout(() => {
@@ -36,9 +36,11 @@ const Comet = ({ height, width, cometNumber }) => {
       comet.x -= comet.vx
       comet.y += comet.vy
 
-      cometsCtx.clearRect(0, 0, current.width, current.height)
+      cometsCtx.clearRect(1, 10, current.width, current.height)
       comet.draw(cometsCtx)
+
       if (comet.y > height || comet.x > width) {
+        // If below city
         let cometDelay = setTimeout(
           () => {
             cometsCtx.clearRect(0, 0, width, height)

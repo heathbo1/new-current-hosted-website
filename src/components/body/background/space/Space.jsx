@@ -18,14 +18,6 @@ const Space = ({ city }) => {
 
   useEffect(() => {
     drawStars()
-    // const cityTimeOut = setTimeout(() => {
-    //   //   const spaceUnder = window.innerHeight - (98 + city.current.offsetHeight)
-    //   //   console.log('spaceUnder == ', spaceUnder)
-    //   //   setHeight(window.innerHeight) // - (98 + spaceUnder))
-
-    //   drawStars()
-    //   clearTimeout(cityTimeOut)
-    // }, 0)
   }, [stars])
 
   useLayoutEffect(() => {

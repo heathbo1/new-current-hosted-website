@@ -56,6 +56,61 @@ $hover-orange: #ffaf19;
   width: 100%;
   transition: height 250ms;
 
+  #header-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4392156863);
+  }
+
+  .info-icon {
+    background-color: #00000000;
+    color: #ffffff;
+    height: 20px;
+    line-height: 10px;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    margin-top: 10px;
+    position: relative;
+
+    .tooltiptext {
+      visibility: hidden;
+      width: 150px;
+      background-color: rgba(0, 92, 138);
+      color: #ffffff;
+      text-align: center;
+      padding: 7px;
+      border-radius: 6px;
+      // border: 1px solid rgb(39, 186, 233);
+      // border-right: 2px solid rgb(39, 186, 233);
+      top: -5px;
+      right: 30px;
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 1;
+      font-size: 1rem;
+    }
+  }
+
+  .info-icon:hover {
+    color: $hover-orange;
+    border-left: 2px solid $hover-orange;
+    border-right: 2px solid $hover-orange;
+  }
+
+  .info-icon:hover .tooltiptext {
+    visibility: visible;
+  }
+  .info-icon .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(0, 92, 138);
+  }
+
   .headerNavigation {
     z-index: 1;
     width: 100%;
@@ -73,7 +128,9 @@ $hover-orange: #ffaf19;
     }
 
     a {
-      transition: margin-top 225ms ease-in;
+      transition:
+        margin-top 225ms ease-in,
+        font-size 225ms ease-in;
     }
 
     #dropDownMenu {
@@ -153,8 +210,11 @@ $hover-orange: #ffaf19;
     }
   }
   .headerNavigation .headerButtonsRow a:hover {
-    margin-top: -5px;
-    transition: margin-top 225ms ease-in;
+    margin-top: -7px;
+    font-size: 1.35rem;
+    transition:
+      margin-top 225ms ease-in,
+      font-size 225ms ease-in;
   }
   canvas {
     position: absolute !important;
@@ -214,6 +274,8 @@ $hover-orange: #ffaf19;
   @extend .navLink;
   color: $hover-orange !important;
   text-shadow: 0 1px 5px #000000;
+  margin-top: -7px;
+  font-size: 1.35rem;
 }
 
 .navLinkIcon {

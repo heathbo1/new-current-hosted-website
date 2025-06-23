@@ -12,7 +12,7 @@ const GenerateNewComet = (canvasWidth, canvasHeight) => {
   }
 
   addVelocity(comet)
-  comet.radius = getRandomIntInclusive(4, 5)
+  comet.radius = getRandomIntInclusive(1, 5)
   let fillStyle = getRandomFillStyle()
 
   comet.draw = (ctx) => {
@@ -38,7 +38,7 @@ function getRandomFillStyle() {
 }
 
 function addVelocity(comet) {
-  comet.vx = getRandomIntInclusive(0.25, 0.5)
+  comet.vx = getRandomIntInclusive(1, 15)
   comet.vy = comet.vx + 1
 }
 

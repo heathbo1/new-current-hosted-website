@@ -23,8 +23,8 @@ const App = () => {
   return (
     <BrowserRouter basename="/">
       <Provider>
-        <Header scrollDist={scrollDist} />
         <div id="fullContainer">
+          <Header scrollDist={scrollDist} />
           <div id="pageContainer" ref={ref} onScroll={scrolling}>
             <Routes>
               <Route index element={<Home />} />
@@ -33,7 +33,6 @@ const App = () => {
               <Route path="/portfolio" element={<Portfolio appRef={ref} />} />
               <Route path="/connect" element={<Connect />} />
             </Routes>
-            {/* <Footer /> */}
           </div>
           <Background />
         </div>

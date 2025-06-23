@@ -3,11 +3,33 @@
   box-shadow: 5px 5px 5px #00000047;
   //   max-width: 100%;
 }
-
-.infoContainer {
+.imageDisplayContainer {
+  padding: 10px;
   display: flex;
+  align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  .portImageDisplay {
+    height: 60vh;
+    box-shadow: 5px 5px 5px #00000047;
+    flex-direction: column;
+  }
+
+  .arrows {
+    border-width: 30px;
+    border-style: solid;
+    flex-direction: column;
+
+    content: '';
+  }
+
+  .left {
+    border-color: transparent #ffffff transparent transparent;
+  }
+  .right {
+    border-color: transparent transparent transparent #ffffff;
+  }
 }
 
 .photoHalf {
@@ -33,22 +55,166 @@
   display: flex;
   cursor: pointer;
 }
-
-.portPanel {
-  //   min-width: 735px;
-}
+//
+// ===== Modal ======
 
 .modalBackdrop {
+  opacity: 0.5;
   z-index: 1050;
   background-color: #000000;
-  opacity: 0.5;
   height: 100vh;
-  width: 100vw;
   left: 0;
-  top: 0;
-  transition: opacity 0.15s linear;
   position: fixed;
+  top: 0;
+  width: 100vw;
+  transition: opacity 0.15s linear;
+  display: block;
 }
+
+.modal {
+  width: 500px;
+  padding: 1rem;
+  height: 100%;
+  left: 0;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1055;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modalDialog {
+    transform: none;
+    transition: transform 0.3s ease-out;
+    // margin: 7rem auto;
+    // max-width: 1244px;
+    pointer-events: none;
+    position: relative;
+    width: auto;
+    display: block;
+
+    .modalContent {
+      display: flex;
+      flex-direction: column;
+      pointer-events: auto;
+      position: relative;
+      width: 100%;
+
+      .modalHeader {
+        border-bottom: 1.5px solid #ffffff;
+        pointer-events: auto;
+        display: flex;
+        flex-shrink: 0;
+        .modalTitle {
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          flex-shrink: 0;
+          pointer-events: auto;
+          width: 100%;
+          color: #ffaf19;
+          font-weight: bold;
+        }
+        .titleContent {
+          display: flex;
+          flex-direction: column;
+        }
+        .closeBtn {
+          background-clip: border-box;
+          background-color: rgba(0, 0, 0, 0);
+          color: #ffffff;
+          border: none;
+          font-size: 1.5em;
+        }
+        .closeBtn:hover {
+          color: #ffaf19;
+          font-weight: bold;
+          text-shadow:
+            2px 2px 3px #004669,
+            2px 2px 5px #000000;
+        }
+      }
+    }
+
+    .snapshots {
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      .snapshot {
+        width: 200px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+
+// .modalBackdrop {
+//   z-index: 100;
+//   //   background-color: #00000084;
+//   display: flex;
+//   height: 100vh;
+//   width: 100vw;
+//   left: 0;
+//   top: 0;
+//   transition: opacity 0.15s linear;
+//   position: absolute;
+
+//   .modalBlack {
+//     height: 100vh;
+//     width: 100vw;
+//     left: 0;
+//     top: 0;
+//     background-color: #00000084;
+//     position: absolute;
+//   }
+
+//   //   .modal-wrapper {
+//   //     pointer-events: none;
+//   //     position: absolute;
+//   //     z-index: 120;
+
+//   .modal-content {
+//     pointer-events: none;
+//     width: 100%;
+//     margin: 0 auto;
+//     margin-top: 10%;
+
+//     .modal-header {
+//       border-bottom: 1.5px solid #ffffff;
+//       pointer-events: auto;
+//       .modal-title {
+//         align-items: center;
+//         display: flex;
+//         flex-direction: row;
+//         flex-shrink: 0;
+//         padding: 0 1rem 1rem 1rem;
+//         pointer-events: auto;
+//         width: 100%;
+//       }
+//       .title-content {
+//         display: flex;
+//         flex-direction: column;
+//       }
+//       .closeBtn {
+//         background-clip: border-box;
+//         background-color: rgba(0, 0, 0, 0);
+//         color: #ffffff;
+//         border: none;
+//         font-size: 1.5em;
+//       }
+//     }
+//   }
+//   //   }
+// }
 
 // 1300px or less
 @media screen and (max-width: 1300px) {

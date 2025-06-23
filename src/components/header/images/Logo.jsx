@@ -6,10 +6,6 @@ import HeathBishop from './New Name Logo/HeathBishop.svg'
 
 export const Logo = (scrollDist) => {
   const [min, setMin] = useState(false)
-  console.log('scrollDist = ', scrollDist.scrollDist)
-
-  //   const scroll = scrollDist.scrollDist >= 10 ? false : true
-  //   console.log('test = ', scroll)
 
   useEffect(() => {
     if (scrollDist.scrollDist >= 10) {

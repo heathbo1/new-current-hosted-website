@@ -14,24 +14,22 @@ interface idata {
 interface iProject {
   key: string
   data: idata
-  modalOpen: () => void
+  modalOpen: (data: idata) => void
 }
 
 const Project = ({ key, data, modalOpen }: iProject) => {
-  const [images, setImages] = useState([])
+  const [images, setImages] = useState<any>([])
 
   const openModal = () => {
-    console.log('modalOpen = ', modalOpen)
-    modalOpen()
+    modalOpen(data)
   }
 
   useEffect(() => {
-    const temp = []
+    const temp: any[] = []
 
     for (const key in data.images) {
       const style = {
         zIndex: Object.keys(data.images).length - Number(key),
-        position: 'relative',
       }
       temp.push(
         <div className="portImageContainer">
@@ -39,15 +37,15 @@ const Project = ({ key, data, modalOpen }: iProject) => {
         </div>
       )
     }
-    // @ts-ignore
+
     setImages(temp)
   }, [])
 
   return (
     <BluePanel key={key} className="panels portPanel">
       <div className="sectionHeader-Line" style={{ display: 'flex' }}>
-        <div style={{ width: '50%' }}>{data.name}</div>
-        <div style={{ width: '50%', textAlign: 'right', color: '#ffffff' }}>{data.client}</div>
+        <div>{data.name}</div>
+        <div style={{ position: 'absolute', right: '15px', textAlign: 'right', color: '#ffffff' }}>{data.client}</div>
       </div>
       <div className="infoContainer">
         <div className="infoHalf">
