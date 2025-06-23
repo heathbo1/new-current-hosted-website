@@ -6,7 +6,7 @@ import CollapseMenu from './collapseMenu'
 import './header.scss'
 import { Logo } from './images/Logo'
 
-const Header = (scrollDist) => {
+const Header = (scrollDist, showAbout) => {
   const [btn, btnClick] = useState('')
   const [headerMin, setHeaderMin] = useState(false)
   const [canvOpacity, setcanvOpacity] = useState(false)
@@ -30,7 +30,7 @@ const Header = (scrollDist) => {
       }
     }
   }
-
+  console.log('showAbout = ', typeof showAbout)
   useEffect(() => {
     const fillHeader = () => {
       const ctx = headerCanvas.getContext('2d')
@@ -57,11 +57,16 @@ const Header = (scrollDist) => {
     }
     fillHeader()
 
-    const logo = document.getElementById('logoBtn')
-    logo.onclick = () => {
-      btnClick('')
-    }
+    // const logo = document.getElementById('logoBtn')
+    // logo.onclick = () => {
+    //   btnClick('')
+    // }
   }, [])
+
+  const showModal = () => {
+    console.log('showModal')
+    showAbout()
+  }
 
   useEffect(() => {
     if (scrollDist.scrollDist >= 10) {
@@ -103,11 +108,6 @@ const Header = (scrollDist) => {
   }
   // --------------------------------------------------------------------
 
-  const nameStyle = {
-    width: '342px',
-    lineHeight: '50px',
-  }
-
   const minStyle = {
     height: '50px',
     maxWidth: '1786px',
@@ -146,7 +146,7 @@ const Header = (scrollDist) => {
             </Col>
           </div>
           <CollapseMenu headermin={headerMin} />
-          <button className="info-icon">
+          <button className="info-icon" onClick={showModal}>
             <i>i</i>
             <span class="tooltiptext">About this site</span>
           </button>

@@ -1,7 +1,9 @@
 #satellite {
+  width: 100vw;
   min-width: 1102px;
   position: absolute;
   max-width: 1782px;
+  filter: blur();
 }
 
 #starsCanvas {

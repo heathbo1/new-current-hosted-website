@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
-import BluePanel from '../compnents/BluePanel'
-import './Portfolio'
+import '../portfolio/Portfolio'
+import BluePanel from './BluePanel'
 
 interface iModal {
   open: boolean
@@ -12,7 +12,6 @@ interface iModal {
 const Modal = ({ open, openClose, children, title }: iModal) => {
   //fsd
   const close = () => {
-    console.log('open close')
     openClose()
   }
 

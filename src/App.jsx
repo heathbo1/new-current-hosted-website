@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.scss'
 import Background from './components/body/background/Background'
 import About from './components/body/pages/About'
+import Modal from './components/body/pages/compnents/Modal'
 import Connect from './components/body/pages/Connect'
 import Home from './components/body/pages/Home'
 import Portfolio from './components/body/pages/portfolio/Portfolio'
@@ -13,9 +14,14 @@ import Header from './components/header/Header'
 
 const App = () => {
   const [scrollDist, setScrollDist] = useState(0)
+  const [showAbout, setShowAbout] = useState(false)
 
   const scrolling = (e) => {
     setScrollDist(e.target.scrollTop)
+  }
+
+  const openCloseAboutModal = () => {
+    setShowAbout(!showAbout)
   }
 
   const ref = useRef()
@@ -24,7 +30,10 @@ const App = () => {
     <BrowserRouter basename="/">
       <Provider>
         <div id="fullContainer">
-          <Header scrollDist={scrollDist} />
+          <Modal open={showAbout} openClose={openCloseAboutModal} title={'About This Site'}>
+            Testing 123
+          </Modal>
+          <Header scrollDist={scrollDist} showAbout={openCloseAboutModal} />
           <div id="pageContainer" ref={ref} onScroll={scrolling}>
             <Routes>
               <Route index element={<Home />} />

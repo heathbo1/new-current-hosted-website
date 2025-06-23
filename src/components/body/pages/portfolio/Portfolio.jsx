@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import '../../Body.scss'
+import Modal from '../compnents/Modal'
 import '../Pages.scss'
 import dataJSON from './data.json'
-import Modal from './Modal'
 import './Portfolio.scss'
 import Project from './Project'
 
