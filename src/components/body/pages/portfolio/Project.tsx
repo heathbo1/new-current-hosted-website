@@ -44,15 +44,15 @@ const Project = ({ key, data, modalOpen }: iProject) => {
   return (
     <BluePanel key={key} className="panels portPanel">
       <div className="sectionHeader-Line" style={{ display: 'flex' }}>
-        <div>{data.name}</div>
-        <div style={{ position: 'absolute', right: '15px', textAlign: 'right', color: '#ffffff' }}>{data.client}</div>
+        <div style={{ width: '60%' }}>{data.name}</div>
+        <div style={{ right: '15px', textAlign: 'right', color: '#ffffff', width: '50%' }}>{data.client}</div>
       </div>
       <div className="infoContainer">
         <div className="infoHalf">
           <div>
             <b>Technologies Used:</b> {data.technology}
           </div>
-          <div>{data.description}</div>
+          <div className="infoDescript">{data.description}</div>
         </div>
         <div className="photoHalf">
           <div className="photoPlacer">{images}</div>

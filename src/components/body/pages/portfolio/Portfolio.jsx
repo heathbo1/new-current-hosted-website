@@ -28,7 +28,7 @@ const Portfolio = ({ appRef }) => {
       })
       setSelectedProj(prod)
     }
-    window.getSelection().removeAllRanges() // Prevent auto selecting the main image.  Otherwise it might turn blue because it's selected.
+    // window.getSelection().removeAllRanges() // Prevent auto selecting the main image.  Otherwise it might turn blue because it's selected.
   }
 
   useEffect(() => {
@@ -81,15 +81,19 @@ const Portfolio = ({ appRef }) => {
       >
         {selectedProj ? (
           <div className="imageDisplayContainer">
-            <div className="arrows left" onClick={() => nextPreviousImage('previous')} />
+            <div className="arrowCoverLeft">
+              <div className="arrows left" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('previous')} />
+            </div>
             <img id="mainPortImage" className="portImageDisplay" src={'/src/components/body/pages/portfolio/images/' + selectedProj.images[selectedPictIndex]} />
-            <div className="arrows right" onClick={() => nextPreviousImage('next')} />
+            <div className="arrowCoverRight">
+              <div className="arrows right" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('next')} />
+            </div>
           </div>
         ) : (
           <div />
         )}
 
-        <div className="snapshots">
+        <div className="snapshots" style={{ display: selectedProj && selectedProj.images && selectedProj.images.length > 1 ? 'flex' : 'none' }}>
           {selectedProj &&
             selectedProj.images.length > 1 &&
             selectedProj.images.map((value, i) => {

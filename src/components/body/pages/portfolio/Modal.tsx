@@ -19,7 +19,8 @@ const Modal = ({ open, openClose, children, title }: iModal) => {
   return (
     <>
       <div className="modalBackdrop" style={{ display: `${open ? 'block' : 'none'}` }} onClick={close} />
-      <div role="dialog" className="fade modal show" tabIndex={-1} style={{ display: `${open ? 'flex' : 'none'}` }}>
+      <div role="dialog" className="fade customModal show" tabIndex={-1} style={{ display: `${open ? 'flex' : 'none'}` }}>
+        <div className="clickBackdrop" onClick={close} />
         <div className="modalDialog">
           <BluePanel className="modalContent">
             <div className="modalHeader">

@@ -56,7 +56,7 @@
     "images": ["GoldCorp/GoldCorp1.jpg", "GoldCorp/GoldCorp2.jpg", "GoldCorp/GoldCorp3.jpg", "GoldCorp/GoldCorp4.jpg"]
   },
   "9": {
-    "name": "Interactive Equipment Selection Tool",
+    "name": "Equipment Selection Tool",
     "client": "Coca-Cola",
     "technology": "Adobe Flash, Adobe Air",
     "description": "An iPad and Windows application designed to help Coco-Cola's salesforce find the right equipment to meet their customer's needs.",

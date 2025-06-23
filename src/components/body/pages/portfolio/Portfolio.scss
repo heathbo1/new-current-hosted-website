@@ -10,10 +10,27 @@
   flex-direction: row;
   justify-content: center;
   gap: 10px;
+  user-select: none;
+
   .portImageDisplay {
     height: 60vh;
     box-shadow: 5px 5px 5px #00000047;
     flex-direction: column;
+    object-fit: cover;
+  }
+
+  .arrowCoverLeft {
+    position: relative;
+    width: 15px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .arrowCoverRight {
+    position: relative;
+    width: 15px;
+    display: flex;
+    justify-content: start;
   }
 
   .arrows {
@@ -27,20 +44,19 @@
   .left {
     border-color: transparent #ffffff transparent transparent;
     cursor: pointer;
-    text-shadow: 5px 5px 5px #00000047;
-    filter: drop-shadow(2px 4px 6px black);
+    filter: brightness(0.65);
   }
   .left:hover {
-    border-color: transparent #ffaf19 transparent transparent;
+    filter: brightness(1) drop-shadow(2px 4px 6px black);
   }
 
   .right {
     border-color: transparent transparent transparent #ffffff;
     cursor: pointer;
-    filter: drop-shadow(2px 4px 6px black);
+    filter: brightness(0.65);
   }
   .right:hover {
-    border-color: transparent transparent transparent #ffaf19;
+    filter: brightness(1) drop-shadow(2px 4px 6px black);
   }
 }
 
@@ -48,25 +64,29 @@
   width: 50%;
   //   display: grid;
   grid-template-columns: calc(45vw - 300px) 35%;
-  display: inline-block;
+  display: flex;
+  justify-content: end;
 }
 
 .photoPlacer {
   display: grid;
   grid-template-columns: repeat(4, 10px [col-start]);
-  //   grid-column-start: 2;
-  width: 100%;
+  width: 270px;
 }
 
 .infoContainer {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+}
 
-  .infoHalf {
-    width: 50%;
-    display: inline-block;
-  }
+.infoHalf {
+  width: 50%;
+  display: inline-block;
+}
+
+.infoDescript {
+  padding-top: 10px;
 }
 
 .portImageContainer {
@@ -89,7 +109,7 @@
   display: block;
 }
 
-.modal {
+.customModal {
   width: 500px;
   padding: 1rem;
   height: 100%;
@@ -163,11 +183,18 @@
       display: flex;
       flex-direction: row;
       gap: 10px;
+      overflow: scroll;
       .snapshot {
         width: 200px;
         cursor: pointer;
       }
     }
+  }
+
+  .clickBackdrop {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
   }
 }
 
@@ -175,64 +202,16 @@
   transition: opacity 0.15s linear;
 }
 
-// .modalBackdrop {
-//   z-index: 100;
-//   //   background-color: #00000084;
-//   display: flex;
-//   height: 100vh;
-//   width: 100vw;
-//   left: 0;
-//   top: 0;
-//   transition: opacity 0.15s linear;
-//   position: absolute;
+@media screen and (max-width: 1230px) {
+  .customModal .modalDialog {
+    width: 100%;
+  }
 
-//   .modalBlack {
-//     height: 100vh;
-//     width: 100vw;
-//     left: 0;
-//     top: 0;
-//     background-color: #00000084;
-//     position: absolute;
-//   }
-
-//   //   .modal-wrapper {
-//   //     pointer-events: none;
-//   //     position: absolute;
-//   //     z-index: 120;
-
-//   .modal-content {
-//     pointer-events: none;
-//     width: 100%;
-//     margin: 0 auto;
-//     margin-top: 10%;
-
-//     .modal-header {
-//       border-bottom: 1.5px solid #ffffff;
-//       pointer-events: auto;
-//       .modal-title {
-//         align-items: center;
-//         display: flex;
-//         flex-direction: row;
-//         flex-shrink: 0;
-//         padding: 0 1rem 1rem 1rem;
-//         pointer-events: auto;
-//         width: 100%;
-//       }
-//       .title-content {
-//         display: flex;
-//         flex-direction: column;
-//       }
-//       .closeBtn {
-//         background-clip: border-box;
-//         background-color: rgba(0, 0, 0, 0);
-//         color: #ffffff;
-//         border: none;
-//         font-size: 1.5em;
-//       }
-//     }
-//   }
-//   //   }
-// }
+  .imageDisplayContainer .portImageDisplay {
+    height: auto;
+    width: 90%;
+  }
+}
 
 // 1300px or less
 @media screen and (max-width: 1300px) {
@@ -241,10 +220,23 @@
   }
   .photoHalf {
     width: 100%;
+    justify-content: center;
   }
 
   .photoPlacer {
     padding-left: 0px;
     padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 729px) {
+  .panels {
+    width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .panels {
+    width: 100% !important;
   }
 }
