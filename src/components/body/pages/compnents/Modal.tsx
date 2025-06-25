@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
-import '../portfolio/Portfolio'
 import BluePanel from './BluePanel'
+import './Components.scss'
 
 interface iModal {
   open: boolean

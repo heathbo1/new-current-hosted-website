@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import './BluePanel.scss'
+import './Components.scss'
 
 interface WrapperProps {
   children: ReactNode
