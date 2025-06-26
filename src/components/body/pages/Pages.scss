@@ -125,6 +125,13 @@
   }
 }
 
+.connectPage {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 1297px) {
   .aboutStyle {
     .aboutContainer {
@@ -163,11 +170,6 @@
     width: 100% !important;
   }
 }
-
-// .bluePanelScroll {
-//   //   max-height: calc(100vh - 165px);
-//   //   height: 88%;
-// }
 
 ::-webkit-scrollbar {
   -webkit-appearance: none;
