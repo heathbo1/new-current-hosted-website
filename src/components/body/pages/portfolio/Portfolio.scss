@@ -113,16 +113,15 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
-  .modal-lg,
-  .modal-xl {
+@media (min-width: 992px) {
+  .modal-dialog {
     --bs-modal-width: 1000px !important;
   }
 }
 
 @media (min-width: 576px) {
   .modal-dialog {
-    --bs-modal-width: 98% !important;
+    --bs-modal-width: 98%;
   }
 }
 

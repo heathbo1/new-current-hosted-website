@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import BluePanel from '../compnents/BluePanel'
+import BluePanel from '../components/BluePanel'
 import '../Pages.scss'
 import './portfolio.scss'
 

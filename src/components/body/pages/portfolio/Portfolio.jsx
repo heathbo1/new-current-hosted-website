@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import '../../Body.scss'
-import Modal from '../compnents/Modal'
+import Modal from '../components/Modal'
 import '../Pages.scss'
 import dataJSON from './data.json'
 import './Portfolio.scss'
@@ -78,6 +78,7 @@ const Portfolio = ({ appRef }) => {
             </span>
           )
         }
+        style={{ maxWidth: '1250px' }}
       >
         {selectedProj ? (
           <div className="imageDisplayContainer">

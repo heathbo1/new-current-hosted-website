@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import '../Body.scss'
-import BluePanel from './compnents/BluePanel'
+import BluePanel from './components/BluePanel'
 import Data from './data/resume.json'
 import './Pages.scss'
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../body.scss'
 import './Pages.scss'
+import BluePanel from './components/BluePanel'
 
 const Home = () => {
   const [opacity1, setOpacity1] = useState(0)
@@ -32,9 +33,9 @@ const Home = () => {
           <span className="titleText">Imagination</span>
         </p>
         <p className="aboutStyle" style={{ opacity: opacity4 }}>
-          <span className="aboutContainer">
+          <BluePanel className="aboutContainer bluePanel75">
             Heath’s unique blend of artistic training and technical mastery allows him to bridge the gap between design and engineering, consistently delivering front-end experiences that are not only functional but intuitive and engaging.
-          </span>
+          </BluePanel>
         </p>
       </div>
     </div>

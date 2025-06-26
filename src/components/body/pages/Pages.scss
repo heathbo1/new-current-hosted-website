@@ -105,19 +105,25 @@
   .aboutStyle {
     transition: opacity 3s;
     display: flex;
-    gap: 10px;
-    flex-grow: 1;
-    justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
     .aboutContainer {
       border: 1px solid #ffffff70;
       padding: 20px;
       border-radius: 5px;
-      font-size: 1.25em;
+      font-size: 1em;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      margin: 40px;
-      background-color: #000000c7;
-      //   width: 50%;
+      margin: 20px 40px;
+      background: linear-gradient(-45deg, rgb(0, 32, 48, 0.75), rgba(0, 92, 138, 0.75) 40%, rgba(0, 88, 133, 0.75) 65%, rgba(0, 32, 48, 0.75));
+      min-height: 100px;
+      width: 405px;
+    }
+  }
+}
+
+@media screen and (max-width: 1297px) {
+  .aboutStyle {
+    .aboutContainer {
+      background: linear-gradient(-45deg, rgb(0, 32, 48, 0.9), rgba(0, 92, 138, 0.9) 40%, rgba(0, 88, 133, 0.9) 65%, rgba(0, 32, 48, 0.9)) !important;
     }
   }
 }
