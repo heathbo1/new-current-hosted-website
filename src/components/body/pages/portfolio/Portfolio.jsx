@@ -84,7 +84,7 @@ const Portfolio = ({ appRef }) => {
             <div className="arrowCoverLeft">
               <div className="arrows left" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('previous')} />
             </div>
-            <div>
+            <div className="imgContainer">
               <img id="mainPortImage" className="portImageDisplay" src={'/src/components/body/pages/portfolio/images/' + selectedProj.images[selectedPictIndex]} />
             </div>
             <div className="arrowCoverRight">

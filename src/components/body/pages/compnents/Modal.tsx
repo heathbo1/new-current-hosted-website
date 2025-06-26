@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Modal from 'react-bootstrap/Modal'
 import BluePanel from './BluePanel'
 import './Components.scss'
 
@@ -7,37 +8,35 @@ interface iModal {
   openClose: () => void
   children: ReactNode
   title: any
+  size: string
 }
 
-const Modal = ({ open, openClose, children, title }: iModal) => {
+const ModalComponent = ({ open, openClose, children, title }: iModal) => {
   //fsd
   const close = () => {
     openClose()
   }
-
+  // --bs-modal-width: 1000px;
   return (
     <>
-      <div className="modalBackdrop" style={{ display: `${open ? 'block' : 'none'}` }} onClick={close} />
-      <div role="dialog" className="fade customModal show" tabIndex={-1} style={{ display: `${open ? 'flex' : 'none'}` }}>
-        <div className="clickBackdrop" onClick={close} />
-        <div className="modalDialog">
-          <BluePanel className="modalContent">
-            <div className="modalHeader">
-              <div className="titleContent">
-                <div className="modalTitle h5">{title}</div>
-              </div>
-              <div className="titleContent" style={{ position: 'absolute', right: '0px', top: '1px' }}>
-                <button type="button" aria-label="Close" className="closeBtn" onClick={close}>
-                  &times;
-                </button>
-              </div>
+      // @ts-ignore
+      <Modal show={open} onHide={close} size="xl" className="mw-100">
+        <BluePanel className="modalContent">
+          <div className="modalHeader">
+            <div className="titleContent">
+              <div className="modalTitle h5">{title}</div>
             </div>
-            {children}
-          </BluePanel>
-        </div>
-      </div>
+            <div className="titleContent" style={{ position: 'absolute', right: '0px', top: '1px' }}>
+              <button type="button" aria-label="Close" className="closeBtn" onClick={close}>
+                &times;
+              </button>
+            </div>
+          </div>
+          <Modal.Body>{children}</Modal.Body>
+        </BluePanel>
+      </Modal>
     </>
   )
 }
 
-export default Modal
+export default ModalComponent

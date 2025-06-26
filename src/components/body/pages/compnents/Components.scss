@@ -35,121 +35,121 @@
   min-height: 50px !important;
 }
 
-.modalBackdrop {
-  opacity: 0.5;
-  z-index: 1050;
-  background-color: #000000;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  transition: opacity 0.15s linear;
-  display: block;
-}
+// .modalBackdrop {
+//   opacity: 0.5;
+//   z-index: 1050;
+//   background-color: #000000;
+//   height: 100vh;
+//   left: 0;
+//   position: fixed;
+//   top: 0;
+//   width: 100vw;
+//   transition: opacity 0.15s linear;
+//   display: block;
+// }
 
 // ===== Modal
-.customModal {
-  width: 500px;
-  padding: 1rem;
-  height: 100%;
-  left: 0;
-  outline: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1055;
+// .customModal {
+//   width: 500px;
+//   padding: 1rem;
+//   height: 100%;
+//   left: 0;
+//   outline: 0;
+//   overflow-x: hidden;
+//   overflow-y: hidden;
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   z-index: 1055;
+//   display: flex;
+//   // align-items: center;
+//   justify-content: center;
+//   padding-top: 75px;
+
+// .modalDialog {
+//   transform: none;
+//   transition: transform 0.3s ease-out;
+//   // margin: 7rem auto;
+//   // max-width: 1244px;
+//   pointer-events: none;
+//   position: relative;
+//   width: auto;
+//   display: block;
+
+// .modalContent {
+//   display: flex;
+//   flex-direction: column;
+//   pointer-events: auto;
+//   position: relative;
+//   width: 100%;
+
+.modal-header {
+  border-bottom: 1.5px solid #ffffff;
+  pointer-events: auto;
   display: flex;
-  // align-items: center;
-  justify-content: center;
-  padding-top: 96px;
+  flex-shrink: 0;
+}
+// }
 
-  .modalDialog {
-    transform: none;
-    transition: transform 0.3s ease-out;
-    // margin: 7rem auto;
-    // max-width: 1244px;
-    pointer-events: none;
-    position: relative;
-    width: auto;
-    display: block;
-
-    .modalContent {
-      display: flex;
-      flex-direction: column;
-      pointer-events: auto;
-      position: relative;
-      width: 100%;
-
-      .modalHeader {
-        border-bottom: 1.5px solid #ffffff;
-        pointer-events: auto;
-        display: flex;
-        flex-shrink: 0;
-        .modalTitle {
-          align-items: center;
-          display: flex;
-          flex-direction: row;
-          flex-shrink: 0;
-          pointer-events: auto;
-          width: 100%;
-          color: #ffaf19;
-          font-weight: bold;
-        }
-        .titleContent {
-          display: flex;
-          flex-direction: column;
-        }
-        .closeBtn {
-          background-clip: border-box;
-          background-color: rgba(0, 0, 0, 0);
-          color: #ffffff;
-          border: none;
-          font-size: 2em;
-        }
-        .closeBtn:hover {
-          color: #ffaf19;
-          font-weight: bold;
-          text-shadow:
-            2px 2px 3px #004669,
-            2px 2px 5px #000000;
-        }
-      }
-    }
-
-    .snapshots {
-      padding: 10px;
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      overflow: auto;
-      .snapshot {
-        width: 200px;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .clickBackdrop {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
+.modalTitle {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  pointer-events: auto;
+  width: 100%;
+  color: #ffaf19 !important;
+  font-weight: bold;
+}
+.titleContent {
+  display: flex;
+  flex-direction: column;
+}
+.closeBtn {
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  border: none;
+  font-size: 2em;
+}
+.closeBtn:hover {
+  color: #ffaf19;
+  font-weight: bold;
+  text-shadow:
+    2px 2px 3px #004669,
+    2px 2px 5px #000000;
+}
+.snapshots {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow: auto;
+  .snapshot {
+    width: 200px;
+    cursor: pointer;
   }
 }
+// }
+
+.clickBackdrop {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+// }
 
 .fade {
   transition: opacity 0.15s linear;
 }
 
 @media screen and (max-width: 1230px) {
-  .customModal .modalDialog {
-    width: 100%;
+  .modalDialog {
+    min-width: 950px;
   }
 
   .imageDisplayContainer .portImageDisplay {
     height: auto;
-    width: 90%;
+    // width: 90%;
   }
 }

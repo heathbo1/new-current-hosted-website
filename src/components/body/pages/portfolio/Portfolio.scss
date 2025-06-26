@@ -3,8 +3,11 @@
   box-shadow: 5px 5px 5px #00000047;
   //   max-width: 100%;
 }
+.imgContainer {
+  width: 100%;
+  text-align: center;
+}
 .imageDisplayContainer {
-  padding: 10px;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -13,10 +16,11 @@
   user-select: none;
 
   .portImageDisplay {
-    height: 60vh;
+    // height: 60vh;
     box-shadow: 5px 5px 5px #00000047;
     flex-direction: column;
     object-fit: cover;
+    width: 100%;
   }
 
   .arrowCoverLeft {
@@ -107,6 +111,19 @@
   .photoPlacer {
     padding-left: 0px;
     padding-top: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .modal-lg,
+  .modal-xl {
+    --bs-modal-width: 1000px !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    --bs-modal-width: 98% !important;
   }
 }
 
