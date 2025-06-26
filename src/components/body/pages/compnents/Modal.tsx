@@ -16,10 +16,9 @@ const ModalComponent = ({ open, openClose, children, title }: iModal) => {
   const close = () => {
     openClose()
   }
-  // --bs-modal-width: 1000px;
+
   return (
     <>
-      // @ts-ignore
       <Modal show={open} onHide={close} size="xl" className="mw-100">
         <BluePanel className="modalContent">
           <div className="modalHeader">
