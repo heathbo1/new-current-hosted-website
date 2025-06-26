@@ -43,20 +43,6 @@ $hover-orange: #ffaf19;
   transition: height 150ms ease-in;
 }
 
-// const minStyle = {
-//   height: '50px',
-//   maxWidth: '1786px',
-//   lineHeight: '50px',
-//   position: 'relative',
-// }
-
-// const normStyle = {
-//   maxWidth: '1786px',
-//   height: '96px',
-//   lineHeight: '50px',
-//   position: 'relative',
-// }
-
 .minStyle {
   height: 50px;
   max-width: 1786px;
@@ -235,7 +221,7 @@ $hover-orange: #ffaf19;
   }
   .headerNavigation .headerButtonsRow a:hover {
     margin-top: -7px;
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     transition:
       margin-top 225ms ease-in,
       font-size 225ms ease-in;
@@ -299,7 +285,7 @@ $hover-orange: #ffaf19;
   color: $hover-orange !important;
   text-shadow: 0 1px 5px #000000;
   margin-top: -7px;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
 }
 
 .navLinkIcon {

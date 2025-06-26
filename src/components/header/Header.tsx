@@ -6,13 +6,18 @@ import CollapseMenu from './collapseMenu'
 import './header.scss'
 import { Logo } from './images/Logo'
 
-const Header = (scrollDist, showAbout) => {
-  const [btn, btnClick] = useState('')
+interface iHeader {
+  scrollDist: number
+  showAbout: () => void
+}
+
+const Header = ({ scrollDist, showAbout }: iHeader) => {
   const [headerMin, setHeaderMin] = useState(false)
   const [canvOpacity, setcanvOpacity] = useState(false)
 
-  const updateHeader = (show) => {
-    const headerCanvas = document.getElementById('headerCanvas')
+  const headerCanvas = document.getElementById('headerCanvas') as HTMLCanvasElement
+
+  const updateHeader = (show: boolean) => {
     if (headerCanvas) {
       if (show == true) {
         // headerCanvas.style.opacity = 1
@@ -30,33 +35,36 @@ const Header = (scrollDist, showAbout) => {
       }
     }
   }
-  console.log('showAbout = ', typeof showAbout)
+
   useEffect(() => {
     const fillHeader = () => {
-      const ctx = headerCanvas.getContext('2d')
+      if (headerCanvas) {
+        const ctx = headerCanvas.getContext('2d')
+        if (ctx) {
+          const style = ctx.createRadialGradient(600, 800, 50, 515, 800, 700)
+          style.addColorStop(0, 'rgba(0, 92, 138,1)')
+          style.addColorStop(1, '#00070A')
 
-      const style = ctx.createRadialGradient(600, 800, 50, 515, 800, 700)
-      style.addColorStop(0, 'rgba(0, 92, 138,1)')
-      style.addColorStop(1, '#00070A')
+          const rectW = 1030
+          const rectH = 150
 
-      const rectW = 1030
-      const rectH = 150
+          const rx = rectW / Math.sqrt(2)
+          const ry = rectH / Math.sqrt(2) + 10
 
-      const rx = rectW / Math.sqrt(2)
-      const ry = rectH / Math.sqrt(2) + 10
+          const scaleX = 1
+          const scaleY = ry / rx
 
-      const scaleX = 1
-      const scaleY = ry / rx
+          const invScaleX = 1
+          const invScaleY = rx / ry
 
-      const invScaleX = 1
-      const invScaleY = rx / ry
-
-      ctx.setTransform(scaleX, 0, 0, scaleY, 0, 0)
-      ctx.fillStyle = style
-      ctx.fillRect(0, 0, rectW * invScaleX, rectH * invScaleY)
+          ctx.setTransform(scaleX, 0, 0, scaleY, 0, 0)
+          ctx.fillStyle = style
+          ctx.fillRect(0, 0, rectW * invScaleX, rectH * invScaleY)
+        }
+      }
     }
     fillHeader()
-  }, [])
+  }, [headerCanvas])
 
   const showModal = () => {
     console.log('showModal')
@@ -64,7 +72,7 @@ const Header = (scrollDist, showAbout) => {
   }
 
   useEffect(() => {
-    if (scrollDist.scrollDist >= 10) {
+    if (scrollDist >= 10) {
       updateHeader(true)
     } else {
       updateHeader(false)
@@ -72,13 +80,17 @@ const Header = (scrollDist, showAbout) => {
   }, [scrollDist])
 
   // --------------------------------------------------------------------
-  const HeaderButton = ({ maxw, minw, title, id, link, clasName }) => {
+  interface iHeaderButton {
+    maxw: string
+    minw: string
+    title: string
+    id: string
+    link: string
+  }
+
+  const HeaderButton = ({ maxw, minw, title, id, link }: iHeaderButton) => {
     const maxWidth = maxw ? maxw : '370'
     const minWidth = minw ? minw : '200'
-
-    const handleClick = (title) => {
-      btnClick(title)
-    }
 
     if (link) {
       return (
@@ -122,7 +134,7 @@ const Header = (scrollDist, showAbout) => {
       <Container id="header-container" fluid style={headerMin ? minStyle : normStyle}>
         <NavLink className={'navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
-            <Logo scrollDist={scrollDist.scrollDist} />
+            <Logo scrollDist={scrollDist} />
           </div>
         </NavLink>
         <div className="headerNavigation">
@@ -146,7 +158,6 @@ const Header = (scrollDist, showAbout) => {
             <span className="tooltiptext">About this site</span>
           </button>
         </div>
-
         <canvas id="headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: canvOpacity ? 1 : 0 }} />
       </Container>
     </Navbar>

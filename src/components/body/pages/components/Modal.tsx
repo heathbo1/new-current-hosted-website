@@ -8,10 +8,10 @@ interface iModal {
   openClose: () => void
   children: ReactNode
   title: any
-  size: string
+  size: 'lg' | 'sm' | 'xl'
 }
 
-const ModalComponent = ({ open, openClose, children, title }: iModal) => {
+const ModalComponent = ({ open, openClose, children, title, size = 'lg' }: iModal) => {
   //fsd
   const close = () => {
     openClose()
@@ -19,7 +19,7 @@ const ModalComponent = ({ open, openClose, children, title }: iModal) => {
 
   return (
     <>
-      <Modal show={open} onHide={close} size="xl" className="mw-100">
+      <Modal show={open} onHide={close} size={size} className="mw-100">
         <BluePanel className="modalContent">
           <div className="modalHeader">
             <div className="titleContent">

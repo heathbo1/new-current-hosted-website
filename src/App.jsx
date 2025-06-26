@@ -31,7 +31,12 @@ const App = () => {
       <Provider>
         <div id="fullContainer">
           <Modal open={showAbout} openClose={openCloseAboutModal} title={'About This Site'}>
-            Testing 123
+            <ul>
+              <li>This site was designed and built by Heath Bishop.</li>
+              <br />
+              <li>It was built with TypeScript, React, SCSS, Bootstrap, Prettier, React-Router, ESLint, Nodejs, and Vite.</li>
+              <li>Bootstrap was used for the Header and the Modals. Everything else is custom CSS.</li>
+            </ul>
           </Modal>
           <Header scrollDist={scrollDist} showAbout={openCloseAboutModal} />
           <div id="pageContainer" ref={ref} onScroll={scrolling}>
