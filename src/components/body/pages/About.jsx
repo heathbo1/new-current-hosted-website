@@ -17,9 +17,7 @@ const Testimonials = ({ Name }) => {
 }
 
 const About = ({ appRef }) => {
-  console.log('about')
   useEffect(() => {
-    console.log('AR = ', appRef.current)
     appRef.current.scrollIntoView({ behavior: 'smooth' })
   }, [])
 

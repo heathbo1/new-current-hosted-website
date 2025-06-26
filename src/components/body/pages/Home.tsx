@@ -10,10 +10,10 @@ const Home = () => {
   const [opacity4, setOpacity4] = useState(0)
 
   useEffect(() => {
-    setTimeout(() => setOpacity1(100), 240)
-    setTimeout(() => setOpacity2(100), 1240)
-    setTimeout(() => setOpacity3(100), 2240)
-    setTimeout(() => setOpacity4(100), 3240)
+    setTimeout(() => setOpacity1(100), 70)
+    setTimeout(() => setOpacity2(100), 280)
+    setTimeout(() => setOpacity3(100), 490)
+    setTimeout(() => setOpacity4(100), 700)
   }, [])
 
   return (
@@ -32,11 +32,11 @@ const Home = () => {
           <span className="boldText">VAST</span>
           <span className="titleText">Imagination</span>
         </p>
-        <p className="aboutStyle" style={{ opacity: opacity4 }}>
+        <div className="aboutStyle" style={{ opacity: opacity4 }}>
           <BluePanel className="aboutContainer bluePanel75">
             Heath’s unique blend of artistic training and technical mastery allows him to bridge the gap between design and engineering, consistently delivering front-end experiences that are not only functional but intuitive and engaging.
           </BluePanel>
-        </p>
+        </div>
       </div>
     </div>
   )

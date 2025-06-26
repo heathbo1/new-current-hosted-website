@@ -78,7 +78,7 @@
 
   .titleStyle {
     margin: 8px 0;
-    transition: opacity 3s;
+    transition: opacity 1s;
     font-size: 1.9em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
@@ -103,8 +103,12 @@
     }
   }
 
+  #about {
+    transition: opacity 5s;
+  }
+
   .aboutStyle {
-    transition: opacity 3s;
+    transition: opacity 1s;
     display: flex;
     width: 100%;
     .aboutContainer {

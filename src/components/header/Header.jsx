@@ -56,11 +56,6 @@ const Header = (scrollDist, showAbout) => {
       ctx.fillRect(0, 0, rectW * invScaleX, rectH * invScaleY)
     }
     fillHeader()
-
-    // const logo = document.getElementById('logoBtn')
-    // logo.onclick = () => {
-    //   btnClick('')
-    // }
   }, [])
 
   const showModal = () => {
@@ -148,7 +143,7 @@ const Header = (scrollDist, showAbout) => {
           <CollapseMenu headermin={headerMin} />
           <button className="info-icon" onClick={showModal}>
             <i>i</i>
-            <span class="tooltiptext">About this site</span>
+            <span className="tooltiptext">About this site</span>
           </button>
         </div>
 
