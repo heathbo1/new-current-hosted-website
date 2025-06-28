@@ -166,11 +166,11 @@
           "description": "Redeveloped Customer Service Management website.",
           "details": [
             "Redeveloped the Customer Service Management website as part of the Gateway Project, improving functionality and user experience.",
-            "Resolved a complex Bootstrap dropdown menu bug by implementing a unique solution that enhanced UI reliability.",
+            "Resolved a complex Bootstrap dropdown menu bug by implementing a unique solution that enhanced UI usability. - Became usable no matter where on the screen it was placed and no matter how many items where in the menu. (2016)",
             "Developed a custom event-based library for global state management using React, JavaScript, and HTML, demonstrating strong front-end expertise",
             "Collaborated on rewriting critical Trading System components, migrating business logic to managed .NET code to boost system efficiency and maintainability"
           ],
-          "used": "Agile Development, React.js, JavaScript, HTML, CSS, JAVA, Spring, Intellij, Mongo, Node, Webpack, NPM, Bootstrap, JSON"
+          "used": "Agile Development, React.js, JavaScript, HTML, CSS, Node, Webpack, NPM, Bootstrap, JSON"
         },
         {
           "company": "Metal Exchange Corporation",
@@ -235,7 +235,7 @@
       "contract": false,
       "position": "Software Consultant",
       "location": "St. Louis, MO",
-      "date": "2010 - May 2013",
+      "date": "Nov 2011 - May 2013",
       "description": "Designed and developed a variety of software, and e-Learning products for clients.",
       "details": [],
       "used": "",
@@ -275,19 +275,14 @@
           "description": "Developed two e-Learning modules to educate managers about how handle policy changes.",
           "details": ["Developed the framework to be scalable and reusable.", "Developed the modules to incorporate videos, a quiz, and to include reporting back to a .NET back end."],
           "used": "Adobe Flash, XML, HTML, SCORM, SOAP"
+        },
+        {
+          "company": "Edward Jones Investments",
+          "description": "Designed and developed e-Learning content.",
+          "details": ["Upgraded an obsolete Flash framework in order to make it more flexible and efficient.", "Designed and developed various Flash and XML based e-Learning content that integrated with an existing LMS system."],
+          "used": "Adobe Flash, XML, SCORM"
         }
       ]
-    },
-    {
-      "company": "Edward Jones Investments",
-      "contract": true,
-      "position": "eLearning Developer",
-      "location": "St. Louis, MO",
-      "date": "May 2011 - November 2011",
-      "description": "Designed and developed e-Learning content.",
-      "details": ["Upgraded an obsolete Flash framework in order to make it more flexible and efficient.", "Designed and developed various Flash and XML based e-Learning content that integrated with an existing LMS system."],
-      "clients": [],
-      "used": "Adobe Flash, XML, SCORM"
     },
     {
       "company": "Motivation Technologies",

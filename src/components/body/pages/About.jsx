@@ -8,10 +8,10 @@ const Testimonials = ({ Name }) => {
   return (
     <div>
       <div className="sectionHeader-Line">{Name.name}</div>
-      <div>{Name.quote}</div>
+      <div className="whiteText">{Name.quote}</div>
       <br />
-      <div>{Name.name}</div>
-      <div>{Name.company}</div>
+      <div className="whiteText">{Name.name}</div>
+      <div className="whiteText">{Name.company}</div>
     </div>
   )
 }
@@ -25,7 +25,7 @@ const About = ({ appRef }) => {
     <div key="aboutBody" id="about" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
       <div key="aboutMain" className="hbColumn">
         <BluePanel>
-          <div>
+          <div className="whiteText">
             {Data.About.Me.part1}
             <br />
             <br />

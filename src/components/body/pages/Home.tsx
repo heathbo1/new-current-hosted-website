@@ -33,7 +33,7 @@ const Home = () => {
           <span className="titleText">Imagination</span>
         </p>
         <div className="aboutStyle" style={{ opacity: opacity4 }}>
-          <BluePanel className="aboutContainer bluePanel75">
+          <BluePanel className="aboutContainer bluePanel75 whiteText">
             Heath’s unique blend of artistic training and technical mastery allows him to bridge the gap between design and engineering, consistently delivering front-end experiences that are not only functional but intuitive and engaging.
           </BluePanel>
         </div>

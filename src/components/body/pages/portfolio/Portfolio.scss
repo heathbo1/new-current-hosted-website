@@ -86,6 +86,7 @@
 .infoHalf {
   width: 50%;
   display: inline-block;
+  -webkit-text-stroke: 0.15px #ffffff;
 }
 
 .infoDescript {
@@ -95,6 +96,10 @@
 .portImageContainer {
   display: flex;
   cursor: pointer;
+}
+
+.panels {
+  transition: width 0.5s;
 }
 
 // 1300px or less
@@ -131,7 +136,25 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 672px) {
+  .panels {
+    width: 85% !important;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .panels {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .panels {
+    width: 95% !important;
+  }
+}
+
+@media screen and (max-width: 525px) {
   .panels {
     width: 100% !important;
   }

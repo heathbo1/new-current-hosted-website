@@ -33,10 +33,10 @@ const App = () => {
           <Modal open={showAbout} openClose={openCloseAboutModal} title={'About This Site'}>
             <ul>
               <li>This site was designed and developed by Heath Bishop.</li>
-              <br />
-              <li>It was built with TypeScript, React, SASS, Bootstrap, Prettier, React-Router, ESLint, Nodejs, and Vite.</li>
+
+              <li>It was built with TypeScript, React, SCSS, Bootstrap, Prettier, React-Router, ESLint, Nodejs, and Vite.</li>
               <ul>
-                <li>Bootstrap was used for the Header and the Modals. Everything else is custom CSS.</li>
+                <li>Bootstrap was used in the Header (for resizing) and in the Modals (modal functionality). Everything else is custom CSS.</li>
               </ul>
             </ul>
           </Modal>

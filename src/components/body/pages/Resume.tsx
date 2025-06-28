@@ -38,30 +38,28 @@ const Resume = () => {
       tempExp.forEach((exp) => {
         const clients = exp.clients.length >= 1
 
-        console.log('clients = ', clients)
-
         tempExpDom.push(
           <BluePanel key={exp.company} className="bluePanelExper">
             <div className="expRow">
-              <div className="expColumn" style={{ color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700' }}>
+              <div className="expColumn expRole">
                 <span>{exp.position}</span>
               </div>
-              <div className="">| {exp.date}</div>
+              <div className="whiteText">| {exp.date}</div>
             </div>
             <div className="expRow" style={{ borderBottom: '1px solid #ffffff' }}>
               <div className="expColumn" style={{ textAlign: 'right', textTransform: 'uppercase', fontWeight: '700' }}>
                 {exp.company}
               </div>
-              <div className="expColumn" style={{ textAlign: 'right' }}>
+              <div className="expColumn whiteText" style={{ textAlign: 'right' }}>
                 - {exp.location}
               </div>
-              <div style={{ display: exp.contract ? 'inline' : 'none' }}> - Contract</div>
+              <div style={{ display: exp.contract ? 'inline' : 'none', fontWeight: 'bold', fontStyle: 'italic' }}> - Contract</div>
             </div>
             <div className="clients">
-              <div>{exp.description}</div>
-              <div style={{ padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' }}>{!clients && exp.details.map((det) => <div className="hbRow">&#x2022; {det}</div>)}</div>
+              <div className="whiteText">{exp.description}</div>
+              <div style={{ padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' }}>{!clients && exp.details.map((det) => <div className="hbRow whiteText">&#x2022; {det}</div>)}</div>
               {!clients && (
-                <div className="hbRow" style={{ marginTop: '20px' }}>
+                <div className="hbRow whiteText" style={{ marginTop: '20px' }}>
                   Skills: {exp.used}
                 </div>
               )}
@@ -75,10 +73,10 @@ const Resume = () => {
                 </div>
                 <div style={{ padding: '10px' }}>
                   {c.details.map((det) => (
-                    <div className="hbRow">&#x2022; {det}</div>
+                    <div className="hbRow whiteText">&#x2022; {det}</div>
                   ))}
                 </div>
-                <div className="hbRow" style={{ marginTop: '20px' }}>
+                <div className="hbRow whiteText" style={{ marginTop: '20px' }}>
                   Skills: {c.used}
                 </div>
               </div>
@@ -95,17 +93,17 @@ const Resume = () => {
       <div key="resumeMain" className="hbColumn">
         <BluePanel key="resBP1">
           <div className="sectionHeader-Line">PROFILE</div>
-          <div>{Data.Profile}</div>
+          <div className="whiteText">{Data.Profile}</div>
         </BluePanel>
       </div>
       <div key="resumeData" className="hbRow dataRows">
         <BluePanel key="resBP2" className="panels">
           <div className="sectionHeader-Line">Industry Experience</div>
-          <div>{Data.IndustryExperience}</div>
+          <div className="whiteText">{Data.IndustryExperience}</div>
         </BluePanel>
         <BluePanel key="resBP3" className="panels">
           <div className="sectionHeader-Line">Competencies</div>
-          <div>{Data.Competencies}</div>
+          <div className="whiteText">{Data.Competencies}</div>
         </BluePanel>
         <BluePanel key="resBP4" className="panels">
           <div className="sectionHeader-Line">Languages</div>
@@ -113,15 +111,15 @@ const Resume = () => {
         </BluePanel>
         <BluePanel key="resBP5" className="panels">
           <div className="sectionHeader-Line">Tools / Libraries</div>
-          <div>{Data.Technologies['Tools / Libraries']}</div>
+          <div className="whiteText">{Data.Technologies['Tools / Libraries']}</div>
         </BluePanel>
         <BluePanel key="resBP6" className="panels">
           <div className="sectionHeader-Line">Software</div>
-          <div>{Data.Technologies.Software}</div>
+          <div className="whiteText">{Data.Technologies.Software}</div>
         </BluePanel>
         <BluePanel key="resBP7" className="panels">
           <div className="sectionHeader-Line">Operating Systems</div>
-          <div>{Data.Technologies['Operating Systems']}</div>
+          <div className="whiteText">{Data.Technologies['Operating Systems']}</div>
         </BluePanel>
         <div className="sectionTitle">
           <span className="sectionText">EXPERIENCE</span>

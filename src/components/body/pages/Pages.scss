@@ -33,6 +33,11 @@
   @extend .panels;
 }
 
+.whiteText {
+  -webkit-text-stroke: 0.15px #ffffff;
+  letter-spacing: 1.5px;
+}
+
 #resume {
   .expRow {
     display: flex;
@@ -46,6 +51,15 @@
     flex-direction: column;
     gap: 10px;
     // width: 49%;
+  }
+
+  //color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700'
+
+  .expRole {
+    color: #ffaf19;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #000000;
   }
 
   .clients {
@@ -129,6 +143,35 @@
   .container {
     display: flex;
     justify-content: center;
+  }
+
+  .blue {
+    max-width: 700px;
+  }
+
+  .formLine {
+    margin-bottom: 1rem;
+
+    .formLabel {
+      margin-bottom: 0.5rem;
+    }
+    .formInput {
+      display: block;
+      font-size: 1rem;
+      border: 1px solid rgb(255 255 255 / 34%);
+      border-radius: 5px;
+      padding: 10px;
+      background-color: rgb(0 0 0 / 25%);
+      color: #ffffff;
+      width: 100%;
+    }
+    .formInput::placeholder {
+      color: #ffffffa2;
+    }
+    .errorInput {
+      color: #ffaf19;
+      font-weight: bold;
+    }
   }
 }
 
