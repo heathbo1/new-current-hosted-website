@@ -57,7 +57,14 @@ const Resume = () => {
             </div>
             <div className="clients">
               <div className="whiteText">{exp.description}</div>
-              <div style={{ padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' }}>{!clients && exp.details.map((det) => <div className="hbRow whiteText">&#x2022; {det}</div>)}</div>
+              <div style={{ padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' }}>
+                {!clients &&
+                  exp.details.map((det, i) => (
+                    <div key={i} className="hbRow whiteText">
+                      &#x2022; {det}
+                    </div>
+                  ))}
+              </div>
               {!clients && (
                 <div className="hbRow whiteText" style={{ marginTop: '20px' }}>
                   Skills: {exp.used}
@@ -72,8 +79,10 @@ const Resume = () => {
                   <span style={{ paddingLeft: '10px' }}>{c.description}</span>
                 </div>
                 <div style={{ padding: '10px' }}>
-                  {c.details.map((det) => (
-                    <div className="hbRow whiteText">&#x2022; {det}</div>
+                  {c.details.map((det, i) => (
+                    <div key={i} className="hbRow whiteText">
+                      &#x2022; {det}
+                    </div>
                   ))}
                 </div>
                 <div className="hbRow whiteText" style={{ marginTop: '20px' }}>

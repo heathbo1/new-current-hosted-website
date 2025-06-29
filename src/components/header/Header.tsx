@@ -115,23 +115,9 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
   }
   // --------------------------------------------------------------------
 
-  const minStyle = {
-    height: '50px',
-    maxWidth: '1786px',
-    lineHeight: '50px',
-    position: 'relative',
-  }
-
-  const normStyle = {
-    maxWidth: '1786px',
-    height: '96px',
-    lineHeight: '50px',
-    position: 'relative',
-  }
-
   return (
     <Navbar className="header navbar-expand-lg" style={{ height: headerMin ? '50px' : '75px' }}>
-      <Container id="header-container" fluid style={headerMin ? minStyle : normStyle}>
+      <Container id="header-container" fluid>
         <NavLink className={'navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
             <Logo scrollDist={scrollDist} />

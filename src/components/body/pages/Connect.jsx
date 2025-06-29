@@ -12,23 +12,40 @@ const Connect = () => {
   const body = `Name: ${name},  Phone: ${phone},  Email: ${email},  Message: ${message}`
 
   const validate = (e) => {
+    const errors = []
+
     const nameEmpty = name !== ''
     const phoneEmpty = phone !== ''
     const emailEmpty = email !== ''
     const messageEmpty = message !== ''
 
-    // Check if all 4 have been filled
-    const validate = nameEmpty + phoneEmpty + emailEmpty + messageEmpty
-    console.log('valid = ', validate === 4)
-    if (validate !== 4) {
-      // add logic to check the typed in values
+    if (nameEmpty + phoneEmpty + emailEmpty + messageEmpty !== 4) {
+      errors.push('Fill all required fields')
+    }
+
+    if (!email.includes('@')) {
+      errors.push('Email must have an @ symbol')
+    }
+
+    if (phone.length < 14) {
+      errors.push('Phone # must include a full phone #.')
+    }
+
+    if (errors.length === 0) {
+      return true
+    } else {
+      return { value: false, errors: errors }
     }
   }
 
   const submit = (e) => {
     e.preventDefault()
-    validate()
-    // window.open(`mailto:hbishop@heathbishop.com?subject=Connect Communication&body=${body}`)
+    const valid = validate()
+    console.log('valid = ', valid)
+    // if (validate()) {
+    //   console.log('window.open')
+    //   // window.open(`mailto:hbishop@heathbishop.com?subject=Connect Communication&body=${body}`)
+    // }
   }
 
   const resetAll = () => {
@@ -43,15 +60,47 @@ const Connect = () => {
     clearTimeout(nameTimer)
     nameTimer = setTimeout(() => {
       setName(e.target.value)
-    }, 1000)
+    }, 500)
   }
 
   let phoneTimer
   const onPhoneChange = (e) => {
+    const without = e.target.value.split('(').join('').split(')').join('').split(' ').join('')
+    const numbersOnly = /^\d+$/.test(without[without.length - 1])
+
+    const value = e.target.value
+    const length = value.length
+
+    let editedValue = value
+
+    if (numbersOnly) {
+      if (e.nativeEvent.inputType !== 'deleteContentBackward' && length - 1 <= 12) {
+        if (value[0] !== '(') {
+          editedValue = `(${value}`
+        }
+
+        if (length >= 4 && value[4] !== ')') {
+          editedValue = `${value[0]}${value[1]}${value[2]}${value[3]}) ${value.substring(4, length)}`
+        }
+
+        if (length >= 9 && value[9] !== '-') {
+          editedValue = `${value.substring(0, 9)}-${value.substring(10, length)}`
+        }
+      }
+
+      if (length - 1 >= 14) {
+        editedValue = value.substring(0, 14)
+      }
+    } else {
+      editedValue = value.substring(0, value.length - 1)
+    }
+
+    e.target.value = editedValue
+
     clearTimeout(phoneTimer)
     phoneTimer = setTimeout(() => {
-      setPhone(e.target.value)
-    }, 1000)
+      setPhone(editedValue)
+    }, 500)
   }
 
   let emailTimer
@@ -59,15 +108,16 @@ const Connect = () => {
     clearTimeout(phoneTimer)
     phoneTimer = setTimeout(() => {
       setEmail(e.target.value)
-    }, 1000)
+    }, 500)
   }
 
   let messageTimer
   const onMessageChange = (e) => {
     clearTimeout(phoneTimer)
     phoneTimer = setTimeout(() => {
+      console.log('message = ', e.target.value)
       setMessage(e.target.value)
-    }, 1000)
+    }, 500)
   }
 
   return (
