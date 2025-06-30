@@ -32,6 +32,7 @@
 
 .bluePanelExper {
   min-height: 50px !important;
+  max-width: 49%;
 }
 
 .modal-header {
@@ -93,6 +94,69 @@
 
 .fade {
   transition: opacity 0.15s linear;
+}
+
+.collapsiblePanel {
+  color: #ffffff;
+  min-height: 50px !important;
+
+  button {
+    color: #ffffff;
+    background: none;
+    border: none;
+  }
+  //borderBottom: '1px solid #ffffff'
+  .headerGrid {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    // flex-direction: row;
+    // gap: 10px;
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+
+    .info {
+      width: 100%;
+    }
+    .close {
+      text-align: right;
+    }
+
+    .downArrow {
+      width: 1.5rem;
+      height: 1.5rem;
+      transition: rotate 0.25s ease-in-out;
+    }
+  }
+
+  .collapsibleContainer {
+    margin-top: 15px;
+    overflow-y: hidden;
+    height: auto;
+    height: calc-size(auto, size);
+    transition: height 0.25s ease-in-out;
+
+    &--close {
+      @extend .collapsibleContainer;
+      // padding: 0px;
+      border: none;
+      height: 0px;
+    }
+
+    .collapsibleBody {
+      // padding-top: 20px;
+      // border: 1px solid rgb(255 255 255 / 34%);
+      // border-radius: 5px;
+      display: flex;
+      flex-flow: column;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1046px) {
+  .bluePanelExper {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 1230px) {

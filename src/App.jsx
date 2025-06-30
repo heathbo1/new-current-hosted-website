@@ -34,11 +34,14 @@ const App = () => {
             <ul>
               <li>This site was designed and developed by Heath Bishop.</li>
 
-              <li>It was built with TypeScript, React, SCSS, Bootstrap, Prettier, React-Router, ESLint, Nodejs, and Vite.</li>
+              <li>It was built using TypeScript, React, SCSS, Bootstrap, Prettier, React Router, ESLint, Node.js, and Vite.</li>
               <ul>
-                <li>Bootstrap was used in the Header (for resizing) and in the Modals (modal functionality). Everything else is custom CSS.</li>
+                <li>Bootstrap was used in the Header (for horizontal resizing) and in the Modals (modal functionality). Everything else is custom CSS.</li>
               </ul>
             </ul>
+            <div>
+              <i>Note: The background stars are randomly generated, and the comets have random start and stop locations, colors, velocities, and sizes.</i>
+            </div>
           </Modal>
           <Header scrollDist={scrollDist} showAbout={openCloseAboutModal} />
           <div id="pageContainer" ref={ref} onScroll={scrolling}>

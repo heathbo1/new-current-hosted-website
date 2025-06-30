@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import '../Body.scss'
 import BluePanel from './components/BluePanel'
+import CollapsiblePanel from './components/CollapsiblePanel'
 import Data from './data/resume.json'
 import './Pages.scss'
 
@@ -39,22 +40,28 @@ const Resume = () => {
         const clients = exp.clients.length >= 1
 
         tempExpDom.push(
-          <BluePanel key={exp.company} className="bluePanelExper">
-            <div className="expRow">
-              <div className="expColumn expRole">
-                <span>{exp.position}</span>
-              </div>
-              <div className="whiteText">| {exp.date}</div>
-            </div>
-            <div className="expRow" style={{ borderBottom: '1px solid #ffffff' }}>
-              <div className="expColumn" style={{ textAlign: 'right', textTransform: 'uppercase', fontWeight: '700' }}>
-                {exp.company}
-              </div>
-              <div className="expColumn whiteText" style={{ textAlign: 'right' }}>
-                - {exp.location}
-              </div>
-              <div style={{ display: exp.contract ? 'inline' : 'none', fontWeight: 'bold', fontStyle: 'italic' }}> - Contract</div>
-            </div>
+          <CollapsiblePanel
+            key={exp.company}
+            header={
+              <>
+                <div className="expRow">
+                  <div className="expColumn expRole">
+                    <span>{exp.position}</span>
+                  </div>
+                  <div className="whiteText">| {exp.date}</div>
+                </div>
+                <div className="expRow">
+                  <div className="expColumn" style={{ textAlign: 'right', textTransform: 'uppercase', fontWeight: '700' }}>
+                    {exp.company}
+                  </div>
+                  <div className="expColumn whiteText" style={{ textAlign: 'right' }}>
+                    - {exp.location}
+                  </div>
+                  <div style={{ display: exp.contract ? 'inline' : 'none', fontWeight: 'bold', fontStyle: 'italic' }}> - Contract</div>
+                </div>
+              </>
+            }
+          >
             <div className="clients">
               <div className="whiteText">{exp.description}</div>
               <div style={{ padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' }}>
@@ -71,9 +78,8 @@ const Resume = () => {
                 </div>
               )}
             </div>
-
             {exp.clients.map((c) => (
-              <div className="clients">
+              <div className="clients bottomLine">
                 <div className="hbRow nameDescription">
                   <span style={{ fontWeight: '700', color: '#ffaf19' }}>{c.company}</span>
                   <span style={{ paddingLeft: '10px' }}>{c.description}</span>
@@ -90,7 +96,7 @@ const Resume = () => {
                 </div>
               </div>
             ))}
-          </BluePanel>
+          </CollapsiblePanel>
         )
       })
       setExpDOM(tempExpDom)

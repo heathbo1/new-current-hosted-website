@@ -143,7 +143,7 @@
       "position": "Senior UI Developer",
       "location": "St. Louis, MO",
       "date": "March 2018 - March 2019",
-      "description": "Rebuilding Panera's Point-of-Sale devices.",
+      "description": "Development of Panera's new Point-of-Sale devices.",
       "details": [
         "Collaborated on developing the UI, enhancing usability and efficiency for the Point-of-Sale system used in their restaurants.",
         "Led the initiative to reorganize the code, standardize code patterns, and implement Jest to increase code coverage."

@@ -43,7 +43,6 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    flex-wrap: wrap;
     flex-wrap: nowrap;
   }
   .expColumn {
@@ -53,7 +52,9 @@
     // width: 49%;
   }
 
-  //color: '#ffaf19', textTransform: 'uppercase', fontWeight: '700'
+  .experiencePanel {
+    width: 49%;
+  }
 
   .expRole {
     color: #ffaf19;
@@ -63,16 +64,23 @@
   }
 
   .clients {
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
     border: 1px solid rgb(255 255 255 / 34%);
     border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
+
+    // margin-top: 15px;
     background-color: rgb(0 0 0 / 25%);
 
     .nameDescription {
       flex-wrap: nowrap;
       border-bottom: 0.75px solid #ffffff;
     }
+  }
+
+  .bottomLine {
+    border-bottom: 0.75px solid #ffffff;
   }
 }
 
@@ -89,6 +97,7 @@
   flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
+  margin-bottom: calc(50vh * 0.03);
 
   .titleStyle {
     margin: 8px 0;
@@ -106,7 +115,7 @@
       color: #ffffff;
       // background-color: #000000c7;
       align-self: flex-end;
-      line-height: 2em;
+      line-height: 1em;
     }
 
     .boldText {
@@ -114,27 +123,34 @@
       font-weight: bold;
       font-size: 1.5em;
       align-self: flex-end;
+      line-height: 1em;
     }
   }
+}
 
-  #about {
-    transition: opacity 5s;
-  }
+.aboutStyle {
+  transition: opacity 1s;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 86px;
+  padding: 10px;
 
-  .aboutStyle {
-    transition: opacity 1s;
-    display: flex;
-    width: 100%;
-    .aboutContainer {
-      border: 1px solid #ffffff70;
-      padding: 20px;
-      border-radius: 5px;
-      font-size: 1em;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      margin: 20px 40px;
-      background: linear-gradient(-45deg, rgb(0, 32, 48, 0.75), rgba(0, 92, 138, 0.75) 40%, rgba(0, 88, 133, 0.75) 65%, rgba(0, 32, 48, 0.75));
-      min-height: 100px;
-      width: 405px;
+  .aboutContainer {
+    border: 1px solid #ffffff70;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    background: linear-gradient(-45deg, rgb(0, 32, 48, 0.75), rgba(0, 92, 138, 0.75) 40%, rgba(0, 88, 133, 0.75) 65%, rgba(0, 32, 48, 0.75));
+    min-height: 100px;
+    max-width: 450px;
+
+    &--small {
+      @extend .aboutContainer;
+      max-height: 103px;
     }
   }
 }
@@ -175,9 +191,22 @@
   }
 }
 
+@media screen and (max-width: 1543px) {
+  .aboutStyle {
+    justify-content: left;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .aboutStyle {
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 1297px) {
   .aboutStyle {
     .aboutContainer {
+      // Change opacity so it's visible ontop of the city
       background: linear-gradient(-45deg, rgb(0, 32, 48, 0.9), rgba(0, 92, 138, 0.9) 40%, rgba(0, 88, 133, 0.9) 65%, rgba(0, 32, 48, 0.9)) !important;
     }
   }

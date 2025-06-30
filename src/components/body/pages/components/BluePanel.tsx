@@ -11,7 +11,7 @@ interface WrapperProps {
 
 const BluePanel: React.FC<WrapperProps> = ({ children, width, key, className }) => {
   return (
-    <div key={key} style={width ? { width: width } : {}} className={`bluePanel bluePanelScroll ${className}`}>
+    <div key={key} style={width ? { width: width } : {}} className={`bluePanel ${className}`}>
       {children}
     </div>
   )

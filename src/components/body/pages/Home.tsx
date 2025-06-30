@@ -32,11 +32,14 @@ const Home = () => {
           <span className="boldText">VAST</span>
           <span className="titleText">Imagination</span>
         </p>
-        <div className="aboutStyle" style={{ opacity: opacity4 }}>
-          <BluePanel className="aboutContainer bluePanel75 whiteText">
-            Heath’s unique blend of artistic training and technical mastery allows him to bridge the gap between design and engineering, consistently delivering front-end experiences that are not only functional but intuitive and engaging.
-          </BluePanel>
-        </div>
+      </div>
+      <div className="aboutStyle" style={{ opacity: opacity4 }}>
+        <BluePanel className="aboutContainer--small whiteText">I've been building front-end user interfaces for over 20 years. Including 10 years of experience with React.js.</BluePanel>
+        <BluePanel className="aboutContainer--small whiteText">I’m not afraid to think outside the box to invent solutions that match exactly what your clients need.</BluePanel>
+        <BluePanel className="aboutContainer whiteText">
+          I possess extensive knowledge and expertise in the core technologies that form the foundation of every UI library and framework (JavaScript, HTML, CSS). I can overwrite, push, and customize most UI libraries without relying on
+          their built-in customization methods. Bootstrap, for example.
+        </BluePanel>
       </div>
     </div>
   )
