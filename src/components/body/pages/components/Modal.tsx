@@ -12,7 +12,6 @@ interface iModal {
 }
 
 const ModalComponent = ({ open, openClose, children, title, size = 'lg' }: iModal) => {
-  //fsd
   const close = () => {
     openClose()
   }
@@ -20,18 +19,18 @@ const ModalComponent = ({ open, openClose, children, title, size = 'lg' }: iModa
   return (
     <>
       <Modal show={open} onHide={close} size={size} className="mw-100">
-        <BluePanel className="modalContent">
-          <div className="modalHeader">
-            <div className="titleContent">
-              <div className="modalTitle h5">{title}</div>
+        <BluePanel>
+          <div className="hmb-modalHeader">
+            <div className="hmb-titleContent">
+              <div className="hmb-modalTitle h5">{title}</div>
             </div>
-            <div className="titleContent" style={{ position: 'absolute', right: '0px', top: '1px' }}>
-              <button type="button" aria-label="Close" className="closeBtn" onClick={close}>
+            <div className="hmb-titleContent" style={{ position: 'absolute', right: '0px', top: '1px' }}>
+              <button type="button" aria-label="Close" className="hmb-closeBtn" onClick={close}>
                 &times;
               </button>
             </div>
           </div>
-          <Modal.Body>{children}</Modal.Body>
+          <div className="hmb-modalContent">{children}</div>
         </BluePanel>
       </Modal>
     </>

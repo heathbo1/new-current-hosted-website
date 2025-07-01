@@ -96,7 +96,7 @@ const Portfolio = ({ appRef }) => {
           <div />
         )}
 
-        <div className="snapshots" style={{ display: selectedProj && selectedProj.images && selectedProj.images.length > 1 ? 'flex' : 'none' }}>
+        <div className="hmb-snapshots" style={{ display: selectedProj && selectedProj.images && selectedProj.images.length > 1 ? 'flex' : 'none' }}>
           {selectedProj &&
             selectedProj.images.length > 1 &&
             selectedProj.images.map((value, i) => {
@@ -106,8 +106,8 @@ const Portfolio = ({ appRef }) => {
             })}
         </div>
       </Modal>
-      <div className="flexContainer pages">
-        <div className="hbRow dataRows">{projects}</div>
+      <div className="hmb-flexContainer pages">
+        <div className="hmb-row hmb-dataRows">{projects}</div>
       </div>
     </>
   )

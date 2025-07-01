@@ -7,11 +7,11 @@ import Data from './data/about.json'
 const Testimonials = ({ Name }) => {
   return (
     <div>
-      <div className="sectionHeader-Line">{Name.name}</div>
-      <div className="whiteText">{Name.quote}</div>
+      <div className="hmb-sectionHeader-Line">{Name.name}</div>
+      <div className="hmb-whiteText">{Name.quote}</div>
       <br />
-      <div className="whiteText">{Name.name}</div>
-      <div className="whiteText">{Name.company}</div>
+      <div className="hmb-whiteText">{Name.name}</div>
+      <div className="hmb-whiteText">{Name.company}</div>
     </div>
   )
 }
@@ -22,10 +22,10 @@ const About = ({ appRef }) => {
   }, [])
 
   return (
-    <div key="aboutBody" id="about" className="flexContainer pages" style={{ letterSpacing: '1.5px' }}>
-      <div key="aboutMain" className="hbColumn">
+    <div key="aboutBody" id="about" className="hmb-flexContainer pages" style={{ letterSpacing: '1.5px' }}>
+      <div key="aboutMain" className="hmb-column">
         <BluePanel>
-          <div className="whiteText">
+          <div className="hmb-whiteText">
             {Data.About.Me.part1}
             <br />
             <br />
@@ -39,23 +39,23 @@ const About = ({ appRef }) => {
           </div>
         </BluePanel>
       </div>
-      <div className="sectionTitle">
+      <div className="hmb-sectionTitle">
         <span className="sectionText">TESTIMONIALS</span>
       </div>
-      <div key="abSide" className="hbRow dataRows">
-        <BluePanel className="aboutPanels">
+      <div key="abSide" className="hmb-row hmb-dataRows">
+        <BluePanel className="hmb-aboutPanels">
           <Testimonials Name={Data.Testimonials.ChandlerPrince} />
         </BluePanel>
-        <BluePanel className="aboutPanels">
+        <BluePanel className="hmb-aboutPanels">
           <Testimonials Name={Data.Testimonials.StevenWilliams} />
         </BluePanel>
-        <BluePanel className="aboutPanels">
+        <BluePanel className="hmb-aboutPanels">
           <Testimonials Name={Data.Testimonials.AmandaPozzo} />
         </BluePanel>
-        <BluePanel className="aboutPanels">
+        <BluePanel className="hmb-aboutPanels">
           <Testimonials Name={Data.Testimonials.RobertWade} />
         </BluePanel>
-        <BluePanel className="aboutPanels">
+        <BluePanel className="hmb-aboutPanels">
           <Testimonials Name={Data.Testimonials.JamesJervis} />
         </BluePanel>
       </div>

@@ -1,3 +1,7 @@
+:root {
+  --HMB-orange: #ffaf19;
+}
+
 body {
   background-color: #000;
   width: 100vw;
@@ -28,21 +32,3 @@ body {
   max-width: 1782px;
   padding-top: 80px;
 }
-
-footer {
-  background: linear-gradient(rgb(0 0 0 / 2%) 25%, rgb(0 0 0 / 79%)) 95%;
-  padding: 0px 5px;
-}
-
-footer span {
-  color: #ffffff;
-  font-size: 12px;
-  cursor: pointer;
-  z-index: 3;
-  position: relative;
-}
-
-footer span:hover {
-  color: #ffaf19;
-}
-// height: 'calc(100vh - 96px', width: '100vw'

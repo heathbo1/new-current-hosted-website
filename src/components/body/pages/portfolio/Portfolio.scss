@@ -98,7 +98,7 @@
   cursor: pointer;
 }
 
-.panels {
+.hmb-panels {
   transition: width 0.5s;
 }
 
@@ -131,31 +131,31 @@
 }
 
 @media screen and (max-width: 729px) {
-  .panels {
+  .hmb-panels {
     width: 80% !important;
   }
 }
 
 @media screen and (max-width: 672px) {
-  .panels {
+  .hmb-panels {
     width: 85% !important;
   }
 }
 
 @media screen and (max-width: 615px) {
-  .panels {
+  .hmb-panels {
     width: 90% !important;
   }
 }
 
 @media screen and (max-width: 570px) {
-  .panels {
+  .hmb-panels {
     width: 95% !important;
   }
 }
 
 @media screen and (max-width: 525px) {
-  .panels {
+  .hmb-panels {
     width: 100% !important;
   }
 }

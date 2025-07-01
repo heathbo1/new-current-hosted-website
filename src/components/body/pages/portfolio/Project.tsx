@@ -42,8 +42,8 @@ const Project = ({ key, data, modalOpen }: iProject) => {
   }, [])
 
   return (
-    <BluePanel key={key} className="panels portPanel">
-      <div className="sectionHeader-Line" style={{ display: 'flex' }}>
+    <BluePanel key={key} className="hmb-panels portPanel">
+      <div className="hmb-sectionHeader-Line" style={{ display: 'flex' }}>
         <div style={{ width: '60%' }}>{data.name}</div>
         <div style={{ right: '15px', textAlign: 'right', color: '#ffffff', width: '50%' }}>{data.client}</div>
       </div>

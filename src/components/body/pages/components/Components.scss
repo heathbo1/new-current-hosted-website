@@ -1,5 +1,5 @@
 // ===== Blue Panel
-.bluePanel {
+.hmb-bluePanel {
   color: white;
   width: 100%;
   min-width: 260px;
@@ -15,7 +15,7 @@
   min-width: 330px;
 }
 
-.bluePanel:after {
+.hmb-bluePanel:after {
   content: '';
   position: absolute;
   left: -3px;
@@ -30,51 +30,46 @@
   pointer-events: none;
 }
 
-.bluePanelExper {
-  min-height: 50px !important;
-  max-width: 49%;
+// ===== Modal
+.hmb-modalContent {
+  position: relative;
+  padding: 1rem;
 }
 
-.modal-header {
-  border-bottom: 1.5px solid #ffffff;
-  pointer-events: auto;
-  display: flex;
-  flex-shrink: 0;
-}
-
-.modalTitle {
+.hmb-modalTitle {
   align-items: center;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
   pointer-events: auto;
   width: 100%;
-  color: #ffaf19 !important;
+  color: var(--HMB-orange) !important;
   font-weight: bold;
   text-shadow: 1px 1px 1px #000000;
   border-bottom: 1px solid #ffffff;
   box-shadow: 0px 8px 11px -8px #000000;
   line-height: 150%;
+  text-transform: uppercase;
 }
-.titleContent {
+.hmb-titleContent {
   display: flex;
   flex-direction: column;
 }
-.closeBtn {
+.hmb-closeBtn {
   background-clip: border-box;
   background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
   border: none;
   font-size: 2em;
 }
-.closeBtn:hover {
-  color: #ffaf19;
+.hmb-closeBtn:hover {
+  color: var(--HMB-orange);
   // font-weight: bold;
   text-shadow:
     2px 2px 3px #004669,
     2px 2px 5px #000000;
 }
-.snapshots {
+.hmb-snapshots {
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -86,49 +81,40 @@
   }
 }
 
-.clickBackdrop {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-}
-
-.fade {
-  transition: opacity 0.15s linear;
-}
-
-.collapsiblePanel {
+// ===== Collapsible Panel
+.hmb-collapsiblePanel {
   color: #ffffff;
   min-height: 50px !important;
+  padding-top: 0px;
 
   button {
     color: #ffffff;
     background: none;
     border: none;
+    padding-top: 10px;
   }
-  //borderBottom: '1px solid #ffffff'
-  .headerGrid {
+
+  .hmb-headerGrid {
     display: grid;
     grid-template-columns: 10fr 1fr;
-    // flex-direction: row;
-    // gap: 10px;
     width: 100%;
     border-bottom: 1px solid #ffffff;
 
-    .info {
+    .hmb-info {
       width: 100%;
     }
-    .close {
+    .hmb-close {
       text-align: right;
     }
 
-    .downArrow {
+    .hmb-downArrow {
       width: 1.5rem;
       height: 1.5rem;
       transition: rotate 0.25s ease-in-out;
     }
   }
 
-  .collapsibleContainer {
+  .hmb-collapsibleContainer {
     margin-top: 15px;
     overflow-y: hidden;
     height: auto;
@@ -136,16 +122,12 @@
     transition: height 0.25s ease-in-out;
 
     &--close {
-      @extend .collapsibleContainer;
-      // padding: 0px;
+      @extend .hmb-collapsibleContainer;
       border: none;
       height: 0px;
     }
 
-    .collapsibleBody {
-      // padding-top: 20px;
-      // border: 1px solid rgb(255 255 255 / 34%);
-      // border-radius: 5px;
+    .hmb-collapsibleBody {
       display: flex;
       flex-flow: column;
       gap: 20px;
@@ -153,18 +135,8 @@
   }
 }
 
-@media screen and (max-width: 1046px) {
-  .bluePanelExper {
-    max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 1230px) {
-  .modalDialog {
-    min-width: 950px;
-  }
-
-  .imageDisplayContainer .portImageDisplay {
-    height: auto;
-  }
-}
+// @media screen and (max-width: 1230px) {
+//   .imageDisplayContainer .portImageDisplay {
+//     height: auto;
+//   }
+// }

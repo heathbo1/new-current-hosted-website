@@ -1,5 +1,3 @@
-$hover-orange: #ffaf19;
-
 #headerContainer {
   background-image: radial-gradient(circle at bottom, rgba(0, 92, 138, 1), #00070a);
 }
@@ -70,7 +68,7 @@ $hover-orange: #ffaf19;
   width: 100%;
   transition: height 250ms;
 
-  .info-icon {
+  .hmb-info-icon {
     background-color: #00000000;
     color: #ffffff;
     height: 20px;
@@ -101,16 +99,16 @@ $hover-orange: #ffaf19;
     }
   }
 
-  .info-icon:hover {
-    color: $hover-orange;
-    border-left: 2px solid $hover-orange;
-    border-right: 2px solid $hover-orange;
+  .hmb-info-icon:hover {
+    color: var(--HMB-orange);
+    border-left: 2px solid var(--HMB-orange);
+    border-right: 2px solid var(--HMB-orange);
   }
 
-  .info-icon:hover .tooltiptext {
+  .hmb-info-icon:hover .tooltiptext {
     visibility: visible;
   }
-  .info-icon .tooltiptext::after {
+  .hmb-info-icon .tooltiptext::after {
     content: '';
     position: absolute;
     top: 40%;
@@ -159,7 +157,7 @@ $hover-orange: #ffaf19;
       }
 
       #menuBars:hover {
-        color: $hover-orange;
+        color: var(--HMB-orange);
       }
 
       #menuBars:active {
@@ -202,13 +200,13 @@ $hover-orange: #ffaf19;
             }
 
             .menuBarNavigation:hover {
-              color: $hover-orange;
+              color: var(--HMB-orange);
             }
 
             .menuBarNavigationActive {
               text-decoration: none;
               text-align: right;
-              color: $hover-orange;
+              color: var(--HMB-orange);
               letter-spacing: 2px;
               cursor: pointer;
               text-shadow: 2px 2px 2px #000000;
@@ -239,7 +237,7 @@ $hover-orange: #ffaf19;
   }
 
   .headerLinkClicked {
-    color: $hover-orange;
+    color: var(--HMB-orange);
     text-shadow: 0 1px 5px #000000;
   }
 }
@@ -282,7 +280,7 @@ $hover-orange: #ffaf19;
 
 .navLinkActive {
   @extend .navLink;
-  color: $hover-orange !important;
+  color: var(--HMB-orange);
   text-shadow: 0 1px 5px #000000;
   margin-top: -7px;
   font-size: 1.45rem;

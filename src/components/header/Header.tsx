@@ -139,7 +139,7 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
             </Col>
           </div>
           <CollapseMenu headermin={headerMin} />
-          <button className="info-icon" onClick={showModal}>
+          <button className="hmb-info-icon" onClick={showModal}>
             <i>i</i>
             <span className="tooltiptext">About this site</span>
           </button>

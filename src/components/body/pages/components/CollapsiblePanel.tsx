@@ -22,7 +22,7 @@ const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, key, classN
   console.log('open = ', open)
 
   return (
-    <div key={key} style={width ? { width: width } : {}} className={`bluePanel collapsiblePanel ${className}`}>
+    <div key={key} style={width ? { width: width } : {}} className={`hmb-bluePanel hmb-collapsiblePanel ${className}`}>
       <button
         type="button"
         onClick={() => {
@@ -30,17 +30,17 @@ const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, key, classN
         }}
         style={{ width: '100%' }}
       >
-        <div className="headerGrid">
-          <span className="info">
+        <div className="hmb-headerGrid">
+          <span className="hmb-info">
             <span>{header}</span>
           </span>
-          <span className="close">
-            <img src={Arrow} alt="downArrow" className="downArrow" style={{ rotate: open ? '180deg' : '0deg' }} />
+          <span className="hmb-close">
+            <img src={Arrow} alt="downArrow" className="hmb-downArrow" style={{ rotate: open ? '180deg' : '0deg' }} />
           </span>
         </div>
       </button>
-      <div className={`${open ? 'collapsibleContainer' : 'collapsibleContainer--close'}`}>
-        <div className="collapsibleBody">{children}</div>
+      <div className={`${open ? 'hmb-collapsibleContainer' : 'hmb-collapsibleContainer--close'}`}>
+        <div className="hmb-collapsibleBody">{children}</div>
       </div>
     </div>
   )

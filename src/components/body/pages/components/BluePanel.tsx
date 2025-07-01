@@ -9,9 +9,9 @@ interface WrapperProps {
   className?: string
 }
 
-const BluePanel: React.FC<WrapperProps> = ({ children, width, key, className }) => {
+const BluePanel: React.FC<WrapperProps> = ({ children, width, key, className = '' }) => {
   return (
-    <div key={key} style={width ? { width: width } : {}} className={`bluePanel ${className}`}>
+    <div key={key} style={width ? { width: width } : {}} className={`hmb-bluePanel ${className}`}>
       {children}
     </div>
   )
