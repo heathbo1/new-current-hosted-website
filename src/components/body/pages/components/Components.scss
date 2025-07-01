@@ -82,9 +82,15 @@
 
 // ===== Collapsible Panel
 .hmb-collapsiblePanel {
+  position: relative;
+  margin: 0 auto;
+  padding: 1rem;
   padding-top: 0px;
+  width: 100%;
   min-height: 50px !important;
   color: #ffffff;
+  font-size: 1em;
+  line-height: 150%;
 
   button {
     border: none;

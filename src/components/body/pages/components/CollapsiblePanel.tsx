@@ -18,7 +18,7 @@ const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, Ckey, class
   const [open, setOpen] = useState(false)
 
   return (
-    <div key={Ckey} style={width ? { width: width } : {}} className={`hmb-bluePanel hmb-collapsiblePanel ${className}`}>
+    <div key={Ckey} style={width ? { width: width } : {}} className={` hmb-collapsiblePanel ${className}`}>
       <button
         type="button"
         onClick={() => {

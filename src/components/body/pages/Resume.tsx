@@ -139,9 +139,9 @@ const Resume = () => {
         <div className="hmb-sectionTitle">
           <span className="hmb-sectionText">EXPERIENCE</span>
         </div>
-        <div key="experience" className="hmb-row hmb-dataRows">
+        <BluePanel key="experience" className="hmb-row hmb-dataRows">
           {expDOM}
-        </div>
+        </BluePanel>
       </div>
     </div>
   )
