@@ -1,21 +1,16 @@
-#background {
+#hmb-background {
   position: relative;
   display: flex;
   max-width: 1782px;
   height: 100vh;
   overflow: hidden;
 
-  #spaceContainer {
+  #hmb-spaceContainer {
     position: relative;
     margin-top: -72px;
-    // display: flex;
-    // z-index: 0;
-    #spac-align {
-      position: absolute;
-    }
   }
 
-  #cityContainer {
+  #hmb-cityContainer {
     position: relative;
     min-height: 633px;
     min-width: 1102px;
@@ -28,18 +23,18 @@
     margin: 0 auto;
     overflow: hidden;
 
-    #citWrapper {
+    #hmb-citWrapper {
       width: 1782px;
       position: relative;
     }
 
-    #cityIMG {
+    #hmb-cityIMG {
       position: relative;
       max-height: 786px;
       filter: brightness(1.25) contrast(1.1);
     }
 
-    #towerFlash {
+    #hmb-towerFlash {
       background: #ffffff;
       width: 7px;
       height: 7px;
@@ -47,15 +42,15 @@
       position: absolute;
       top: 153px;
       animation-name: towerFlashing;
-      animation-duration: 3s;
+      animation-duration: 2s;
       animation-iteration-count: infinite;
-      animation-delay: 2s;
+      animation-delay: 3s;
       border-radius: 5px;
       filter: blur(1px);
       rotate: 45deg;
     }
 
-    #towerFlash:after {
+    #hmb-towerFlash:after {
       background: #ffffffda;
       width: 50px;
       height: 50px;
@@ -92,10 +87,3 @@
     }
   }
 }
-
-// 1300px or less
-// @media screen and (max-width: 1500px) {
-//   #background {
-//     // margin-left: calc((1290px - 100vw) / 2 * -1);
-//   }
-// }

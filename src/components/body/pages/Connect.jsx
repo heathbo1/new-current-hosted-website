@@ -121,39 +121,39 @@ const Connect = () => {
   }
 
   return (
-    <div style={{ height: 'calc(100vh-96px' }} className="hmb-flexContainer pages connectPage">
-      <div className="container">
-        <BluePanel className="blue">
+    <div style={{ height: 'calc(100vh-96px' }} className="hmb-flexContainer pages hmb-connectPage">
+      <div className="hmb-container">
+        <BluePanel className="hmb-blue">
           <form>
-            <div className="formLine">
-              <label htmlFor="formName" className="formLabel">
+            <div className="hmb-formLine">
+              <label htmlFor="formName" className="hmb-formLabel">
                 <span className="hmb-whiteText">Your Name: </span>
                 <span style={{ color: 'var(--HMB-orange)' }}>*</span>
               </label>
-              <input id="formName" placeholder="Enter name" className="formInput" type="text" onChange={onNameChange} />
+              <input id="formName" placeholder="Enter name" className="hmb-formInput" type="text" onChange={onNameChange} />
             </div>
-            <div className="formLine">
-              <label htmlFor="formPhone" className="formLabel">
+            <div className="hmb-formLine">
+              <label htmlFor="formPhone" className="hmb-formLabel">
                 <span className="hmb-whiteText">Phone #: </span>
                 <span style={{ color: 'var(--HMB-orange)' }}>*</span>
               </label>
-              <input id="formPhone" placeholder="Enter your phone number" className="formInput" type="tel" onChange={onPhoneChange}></input>
+              <input id="formPhone" placeholder="Enter your phone number" className="hmb-formInput" type="tel" onChange={onPhoneChange}></input>
             </div>
-            <div className="formLine">
-              <label htmlFor="formEmail" className="formLabel">
+            <div className="hmb-formLine">
+              <label htmlFor="formEmail" className="hmb-formLabel">
                 <span className="hmb-whiteText">Email Address: </span>
                 <span style={{ color: 'var(--HMB-orange)' }}>*</span>
               </label>
-              <input id="formEmail" placeholder="Enter your email address" className="formInput" type="email" onChange={onEmailChange}></input>
+              <input id="formEmail" placeholder="Enter your email address" className="hmb-formInput" type="email" onChange={onEmailChange}></input>
             </div>
-            <div className="formLine">
-              <label htmlFor="formMessage" className="formLabel">
+            <div className="hmb-formLine">
+              <label htmlFor="formMessage" className="hmb-formLabel">
                 <span className="hmb-whiteText">Message: </span>
                 <span style={{ color: 'var(--HMB-orange)' }}>*</span>
               </label>
-              <textarea id="formMessage" className="formInput" onChange={onMessageChange} />
+              <textarea id="formMessage" className="hmb-formInput" onChange={onMessageChange} />
             </div>
-            <div className="formLine">
+            <div className="hmb-formLine">
               <button onClick={submit}>Submit</button>
               <button onClick={resetAll}>Reset Form</button>
             </div>

@@ -41,20 +41,20 @@ const Resume = () => {
 
         tempExpDom.push(
           <CollapsiblePanel
-            key={exp.company}
+            Ckey={exp.company}
             header={
               <>
-                <div className="expRow">
-                  <div className="expColumn expRole">
+                <div className="hmb-expRow">
+                  <div className="hmb-expColumn hmb-expRole">
                     <span>{exp.position}</span>
                   </div>
                   <div className="hmb-whiteText">| {exp.date}</div>
                 </div>
-                <div className="expRow">
-                  <div className="expColumn" style={{ textAlign: 'right', textTransform: 'uppercase', fontWeight: '700' }}>
+                <div className="hmb-expRow">
+                  <div className="hmb-expColumn" style={{ textAlign: 'right', textTransform: 'uppercase', fontWeight: '700' }}>
                     {exp.company}
                   </div>
-                  <div className="expColumn hmb-whiteText" style={{ textAlign: 'right' }}>
+                  <div className="hmb-expColumn hmb-whiteText" style={{ textAlign: 'right' }}>
                     - {exp.location}
                   </div>
                   <div style={{ display: exp.contract ? 'inline' : 'none', fontWeight: 'bold', fontStyle: 'italic' }}> - Contract</div>
@@ -62,7 +62,7 @@ const Resume = () => {
               </>
             }
           >
-            <div className="clients">
+            <div className="hmb-clients">
               <div className="hmb-whiteText">{exp.description}</div>
               <div style={{ padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' }}>
                 {!clients &&
@@ -79,8 +79,8 @@ const Resume = () => {
               )}
             </div>
             {exp.clients.map((c) => (
-              <div className="clients bottomLine">
-                <div className="hmb-row nameDescription">
+              <div className="hmb-clients hmb-bottomLine">
+                <div className="hmb-row hmb-nameDescription">
                   <span style={{ fontWeight: '700', color: 'var(--HMB-orange)' }}>{c.company}</span>
                   <span style={{ paddingLeft: '10px' }}>{c.description}</span>
                 </div>
@@ -106,38 +106,38 @@ const Resume = () => {
   return (
     <div id="hmb-resume" key="resumeBody" className="hmb-flexContainer pages" style={{ letterSpacing: '1.5px' }}>
       <div key="resumeMain" className="hmb-column">
-        <BluePanel key="resBP1">
+        <BluePanel Bkey="resBP1">
           <div className="hmb-sectionHeader-Line">PROFILE</div>
           <div className="hmb-whiteText">{Data.Profile}</div>
         </BluePanel>
       </div>
       <div key="resumeData" className="hmb-row hmb-dataRows">
-        <BluePanel key="resBP2" className="hmb-panels">
+        <BluePanel Bkey="resBP2" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Industry Experience</div>
           <div className="hmb-whiteText">{Data.IndustryExperience}</div>
         </BluePanel>
-        <BluePanel key="resBP3" className="hmb-panels">
+        <BluePanel Bkey="resBP3" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Competencies</div>
           <div className="hmb-whiteText">{Data.Competencies}</div>
         </BluePanel>
-        <BluePanel key="resBP4" className="hmb-panels">
+        <BluePanel Bkey="resBP4" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Languages</div>
           <div>{Data.Technologies.Languages}</div>
         </BluePanel>
-        <BluePanel key="resBP5" className="hmb-panels">
+        <BluePanel Bkey="resBP5" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Tools / Libraries</div>
           <div className="hmb-whiteText">{Data.Technologies['Tools / Libraries']}</div>
         </BluePanel>
-        <BluePanel key="resBP6" className="hmb-panels">
+        <BluePanel Bkey="resBP6" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Software</div>
           <div className="hmb-whiteText">{Data.Technologies.Software}</div>
         </BluePanel>
-        <BluePanel key="resBP7" className="hmb-panels">
+        <BluePanel Bkey="resBP7" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Operating Systems</div>
           <div className="hmb-whiteText">{Data.Technologies['Operating Systems']}</div>
         </BluePanel>
         <div className="hmb-sectionTitle">
-          <span className="sectionText">EXPERIENCE</span>
+          <span className="hmb-sectionText">EXPERIENCE</span>
         </div>
         <div key="experience" className="hmb-row hmb-dataRows">
           {expDOM}

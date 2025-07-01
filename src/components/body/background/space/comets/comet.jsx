@@ -53,7 +53,7 @@ const Comet = ({ height, width, cometNumber }) => {
     }
   }
 
-  return <canvas className="comets" id={cometNumb} ref={cometCanvas} width={width} height={height} />
+  return <canvas className="hmb-comets" id={cometNumb} ref={cometCanvas} width={width} height={height} />
 }
 
 export default Comet

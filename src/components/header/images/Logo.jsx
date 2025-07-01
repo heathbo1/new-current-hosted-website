@@ -16,9 +16,9 @@ export const Logo = (scrollDist) => {
   }, [scrollDist])
 
   return (
-    <div className="logoNameContainer" style={{ height: min ? '50px' : '' }}>
-      <img id="logo" src={HBIcon} style={{ width: min ? '40px' : '65px' }} alt="HBIcon" />
-      <div id="text">
+    <div className="hmb-logoNameContainer" style={{ height: min ? '50px' : '' }}>
+      <img id="hmb-logo" src={HBIcon} style={{ width: min ? '40px' : '65px' }} alt="HBIcon" />
+      <div id="hmb-text">
         <img src={HeathBishop} alt="HeathBishop" />
         <img src={FEdeveloper} style={{ display: scrollDist.scrollDist >= 7 ? 'none' : 'inline' }} alt="FEdeveloper" />
       </div>

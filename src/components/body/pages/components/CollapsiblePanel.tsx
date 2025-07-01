@@ -9,20 +9,16 @@ interface WrapperProps {
   children: ReactNode
   size?: string
   width?: string
-  key?: string
+  Ckey?: string
   className?: string
   header: ReactNode
 }
 
-const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, key, className = '', header }) => {
+const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, Ckey, className = '', header }) => {
   const [open, setOpen] = useState(false)
 
-  // <img id="logo" src={HBIcon} style={{ width: min ? '40px' : '65px' }} alt="HBIcon" />
-
-  console.log('open = ', open)
-
   return (
-    <div key={key} style={width ? { width: width } : {}} className={`hmb-bluePanel hmb-collapsiblePanel ${className}`}>
+    <div key={Ckey} style={width ? { width: width } : {}} className={`hmb-bluePanel hmb-collapsiblePanel ${className}`}>
       <button
         type="button"
         onClick={() => {

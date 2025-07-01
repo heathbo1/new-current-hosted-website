@@ -40,7 +40,7 @@ const About = ({ appRef }) => {
         </BluePanel>
       </div>
       <div className="hmb-sectionTitle">
-        <span className="sectionText">TESTIMONIALS</span>
+        <span className="hmb-sectionText">TESTIMONIALS</span>
       </div>
       <div key="abSide" className="hmb-row hmb-dataRows">
         <BluePanel className="hmb-aboutPanels">

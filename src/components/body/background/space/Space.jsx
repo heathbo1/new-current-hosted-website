@@ -72,7 +72,7 @@ const Space = ({ city }) => {
   }
 
   return (
-    <div id="spaceContainer">
+    <div id="hmb-spaceContainer">
       <div id="space-align">
         <Comet cometNumber={1} width={1782} height={height} />
         <Comet cometNumber={2} width={1782} height={height} />
@@ -81,8 +81,8 @@ const Space = ({ city }) => {
         <Comet cometNumber={5} width={1782} height={height} />
         <Comet cometNumber={6} width={1782} height={height} />
         <Comet cometNumber={7} width={1782} height={height} />
-        <canvas id="satellite" ref={sateliteCanvas} width="1782px" height={height} />
-        <canvas id="starsCanvas" ref={starsCanvas} width="1782px" height={height} />
+        <canvas id="hmb-satellite" ref={sateliteCanvas} width="1782px" height={height} />
+        <canvas id="hmb-starsCanvas" ref={starsCanvas} width="1782px" height={height} />
       </div>
     </div>
   )

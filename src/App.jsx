@@ -29,7 +29,7 @@ const App = () => {
   return (
     <BrowserRouter basename="/">
       <Provider>
-        <div id="fullContainer">
+        <div id="hmb-fullContainer">
           <Modal open={showAbout} openClose={openCloseAboutModal} title={'About This Site'}>
             <ul>
               <li>This site was designed and developed by Heath Bishop.</li>
@@ -42,7 +42,7 @@ const App = () => {
             </ul>
           </Modal>
           <Header scrollDist={scrollDist} showAbout={openCloseAboutModal} />
-          <div id="pageContainer" ref={ref} onScroll={scrolling}>
+          <div id="hmb-pageContainer" ref={ref} onScroll={scrolling}>
             <Routes>
               <Route index element={<Home />} />
               <Route path="/about" element={<About appRef={ref} />} />

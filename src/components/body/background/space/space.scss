@@ -1,4 +1,4 @@
-#satellite {
+#hmb-satellite {
   width: 100vw;
   min-width: 1102px;
   position: absolute;
@@ -6,25 +6,20 @@
   filter: blur();
 }
 
-#starsCanvas {
+#hmb-starsCanvas {
   min-width: 1102px;
   position: absolute;
   max-width: 1782px;
 }
 
-.comets {
+.hmb-comets {
   width: 100vw;
   min-width: 1102px;
   position: absolute;
   //   max-width: 1782px;
 }
 
-#spaceContainer {
+#hmb-spaceContainer {
   position: relative;
   margin-top: -72px;
-  // display: flex;
-  // z-index: 0;
-  #spac-align {
-    position: absolute;
-  }
 }

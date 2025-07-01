@@ -6,7 +6,7 @@ import Space from './space/Space'
 const Background = () => {
   const cityRef = useRef(null)
   return (
-    <div id="background">
+    <div id="hmb-background">
       <Space city={cityRef} />
       <City city={cityRef} />
     </div>

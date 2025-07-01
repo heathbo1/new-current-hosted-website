@@ -22,34 +22,34 @@ const CollapseMenu = ({ headermin }: Menu) => {
 
   const scrollTop = () => {
     setMenuOpen(false)
-    const container = document.getElementById('pageContainer')
+    const container = document.getElementById('hmb-pageContainer')
     container?.scrollTo({ top: 0 })
   }
 
   return (
-    <div id="dropDownMenu" style={{ marginTop: headermin ? '10px' : '20px' }}>
-      <div id="menuBars" onClick={menuToggle}>
+    <div id="hmb-dropDownMenu" style={{ marginTop: headermin ? '10px' : '20px' }}>
+      <div id="hmb-menuBars" onClick={menuToggle}>
         <i className="fas fa-bars" />
       </div>
-      <div id="dropDownContainer" style={{ height: menuOpen ? '210px' : 0, top: headermin ? '50px' : '80px' }}>
-        <div id="dropDown">
-          <div className="linkContainer">
-            <NavLink id="menu-about" className="menuBarNavigation" to="/about" onClick={scrollTop}>
+      <div id="hmb-dropDownContainer" style={{ height: menuOpen ? '210px' : 0, top: headermin ? '50px' : '80px' }}>
+        <div id="hmb-dropDown">
+          <div className="hmb-linkContainer">
+            <NavLink id="menu-about" className="hmb-menuBarNavigation" to="/about" onClick={scrollTop}>
               About
             </NavLink>
           </div>
-          <div className="linkContainer">
-            <NavLink id="menu-resume" className="menuBarNavigation" to="/resume" onClick={scrollTop}>
+          <div className="hmb-linkContainer">
+            <NavLink id="menu-resume" className="hmb-menuBarNavigation" to="/resume" onClick={scrollTop}>
               Resume
             </NavLink>
           </div>
-          <div className="linkContainer">
-            <NavLink id="menu-portfolio" className="menuBarNavigation" to="/portfolio" onClick={scrollTop}>
+          <div className="hmb-linkContainer">
+            <NavLink id="menu-portfolio" className="hmb-menuBarNavigation" to="/portfolio" onClick={scrollTop}>
               Portfolio
             </NavLink>
           </div>
-          <div className="linkContainer">
-            <NavLink id="menu-contact" className="menuBarNavigation" to="/Connect" onClick={scrollTop}>
+          <div className="hmb-linkContainer">
+            <NavLink id="menu-contact" className="hmb-menuBarNavigation" to="/Connect" onClick={scrollTop}>
               Connect
             </NavLink>
           </div>

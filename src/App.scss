@@ -12,7 +12,7 @@ body {
   letter-spacing: 1px;
 }
 
-#fullContainer {
+#hmb-fullContainer {
   margin: 0 auto;
   position: relative;
   min-height: 633px;
@@ -23,7 +23,7 @@ body {
   justify-content: center;
 }
 
-#pageContainer {
+#hmb-pageContainer {
   z-index: 2;
   position: absolute;
   height: calc(100vh);

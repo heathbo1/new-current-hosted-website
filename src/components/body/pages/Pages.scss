@@ -9,7 +9,7 @@
   padding-left: 15px;
   padding-top: 15px;
 
-  .sectionText {
+  .hmb-sectionText {
     text-shadow: 2px 2px 5px #000000;
     font-weight: bold;
     color: #ffffff;
@@ -39,31 +39,31 @@
 }
 
 #hmb-resume {
-  .expRow {
+  .hmb-expRow {
     display: flex;
     flex-direction: row;
     gap: 10px;
     flex-wrap: nowrap;
   }
-  .expColumn {
+  .hmb-expColumn {
     display: flex;
     flex-direction: column;
     gap: 10px;
     // width: 49%;
   }
 
-  .experiencePanel {
-    width: 49%;
-  }
+  // .experiencePanel {
+  //   width: 49%;
+  // }
 
-  .expRole {
+  .hmb-expRole {
     color: var(--HMB-orange);
     text-transform: uppercase;
     font-weight: 700;
     text-shadow: 1px 1px 1px #000000;
   }
 
-  .clients {
+  .hmb-clients {
     display: flex;
     flex-flow: column;
     padding: 10px;
@@ -73,33 +73,33 @@
     // margin-top: 15px;
     background-color: rgb(0 0 0 / 25%);
 
-    .nameDescription {
+    .hmb-nameDescription {
       flex-wrap: nowrap;
       border-bottom: 0.75px solid #ffffff;
     }
   }
 
-  .bottomLine {
+  .hmb-bottomLine {
     border-bottom: 0.75px solid #ffffff;
   }
 }
 
-#experience {
-  width: 100%;
-}
+// #experience {
+//   width: 100%;
+// }
 
-#homePage {
+#hmb-homePage {
   height: calc(100vh - 102px);
   padding-top: calc((100vh - 950px) / 2);
 }
 
-.homeTextStyle {
+.hmb-homeTextStyle {
   flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
   margin-bottom: calc(50vh * 0.03);
 
-  .titleStyle {
+  .hmb-titleStyle {
     margin: 8px 0;
     transition: opacity 1s;
     font-size: 1.9em;
@@ -111,14 +111,14 @@
     padding: 0 10px;
     flex-wrap: wrap;
 
-    .titleText {
+    .hmb-titleText {
       color: #ffffff;
       // background-color: #000000c7;
       align-self: flex-end;
       line-height: 1em;
     }
 
-    .boldText {
+    .hmb-boldText {
       color: var(--HMB-orange);
       font-weight: bold;
       font-size: 1.5em;
@@ -128,7 +128,7 @@
   }
 }
 
-.aboutStyle {
+.hmb-aboutStyle {
   transition: opacity 1s;
   display: flex;
   width: 100%;
@@ -137,7 +137,7 @@
   gap: 20px 86px;
   padding: 10px;
 
-  .aboutContainer {
+  .hmb-aboutContainer {
     border: 1px solid #ffffff70;
     padding: 15px;
     border-radius: 5px;
@@ -149,29 +149,29 @@
     max-width: 450px;
 
     &--small {
-      @extend .aboutContainer;
+      @extend .hmb-aboutContainer;
       max-height: 103px;
     }
   }
 }
 
-.connectPage {
-  .container {
+.hmb-connectPage {
+  .hmb-container {
     display: flex;
     justify-content: center;
   }
 
-  .blue {
+  .hmb-blue {
     max-width: 700px;
   }
 
-  .formLine {
+  .hmb-formLine {
     margin-bottom: 1rem;
 
-    .formLabel {
+    .hmb-formLabel {
       margin-bottom: 0.5rem;
     }
-    .formInput {
+    .hmb-formInput {
       display: block;
       font-size: 1rem;
       border: 1px solid rgb(255 255 255 / 34%);
@@ -181,31 +181,27 @@
       color: #ffffff;
       width: 100%;
     }
-    .formInput::placeholder {
+    .hmb-formInput::placeholder {
       color: #ffffffa2;
-    }
-    .errorInput {
-      color: var(--HMB-orange);
-      font-weight: bold;
     }
   }
 }
 
 @media screen and (max-width: 1543px) {
-  .aboutStyle {
+  .hmb-aboutStyle {
     justify-content: left;
   }
 }
 
 @media screen and (max-width: 525px) {
-  .aboutStyle {
+  .hmb-aboutStyle {
     justify-content: center;
   }
 }
 
 @media screen and (max-width: 1297px) {
-  .aboutStyle {
-    .aboutContainer {
+  .hmb-aboutStyle {
+    .hmb-aboutContainer {
       // Change opacity so it's visible ontop of the city
       background: linear-gradient(-45deg, rgb(0, 32, 48, 0.9), rgba(0, 92, 138, 0.9) 40%, rgba(0, 88, 133, 0.9) 65%, rgba(0, 32, 48, 0.9)) !important;
     }

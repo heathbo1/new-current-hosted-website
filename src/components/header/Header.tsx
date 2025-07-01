@@ -15,7 +15,7 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
   const [headerMin, setHeaderMin] = useState(false)
   const [canvOpacity, setcanvOpacity] = useState(false)
 
-  const headerCanvas = document.getElementById('headerCanvas') as HTMLCanvasElement
+  const headerCanvas = document.getElementById('hmb-headerCanvas') as HTMLCanvasElement
 
   const updateHeader = (show: boolean) => {
     if (headerCanvas) {
@@ -94,7 +94,7 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
 
     if (link) {
       return (
-        <Container className="headerButtonContainer" style={{ maxWidth: `${maxWidth}px`, minWidth: `${minWidth}px` }}>
+        <Container className="hmb-headerButtonContainer" style={{ maxWidth: `${maxWidth}px`, minWidth: `${minWidth}px` }}>
           <NavLink
             id={id}
             to={link}
@@ -116,15 +116,15 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
   // --------------------------------------------------------------------
 
   return (
-    <Navbar className="header navbar-expand-lg" style={{ height: headerMin ? '50px' : '75px' }}>
+    <Navbar className="hmb-header navbar-expand-lg" style={{ height: headerMin ? '50px' : '75px' }}>
       <Container id="header-container" fluid>
         <NavLink className={'navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
             <Logo scrollDist={scrollDist} />
           </div>
         </NavLink>
-        <div className="headerNavigation">
-          <div className="headerButtonsRow" style={{ height: headerMin ? '50px' : '75px' }}>
+        <div className="hmb-headerNavigation">
+          <div className="hmb-headerButtonsRow" style={{ height: headerMin ? '50px' : '75px' }}>
             <Col>
               <HeaderButton id="about" link="/about" title="ABOUT" maxw="130" minw="75" />
             </Col>
@@ -141,10 +141,10 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
           <CollapseMenu headermin={headerMin} />
           <button className="hmb-info-icon" onClick={showModal}>
             <i>i</i>
-            <span className="tooltiptext">About this site</span>
+            <span className="hmb-tooltiptext">About this site</span>
           </button>
         </div>
-        <canvas id="headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: canvOpacity ? 1 : 0 }} />
+        <canvas id="hmb-headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: canvOpacity ? 1 : 0 }} />
       </Container>
     </Navbar>
   )

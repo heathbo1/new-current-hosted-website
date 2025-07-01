@@ -12,12 +12,12 @@ interface idata {
 }
 
 interface iProject {
-  key: string
+  Pkey: string
   data: idata
   modalOpen: (data: idata) => void
 }
 
-const Project = ({ key, data, modalOpen }: iProject) => {
+const Project = ({ Pkey, data, modalOpen }: iProject) => {
   const [images, setImages] = useState<any>([])
 
   const openModal = () => {
@@ -32,8 +32,8 @@ const Project = ({ key, data, modalOpen }: iProject) => {
         zIndex: Object.keys(data.images).length - Number(key),
       }
       temp.push(
-        <div className="portImageContainer">
-          <img key={key} className="portImages" onClick={openModal} src={'/src/components/body/pages/portfolio/images/' + data.images[key]} style={style} />
+        <div key={`${key}-d`} className="portImageContainer">
+          <img key={`${key}-i`} className="portImages" onClick={openModal} src={'/src/components/body/pages/portfolio/images/' + data.images[key]} style={style} />
         </div>
       )
     }
@@ -42,7 +42,7 @@ const Project = ({ key, data, modalOpen }: iProject) => {
   }, [])
 
   return (
-    <BluePanel key={key} className="hmb-panels portPanel">
+    <BluePanel key={Pkey} className="hmb-panels portPanel">
       <div className="hmb-sectionHeader-Line" style={{ display: 'flex' }}>
         <div style={{ width: '60%' }}>{data.name}</div>
         <div style={{ right: '15px', textAlign: 'right', color: '#ffffff', width: '50%' }}>{data.client}</div>
