@@ -20,6 +20,7 @@ interface iExperience {
   date: string
   description: string
   details: string[]
+  key: number
   used: string
   clients: iClients[]
 }
@@ -41,7 +42,7 @@ const Resume = () => {
 
         tempExpDom.push(
           <CollapsiblePanel
-            Ckey={exp.company}
+            Ckey={exp.key}
             header={
               <>
                 <div className="hmb-expRow">
@@ -62,7 +63,7 @@ const Resume = () => {
               </>
             }
           >
-            <div className="hmb-clients">
+            <div className="hmb-companies">
               <div className="hmb-whiteText">{exp.description}</div>
               <div style={{ padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' }}>
                 {!clients &&
@@ -77,25 +78,27 @@ const Resume = () => {
                   Skills: {exp.used}
                 </div>
               )}
-            </div>
-            {exp.clients.map((c) => (
-              <div className="hmb-clients hmb-bottomLine">
-                <div className="hmb-row hmb-nameDescription">
-                  <span style={{ fontWeight: '700', color: 'var(--HMB-orange)' }}>{c.company}</span>
-                  <span style={{ paddingLeft: '10px' }}>{c.description}</span>
-                </div>
-                <div style={{ padding: '10px' }}>
-                  {c.details.map((det, i) => (
-                    <div key={i} className="hmb-row hmb-whiteText">
-                      &#x2022; {det}
+              <>
+                {exp.clients.map((c) => (
+                  <div className="hmb-clients hmb-bottomLine">
+                    <div className="hmb-row hmb-nameDescription">
+                      <span style={{ fontWeight: '700', color: 'var(--HMB-orange)' }}>{c.company}</span>
+                      <span style={{ paddingLeft: '10px' }}>{c.description}</span>
                     </div>
-                  ))}
-                </div>
-                <div className="hmb-row hmb-whiteText" style={{ marginTop: '20px' }}>
-                  Skills: {c.used}
-                </div>
-              </div>
-            ))}
+                    <div style={{ padding: '10px' }}>
+                      {c.details.map((det, i) => (
+                        <div key={i} className="hmb-row hmb-whiteText">
+                          &#x2022; {det}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="hmb-row hmb-whiteText" style={{ padding: '10px' }}>
+                      Skills: {c.used}
+                    </div>
+                  </div>
+                ))}
+              </>
+            </div>
           </CollapsiblePanel>
         )
       })

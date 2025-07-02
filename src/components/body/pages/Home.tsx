@@ -25,20 +25,20 @@ const Home = () => {
           <span className="hmb-titleText"> Skills</span>
         </p>
         <p className="hmb-titleStyle" style={{ opacity: opacity2 }}>
-          <span className="hmb-boldText">LIMITLESS</span>
-          <span className="hmb-titleText">Creativity</span>
+          <span className="hmb-boldText">EXTENSIVE</span>
+          <span className="hmb-titleText">Knowledge</span>
         </p>
         <p className="hmb-titleStyle" style={{ opacity: opacity3 }}>
-          <span className="hmb-boldText">VAST</span>
-          <span className="hmb-titleText">Imagination</span>
+          <span className="hmb-boldText">VERY</span>
+          <span className="hmb-titleText">Creative</span>
         </p>
       </div>
       <div className="hmb-aboutStyle" style={{ opacity: opacity4 }}>
         <BluePanel className="hmb-aboutContainer--small hmb-whiteText">I've been building front-end user interfaces for over 20 years. Including 10 years of experience with React.js.</BluePanel>
         <BluePanel className="hmb-aboutContainer--small hmb-whiteText">I’m not afraid to think outside the box to invent solutions that match exactly what your clients need.</BluePanel>
         <BluePanel className="hmb-aboutContainer hmb-whiteText">
-          I possess extensive knowledge and expertise in the core technologies that form the foundation of every UI library and framework (JavaScript, HTML, CSS). I can overwrite, push, and customize most UI libraries without relying on
-          their built-in customization methods. Bootstrap, for example.
+          I possess extensive knowledge and expertise in the core technologies that form the foundation of every UI library and framework. I can overwrite, and customize most UI libraries without relying on their built-in customization
+          methods. Bootstrap, for example.
         </BluePanel>
       </div>
     </div>

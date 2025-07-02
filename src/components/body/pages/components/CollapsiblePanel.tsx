@@ -3,20 +3,18 @@ import { ReactNode, useState } from 'react'
 import './Components.scss'
 import Arrow from './images/downArrow.svg'
 
-// import HBIcon from './New Name Logo/HBIcon.svg'
-
 interface WrapperProps {
   children: ReactNode
   size?: string
   width?: string
-  Ckey?: string
+  Ckey?: number
   className?: string
   header: ReactNode
 }
 
 const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, Ckey, className = '', header }) => {
   const [open, setOpen] = useState(false)
-
+  console.log('key = ', Ckey)
   return (
     <div key={Ckey} style={width ? { width: width } : {}} className={` hmb-collapsiblePanel ${className}`}>
       <button
@@ -24,7 +22,7 @@ const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, Ckey, class
         onClick={() => {
           setOpen(!open)
         }}
-        style={{ width: '100%' }}
+        style={{ background: `${open ? 'rgb(27 27 27 / 25%)' : 'none'}` }}
       >
         <div className="hmb-headerGrid">
           <span className="hmb-info">

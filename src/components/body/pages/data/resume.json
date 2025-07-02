@@ -23,6 +23,7 @@
         "Engineered a creative solution to integrate a non-native dropdown menu with the Formik library, demonstrating problem-solving and adaptability."
       ],
       "clients": [],
+      "key": 16,
       "used": "Agile Development, React, Nextjs, TypeScript, ESLINT, Prettier, Tailwind, MSW, Storybook, and Playright"
     },
     {
@@ -39,6 +40,7 @@
         "Utilized design tools like Adobe XD, Illustrator, and Photoshop to align UI/UX improvements with brand and accessibility standards."
       ],
       "clients": [],
+      "key": 15,
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
     },
     {
@@ -55,6 +57,7 @@
         "Applied Agile methodologies to enhance team collaboration, increase productivity, and ensure timely project delivery."
       ],
       "clients": [],
+      "key": 14,
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
     },
     {
@@ -71,6 +74,7 @@
         "Employed Agile methodologies and modern technologies such as Next.js, TypeScript, and CSS Modules to deliver scalable solutions."
       ],
       "clients": [],
+      "key": 13,
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Storybook"
     },
     {
@@ -87,6 +91,7 @@
         "Implemented performance and UX improvements through strategic upgrades, maintaining high code quality with ESLint and Jest."
       ],
       "clients": [],
+      "key": 12,
       "used": "Agile Development, React, Angular, Webpack, Node.js, Sass, HTML, CSS, TypeScript, ESLint, Prettier"
     },
     {
@@ -103,6 +108,7 @@
         "Designed screen architectures and established testing standards, reducing redundant code while increasing test coverage and reliability."
       ],
       "clients": [],
+      "key": 11,
       "used": "Agile Development, React, Redux, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint"
     },
     {
@@ -119,6 +125,7 @@
         "Sped up development by updating all obsolete NPM packages and upgrading to a multithreaded version of Nodejs."
       ],
       "clients": [],
+      "key": 10,
       "used": "Agile Development, React, AngularJS, TypeScript, Jasmine, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint, TSLint"
     },
     {
@@ -135,6 +142,7 @@
         "Guided the team through architecture improvements and Angular 7 upgrades, successfully achieving key project milestones."
       ],
       "clients": [],
+      "key": 9,
       "used": "Agile Development, Angular, TypeScript, Jasmine, Karma, Protractor, Webpack, Node.js, Sass, HTML, CSS, JavaScript"
     },
     {
@@ -149,6 +157,7 @@
         "Led the initiative to reorganize the code, standardize code patterns, and implement Jest to increase code coverage."
       ],
       "clients": [],
+      "key": 8,
       "used": "React.js, Redux,js, Axios.js, Saga.js, Jest, JavaScript, JSON, HTML, CSS, LESS, Webpack, Node.js, Intellij"
     },
     {
@@ -160,6 +169,7 @@
       "description": "Member of the Software Architecture and Engineering Line of Service.",
       "details": [],
       "used": "",
+      "key": 7,
       "clients": [
         {
           "company": "Charter Communications",
@@ -167,8 +177,7 @@
           "details": [
             "Redeveloped the Customer Service Management website as part of the Gateway Project, improving functionality and user experience.",
             "Resolved a complex Bootstrap dropdown menu bug by implementing a unique solution that enhanced UI usability. - Became usable no matter where on the screen it was placed and no matter how many items where in the menu. (2016)",
-            "Developed a custom event-based library for global state management using React, JavaScript, and HTML, demonstrating strong front-end expertise",
-            "Collaborated on rewriting critical Trading System components, migrating business logic to managed .NET code to boost system efficiency and maintainability"
+            "Developed a custom event-based library for global state management using React, JavaScript, and HTML, demonstrating strong front-end expertise"
           ],
           "used": "Agile Development, React.js, JavaScript, HTML, CSS, Node, Webpack, NPM, Bootstrap, JSON"
         },
@@ -178,7 +187,8 @@
           "details": [
             "Collaborated to rewrite two major components of the Trading System, the Pricing Engine and Broker Invoice Engine.",
             "Rewrote multiple SQL stored procedures to move business logic from SQL to managed .Net code.",
-            "Built unit test and / or integration test for new and existing code."
+            "Built unit test and / or integration test for new and existing code.",
+            "Collaborated on rewriting critical Trading System components, migrating business logic to managed .NET code to boost system efficiency and maintainability"
           ],
           "used": "Agile Development, Dependency Injection, Design Patterns, Moq, MVC, C#, VB, MS SQL, ASP, HTML, JavaScript, Visual Studio 2010, MS SQL Server Management Studio, Fiddler"
         },
@@ -199,6 +209,7 @@
       "description": "Built and updated client websites.",
       "details": [],
       "used": "",
+      "key": 6,
       "clients": [
         {
           "company": "Goldcorp Inc.",
@@ -238,6 +249,7 @@
       "date": "Nov 2011 - May 2013",
       "description": "Designed and developed a variety of software, and e-Learning products for clients.",
       "details": [],
+      "key": 5,
       "used": "",
       "clients": [
         {
@@ -293,6 +305,7 @@
       "description": "Designed and developed an entire Flash framework for Intel.",
       "details": ["Developed a framework for to integrate with a SCORM compliant .Net LMS using SOAP.", "Developed multiple e-Learning modules that supported multiple languages and included quizzes and quiz reporting."],
       "clients": [],
+      "key": 4,
       "used": "Adobe Flash, XML, HTML, SCORM, SOAP"
     },
     {
@@ -304,6 +317,7 @@
       "description": "Helped manage an HTML and CSS based Content Management System.",
       "details": ["Updated HTML code to add and remove products from online catalog."],
       "clients": [],
+      "key": 3,
       "used": "HTML, CSS"
     },
     {
@@ -319,17 +333,19 @@
         "Designed and developed websites for a variety of high profile clients."
       ],
       "clients": [],
+      "key": 2,
       "used": "Adobe Flash, XML, HTML, CSS"
     },
     {
+      "clients": [],
       "company": "MasterKey Consulting",
       "contract": false,
-      "position": "Interactive Designer / Developer",
-      "location": "St. Louis, MO",
       "date": "December 2008 - April 2009",
       "description": "Designed and developed interactive media.",
       "details": ["Designed and developed HTML, CSS, and JavaScript based websites for commercial clients and the Department of Defense’s Privacy and Civil Liberties Office.", "Developed medical education software for Elsevier."],
-      "clients": [],
+      "key": 1,
+      "location": "St. Louis, MO",
+      "position": "Interactive Designer / Developer",
       "used": "HTML, CSS, JavaScript, Adobe Flash, XML"
     }
   ],

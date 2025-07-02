@@ -64,24 +64,28 @@
     text-transform: uppercase;
   }
 
-  .hmb-clients {
+  .hmb-companies {
     display: flex;
     flex-flow: column;
     border: 1px solid rgb(255 255 255 / 34%);
     border-radius: 5px;
 
     // margin-top: 15px;
-    background-color: rgb(0 0 0 / 25%);
+    background-color: rgb(0 0 0 / 30%);
     padding: 10px;
 
     .hmb-nameDescription {
       flex-wrap: nowrap;
-      border-bottom: 0.75px solid #ffffff;
+      // border-bottom: 0.75px solid #ffffff;
+    }
+
+    .hmb-clients {
+      margin-top: 15px;
     }
   }
 
   .hmb-bottomLine {
-    border-bottom: 0.75px solid #ffffff;
+    border-bottom: 0.75px solid #ffffff6e;
   }
 }
 
