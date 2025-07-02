@@ -39,6 +39,11 @@
 }
 
 #hmb-resume {
+
+  .experienceContainer {
+    gap: 0px;
+  }
+
   .hmb-expRow {
     display: flex;
     flex-direction: row;
