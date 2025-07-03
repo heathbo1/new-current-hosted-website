@@ -143,7 +143,7 @@
     border-radius: 5px;
     background: var(--HB-blue-background);
     padding: 15px;
-    max-width: 450px;
+    max-width: 380px;
     min-height: 100px;
     font-size: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -151,6 +151,7 @@
     &--small {
       @extend .hmb-aboutContainer;
       max-height: 103px;
+      max-width: 450px;
     }
   }
 }
@@ -190,17 +191,17 @@
   }
 }
 
-@media screen and (max-width: 1543px) {
-  .hmb-aboutStyle {
-    justify-content: left;
-  }
-}
+// @media screen and (max-width: 1543px) {
+//   .hmb-aboutStyle {
+//     justify-content: left;
+//   }
+// }
 
-@media screen and (max-width: 525px) {
-  .hmb-aboutStyle {
-    justify-content: center;
-  }
-}
+// @media screen and (max-width: 525px) {
+//   .hmb-aboutStyle {
+//     justify-content: center;
+//   }
+// }
 
 @media screen and (max-width: 610px) {
   #hmb-resumeData {
