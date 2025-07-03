@@ -11,11 +11,6 @@ const Comet = ({ height, width, cometNumber }) => {
 
   useEffect(() => {
     setInterval(drawComets, 25)
-    // const delay = Math.random() * 1000
-
-    // setTimeout(() => {
-    //   setInterval(drawComets, 50)
-    // }, delay)
   }, [])
 
   useLayoutEffect(() => {

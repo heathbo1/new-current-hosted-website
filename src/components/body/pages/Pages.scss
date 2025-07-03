@@ -191,18 +191,6 @@
   }
 }
 
-// @media screen and (max-width: 1543px) {
-//   .hmb-aboutStyle {
-//     justify-content: left;
-//   }
-// }
-
-// @media screen and (max-width: 525px) {
-//   .hmb-aboutStyle {
-//     justify-content: center;
-//   }
-// }
-
 @media screen and (max-width: 610px) {
   #hmb-resumeData {
     flex-direction: column;
@@ -233,7 +221,7 @@
     }
   }
 
-  .aboutPanels {
+  .hmb-aboutPanels {
     width: 100% !important;
   }
 

@@ -1,12 +1,14 @@
-.portImages {
+.hmb-portImages {
   height: 150px;
   box-shadow: 5px 5px 5px #00000047;
 }
-.imgContainer {
+
+.hmb-imgContainer {
   width: 100%;
   text-align: center;
 }
-.imageDisplayContainer {
+
+.hmb-imageDisplayContainer {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -14,7 +16,7 @@
   gap: 10px;
   user-select: none;
 
-  .portImageDisplay {
+  .hmb-portImageDisplay {
     // height: 60vh;
     box-shadow: 5px 5px 5px #00000047;
     flex-direction: column;
@@ -22,21 +24,21 @@
     width: 100%;
   }
 
-  .arrowCoverLeft {
+  .hmb-arrowCoverLeft {
     position: relative;
     width: 15px;
     display: flex;
     justify-content: end;
   }
 
-  .arrowCoverRight {
+  .hmb-arrowCoverRight {
     position: relative;
     width: 15px;
     display: flex;
     justify-content: start;
   }
 
-  .arrows {
+  .hmb-arrows {
     border-width: 30px;
     border-style: solid;
     flex-direction: column;
@@ -44,26 +46,28 @@
     content: '';
   }
 
-  .left {
+  .hmb-left {
     border-color: transparent #ffffff transparent transparent;
     cursor: pointer;
     filter: brightness(0.65);
   }
-  .left:hover {
+
+  .hmb-left:hover {
     filter: brightness(1) drop-shadow(2px 4px 6px black);
   }
 
-  .right {
+  .hmb-right {
     border-color: transparent transparent transparent #ffffff;
     cursor: pointer;
     filter: brightness(0.65);
   }
-  .right:hover {
+
+  .hmb-right:hover {
     filter: brightness(1) drop-shadow(2px 4px 6px black);
   }
 }
 
-.photoHalf {
+.hmb-photoHalf {
   width: 50%;
   //   display: grid;
   grid-template-columns: calc(45vw - 300px) 35%;
@@ -71,29 +75,29 @@
   justify-content: end;
 }
 
-.photoPlacer {
+.hmb-photoPlacer {
   display: grid;
   grid-template-columns: repeat(4, 10px [col-start]);
   width: 270px;
 }
 
-.infoContainer {
+.hmb-infoContainer {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
-.infoHalf {
+.hmb-infoHalf {
   width: 50%;
   display: inline-block;
   -webkit-text-stroke: 0.15px #ffffff;
 }
 
-.infoDescript {
+.hmb-infoDescript {
   padding-top: 10px;
 }
 
-.portImageContainer {
+.hmb-portImageContainer {
   display: flex;
   cursor: pointer;
 }
@@ -104,15 +108,16 @@
 
 // 1300px or less
 @media screen and (max-width: 1300px) {
-  .infoHalf {
+  .hmb-infoHalf {
     width: 100%;
   }
-  .photoHalf {
+
+  .hmb-photoHalf {
     width: 100%;
     justify-content: center;
   }
 
-  .photoPlacer {
+  .hmb-photoPlacer {
     padding-left: 0px;
     padding-top: 10px;
   }

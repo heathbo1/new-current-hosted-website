@@ -81,15 +81,15 @@ const Portfolio = ({ appRef }) => {
         style={{ maxWidth: '1250px' }}
       >
         {selectedProj ? (
-          <div className="imageDisplayContainer">
-            <div className="arrowCoverLeft">
-              <div className="arrows left" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('previous')} />
+          <div className="hmb-imageDisplayContainer">
+            <div className="hmb-arrowCoverLeft">
+              <div className="hmb-arrows hmb-left" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('previous')} />
             </div>
-            <div className="imgContainer">
-              <img id="mainPortImage" className="portImageDisplay" src={'/src/components/body/pages/portfolio/images/' + selectedProj.images[selectedPictIndex]} />
+            <div className="hmb-imgContainer">
+              <img id="mainPortImage" className="hmb-portImageDisplay" src={'/src/components/body/pages/portfolio/images/' + selectedProj.images[selectedPictIndex]} />
             </div>
-            <div className="arrowCoverRight">
-              <div className="arrows right" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('next')} />
+            <div className="hmb-arrowCoverRight">
+              <div className="hmb-arrows hmb-right" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('next')} />
             </div>
           </div>
         ) : (

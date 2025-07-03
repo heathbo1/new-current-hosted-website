@@ -32,8 +32,8 @@ const Project = ({ Pkey, data, modalOpen }: iProject) => {
         zIndex: Object.keys(data.images).length - Number(key),
       }
       temp.push(
-        <div key={`${key}-d`} className="portImageContainer">
-          <img key={`${key}-i`} className="portImages" onClick={openModal} src={'/src/components/body/pages/portfolio/images/' + data.images[key]} style={style} />
+        <div key={`${key}-d`} className="hmb-portImageContainer">
+          <img key={`${key}-i`} className="hmb-portImages" onClick={openModal} src={'/src/components/body/pages/portfolio/images/' + data.images[key]} style={style} />
         </div>
       )
     }
@@ -47,15 +47,15 @@ const Project = ({ Pkey, data, modalOpen }: iProject) => {
         <div style={{ width: '60%' }}>{data.name}</div>
         <div style={{ right: '15px', textAlign: 'right', color: '#ffffff', width: '50%' }}>{data.client}</div>
       </div>
-      <div className="infoContainer">
-        <div className="infoHalf">
+      <div className="hmb-infoContainer">
+        <div className="hmb-infoHalf">
           <div>
             <b>Technologies Used:</b> {data.technology}
           </div>
-          <div className="infoDescript">{data.description}</div>
+          <div className="hmb-infoDescript">{data.description}</div>
         </div>
-        <div className="photoHalf">
-          <div className="photoPlacer">{images}</div>
+        <div className="hmb-photoHalf">
+          <div className="hmb-photoPlacer">{images}</div>
         </div>
       </div>
     </BluePanel>
