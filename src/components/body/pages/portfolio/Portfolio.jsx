@@ -86,7 +86,7 @@ const Portfolio = ({ appRef }) => {
               <div className="hmb-arrows hmb-left" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('previous')} />
             </div>
             <div className="hmb-imgContainer">
-              <img id="mainPortImage" className="hmb-portImageDisplay" src={'public/' + selectedProj.images[selectedPictIndex]} />
+              <img id="mainPortImage" className="hmb-portImageDisplay" src={'/' + selectedProj.images[selectedPictIndex]} />
             </div>
             <div className="hmb-arrowCoverRight">
               <div className="hmb-arrows hmb-right" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('next')} />
@@ -100,9 +100,7 @@ const Portfolio = ({ appRef }) => {
           {selectedProj &&
             selectedProj.images.length > 1 &&
             selectedProj.images.map((value, i) => {
-              return (
-                <img id={i} onClick={selectImage} style={Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' }} className="snapshot" src={'/src/components/body/pages/portfolio/images/' + value} />
-              )
+              return <img id={i} onClick={selectImage} style={Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' }} className="snapshot" src={'/' + value} />
             })}
         </div>
       </Modal>
