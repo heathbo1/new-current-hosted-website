@@ -86,7 +86,7 @@ const Portfolio = ({ appRef }) => {
               <div className="hmb-arrows hmb-left" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('previous')} />
             </div>
             <div className="hmb-imgContainer">
-              <img id="mainPortImage" className="hmb-portImageDisplay" src={'/src/components/body/pages/portfolio/images/' + selectedProj.images[selectedPictIndex]} />
+              <img id="mainPortImage" className="hmb-portImageDisplay" src={'public/' + selectedProj.images[selectedPictIndex]} />
             </div>
             <div className="hmb-arrowCoverRight">
               <div className="hmb-arrows hmb-right" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('next')} />
