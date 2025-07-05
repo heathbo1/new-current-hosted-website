@@ -31,9 +31,10 @@ const Project = ({ Pkey, data, modalOpen }: iProject) => {
       const style = {
         zIndex: Object.keys(data.images).length - Number(key),
       }
+      console.log('test = ', data.images[key])
       temp.push(
         <div key={`${key}-d`} className="hmb-portImageContainer">
-          <img key={`${key}-i`} className="hmb-portImages" onClick={openModal} src={'/src/components/body/pages/portfolio/images/' + data.images[key]} style={style} />
+          <img key={`${key}-i`} className="hmb-portImages" onClick={openModal} src={'public/' + data.images[key]} style={style} />
         </div>
       )
     }

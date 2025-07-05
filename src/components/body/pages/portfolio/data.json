@@ -25,7 +25,7 @@
     "client": "Edward Jones",
     "technology": "React, Material, SCSS, HTML5, JavaScript",
     "description": "This is part of an internal SAAS application that the local offices use to manage client account portfolios.",
-    "images": ["Edward Jones/EdwardJones1.png", "Edward Jones/EdwardJones2.png", "Edward Jones/EdwardJones3.png"]
+    "images": ["EdwardJones/EdwardJones1.png", "EdwardJones/EdwardJones2.png", "EdwardJones/EdwardJones3.png"]
   },
   "5": {
     "name": "ATT: Sustainability ",

@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import Comet from './comets/Comet'
+import Comet from './comets/comet'
 import SateliteFactory from './sateliteFactory'
 import './space.scss'
 import GenerateNewStar from './starFactory'

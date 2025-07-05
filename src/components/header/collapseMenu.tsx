@@ -31,7 +31,7 @@ const CollapseMenu = ({ headermin }: Menu) => {
       <div id="hmb-menuBars" onClick={menuToggle}>
         <i className="fas fa-bars" />
       </div>
-      <div id="hmb-dropDownContainer" style={{ height: menuOpen ? '210px' : 0, top: headermin ? '50px' : '80px' }}>
+      <div id="hmb-dropDownContainer" style={{ height: menuOpen ? '190px' : 0, top: headermin ? '50px' : '65px' }}>
         <div id="hmb-dropDown">
           <div className="hmb-linkContainer">
             <NavLink id="menu-about" className="hmb-menuBarNavigation" to="/about" onClick={scrollTop}>

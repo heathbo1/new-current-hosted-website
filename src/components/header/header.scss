@@ -154,10 +154,13 @@
           border: 1px solid rgb(39, 186, 233);
           border-radius: 5px;
           background: var(--HB-blue-background);
-          padding: 0 10px 0 0;
-          width: 155px;
+          padding: 10px;
+          width: 125px;
           min-height: 178px;
           text-align: right;
+          display: flex;
+          flex-flow: column;
+          gap: 10px;
 
           .hmb-linkContainer {
             .hmb-menuBarNavigation {
@@ -169,6 +172,7 @@
               letter-spacing: 2px;
               text-align: right;
               text-decoration: none;
+              text-shadow: 1px 1px 1px #000000;
             }
 
             .hmb-menuBarNavigation:hover {
