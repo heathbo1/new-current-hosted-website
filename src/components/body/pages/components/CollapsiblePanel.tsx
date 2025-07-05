@@ -14,7 +14,7 @@ interface WrapperProps {
 
 const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, Ckey, className = '', header }) => {
   const [open, setOpen] = useState(false)
-  console.log('key = ', Ckey)
+
   return (
     <div key={Ckey} style={width ? { width: width } : {}} className={` hmb-collapsiblePanel ${className}`}>
       <button

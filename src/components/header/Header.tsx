@@ -67,7 +67,6 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
   }, [headerCanvas])
 
   const showModal = () => {
-    console.log('showModal')
     showAbout()
   }
 

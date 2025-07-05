@@ -157,6 +157,14 @@
 }
 
 .hmb-connectPage {
+  .hmb-connect {
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+
   .hmb-container {
     display: flex;
     justify-content: center;

@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import Comet from './comets/comet'
+import Comet from './comets/Comet'
 import SateliteFactory from './sateliteFactory'
 import './space.scss'
 import GenerateNewStar from './starFactory'
@@ -45,7 +45,9 @@ const Space = ({ city }) => {
         newStarsCtx.shadowBlur = Math.floor(Math.random())
         newStarsCtx.shadowColor = 'white'
       }
-      newStarsCtx.fillStyle = 'hsla(' + star.randomHue + ', 50%, ' + star.randomLightness + '%, ' + star.randomAlpha + ')'
+
+      newStarsCtx.fillStyle = 'hsla(' + 0 + ', 0%, ' + '75%, ' + star.randomAlpha + ')'
+      // newStarsCtx.fillStyle = 'hsla(' + star.randomHue + ', 50%, ' + star.randomLightness + '%, ' + star.randomAlpha + ')'
       newStarsCtx.fillRect(star.randomX, star.randomY, star.randomSize, star.randomSize)
     })
   }
