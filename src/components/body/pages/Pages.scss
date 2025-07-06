@@ -47,8 +47,8 @@
   .hmb-expRow {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10px;
+    flex-wrap: wrap;
+    // gap: 10px;
   }
 
   .hmb-expColumn {
@@ -62,6 +62,7 @@
     font-weight: 700;
     text-shadow: 1px 1px 1px #000000;
     text-transform: uppercase;
+    padding-right: 10px;
   }
 
   .hmb-companies {
@@ -196,6 +197,12 @@
     .hmb-formInput::placeholder {
       color: #ffffffa2;
     }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  #dateSpacer {
+    display: none;
   }
 }
 

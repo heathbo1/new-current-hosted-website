@@ -49,15 +49,15 @@ const Resume = () => {
                   <div className="hmb-expColumn hmb-expRole">
                     <span>{exp.position}</span>
                   </div>
-                  <div className="hmb-whiteText">| {exp.date}</div>
+                  <div className="hmb-whiteText">
+                    <span id="dateSpacer">|</span> {exp.date}
+                  </div>
                 </div>
                 <div className="hmb-expRow">
-                  <div className="hmb-expColumn" style={{ textAlign: 'right', textTransform: 'uppercase', fontWeight: '700' }}>
+                  <div className="hmb-expColumn" style={{ textTransform: 'uppercase', fontWeight: '700' }}>
                     {exp.company}
                   </div>
-                  <div className="hmb-expColumn hmb-whiteText" style={{ textAlign: 'right' }}>
-                    - {exp.location}
-                  </div>
+                  <div className="hmb-expColumn hmb-whiteText">- {exp.location}</div>
                   <div style={{ display: exp.contract ? 'inline' : 'none', fontWeight: 'bold', fontStyle: 'italic' }}> - Contract</div>
                 </div>
               </>
