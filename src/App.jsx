@@ -37,7 +37,8 @@ const App = () => {
               <li>It was built using TypeScript, React, SCSS, Bootstrap, Prettier, React Router, ESLint, Node.js, and Vite.</li>
               <ul>
                 <li>
-                  Bootstrap was used in the Header (for horizontal resizing) and in the Modals (basic modal functionality). Everything else is custom. - You'll find my initials HMB at the start of every custom CSS class name as proof.
+                  Bootstrap was used in the Header (for horizontal resizing) and in the Modals (basic modal functionality). Everything else is custom. - If you look in your browser's dev tools. You'll find my initials HMB at the start of
+                  every custom CSS class name as proof.
                 </li>
               </ul>
               <li>The background stars are randomly generated, and the comets have random start and stop locations, colors, velocities, and sizes.</li>
