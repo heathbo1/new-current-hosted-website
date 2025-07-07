@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Col, Container, Navbar } from 'react-bootstrap'
+import { Container, Navbar } from 'react-bootstrap'
 import { NavLink } from 'react-router'
 import './collapseMenu'
 import CollapseMenu from './collapseMenu'
@@ -124,18 +124,18 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
         </NavLink>
         <div className="hmb-headerNavigation">
           <div className="hmb-headerButtonsRow" style={{ height: headerMin ? '50px' : '75px' }}>
-            <Col>
+            <div className="HMB-column">
               <HeaderButton id="about" link="/about" title="ABOUT" maxw="130" minw="75" />
-            </Col>
-            <Col>
+            </div>
+            <div className="HMB-column">
               <HeaderButton id="resume" link="/resume" title="RESUME" maxw="150" minw="95" />
-            </Col>
-            <Col>
+            </div>
+            <div className="HMB-column">
               <HeaderButton id="portfolio" link="/portfolio" title="PORTFOLIO" maxw="175" minw="130" />
-            </Col>
-            <Col>
+            </div>
+            <div className="HMB-column">
               <HeaderButton id="contact" link="/connect" title="CONNECT" maxw="130" minw="110" />
-            </Col>
+            </div>
           </div>
           <CollapseMenu headermin={headerMin} />
           <button className="hmb-info-icon" onClick={showModal}>
