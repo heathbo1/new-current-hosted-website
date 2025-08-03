@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Container, Navbar } from 'react-bootstrap'
 import { NavLink } from 'react-router'
 import './collapseMenu'
 import CollapseMenu from './collapseMenu'
@@ -91,7 +90,7 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
 
     if (link) {
       return (
-        <Container className="hmb-headerButtonContainer" style={{ maxWidth: `${maxWidth}px`, minWidth: `${minWidth}px` }}>
+        <div className="hmb-headerButtonContainer" style={{ maxWidth: `${maxWidth}px`, minWidth: `${minWidth}px` }}>
           <NavLink
             id={id}
             to={link}
@@ -105,22 +104,22 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
           >
             <div className='hmb-linkBox' style={{ 'backgroundColor': canvOpacity ? "#00000000" : "#000000" }}>{title}</div>
           </NavLink>
-        </Container>
+        </div>
       )
     }
   }
   // --------------------------------------------------------------------
 
   return (
-    <Navbar className="hmb-header navbar-expand-lg" style={{ height: headerMin ? '50px' : '75px' }}>
-      <Container id="header-container" fluid>
+    <nav className="hmb-header" style={{ height: headerMin ? '50px' : '75px' }}>
+      <div id="header-container">
         <NavLink className={'hmb-navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
             <Logo scrollDist={scrollDist} />
           </div>
         </NavLink>
         <div className="hmb-headerNavigation">
-          <div className="hmb-headerButtonsRow" style={{ height: headerMin ? '50px' : '75px' }}>
+          <div className="hmb-headerButtonsRow" style={{ height: headerMin ? '28px' : '50px' }}>
             <div className="HMB-column">
               <HeaderButton id="about" link="/about" title="ABOUT" maxw="110" minw="75" />
             </div>
@@ -141,8 +140,8 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
           </button>
         </div>
         <canvas id="hmb-headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: canvOpacity ? 1 : 0 }} />
-      </Container>
-    </Navbar>
+      </div>
+    </nav>
   )
 }
 
