@@ -29,7 +29,7 @@
   border-bottom-color: rgb(39, 186, 233);
 }
 
-.hmb-header {
+#hmb-header {
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -47,7 +47,7 @@
   width: 100%;
   z-index: 3;
 
-  #header-container {
+  #hmb-header-container {
     display: flex;
     flex-wrap: inherit;
     align-items: center;
