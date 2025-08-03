@@ -2,7 +2,7 @@
   "Profile": "Seasoned Front-End Web Developer with over 20 years of experience delivering high-quality, user-centered digital solutions across diverse industries including healthcare, finance, education, and technology. Proven expertise in React, JavaScript, TypeScript, HTML/CSS, and modern UI frameworks such as Next.js and AngularJS. Skilled in building scalable, accessible interfaces, leading development teams, and implementing reusable component libraries. Adept at driving performance, mentoring junior engineers, and streamlining development through Agile methodologies and testing best practices. Passionate about continuous learning, innovation, and delivering seamless user experiences across platforms.",
   "Technologies": {
     "Languages": "TypeScript, JavaScript, HTML, HTML5, CSS3, JSON, XML",
-    "Tools / Libraries": "React, Redux, Next.js, AngularJS, Material, Bootstrap, SCSS, Tailwind, jQuery, ESLint, Node, NPM, Express, Webpack, Jest, GIT, GitLab, GraphQL, Bitbucket, Jasmine, Jenkins, Agile, Scrum, Kanban Methodologies",
+    "Tools / Libraries": "React, Redux, Next.js, WordPress, AngularJS, Material, Bootstrap, SCSS, Tailwind, jQuery, ESLint, Node, NPM, Express, Webpack, Jest, GIT, GitLab, GraphQL, Bitbucket, Jasmine, Jenkins, Agile, Scrum, Kanban Methodologies",
     "Software": "WebStorm, Visual Studio Code, Eclipse, IntelliJ, Fiddler, Postman, Adobe Photoshop, Adobe Illustrator, Adobe XD, Confluence, JIRA, Figma",
     "Operating Systems": "Windows, Mac OS"
   },
@@ -173,7 +173,7 @@
       "clients": [
         {
           "company": "Charter Communications",
-          "description": "Redeveloped Customer Service Management website.",
+          "description": "Redeveloped their Customer Service Management website.",
           "details": [
             "Redeveloped the Customer Service Management website as part of the Gateway Project, improving functionality and user experience.",
             "Resolved a complex Bootstrap dropdown menu bug by implementing a unique solution that enhanced UI usability. - Became usable no matter where on the screen it was placed and no matter how many items where in the menu. (2016)",
@@ -183,7 +183,7 @@
         },
         {
           "company": "Metal Exchange Corporation",
-          "description": "Redeveloped Trading System.",
+          "description": "Redeveloped their Trading System.",
           "details": [
             "Collaborated to rewrite two major components of the Trading System, the Pricing Engine and Broker Invoice Engine.",
             "Rewrote multiple SQL stored procedures to move business logic from SQL to managed .Net code.",

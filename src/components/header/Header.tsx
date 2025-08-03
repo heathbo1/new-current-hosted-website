@@ -20,13 +20,11 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
   const updateHeader = (show: boolean) => {
     if (headerCanvas) {
       if (show == true) {
-        // headerCanvas.style.opacity = 1
         setcanvOpacity(true)
         if (headerMin === false) {
           setHeaderMin(true)
         }
       } else {
-        // headerCanvas.style.opacity = 0
         setcanvOpacity(false)
 
         if (headerMin === true) {
@@ -97,16 +95,15 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
           <NavLink
             id={id}
             to={link}
-            style={{ lineHeight: headerMin ? '60px' : '110px' }}
             className={({ isActive }) => {
               if (isActive) {
-                return 'navLinkActive'
+                return 'hmb-navLinkActive'
               } else {
-                return 'navLink'
+                return 'hmb-navLink'
               }
             }}
           >
-            {title}
+            <div className='hmb-linkBox' style={{ 'backgroundColor': canvOpacity ? "#00000000" : "#000000" }}>{title}</div>
           </NavLink>
         </Container>
       )
@@ -117,7 +114,7 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
   return (
     <Navbar className="hmb-header navbar-expand-lg" style={{ height: headerMin ? '50px' : '75px' }}>
       <Container id="header-container" fluid>
-        <NavLink className={'navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
+        <NavLink className={'hmb-navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
           <div id="logoBtn">
             <Logo scrollDist={scrollDist} />
           </div>
@@ -125,16 +122,16 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
         <div className="hmb-headerNavigation">
           <div className="hmb-headerButtonsRow" style={{ height: headerMin ? '50px' : '75px' }}>
             <div className="HMB-column">
-              <HeaderButton id="about" link="/about" title="ABOUT" maxw="130" minw="75" />
+              <HeaderButton id="about" link="/about" title="ABOUT" maxw="110" minw="75" />
             </div>
             <div className="HMB-column">
-              <HeaderButton id="resume" link="/resume" title="RESUME" maxw="150" minw="95" />
+              <HeaderButton id="resume" link="/resume" title="RESUME" maxw="130" minw="95" />
             </div>
             <div className="HMB-column">
               <HeaderButton id="portfolio" link="/portfolio" title="PORTFOLIO" maxw="175" minw="130" />
             </div>
             <div className="HMB-column">
-              <HeaderButton id="contact" link="/connect" title="CONNECT" maxw="130" minw="110" />
+              <HeaderButton id="contact" link="/connect" title="CONNECT" maxw="145" minw="110" />
             </div>
           </div>
           <CollapseMenu headermin={headerMin} />

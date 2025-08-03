@@ -1,3 +1,6 @@
+/* Reset */
+
+
 .hmb-logoNameContainer {
   display: flex;
   flex-direction: row;
@@ -66,13 +69,11 @@
     line-height: 10px;
 
     .hmb-tooltiptext {
-      /* Position the tooltip text - see examples below! */
       position: absolute;
-      // border: 1px solid rgb(39, 186, 233);
-      // border-right: 2px solid rgb(39, 186, 233);
       top: -5px;
       right: 30px;
       visibility: hidden;
+      opacity: 0;
       z-index: 1;
       border-radius: 6px;
       background-color: rgba(0, 92, 138);
@@ -81,6 +82,7 @@
       color: #ffffff;
       font-size: 1rem;
       text-align: center;
+      transition: opacity 200ms ease-out;
     }
   }
 
@@ -92,6 +94,7 @@
 
   .hmb-info-icon:hover .hmb-tooltiptext {
     visibility: visible;
+    opacity: 1;
   }
 
   .hmb-info-icon .hmb-tooltiptext::after {
@@ -131,12 +134,12 @@
     a {
       transition:
         margin-top 225ms ease-in,
-        font-size 225ms ease-in;
+        font-size 225ms ease-in,
+        color 300ms ease-in;
     }
 
     #hmb-dropDownMenu {
       padding-right: 20px;
-      //   margin-top: 20px;
 
       #hmb-menuBars {
         display: flex;
@@ -205,12 +208,31 @@
     }
   }
 
-  .hmb-headerNavigation .hmb-headerButtonsRow a:hover {
+  .hmb-headerButtonContainer a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 0.05em;
+    background-color: #ffffff;
+    transition: width 300ms ease-out;
+    transform: translate(-50%, 0);
+  }
+
+  .hmb-headerButtonContainer:hover a:hover {
     transition:
-      margin-top 225ms ease-in,
-      font-size 225ms ease-in;
-    margin-top: -7px;
-    font-size: 1.45rem;
+      font-size 225ms ease-in,
+      letter-spacing 225ms ease-in;
+    font-size: 1.4rem;
+
+
+    letter-spacing: 3px;
+  }
+
+  .hmb-headerButtonContainer:hover a::after {
+    transition: width 300ms ease-out;
+    width: 100%;
   }
 
   canvas {
@@ -222,13 +244,10 @@
   }
 }
 
-// $bs-gutter-x: 1.5rem;
-
 .hmb-headerButtonContainer {
   display: flex;
   position: relative;
   bottom: 0;
-  // cursor: pointer;
   flex: 1;
   z-index: 1;
   background-size: cover;
@@ -239,7 +258,7 @@
   text-align: center;
 }
 
-.navLink {
+.hmb-navLink {
   display: flex;
   position: relative;
   justify-content: center;
@@ -256,14 +275,39 @@
   line-height: 96px;
   letter-spacing: 2px;
   text-decoration: none;
+  transition: color 3s ease-out;
 }
 
-.navLinkActive {
-  @extend .navLink;
-  margin-top: -7px;
+.hmb-linkBox {
+  height: 18px;
+  align-self: flex-end;
+  line-height: 15px;
+}
+
+.hmb-navLinkActive {
+  @extend .hmb-navLink;
   color: var(--HMB-orange);
-  font-size: 1.45rem;
+  font-size: 1.4rem;
   text-shadow: 0 1px 5px #000000;
+  text-decoration: none;
+  transition: color 3s ease-out;
+  letter-spacing: 3px;
+}
+
+.hmb-navLinkActive::after {
+  width: 100% !important;
+  transform: scale(1);
+  opacity: 1 !important;
+}
+
+a::after {
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+}
+
+a:hover::after {
+  transform: scale(1)
 }
 
 .navLinkIcon {
@@ -271,8 +315,6 @@
 }
 
 .hmb-headerButtonContainer:hover .navLink {
-  //   color: #ffffff !important;
-  //   line-height: 110px;
   text-shadow: 0 3px 8px #000000;
 }
 
@@ -307,10 +349,6 @@
   #hmb-dropDownMenu {
     display: none;
   }
-
-  //   .hmb-headerButtonsRow {
-  //     display: flex;
-  //   }
 }
 
 /* LOGO - Less than or equal to 975px */

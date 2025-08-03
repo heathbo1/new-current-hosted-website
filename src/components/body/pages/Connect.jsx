@@ -120,22 +120,25 @@ const Connect = () => {
   // }
 
   return (
-    <div style={{ height: 'calc(100vh-96px' }} className="hmb-flexContainer pages hmb-connectPage">
+    <div style={ { height: 'calc(100vh-96px' } } className="hmb-flexContainer pages hmb-connectPage">
       <div className="hmb-container">
         <BluePanel className="hmb-blue">
-          <div className="hmb-sectionHeader-Line" style={{ fontSize: '2em', textAlign: 'center', paddingBottom: '10px' }}>
+          <div className="hmb-sectionHeader-Line" style={ { fontSize: '2em', textAlign: 'center', paddingBottom: '10px' } }>
             HEATH BISHOP
           </div>
           <div className="hmb-connect">
-            <div className="hmb-whiteText">PHONE: (314) 609-9176</div>
+            <div className="hmb-whiteText"><b>Phone: </b>(314) 609-9176</div>
             <div>
-              <span>EMAIL: </span>
-              <a style={{ color: '#ffffff' }} href="mailto:hbishop@heathbishop.com" className="hmb-whiteText">
+              <span><b>Email: </b></span>
+              <a style={ { color: '#ffffff' } } href="mailto:hbishop@heathbishop.com" className="hmb-whiteText">
                 hbishop@heathbishop.com
               </a>
             </div>
+            <div>
+              <a style={ { color: '#ffffff' } } href='https://www.linkedin.com/in/heath-bishop-757a3b5/' className='hmb-whiteText'><b>LinkedIn</b> Profile</a>
+            </div>
 
-            <div className="hmb-whiteText">LOCATION: ST. LOUIS, MO, USA</div>
+            <div className="hmb-whiteText"><b>Location: </b>St. Louis, Mo, USA</div>
           </div>
           {/* <form>
             <div className="hmb-formLine">

@@ -30,28 +30,28 @@ const App = () => {
     <BrowserRouter basename="/">
       <Provider>
         <div id="hmb-fullContainer">
-          <Modal open={showAbout} openClose={openCloseAboutModal} title={'About This Site'}>
+          <Modal open={ showAbout } openClose={ openCloseAboutModal } title={ 'About This Site' }>
             <ul>
               <li>This site was designed and developed by Heath Bishop.</li>
 
               <li>It was built using TypeScript, React, SCSS, Bootstrap, Prettier, React Router, ESLint, Node.js, and Vite.</li>
               <ul>
                 <li>
-                  Bootstrap was used in the Header (for horizontal resizing) and in the Modals (basic modal functionality). Everything else is custom. - If you look in your browser's dev tools. You'll find my initials HMB at the start of
+                  Bootstrap was used in the Header (for horizontal resizing) and in the Modals (root modal functionality). Everything else is custom. - If you look in your browser's dev tools. You'll find my initials HMB at the start of
                   every custom CSS class name as proof.
                 </li>
               </ul>
               <li>The background stars are randomly generated, and the comets have random start and stop locations, colors, velocities, and sizes.</li>
             </ul>
           </Modal>
-          <Header scrollDist={scrollDist} showAbout={openCloseAboutModal} />
-          <div id="hmb-pageContainer" ref={ref} onScroll={scrolling}>
+          <Header scrollDist={ scrollDist } showAbout={ openCloseAboutModal } />
+          <div id="hmb-pageContainer" ref={ ref } onScroll={ scrolling }>
             <Routes>
-              <Route index element={<Home />} />
-              <Route path="/about" element={<About appRef={ref} />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/portfolio" element={<Portfolio appRef={ref} />} />
-              <Route path="/connect" element={<Connect />} />
+              <Route index element={ <Home /> } />
+              <Route path="/about" element={ <About appRef={ ref } /> } />
+              <Route path="/resume" element={ <Resume /> } />
+              <Route path="/portfolio" element={ <Portfolio appRef={ ref } /> } />
+              <Route path="/connect" element={ <Connect /> } />
             </Routes>
           </div>
           <Background />
