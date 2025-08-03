@@ -30,7 +30,7 @@ const App = () => {
     <BrowserRouter basename="/">
       <Provider>
         <div id="hmb-fullContainer">
-          <Modal open={ showAbout } openClose={ openCloseAboutModal } title={ 'About This Site' }>
+          <Modal open={ showAbout } openClose={ openCloseAboutModal } title={ 'About This Site' } title2='v2.6'>
             <ul>
               <li>This site was designed and developed by Heath Bishop.</li>
 
