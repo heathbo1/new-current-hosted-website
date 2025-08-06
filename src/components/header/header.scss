@@ -226,7 +226,7 @@
     transition:
       font-size 225ms ease-in,
       letter-spacing 225ms ease-in;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 
 
     letter-spacing: 3px;
@@ -290,7 +290,7 @@
 .hmb-navLinkActive {
   @extend .hmb-navLink;
   color: var(--HMB-orange);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-shadow: 0 1px 5px #000000;
   text-decoration: none;
   transition: color 3s ease-out;
