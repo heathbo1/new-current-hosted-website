@@ -8,11 +8,11 @@ interface iModal {
   openClose: () => void
   children: ReactNode
   title: any
-  title2: string
+  title2?: string
   size: 'lg' | 'sm' | 'xl'
 }
 
-const ModalComponent = ({ open, openClose, children, title, title2, size = 'lg' }: iModal) => {
+const ModalComponent = ({ open, openClose, children, title, title2 = '', size = 'lg' }: iModal) => {
   const close = () => {
     openClose()
   }
