@@ -1,6 +1,10 @@
 /* Reset */
 
 
+a {
+  color: #ffffff;
+}
+
 .hmb-logoNameContainer {
   display: flex;
   flex-direction: row;
@@ -39,7 +43,6 @@
   margin: 0px;
   padding: 0px 0.5rem;
   position: absolute;
-  text-align: center;
   top: 0;
   transition-behavior: normal;
   transition-delay: 0s;
@@ -55,7 +58,6 @@
     width: 100%;
     padding: 0 calc(1.5rem * .5);
     box-sizing: border-box;
-    text-align: center;
     margin: 0 auto;
   }
 
@@ -82,7 +84,6 @@
       background-color: rgba(0, 92, 138);
       padding: 7px;
       width: 150px;
-      color: #ffffff;
       font-size: 1rem;
       text-align: center;
       transition: opacity 200ms ease-out;
@@ -123,7 +124,6 @@
       flex-wrap: nowrap;
       justify-content: space-around;
       width: 95%;
-      text-align: center;
     }
 
     .HMB-column {
@@ -179,7 +179,6 @@
           box-shadow: 0px 4px 8px #000000;
           border: 1px solid rgb(39, 186, 233);
           border-radius: 5px;
-          // background: var(--HB-blue-background);
           background: linear-gradient(-45deg, rgb(0, 32, 48, 0.95), rgba(0, 92, 138, 0.95) 40%, rgba(0, 88, 133, 0.95) 65%, rgba(0, 32, 48, 0.95));
           padding: 10px;
           width: 125px;
@@ -269,16 +268,13 @@
   position: relative;
   justify-content: center;
   z-index: 1;
-  transition: line-height 200ms linear;
   margin: 0px;
   background: none;
   padding: 0 4px;
   width: 100%;
   height: 100%;
-  color: #ffffff;
   font-weight: 200;
   font-size: 1.15em;
-  line-height: 96px;
   letter-spacing: 2px;
   text-decoration: none;
   transition: color 50ms ease-out;

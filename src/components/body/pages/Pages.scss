@@ -35,7 +35,10 @@
   }
 }
 
-
+.collapsibleHolder {
+  display: flex;
+  width: 100%;
+}
 
 .hmb-whiteText {
   -webkit-text-stroke: 0.15px #ffffff;
@@ -52,7 +55,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    // gap: 10px;
   }
 
   .hmb-expColumn {
@@ -75,13 +77,11 @@
     border: 1px solid rgb(255 255 255 / 34%);
     border-radius: 5px;
 
-    // margin-top: 15px;
     background-color: rgb(0 0 0 / 30%);
     padding: 10px;
 
     .hmb-nameDescription {
       flex-wrap: nowrap;
-      // border-bottom: 0.75px solid #ffffff;
     }
 
     .hmb-clients {

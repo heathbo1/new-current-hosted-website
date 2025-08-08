@@ -35,7 +35,7 @@ const Portfolio = ({ appRef }) => {
     appRef.current.scrollIntoView({ behavior: 'smooth' })
     const temp = []
     for (const key in dataJSON) {
-      temp.push(<Project key={key} modalOpen={setModal} data={dataJSON[key]} />)
+      temp.push(<Project key={ key } modalOpen={ setModal } data={ dataJSON[key] } />)
     }
     setProjects(temp)
   }, [])
@@ -68,44 +68,44 @@ const Portfolio = ({ appRef }) => {
   return (
     <>
       <Modal
-        open={selectedProj !== null}
-        openClose={setModal}
+        open={ selectedProj !== null }
+        openClose={ setModal }
         title={
           selectedProj && (
             <span>
-              <span>{`${selectedProj.name}: `} </span>
-              <span style={{ color: '#ffffff' }}>{selectedProj.client}</span>
+              <span>{ `${selectedProj.name}: ` } </span>
+              <span style={ { color: '#ffffff' } }>{ selectedProj.client }</span>
             </span>
           )
         }
-        style={{ maxWidth: '1250px' }}
+        style={ { maxWidth: '1250px' } }
       >
-        {selectedProj ? (
+        { selectedProj ? (
           <div className="hmb-imageDisplayContainer">
             <div className="hmb-arrowCoverLeft">
-              <div className="hmb-arrows hmb-left" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('previous')} />
+              <div className="hmb-arrows hmb-left" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('previous') } />
             </div>
             <div className="hmb-imgContainer">
-              <img id="mainPortImage" className={`${selectedProj.images.length > 1 ? 'hmb-portImageDisplay--small' : 'hmb-portImageDisplay'}`} src={'/' + selectedProj.images[selectedPictIndex]} />
+              <img id="mainPortImage" className={ `${selectedProj.images.length > 1 ? 'hmb-portImageDisplay--small' : 'hmb-portImageDisplay'}` } src={ '/' + selectedProj.images[selectedPictIndex] } />
             </div>
             <div className="hmb-arrowCoverRight">
-              <div className="hmb-arrows hmb-right" style={{ display: selectedProj.images.length > 1 ? 'flex' : 'none' }} onClick={() => nextPreviousImage('next')} />
+              <div className="hmb-arrows hmb-right" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('next') } />
             </div>
           </div>
         ) : (
           <div />
-        )}
+        ) }
 
-        <div className="hmb-snapshots" style={{ display: selectedProj && selectedProj.images && selectedProj.images.length > 1 ? 'flex' : 'none' }}>
-          {selectedProj &&
+        <div className="hmb-snapshots" style={ { display: selectedProj && selectedProj.images && selectedProj.images.length > 1 ? 'flex' : 'none' } }>
+          { selectedProj &&
             selectedProj.images.length > 1 &&
             selectedProj.images.map((value, i) => {
-              return <img id={i} onClick={selectImage} style={Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' }} className="snapshot" src={'/' + value} />
-            })}
+              return <img id={ i } key={ i } onClick={ selectImage } style={ Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' } } className="snapshot" src={ '/' + value } />
+            }) }
         </div>
       </Modal>
       <div className="hmb-flexContainer pages">
-        <div className="hmb-row hmb-dataRows">{projects}</div>
+        <div className="hmb-row hmb-dataRows">{ projects }</div>
       </div>
     </>
   )

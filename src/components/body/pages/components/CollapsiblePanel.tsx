@@ -7,16 +7,14 @@ interface WrapperProps {
   children: ReactNode
   size?: string
   width?: string
-  Ckey?: number
   className?: string
   header: ReactNode
 }
 
-const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, Ckey, className = '', header }) => {
+const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, className = '', header }) => {
   const [open, setOpen] = useState(false)
-
   return (
-    <div key={Ckey} style={width ? { width: width } : {}} className={` hmb-collapsiblePanel ${className}`}>
+    <div style={width ? { width: width } : {}} className={` hmb-collapsiblePanel ${className}`}>
       <button
         type="button"
         onClick={() => {

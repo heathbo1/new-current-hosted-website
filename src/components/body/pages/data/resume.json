@@ -23,7 +23,7 @@
         "Engineered a creative solution to integrate a non-native dropdown menu with the Formik library, demonstrating problem-solving and adaptability."
       ],
       "clients": [],
-      "key": 16,
+      "key": 10,
       "used": "Agile Development, React, Nextjs, TypeScript, ESLINT, Prettier, Tailwind, MSW, Storybook, and Playright"
     },
     {
@@ -40,7 +40,7 @@
         "Utilized design tools like Adobe XD, Illustrator, and Photoshop to align UI/UX improvements with brand and accessibility standards."
       ],
       "clients": [],
-      "key": 15,
+      "key": 9,
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
     },
     {
@@ -57,7 +57,7 @@
         "Applied Agile methodologies to enhance team collaboration, increase productivity, and ensure timely project delivery."
       ],
       "clients": [],
-      "key": 14,
+      "key": 8,
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
     },
     {
@@ -74,7 +74,7 @@
         "Employed Agile methodologies and modern technologies such as Next.js, TypeScript, and CSS Modules to deliver scalable solutions."
       ],
       "clients": [],
-      "key": 13,
+      "key": 7,
       "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Storybook"
     },
     {
@@ -91,7 +91,7 @@
         "Implemented performance and UX improvements through strategic upgrades, maintaining high code quality with ESLint and Jest."
       ],
       "clients": [],
-      "key": 12,
+      "key": 6,
       "used": "Agile Development, React, Angular, Webpack, Node.js, Sass, HTML, CSS, TypeScript, ESLint, Prettier"
     },
     {
@@ -108,7 +108,7 @@
         "Designed screen architectures and established testing standards, reducing redundant code while increasing test coverage and reliability."
       ],
       "clients": [],
-      "key": 11,
+      "key": 5,
       "used": "Agile Development, React, Redux, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint"
     },
     {
@@ -125,7 +125,7 @@
         "Sped up development by updating all obsolete NPM packages and upgrading to a multithreaded version of Nodejs."
       ],
       "clients": [],
-      "key": 10,
+      "key": 4,
       "used": "Agile Development, React, AngularJS, TypeScript, Jasmine, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint, TSLint"
     },
     {
@@ -142,7 +142,7 @@
         "Guided the team through architecture improvements and Angular 7 upgrades, successfully achieving key project milestones."
       ],
       "clients": [],
-      "key": 9,
+      "key": 3,
       "used": "Agile Development, Angular, TypeScript, Jasmine, Karma, Protractor, Webpack, Node.js, Sass, HTML, CSS, JavaScript"
     },
     {
@@ -157,7 +157,7 @@
         "Led the initiative to reorganize the code, standardize code patterns, and implement Jest to increase code coverage."
       ],
       "clients": [],
-      "key": 8,
+      "key": 2,
       "used": "React.js, Redux,js, Axios.js, Saga.js, Jest, JavaScript, JSON, HTML, CSS, LESS, Webpack, Node.js, Intellij"
     },
     {
@@ -169,7 +169,7 @@
       "description": "Member of the Software Architecture and Engineering Line of Service.",
       "details": [],
       "used": "",
-      "key": 7,
+      "key": 1,
       "clients": [
         {
           "company": "Charter Communications",
