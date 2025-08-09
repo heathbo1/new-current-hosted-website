@@ -1,4 +1,5 @@
 {
+  "bracketSpacing": false,
   "importOrder": ["^components/(.*)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,

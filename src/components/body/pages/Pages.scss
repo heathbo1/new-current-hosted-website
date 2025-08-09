@@ -95,7 +95,7 @@
 }
 
 #hmb-homePage {
-  padding-top: calc((100vh - 950px) / 2);
+  padding-top: calc((100vh - 875px) / 2);
   height: calc(100vh - 102px);
 
   .hmb-homeTextStyle {
@@ -136,26 +136,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px 86px;
+    gap: 20px 125px;
     transition: opacity 1s;
     padding: 10px;
     width: 100%;
 
     .hmb-aboutContainer {
       margin: 0px;
-      border: 1px solid #ffffff70;
+      // border: 1px solid #ffffff70;
       border-radius: 5px;
-      background: var(--HB-blue-background);
+      // background: var(--HB-blue-background);
       padding: 15px;
-      max-width: 380px;
+      max-width: 325px;
       min-height: 100px;
-      font-size: 1em;
+      // font-size: 1em;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
 
       &--small {
         @extend .hmb-aboutContainer;
-        max-height: 103px;
-        max-width: 450px;
+        margin: 0px;
+        max-height: 142px;
+        max-width: 325px;
       }
     }
   }
@@ -181,7 +182,7 @@
   }
 
   .hmb-formLine {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 
     .hmb-formLabel {
       margin-bottom: 0.5rem;

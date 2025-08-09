@@ -20,16 +20,17 @@ const Home = () => {
     <div id="hmb-homePage" className="pages">
       <div className="hmb-homeTextStyle">
         <p className="hmb-titleStyle" style={{ opacity: opacity1 }}>
-          <span className="hmb-boldText">BROAD</span>
+          <span className="hmb-boldText">Broad</span>
           <span className="hmb-titleText">Technical</span>
           <span className="hmb-titleText"> Skills</span>
         </p>
         <p className="hmb-titleStyle" style={{ opacity: opacity2 }}>
-          <span className="hmb-boldText">EXTENSIVE</span>
+          <span className="hmb-boldText">Extensive</span>
           <span className="hmb-titleText">Knowledge</span>
         </p>
         <p className="hmb-titleStyle" style={{ opacity: opacity3 }}>
-          <span className="hmb-boldText">VERY</span>
+          <span className="hmb-boldText">Innovative</span>
+          <span className="hmb-titleText">&</span>
           <span className="hmb-titleText">Creative</span>
         </p>
       </div>
