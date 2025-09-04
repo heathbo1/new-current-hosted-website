@@ -20,6 +20,7 @@ const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, className =
         onClick={() => {
           setOpen(!open)
         }}
+        className='hmb-button'
         style={{ background: `${open ? 'rgb(27 27 27 / 25%)' : 'none'}` }}
       >
         <div className="hmb-headerGrid">

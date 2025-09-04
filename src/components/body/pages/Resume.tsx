@@ -41,7 +41,7 @@ const Resume = () => {
         const clients = exp.clients.length >= 1
 
         tempExpDom.push(
-          <div key={i} className='collapsibleHolder'>
+          <div key={i} className='hmb-collapsibleHolder'>
             <CollapsiblePanel
               header={
                 <>
