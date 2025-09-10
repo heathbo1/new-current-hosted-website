@@ -31,45 +31,53 @@
 
   .hmb-arrowCoverLeft {
     position: relative;
-    width: 15px;
     display: flex;
     justify-content: end;
   }
 
   .hmb-arrowCoverRight {
     position: relative;
-    width: 15px;
     display: flex;
     justify-content: start;
   }
 
   .hmb-arrows {
-    border-width: 30px;
-    border-style: solid;
     flex-direction: column;
-
-    content: '';
-  }
-
-  .hmb-left {
-    border-color: transparent #ffffff transparent transparent;
+    font-size: 5em;
+    text-decoration: none;
+    color: #ffffff;
     cursor: pointer;
-    filter: brightness(0.65);
+    font-weight: 500;
+    transition: all 200ms ease-out;
+    // content: '';
   }
 
-  .hmb-left:hover {
-    filter: brightness(1) drop-shadow(2px 4px 6px black);
+  .hmb-arrows:hover {
+    filter: drop-shadow(2px 4px 6px black);
+    color: var(--HMB-orange);
   }
 
-  .hmb-right {
-    border-color: transparent transparent transparent #ffffff;
-    cursor: pointer;
-    filter: brightness(0.65);
+  .hmb-arrows:active {
+    color: var(--HMB-active-orange);
+    // text-shadow: 2px 2px 3px #012b40, 2px 2px 5px #000000;
+    filter: drop-shadow(4px 6px 8px black);
   }
 
-  .hmb-right:hover {
-    filter: brightness(1) drop-shadow(2px 4px 6px black);
-  }
+  // .hmb-left {
+  //   cursor: pointer;
+  // }
+
+  // .hmb-left:hover {
+  //   filter: brightness(1) drop-shadow(2px 4px 6px black);
+  // }
+
+  // .hmb-right {
+  //   cursor: pointer;
+  // }
+
+  // .hmb-right:hover {
+  //   filter: brightness(1) drop-shadow(2px 4px 6px black);
+  // }
 }
 
 .hmb-photoHalf {

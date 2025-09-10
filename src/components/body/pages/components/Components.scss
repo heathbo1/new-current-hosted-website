@@ -5,7 +5,7 @@
   border: 4px solid rgb(0, 31, 84);
   border-radius: 5px;
   background: var(--HB-blue-background);
-  padding: 1rem 1rem;
+  padding: .5rem 0.25rem;
   width: 100%;
   min-width: 330px;
   min-height: 178px;
@@ -68,11 +68,17 @@
   background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
   font-size: 2em;
+  transition: all 200ms ease-out;
 }
 
 .hmb-closeBtn:hover {
   color: var(--HMB-orange);
   text-shadow: 2px 2px 3px #004669, 2px 2px 5px #000000;
+}
+
+.hmb-closeBtn:active {
+  color: var(--HMB-active-orange);
+  text-shadow: 2px 2px 3px #012b40, 2px 2px 5px #000000;
 }
 
 .hmb-snapshots {
@@ -81,6 +87,7 @@
   gap: 10px;
   padding: 10px;
   overflow: auto;
+  justify-content: center;
 
   .snapshot {
     cursor: pointer;
