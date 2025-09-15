@@ -26,8 +26,7 @@ a {
 }
 
 #hmb-headerCanvas {
-  transition: opacity 5000ms ease-in;
-  transition: height 150ms ease-in;
+  transition: height 125ms ease-in, opacity 125ms ease-in;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: rgb(39, 186, 233);

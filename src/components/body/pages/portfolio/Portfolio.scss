@@ -29,27 +29,21 @@
     }
   }
 
-  .hmb-arrowCoverLeft {
-    position: relative;
-    display: flex;
-    justify-content: end;
-  }
-
-  .hmb-arrowCoverRight {
-    position: relative;
-    display: flex;
-    justify-content: start;
-  }
-
   .hmb-arrows {
-    flex-direction: column;
+    position: relative;
     font-size: 5em;
-    text-decoration: none;
     color: #ffffff;
     cursor: pointer;
     font-weight: 500;
     transition: all 200ms ease-out;
-    // content: '';
+    line-height: 50px;
+    background: none;
+    border: none;
+    vertical-align: top;
+    align-items: flex-start;
+    height: 60px;
+    padding: 0px;
+    width: 39px;
   }
 
   .hmb-arrows:hover {
@@ -63,17 +57,17 @@
     filter: drop-shadow(4px 6px 8px black);
   }
 
-  // .hmb-left {
-  //   cursor: pointer;
-  // }
+  .hmb-left {
+    justify-content: end;
+  }
 
   // .hmb-left:hover {
   //   filter: brightness(1) drop-shadow(2px 4px 6px black);
   // }
 
-  // .hmb-right {
-  //   cursor: pointer;
-  // }
+  .hmb-right {
+    justify-content: start;
+  }
 
   // .hmb-right:hover {
   //   filter: brightness(1) drop-shadow(2px 4px 6px black);

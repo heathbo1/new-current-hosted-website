@@ -36,7 +36,7 @@ const Home = () => {
       </div>
       <div className="hmb-aboutStyle" style={{ opacity: opacity4 }}>
         <BluePanel className="hmb-aboutContainer--small hmb-whiteText">I've been building front-end user interfaces for over 20 years. Including 10 years of experience with React.js.</BluePanel>
-        <BluePanel className="hmb-aboutContainer--small hmb-whiteText">I’m not afraid to think outside the box to invent solutions that match exactly what your clients need.</BluePanel>
+        <BluePanel className="hmb-aboutContainer--small hmb-whiteText">I'm not afraid to think outside the box to invent solutions that match exactly what your clients need.</BluePanel>
         <BluePanel className="hmb-aboutContainer hmb-whiteText">
           I possess extensive knowledge and expertise in the core technologies that form the foundation of every UI library and framework. I can overwrite, and customize most UI libraries without relying on their built-in customization
           methods. Bootstrap, for example.

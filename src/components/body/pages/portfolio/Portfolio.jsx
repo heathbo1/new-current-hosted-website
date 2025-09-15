@@ -82,15 +82,11 @@ const Portfolio = ({ appRef }) => {
       >
         { selectedProj ? (
           <div className="hmb-imageDisplayContainer">
-            <div className="hmb-arrowCoverLeft">
-              <a className="hmb-arrows hmb-left" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('previous') }>❮</a>
-            </div>
+              <button className="hmb-arrows hmb-left" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('previous') }>❮</button>
             <div className="hmb-imgContainer">
               <img id="mainPortImage" className={ `${selectedProj.images.length > 1 ? 'hmb-portImageDisplay--small' : 'hmb-portImageDisplay'}` } src={ '/' + selectedProj.images[selectedPictIndex] } />
             </div>
-            <div className="hmb-arrowCoverRight">
-              <a className="hmb-arrows hmb-right" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('next') }>❯</a>
-            </div>
+              <button className="hmb-arrows hmb-right" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('next') }>❯</button>
           </div>
         ) : (
           <div />

@@ -9,7 +9,6 @@ import Connect from './components/body/pages/Connect'
 import Home from './components/body/pages/Home'
 import Portfolio from './components/body/pages/portfolio/Portfolio'
 import Resume from './components/body/pages/Resume'
-import Provider from './components/body/Provider'
 import Header from './components/header/Header'
 
 const App = () => {
@@ -28,7 +27,6 @@ const App = () => {
 
   return (
     <BrowserRouter basename="/">
-      <Provider>
         <div id="hmb-fullContainer">
           <Modal open={ showAbout } openClose={ openCloseAboutModal } title={ 'About This Site' } title2='v2.6'>
             <ul>
@@ -56,7 +54,6 @@ const App = () => {
           </div>
           <Background />
         </div>
-      </Provider>
     </BrowserRouter>
   )
 }
