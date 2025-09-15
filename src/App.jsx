@@ -31,15 +31,15 @@ const App = () => {
           <Modal open={ showAbout } openClose={ openCloseAboutModal } title={ 'About This Site' } title2='v2.6'>
             <ul>
               <li>This site was designed and developed by Heath Bishop.</li>
-
-              <li>It was built using TypeScript, React, SCSS, Bootstrap, Prettier, React Router, ESLint, Node.js, and Vite.</li>
+              <li>The background stars are randomly generated.  Refresh your browser to see them regenerated.</li>
+              <li>The comets have random start and stop locations, colors, velocities, and sizes.</li>
+              <li>This site was built using TypeScript, React, SCSS, Bootstrap, Prettier, React Router, ESLint, Node.js, and Vite.</li>
               <ul>
                 <li>
-                  Bootstrap was used in the Modals (root modal functionality). Everything else is custom. - If you look in your browser's dev tools. You'll find my initials HMB at the start of
-                  every custom CSS class name as proof.
+                  Bootstrap was only used in the Modals (root modal functionality). Everything else is custom. - If you look in your browser's dev tools. You'll find my initials HMB at the start of
+                  every custom CSS class name.
                 </li>
               </ul>
-              <li>The background stars are randomly generated, and the comets have random start and stop locations, colors, velocities, and sizes.</li>
             </ul>
           </Modal>
           <Header scrollDist={ scrollDist } showAbout={ openCloseAboutModal } />
