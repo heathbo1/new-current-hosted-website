@@ -31,7 +31,7 @@ const Space = ({ city }) => {
   const generateStars = () => {
     const hmTimes = Math.round((1782 + height) * 1.5)
     const newStars = []
-    for (let i = 0; i < hmTimes; i++) {
+    for (let i = 0;i < hmTimes;i++) {
       const newStar = GenerateNewStar(1782, height)
       newStars.push(newStar)
     }
@@ -47,7 +47,6 @@ const Space = ({ city }) => {
       }
 
       newStarsCtx.fillStyle = 'hsla(' + 0 + ', 0%, ' + '75%, ' + star.randomAlpha + ')'
-      // newStarsCtx.fillStyle = 'hsla(' + star.randomHue + ', 50%, ' + star.randomLightness + '%, ' + star.randomAlpha + ')'
       newStarsCtx.fillRect(star.randomX, star.randomY, star.randomSize, star.randomSize)
     })
   }
@@ -57,7 +56,8 @@ const Space = ({ city }) => {
   }
 
   const drawSatelite = () => {
-    const sateliteCtx = sateliteCanvas.current.getContext('2d')
+    const sateliteCurrent = sateliteCanvas.current;
+    const sateliteCtx = sateliteCurrent.getContext('2d')
 
     sateliteCtx.globalCompositeOperation = 'destination-over'
     sateliteCtx.clearRect(0, 0, 1782, height)
@@ -76,15 +76,15 @@ const Space = ({ city }) => {
   return (
     <div id="hmb-spaceContainer">
       <div id="space-align">
-        <Comet cometNumber={1} width={1782} height={height} />
-        <Comet cometNumber={2} width={1782} height={height} />
-        <Comet cometNumber={3} width={1782} height={height} />
-        <Comet cometNumber={4} width={1782} height={height} />
-        <Comet cometNumber={5} width={1782} height={height} />
-        <Comet cometNumber={6} width={1782} height={height} />
-        <Comet cometNumber={7} width={1782} height={height} />
-        <canvas id="hmb-satellite" ref={sateliteCanvas} width="1782px" height={height} />
-        <canvas id="hmb-starsCanvas" ref={starsCanvas} width="1782px" height={height} />
+        <Comet cometNumber={ 1 } width={ 1782 } height={ height } />
+        <Comet cometNumber={ 2 } width={ 1782 } height={ height } />
+        <Comet cometNumber={ 3 } width={ 1782 } height={ height } />
+        <Comet cometNumber={ 4 } width={ 1782 } height={ height } />
+        <Comet cometNumber={ 5 } width={ 1782 } height={ height } />
+        <Comet cometNumber={ 6 } width={ 1782 } height={ height } />
+        <Comet cometNumber={ 7 } width={ 1782 } height={ height } />
+        <canvas id="hmb-satellite" ref={ sateliteCanvas } width="1782px" height={ height } />
+        <canvas id="hmb-starsCanvas" ref={ starsCanvas } width="1782px" height={ height } />
       </div>
     </div>
   )

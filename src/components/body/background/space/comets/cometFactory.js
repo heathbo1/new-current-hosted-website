@@ -1,6 +1,11 @@
 const GenerateNewComet = (canvasWidth, canvasHeight) => {
   let comet = {}
 
+  function coinFlip() {
+    return Math.floor(Math.random() * 2) === 0 ? 'top' : 'right'
+  }
+
+  // Top or Right side of screen
   if (coinFlip() === 'top') {
     comet.start = 'top'
     comet.y = 0
@@ -12,7 +17,7 @@ const GenerateNewComet = (canvasWidth, canvasHeight) => {
   }
 
   addVelocity(comet)
-  comet.radius = getRandomIntInclusive(1, 3)
+  comet.radius = getRandomIntInclusive(1.5, 2)
   let fillStyle = getRandomFillStyle()
 
   comet.draw = (ctx) => {
@@ -29,21 +34,17 @@ const GenerateNewComet = (canvasWidth, canvasHeight) => {
 function getRandomFillStyle() {
   const colorList = [
     'rgb(255, 192, 99)', // white Orange
-    'rgb(237, 216, 149)', // white yellow
+    'rgba(255, 206, 45, 1)', // white yellow
     'rgb(255, 255, 255)', // white
-    'rgb(195, 148, 91)', // brownish
+    'rgba(226, 150, 57, 1)', // brownish
   ]
 
   return colorList[getRandomIntInclusive(0, colorList.length - 1)]
 }
 
 function addVelocity(comet) {
-  comet.vx = getRandomIntInclusive(1, 15)
-  comet.vy = comet.vx + 1
-}
-
-function coinFlip() {
-  return Math.floor(Math.random() * 2) === 0 ? 'top' : 'right'
+  comet.vx = getRandomIntInclusive(1, 2.25)
+  comet.vy = comet.vx
 }
 
 function getRandomIntInclusive(min, max) {
