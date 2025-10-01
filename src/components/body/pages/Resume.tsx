@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 import '../Body.scss'
 import BluePanel from './components/BluePanel'
 import CollapsiblePanel from './components/CollapsiblePanel'
@@ -27,8 +27,11 @@ interface iExperience {
 
 const Resume = () => {
   const [expDOM, setExpDOM] = useState<JSX.Element[]>([])
+  const [opacity, setOpacity] = useState(0)
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+    setTimeout(() => setOpacity(100), 100)
     const tempExp: iExperience[] = []
     const tempExpDom: JSX.Element[] = []
 
@@ -41,7 +44,7 @@ const Resume = () => {
         const clients = exp.clients.length >= 1
 
         tempExpDom.push(
-          <div key={i} className='hmb-collapsibleHolder'>
+          <div key={i} className="hmb-collapsibleHolder">
             <CollapsiblePanel
               header={
                 <>
@@ -54,18 +57,18 @@ const Resume = () => {
                     </div>
                   </div>
                   <div className="hmb-expRow">
-                    <div className="hmb-expColumn" style={{ textTransform: 'uppercase', fontWeight: '700' }}>
+                    <div className="hmb-expColumn" style={{textTransform: 'uppercase', fontWeight: '700'}}>
                       {exp.company}
                     </div>
                     <div className="hmb-expColumn hmb-whiteText">- {exp.location}</div>
-                    <div style={{ display: exp.contract ? 'inline' : 'none', fontWeight: 'bold', fontStyle: 'italic' }}> - Contract</div>
+                    <div style={{display: exp.contract ? 'inline' : 'none', fontWeight: 'bold', fontStyle: 'italic'}}> - Contract</div>
                   </div>
                 </>
               }
             >
               <div className="hmb-companies">
                 <div className="hmb-whiteText">{exp.description}</div>
-                <div style={{ padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' }}>
+                <div style={{padding: '10px', display: exp.details.length > 0 ? 'block' : 'none'}}>
                   {!clients &&
                     exp.details.map((det, i) => (
                       <div key={i} className="hmb-row hmb-whiteText">
@@ -74,7 +77,7 @@ const Resume = () => {
                     ))}
                 </div>
                 {!clients && (
-                  <div className="hmb-row hmb-whiteText" style={{ marginTop: '20px' }}>
+                  <div className="hmb-row hmb-whiteText" style={{marginTop: '20px'}}>
                     Skills: {exp.used}
                   </div>
                 )}
@@ -82,17 +85,17 @@ const Resume = () => {
                   {exp.clients.map((c, i) => (
                     <div key={i} className="hmb-clients hmb-bottomLine">
                       <div className="hmb-row hmb-nameDescription">
-                        <span style={{ fontWeight: '700', color: 'var(--HMB-orange)' }}>{c.company}</span>
-                        <span style={{ paddingLeft: '10px' }}>{c.description}</span>
+                        <span style={{fontWeight: '700', color: 'var(--HMB-orange)'}}>{c.company}</span>
+                        <span style={{paddingLeft: '10px'}}>{c.description}</span>
                       </div>
-                      <div style={{ padding: '10px' }}>
+                      <div style={{padding: '10px'}}>
                         {c.details.map((det, i) => (
                           <div key={i} className="hmb-row hmb-whiteText">
                             &#x2022; {det}
                           </div>
                         ))}
                       </div>
-                      <div className="hmb-row hmb-whiteText" style={{ padding: '10px' }}>
+                      <div className="hmb-row hmb-whiteText" style={{padding: '10px'}}>
                         Skills: {c.used}
                       </div>
                     </div>
@@ -108,7 +111,7 @@ const Resume = () => {
   }, [])
 
   return (
-    <div id="hmb-resume" key="resumeBody" className="hmb-flexContainer pages" style={{ letterSpacing: '1.5px' }}>
+    <div id="hmb-resume" key="resumeBody" className="hmb-flexContainer pages" style={{letterSpacing: '1.5px', opacity: opacity}}>
       <div key="resumeMain" className="hmb-column">
         <BluePanel Bkey="resBP1">
           <div className="hmb-sectionHeader-Line">PROFILE</div>
