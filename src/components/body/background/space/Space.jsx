@@ -56,21 +56,23 @@ const Space = ({ city }) => {
   }
 
   const drawSatelite = () => {
-    const sateliteCurrent = sateliteCanvas.current;
-    const sateliteCtx = sateliteCurrent.getContext('2d')
+    const sateliteTest = sateliteCanvas.current;
+    if (sateliteTest) {
+      const sateliteCtx = sateliteCanvas.current.getContext('2d')
+      sateliteCtx.globalCompositeOperation = 'destination-over'
+      sateliteCtx.clearRect(0, 0, 1782, height)
 
-    sateliteCtx.globalCompositeOperation = 'destination-over'
-    sateliteCtx.clearRect(0, 0, 1782, height)
+      sateliteCtx.fillStyle = 'rgba(0, 0, 0, 0.15)'
+      sateliteCtx.fillRect(0, 0, 1782, height)
+      sateliteCtx.filter = 'none'
 
-    sateliteCtx.fillStyle = 'rgba(0, 0, 0, 0.15)'
-    sateliteCtx.fillRect(0, 0, 1782, height)
-    sateliteCtx.filter = 'none'
-
-    satelite.x += satelite.vx
-    satelite.draw(sateliteCtx)
-    if (satelite.x > 1782 + 1782 * 0.25) {
-      generateSatellite()
+      satelite.x += satelite.vx
+      satelite.draw(sateliteCtx)
+      if (satelite.x > 1782 + 1782 * 0.25) {
+        generateSatellite()
+      }
     }
+
   }
 
   return (

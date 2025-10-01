@@ -30,6 +30,8 @@
 }
 
 .hmb-aboutPage {
+  transition: opacity 1s;
+
   .hmb-aboutPanels {
     @extend .hmb-panels;
   }
@@ -47,6 +49,7 @@
 }
 
 #hmb-resume {
+  transition: opacity 1s;
 
   .experienceContainer {
     gap: 0px;
