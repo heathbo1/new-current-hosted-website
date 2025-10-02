@@ -28,7 +28,7 @@ const App = () => {
   return (
     <BrowserRouter basename="/">
       <div id="hmb-fullContainer">
-        <Modal open={ showAbout } openClose={ openCloseAboutModal } title={ 'About This Site' } title2='v2.6'>
+        <Modal open={ showAbout } openClose={ openCloseAboutModal } title={ 'About This Site' } title2='v2.8'>
           <ul>
             <li>This site was designed and developed by Heath Bishop.</li>
             <li>The background stars are randomly generated.  Refresh your browser to see them regenerated.</li>
