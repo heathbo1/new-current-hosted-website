@@ -28,11 +28,10 @@ const Portfolio = ({ appRef }) => {
       })
       setSelectedProj(prod)
     }
-    // window.getSelection().removeAllRanges() // Prevent auto selecting the main image.  Otherwise it might turn blue because it's selected.
   }
 
   useEffect(() => {
-    appRef.current.scrollIntoView({ behavior: 'smooth' })
+    appRef.current.scrollTo(0, 0)
     const temp = []
     for (const key in dataJSON) {
       temp.push(<Project key={ key } modalOpen={ setModal } data={ dataJSON[key] } />)
@@ -82,11 +81,11 @@ const Portfolio = ({ appRef }) => {
       >
         { selectedProj ? (
           <div className="hmb-imageDisplayContainer">
-              <button className="hmb-arrows hmb-left" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('previous') }>❮</button>
+            <button className="hmb-arrows hmb-left" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('previous') }>❮</button>
             <div className="hmb-imgContainer">
               <img id="mainPortImage" className={ `${selectedProj.images.length > 1 ? 'hmb-portImageDisplay--small' : 'hmb-portImageDisplay'}` } src={ '/' + selectedProj.images[selectedPictIndex] } />
             </div>
-              <button className="hmb-arrows hmb-right" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('next') }>❯</button>
+            <button className="hmb-arrows hmb-right" style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('next') }>❯</button>
           </div>
         ) : (
           <div />

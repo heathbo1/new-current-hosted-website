@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
 import '../Body.scss'
 import './Pages.scss'
 import BluePanel from './components/BluePanel'
@@ -17,17 +17,13 @@ const Testimonials = ({ Name }) => {
 }
 
 const About = ({ appRef }) => {
-    const [opacity, setOpacity] = useState(0)
-    const aboutRef = useRef(null)
 
   useEffect(() => {
-    setTimeout(() => setOpacity(100), 100)
-    appRef.current.scrollIntoView({ behavior: 'smooth' })
-    aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    appRef.current.scrollTo(0, 0)
   }, [])
 
   return (
-    <div ref={aboutRef} key="aboutBody" id="about" className="hmb-flexContainer pages hmb-aboutPage" style={ { letterSpacing: '1.5px', opacity: opacity } }>
+    <div key="aboutBody" id="about" className="hmb-flexContainer pages hmb-aboutPage" style={ { letterSpacing: '1.5px' } }>
       <div key="aboutMain" className="hmb-column">
         <BluePanel>
           <div className="hmb-whiteText">

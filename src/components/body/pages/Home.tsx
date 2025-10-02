@@ -1,16 +1,19 @@
 import {useEffect, useState} from 'react'
 import '../body.scss'
+import BluePanel from './components/BluePanel'
 import './Pages.scss'
 
 const Home = () => {
   const [opacity1, setOpacity1] = useState(0)
   const [opacity2, setOpacity2] = useState(0)
   const [opacity3, setOpacity3] = useState(0)
+  const [opacity4, setOpacity4] = useState(0)
 
   useEffect(() => {
     setTimeout(() => setOpacity1(100), 70)
     setTimeout(() => setOpacity2(100), 280)
     setTimeout(() => setOpacity3(100), 490)
+    setTimeout(() => setOpacity4(100), 700)
   }, [])
 
   return (
@@ -30,6 +33,16 @@ const Home = () => {
           <span className="hmb-titleText">&</span>
           <span className="hmb-titleText">Creative</span>
         </p>
+      </div>
+      <div id="hmb-aboutStyle" style={{opacity: opacity4}}>
+        <div id="hmb-aboutLeft">
+          <div id="hmb-aboutLeftSpacer">
+            <BluePanel className="hmb-aboutContainer hmb-whiteText">I've been building front-end user interfaces for 15+ years. Including 10 years of experience with React.js.</BluePanel>
+          </div>
+        </div>
+        <div id="hmb-aboutRight">
+          <BluePanel className="hmb-aboutContainer hmb-whiteText">I possess extensive knowledge and expertise in JavaScript, HTML, CSS, and a long list of other UI technologies.</BluePanel>
+        </div>
       </div>
     </div>
   )

@@ -343,6 +343,16 @@ a:hover::after {
   display: inline-block;
 }
 
+@media screen and (max-width: 420px) {
+  #hmb-header {
+    padding: 0px !important;
+  }
+
+  #hmb-header-container {
+    padding: 0px !important;
+  }
+}
+
 /* Less than or equal to 1000px */
 @media screen and (max-width: 850px) {
   .hmb-headerButtonsRow {

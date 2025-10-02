@@ -144,34 +144,12 @@
 
 @media screen and (max-width: 729px) {
   .hmb-panels {
-    width: 80% !important;
-  }
-}
-
-@media screen and (max-width: 672px) {
-  .hmb-panels {
-    width: 85% !important;
-  }
-}
-
-@media screen and (max-width: 615px) {
-  .hmb-panels {
-    width: 90% !important;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .hmb-panels {
-    width: 95% !important;
+    width: 100% !important;
   }
 }
 
 @media screen and (max-width: 525px) {
   .hmb-panels {
     width: 100% !important;
-  }
-
-  .hmb-flexContainer {
-    padding: 20px 0px;
   }
 }

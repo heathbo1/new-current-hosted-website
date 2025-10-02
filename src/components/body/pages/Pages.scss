@@ -30,8 +30,6 @@
 }
 
 .hmb-aboutPage {
-  transition: opacity 1s;
-
   .hmb-aboutPanels {
     @extend .hmb-panels;
   }
@@ -49,8 +47,6 @@
 }
 
 #hmb-resume {
-  transition: opacity 1s;
-
   .experienceContainer {
     gap: 0px;
   }
@@ -124,7 +120,8 @@
         align-self: flex-end;
         color: #ffffff;
         line-height: 1em;
-        background-color: #000000ab;
+        text-shadow: 1px 0px 3px #000000, -1px 0px 3px #000000,
+          0px 1px 3px #000000, 0px -1px 3px #000000;
       }
 
       .hmb-boldText {
@@ -133,37 +130,48 @@
         font-weight: bold;
         font-size: 1.5em;
         line-height: 1em;
-        background-color: #000000ab;
+        text-shadow: 1px 0px 3px #000000, -1px 0px 3px #000000,
+          0px 1px 3px #000000, 0px -1px 3px #000000;
       }
     }
   }
 
-  .hmb-aboutStyle {
+  #hmb-aboutStyle {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px 125px;
     transition: opacity 1s;
     padding: 10px;
+    padding-top: 55px;
     width: 100%;
+
+    #hmb-aboutLeft {
+      width: 45%;
+      display: flex;
+      justify-content: flex-start;
+
+      #hmb-aboutLeftSpacer {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    #hmb-aboutRight {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+    }
 
     .hmb-aboutContainer {
       margin: 0px;
-      // border: 1px solid #ffffff70;
       border-radius: 5px;
-      // background: var(--HB-blue-background);
       padding: 15px;
-      max-width: 325px;
+      max-width: 300px;
+      min-width: 300px;
       min-height: 100px;
-      // font-size: 1em;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-      &--small {
-        @extend .hmb-aboutContainer;
-        margin: 0px;
-        max-height: 142px;
-        max-width: 325px;
-      }
     }
   }
 }
@@ -211,9 +219,28 @@
   }
 }
 
+@media screen and (max-width: 1322px) {
+  #hmb-aboutStyle {
+    padding-top: 0px !important;
+    margin-top: -7px;
+  }
+}
+
+@media screen and (max-width: 1269px) {
+  #hmb-aboutLeft {
+    justify-content: center !important;
+  }
+}
+
 @media screen and (max-width: 730px) {
   #dateSpacer {
     display: none;
+  }
+
+  .hmb-aboutPage {
+    .hmb-aboutPanels {
+      width: 100% !important;
+    }
   }
 }
 
@@ -247,9 +274,8 @@
     }
   }
 
-  .hmb-aboutPanels {
-    width: 100% !important;
-  }
+
+
 
   .hmb-dataRows {
     width: 100% !important;

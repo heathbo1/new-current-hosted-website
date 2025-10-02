@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import Comet from './comets/Comet'
+import Comet from './comets/comet'
 import SateliteFactory from './sateliteFactory'
 import './space.scss'
 import GenerateNewStar from './starFactory'
@@ -9,8 +9,7 @@ import GenerateNewStar from './starFactory'
 // Height of stars and comets are based on the size of the screen
 
 const Space = ({ city }) => {
-  const [width, setWidth] = useState(window.innerWidth)
-  const [height, setHeight] = useState(window.innerHeight) // 170 = header and city height
+  const height = window.innerHeight;
   const [stars, setStars] = useState([])
 
   const sateliteCanvas = useRef(null)
