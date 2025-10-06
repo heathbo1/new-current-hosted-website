@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react'
+import {ReactNode, useState} from 'react'
 
 import './Components.scss'
 import Arrow from './images/downArrow.svg'
@@ -11,24 +11,23 @@ interface WrapperProps {
   header: ReactNode
 }
 
-const CollapsiblePanel: React.FC<WrapperProps> = ({ children, width, className = '', header }) => {
+const CollapsiblePanel: React.FC<WrapperProps> = ({children, width, className = '', header}) => {
   const [open, setOpen] = useState(false)
   return (
-    <div style={width ? { width: width } : {}} className={` hmb-collapsiblePanel ${className}`}>
+    <div style={width ? {width: width} : {}} className={` hmb-collapsiblePanel ${className}`}>
       <button
         type="button"
         onClick={() => {
           setOpen(!open)
         }}
-        className='hmb-button'
-        style={{ background: `${open ? 'rgb(27 27 27 / 25%)' : 'none'}` }}
+        className="hmb-button"
       >
         <div className="hmb-headerGrid">
           <span className="hmb-info">
             <span>{header}</span>
           </span>
           <span className="hmb-close">
-            <img src={Arrow} alt="downArrow" className="hmb-downArrow" style={{ rotate: open ? '180deg' : '0deg' }} />
+            <img src={Arrow} alt="downArrow" className="hmb-downArrow" style={{rotate: open ? '180deg' : '0deg'}} />
           </span>
         </div>
       </button>

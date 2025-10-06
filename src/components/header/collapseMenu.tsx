@@ -28,7 +28,6 @@ const CollapseMenu = ({headermin}: Menu) => {
     } else {
       setCurrentPage('')
     }
-    console.log('currentPage = ', currentPage)
   })
 
   const menuToggle = () => {

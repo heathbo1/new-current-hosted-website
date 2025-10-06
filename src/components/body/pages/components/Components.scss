@@ -108,15 +108,6 @@
   border-bottom: none;
   border-right-color: #000000;
 
-  // button {
-  //   border: none;
-  //   background: none;
-  //   padding-top: 15px;
-  //   color: #ffffff;
-  //   width: 100%;
-  //   padding-right: 0px;
-  // }
-
   .hmb-button {
     border: none;
     background: none;
@@ -172,5 +163,75 @@
 .hmb-collapsiblePanel:hover {
   button {
     background: rgb(27 27 27 / 25%) !important;
+  }
+}
+
+.hmb-Switch {
+  display: inline-flex;
+  width: 58px;
+  height: 38px;
+  overflow: hidden;
+  padding: 12px;
+  box-sizing: border-box;
+  position: relative;
+
+  .hmb-Switch-base {
+    color: #1976d2;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+      transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    position: relative;
+    left: -5px;
+
+    .hmb-Switch-input {
+      left: -100%;
+      width: 300%;
+      position: absolute;
+      opacity: 0;
+      height: 100%;
+      top: 0px;
+      margin: 0px;
+      padding: 0px;
+      z-index: 1;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .hmb-Switch-thumb {
+      box-shadow: var(--mui-shadows-1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12));
+      background-color: #ffffff;
+      border: 1px solid #035883;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  .hmb-Switch-base-on {
+    transform: translate(20px);
+    left: 0px;
+  }
+
+  .hmb-Switch-track {
+    background-color: #035883;
+    border: 1px solid rgb(39, 186, 233);
+    height: 14px;
+    width: 34px;
+    z-index: -1;
+    border-radius: 7px;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .hmb-Switch-track-off {
+    @extend .hmb-Switch-track;
+    background-color: #03588300;
   }
 }
