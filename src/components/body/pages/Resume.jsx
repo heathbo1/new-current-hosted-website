@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import '../Body.scss'
 import BluePanel from './components/BluePanel'
-import Switch from './components/Switch'
 import Data from './data/resume.json'
 import './Pages.scss'
 import ResumePanel from './ResumePanel'
@@ -10,7 +9,7 @@ const callBacks = []
 
 const Resume = ({ appRef }) => {
   const [clicked, setClicked] = useState()
-  const [onOff, setOnOff] = useState(true)
+  const [onOff, setOnOff] = useState(false)
 
   const turnSwitch = (value) => { // function called by switch
     setOnOff(value)
@@ -67,7 +66,7 @@ const Resume = ({ appRef }) => {
           <span className="hmb-sectionText">EXPERIENCE</span>
         </div>
         <BluePanel key="experience" className="hmb-row hmb-dataRows experienceContainer">
-          <label id='hmb-resume-switch'><Switch passedIn={ onOff } onOff={ turnSwitch } /><span>Open One At A Time </span></label>
+          {/* <label id='hmb-resume-switch'><Switch passedIn={ onOff } onOff={ turnSwitch } /><span>Open One At A Time </span></label> */ }
           <ResumePanel exp={ Data.Experience[0] } id={ 1 } opened={ openPanel } register={ registerFunc } />
           <ResumePanel exp={ Data.Experience[1] } id={ 2 } opened={ openPanel } register={ registerFunc } />
           <ResumePanel exp={ Data.Experience[2] } id={ 3 } opened={ openPanel } register={ registerFunc } />
