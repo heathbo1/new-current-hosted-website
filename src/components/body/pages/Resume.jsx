@@ -10,7 +10,7 @@ const callBacks = []
 
 const Resume = ({ appRef }) => {
   const [clicked, setClicked] = useState()
-  const [onOff, setOnOff] = useState()
+  const [onOff, setOnOff] = useState(true)
 
   const turnSwitch = (value) => { // function called by switch
     setOnOff(value)
