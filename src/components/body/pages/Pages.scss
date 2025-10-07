@@ -104,6 +104,13 @@
     cursor: pointer;
     font-weight: 600;
   }
+
+  #hmb-resume-switch:hover {
+    .hmb-Switch-thumb {
+      background: linear-gradient(-45deg, rgba(179 229 255 / 95%), rgb(179 229 255 / 95%) 25%, rgb(246, 252, 255) 60%, rgb(179 229 255 / 95%) 85%, rgba(246, 252, 255));
+      // linear-gradient(-45deg, rgb(0, 32, 48, 0.95), rgba(0, 92, 138, 0.95) 40%, rgba(0, 88, 133, 0.95) 65%, rgba(0, 32, 48, 0.95));
+    }
+  }
 }
 
 #hmb-homePage {
