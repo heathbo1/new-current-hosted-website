@@ -92,6 +92,18 @@
   .hmb-bottomLine {
     border-bottom: 0.75px solid #ffffff6e;
   }
+
+  #hmb-resume-switch {
+    z-index: 12;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    position: relative;
+    padding-top: 0px;
+    min-height: 50px;
+    cursor: pointer;
+    font-weight: 600;
+  }
 }
 
 #hmb-homePage {

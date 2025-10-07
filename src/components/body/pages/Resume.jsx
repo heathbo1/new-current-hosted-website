@@ -1,92 +1,34 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import '../Body.scss'
 import BluePanel from './components/BluePanel'
-import CollapsiblePanel from './components/CollapsiblePanel'
+import Switch from './components/Switch'
 import Data from './data/resume.json'
 import './Pages.scss'
+import ResumePanel from './ResumePanel'
+
+const callBacks = []
 
 const Resume = ({ appRef }) => {
-  const [expDOM, setExpDOM] = useState([])
+  const [clicked, setClicked] = useState()
+  const [onOff, setOnOff] = useState()
 
-  useEffect(() => {
-    appRef.current.scrollTo(0, 0)
-    const tempExp = []
-    const tempExpDom = []
+  const turnSwitch = (value) => { // function called by switch
+    setOnOff(value)
+  }
 
-    if (Data.Experience.length > 0) {
-      Data.Experience.forEach((ext) => {
-        tempExp.push(ext)
-      })
-
-      tempExp.forEach((exp, i) => {
-        const clients = exp.clients.length >= 1
-
-        tempExpDom.push(
-          <div key={ i } className="hmb-collapsibleHolder">
-            <CollapsiblePanel
-              header={
-                <>
-                  <div className="hmb-expRow">
-                    <div className="hmb-expColumn hmb-expRole">
-                      <span>{ exp.position }</span>
-                    </div>
-                    <div className="hmb-whiteText">
-                      <span id="dateSpacer">|</span> { exp.date }
-                    </div>
-                  </div>
-                  <div className="hmb-expRow">
-                    <div className="hmb-expColumn" style={ { textTransform: 'uppercase', fontWeight: '700' } }>
-                      { exp.company }
-                    </div>
-                    <div className="hmb-expColumn hmb-whiteText">- { exp.location }</div>
-                    <div style={ { display: exp.contract ? 'inline' : 'none', fontWeight: 'bold', fontStyle: 'italic' } }> - Contract</div>
-                  </div>
-                </>
-              }
-            >
-              <div className="hmb-companies">
-                <div className="hmb-whiteText">{ exp.description }</div>
-                <div style={ { padding: '10px', display: exp.details.length > 0 ? 'block' : 'none' } }>
-                  { !clients &&
-                    exp.details.map((det, i) => (
-                      <div key={ i } className="hmb-row hmb-whiteText">
-                        &#x2022; { det }
-                      </div>
-                    )) }
-                </div>
-                { !clients && (
-                  <div className="hmb-row hmb-whiteText" style={ { marginTop: '20px' } }>
-                    Skills: { exp.used }
-                  </div>
-                ) }
-                <>
-                  { exp.clients.map((c, i) => (
-                    <div key={ i } className="hmb-clients hmb-bottomLine">
-                      <div className="hmb-row hmb-nameDescription">
-                        <span style={ { fontWeight: '700', color: 'var(--HMB-orange)' } }>{ c.company }</span>
-                        <span style={ { paddingLeft: '10px' } }>{ c.description }</span>
-                      </div>
-                      <div style={ { padding: '10px' } }>
-                        { c.details.map((det, i) => (
-                          <div key={ i } className="hmb-row hmb-whiteText">
-                            &#x2022; { det }
-                          </div>
-                        )) }
-                      </div>
-                      <div className="hmb-row hmb-whiteText" style={ { padding: '10px' } }>
-                        Skills: { c.used }
-                      </div>
-                    </div>
-                  )) }
-                </>
-              </div>
-            </CollapsiblePanel>
-          </div>
-        )
-      })
-      setExpDOM(tempExpDom)
+  const registerFunc = (func) => {
+    if (callBacks.length < 10) {
+      callBacks.push(func)
     }
-  }, [])
+  }
+
+  const openPanel = (id) => { // function called by CollapsiblePanel
+    callBacks.forEach((func) => {
+      func(id, onOff)
+    })
+
+    setClicked(id)
+  }
 
   return (
     <div id="hmb-resume" key="resumeBody" className="hmb-flexContainer pages" style={ { letterSpacing: '1.5px' } }>
@@ -125,7 +67,17 @@ const Resume = ({ appRef }) => {
           <span className="hmb-sectionText">EXPERIENCE</span>
         </div>
         <BluePanel key="experience" className="hmb-row hmb-dataRows experienceContainer">
-          { expDOM }
+          <label id='hmb-resume-switch'><Switch passedIn={ onOff } onOff={ turnSwitch } /><span>Open One At A Time </span></label>
+          <ResumePanel exp={ Data.Experience[0] } id={ 1 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[1] } id={ 2 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[2] } id={ 3 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[3] } id={ 4 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[4] } id={ 5 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[5] } id={ 6 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[6] } id={ 7 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[7] } id={ 8 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[8] } id={ 9 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[9] } id={ 10 } opened={ openPanel } register={ registerFunc } />
         </BluePanel>
       </div>
     </div>
