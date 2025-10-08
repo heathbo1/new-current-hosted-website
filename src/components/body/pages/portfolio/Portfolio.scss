@@ -1,3 +1,19 @@
+.hmb-porfolio-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+
+  .hmb-project-name {
+    color: var(--HMB-orange);
+  }
+
+  .hmb-company-name {
+    color: #ffffff;
+  }
+}
+
 .hmb-portImages {
   height: 150px;
   box-shadow: 5px 5px 5px #00000047;
@@ -53,7 +69,6 @@
 
   .hmb-arrows:active {
     color: var(--HMB-active-orange);
-    // text-shadow: 2px 2px 3px #012b40, 2px 2px 5px #000000;
     filter: drop-shadow(4px 6px 8px black);
   }
 
@@ -61,31 +76,23 @@
     justify-content: end;
   }
 
-  // .hmb-left:hover {
-  //   filter: brightness(1) drop-shadow(2px 4px 6px black);
-  // }
-
   .hmb-right {
     justify-content: start;
   }
-
-  // .hmb-right:hover {
-  //   filter: brightness(1) drop-shadow(2px 4px 6px black);
-  // }
 }
 
 .hmb-photoHalf {
   width: 50%;
-  //   display: grid;
-  grid-template-columns: calc(45vw - 300px) 35%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 .hmb-photoPlacer {
   display: grid;
   grid-template-columns: repeat(4, 10px [col-start]);
   width: 270px;
+  background: none;
+  border: none;
 }
 
 .hmb-infoContainer {

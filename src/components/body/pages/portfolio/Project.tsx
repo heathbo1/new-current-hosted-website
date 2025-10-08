@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 import BluePanel from '../components/BluePanel'
 import '../Pages.scss'
 import './portfolio.scss'
@@ -17,7 +17,7 @@ interface iProject {
   modalOpen: (data: idata) => void
 }
 
-const Project = ({ Pkey, data, modalOpen }: iProject) => {
+const Project = ({Pkey, data, modalOpen}: iProject) => {
   const [images, setImages] = useState<any>([])
 
   const openModal = () => {
@@ -33,7 +33,7 @@ const Project = ({ Pkey, data, modalOpen }: iProject) => {
       }
       temp.push(
         <div key={`${key}-d`} className="hmb-portImageContainer">
-          <img key={`${key}-i`} className="hmb-portImages" onClick={openModal} src={'/' + data.images[key]} style={style} />
+          <img key={`${key}-i`} className="hmb-portImages" src={'/' + data.images[key]} style={style} />
         </div>
       )
     }
@@ -43,9 +43,9 @@ const Project = ({ Pkey, data, modalOpen }: iProject) => {
 
   return (
     <BluePanel key={Pkey} className="hmb-panels portPanel">
-      <div className="hmb-sectionHeader-Line" style={{ display: 'flex' }}>
-        <div style={{ width: '60%' }}>{data.name}</div>
-        <div style={{ right: '15px', textAlign: 'right', color: '#ffffff', width: '50%' }}>{data.client}</div>
+      <div className="hmb-sectionHeader-Line hmb-porfolio-header">
+        <div className="hmb-project-name">{data.name}</div>
+        <div className="hmb-company-name">{data.client}</div>
       </div>
       <div className="hmb-infoContainer">
         <div className="hmb-infoHalf">
@@ -55,7 +55,9 @@ const Project = ({ Pkey, data, modalOpen }: iProject) => {
           <div className="hmb-infoDescript">{data.description}</div>
         </div>
         <div className="hmb-photoHalf">
-          <div className="hmb-photoPlacer">{images}</div>
+          <button onClick={openModal} className="hmb-photoPlacer">
+            {images}
+          </button>
         </div>
       </div>
     </BluePanel>
