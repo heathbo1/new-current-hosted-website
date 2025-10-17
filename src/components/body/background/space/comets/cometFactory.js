@@ -1,12 +1,9 @@
-const GenerateNewComet = (canvasWidth, canvasHeight) => {
+
+export const GenerateNewComet = (canvasWidth, canvasHeight) => {
   let comet = {}
 
-  function coinFlip() {
-    return Math.floor(Math.random() * 2) === 0 ? 'top' : 'right'
-  }
-
   // Top or Right side of screen
-  if (coinFlip() === 'top') {
+  if (topRight() === 'top') {
     comet.start = 'top'
     comet.y = 0
     comet.x = getRandomIntInclusive(canvasWidth * 0.08, canvasWidth)
@@ -16,41 +13,56 @@ const GenerateNewComet = (canvasWidth, canvasHeight) => {
     comet.x = canvasWidth
   }
 
-  addVelocity(comet)
-  comet.radius = getRandomIntInclusive(1.5, 2)
-  let fillStyle = getRandomFillStyle()
-
-  comet.draw = (ctx) => {
-    ctx.beginPath()
-    ctx.arc(comet.x, comet.y, comet.radius, 0, Math.PI * 2, true)
-    ctx.closePath()
-    ctx.fillStyle = fillStyle
-    ctx.fill()
-  }
-
+  comet.speedX = getRandomDecimalInclusive(1, 2.75)
+  comet.speedY = comet.speedX
+  comet.radius = getRandomDecimalInclusive(0.5, 2)
+  comet.color = getRandomFillStyle()
+  comet.tailLength = getRandomIntInclusive(7, 7 * comet.speedX)
+  comet.tail = []
   return comet
+}
+
+function topRight() {
+  return Math.floor(Math.random() * 2) === 0 ? 'top' : 'right'
 }
 
 function getRandomFillStyle() {
   const colorList = [
-    'rgb(255, 192, 99)', // white Orange
-    'rgba(255, 206, 45, 1)', // white yellow
-    'rgb(255, 255, 255)', // white
-    'rgba(226, 150, 57, 1)', // brownish
+    'rgba(162, 165, 206, 1)', // calcium
+    'rgba(183, 216, 237, 1)', // iron
+    'rgba(190, 219, 178, 1)', // magnesium
+    // 'rgba(213, 167, 128, 1)', // sodium
+    'rgba(173, 246, 251, 1)' // carbon
   ]
 
   return colorList[getRandomIntInclusive(0, colorList.length - 1)]
 }
 
-function addVelocity(comet) {
-  comet.vx = getRandomIntInclusive(1, 2.25)
-  comet.vy = comet.vx
-}
-
-function getRandomIntInclusive(min, max) {
+export function getRandomIntInclusive(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min + 1)) + min //The maximum is inclusive and the minimum is inclusive
 }
+
+function getRandomDecimalInclusive(min, max) {
+  // Ensure min and max are numbers
+  min = Number(min);
+  max = Number(max);
+
+  // Handle cases where min might be greater than max
+  if (min > max) {
+    [min, max] = [max, min]; // Swap values
+  }
+
+  // Calculate the range
+  const range = max - min;
+
+  // Generate a random decimal between 0 (inclusive) and 1 (exclusive)
+  const randomFactor = Math.random();
+
+  // Scale the random factor to the desired range and add the minimum offset
+  return (randomFactor * range) + min;
+}
+
 
 export default GenerateNewComet
