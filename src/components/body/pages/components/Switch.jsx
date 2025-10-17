@@ -27,7 +27,7 @@ const Switch = ({ passedIn, onOff }) => {
           } }
         />
         <span
-          className="hmb-Switch-thumb"
+          className={ `${on ? 'hmb-Switch-thumb' : 'hmb-Switch-thumb-off'}` }
         />
       </span>
       <span className={ `${on ? 'hmb-Switch-track' : 'hmb-Switch-track-off'}` } />

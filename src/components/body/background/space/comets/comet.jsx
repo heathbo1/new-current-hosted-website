@@ -49,7 +49,7 @@ const Comet = ({ height, widthOfScene, cometNumber }) => {
         ctx.beginPath();
         ctx.arc(tailSegment.x, tailSegment.y, comet.radius * (i / comet.tail.length), 0, Math.PI * 2); // Smaller segments at the end
         ctx.fill();
-        ctx.filter = "blur(0.25px)"
+        ctx.filter = "blur(0.5px)"
       }
 
       // Draw the comet's head

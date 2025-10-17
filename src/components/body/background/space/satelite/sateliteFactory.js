@@ -1,20 +1,20 @@
 class SateliteFactory {
-  static generateSatellite() {
+  static generateSatellite(height) {
     let satellite = {}
 
-    satellite.y = window.innerHeight / 2
+    satellite.y = height * 0.25
     satellite.x = 0
-    satellite.vx = 0.5
-    satellite.radius = 3
+    satellite.speedX = 0.25
+    satellite.radius = 2
     let flashStatus = 0
 
     const getFlashState = () => {
       flashStatus++
       let flashWait = 40
       if (flashStatus > flashWait && flashStatus < flashWait + 4) {
-        return 'rgb(255, 0, 0)'
+        return 'rgba(255, 221, 0, 1)'
       } else {
-        if (flashStatus > flashWait + 3) {
+        if (flashStatus > flashWait) {
           flashStatus = 0
         }
         return 'rgba(255,255,255, 1)'
@@ -27,6 +27,7 @@ class SateliteFactory {
       ctx.closePath()
       ctx.fillStyle = getFlashState()
       ctx.fill()
+      ctx.filter = "blur(0.5px)"
     }
 
     return satellite

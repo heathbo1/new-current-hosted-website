@@ -3,7 +3,7 @@ export const GenerateNewComet = (canvasWidth, canvasHeight) => {
   let comet = {}
 
   // Top or Right side of screen
-  if (topRight() === 'top') {
+  if (topOrRight() === 'top') {
     comet.start = 'top'
     comet.y = 0
     comet.x = getRandomIntInclusive(canvasWidth * 0.08, canvasWidth)
@@ -13,16 +13,16 @@ export const GenerateNewComet = (canvasWidth, canvasHeight) => {
     comet.x = canvasWidth
   }
 
-  comet.speedX = getRandomDecimalInclusive(1, 2.75)
+  comet.speedX = getRandomDecimalInclusive(1, 3)
   comet.speedY = comet.speedX
-  comet.radius = getRandomDecimalInclusive(0.5, 2)
+  comet.radius = getRandomDecimalInclusive(0.75, 2)
   comet.color = getRandomFillStyle()
   comet.tailLength = getRandomIntInclusive(7, 7 * comet.speedX)
   comet.tail = []
   return comet
 }
 
-function topRight() {
+function topOrRight() {
   return Math.floor(Math.random() * 2) === 0 ? 'top' : 'right'
 }
 

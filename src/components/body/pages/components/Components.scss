@@ -201,13 +201,21 @@
 
     .hmb-Switch-thumb {
       box-shadow: var(--mui-shadows-1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12));
-      background-color: #ffffff;
+      background-color: var(--HMB-orange);
       border: 1px solid #035883;
       width: 20px;
       height: 20px;
       border-radius: 25%;
       display: block;
       cursor: pointer;
+      box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12)
+    }
+
+    .hmb-Switch-thumb-off {
+      @extend .hmb-Switch-thumb;
+      background-color: #ffffff;
     }
   }
 
@@ -217,8 +225,7 @@
   }
 
   .hmb-Switch-track {
-    background-color: #035883;
-    border: 1px solid rgb(39, 186, 233);
+    background-color: #ffffff80;
     height: 14px;
     width: 34px;
     z-index: -1;
@@ -227,11 +234,14 @@
       background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
     position: absolute;
+    box-shadow: inset 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      inset 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      inset 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     cursor: pointer;
   }
 
   .hmb-Switch-track-off {
     @extend .hmb-Switch-track;
-    background-color: #03588300;
+    background-color: #00000082;
   }
 }

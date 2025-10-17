@@ -1,8 +1,7 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import Comet from './comets/comet'
-import SateliteFactory from './sateliteFactory'
+import Comet from './comets/Comet'
+import Satelite from './satelite/Satelite'
 import './space.scss'
-import GenerateNewStar from './starFactory'
+import Stars from './stars/Stars'
 
 // =============================================================================
 // NEED TO GENERATE THE BACKGROUND BASED ON THE SIZE OF THE SCREEN
@@ -10,71 +9,43 @@ import GenerateNewStar from './starFactory'
 
 const Space = ({ city }) => {
   const height = window.innerHeight;
-  const [stars, setStars] = useState([])
+  // const [stars, setStars] = useState([])
 
-  const sateliteCanvas = useRef(null)
-  const starsCanvas = useRef(null)
+  // const starsCanvas = useRef(null)
 
-  useEffect(() => {
-    drawStars()
-  }, [stars])
+  // useEffect(() => {
+  //   // drawStars()
+  // }, [stars])
 
-  useLayoutEffect(() => {
-    generateStars()
-    generateSatellite()
-    setInterval(drawSatelite, 75)
-  }, [])
+  // useLayoutEffect(() => {
+  //   // generateStars()
+  // }, [])
 
-  let satelite = null
+  // const generateStars = () => {
+  //   const hmTimes = Math.round((1782 + height) * 1.5)
+  //   const newStars = []
+  //   for (let i = 0;i < hmTimes;i++) {
+  //     const newStar = GenerateNewStar(1782, height)
+  //     newStars.push(newStar)
+  //   }
+  //   setStars(newStars)
+  // }
 
-  const generateStars = () => {
-    const hmTimes = Math.round((1782 + height) * 1.5)
-    const newStars = []
-    for (let i = 0;i < hmTimes;i++) {
-      const newStar = GenerateNewStar(1782, height)
-      newStars.push(newStar)
-    }
-    setStars(newStars)
-  }
+  // const drawStars = () => {
+  //   const newStarsCtx = starsCanvas.current.getContext('2d')
+  //   stars.forEach((star) => {
+  //     if (star.randomSize > 1) {
+  //       newStarsCtx.shadowBlur = Math.floor(Math.random())
+  //       newStarsCtx.shadowColor = 'white'
+  //     }
 
-  const drawStars = () => {
-    const newStarsCtx = starsCanvas.current.getContext('2d')
-    stars.forEach((star) => {
-      if (star.randomSize > 1) {
-        newStarsCtx.shadowBlur = Math.floor(Math.random())
-        newStarsCtx.shadowColor = 'white'
-      }
-
-      newStarsCtx.fillStyle = 'hsla(' + 0 + ', 0%, ' + '75%, ' + star.randomAlpha + ')'
-      newStarsCtx.fillRect(star.randomX, star.randomY, star.randomSize, star.randomSize)
-    })
-  }
-
-  const generateSatellite = () => {
-    satelite = SateliteFactory.generateSatellite()
-  }
+  //     newStarsCtx.fillStyle = 'hsla(' + 0 + ', 0%, ' + '75%, ' + star.randomAlpha + ')'
+  //     newStarsCtx.fillRect(star.randomX, star.randomY, star.randomSize, star.randomSize)
+  //   })
+  // }
 
   const widthOfScene = 1782
 
-  const drawSatelite = () => {
-    const sateliteTest = sateliteCanvas.current;
-    if (sateliteTest) {
-      const sateliteCtx = sateliteCanvas.current.getContext('2d')
-      sateliteCtx.globalCompositeOperation = 'destination-over'
-      sateliteCtx.clearRect(0, 0, widthOfScene, height)
-
-      sateliteCtx.fillStyle = 'rgba(0, 0, 0, 0.15)'
-      sateliteCtx.fillRect(0, 0, widthOfScene, height)
-      sateliteCtx.filter = 'none'
-
-      satelite.x += satelite.vx
-      satelite.draw(sateliteCtx)
-      if (satelite.x > widthOfScene + widthOfScene * 0.25) {
-        generateSatellite()
-      }
-    }
-
-  }
   return (
     <div id="hmb-spaceContainer">
       <div id="space-align">
@@ -83,10 +54,9 @@ const Space = ({ city }) => {
         <Comet cometNumber={ 3 } widthOfScene={ widthOfScene } height={ height } />
         <Comet cometNumber={ 4 } widthOfScene={ widthOfScene } height={ height } />
         <Comet cometNumber={ 5 } widthOfScene={ widthOfScene } height={ height } />
-        <Comet cometNumber={ 6 } widthOfScene={ widthOfScene } height={ height } />
-        <Comet cometNumber={ 7 } widthOfScene={ widthOfScene } height={ height } />
-        <canvas id="hmb-satellite" ref={ sateliteCanvas } width={ `${widthOfScene}` } height={ height } />
-        <canvas id="hmb-starsCanvas" ref={ starsCanvas } width={ `${widthOfScene}` } height={ height } />
+        <Satelite height={ height } widthOfScene={ widthOfScene } />
+        <Stars height={ height } widthOfScene={ widthOfScene } />
+        {/* <canvas id="hmb-starsCanvas" ref={ starsCanvas } width={ `${widthOfScene}` } height={ height } /> */ }
       </div>
     </div>
   )
