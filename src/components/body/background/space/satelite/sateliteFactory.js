@@ -10,9 +10,12 @@ class SateliteFactory {
 
     const getFlashState = () => {
       flashStatus++
-      let flashWait = 40
+      let flashWait = 120
+      if (flashStatus === flashWait + 4) {
+        flashStatus = 0
+      }
       if (flashStatus > flashWait && flashStatus < flashWait + 4) {
-        return 'rgba(255, 221, 0, 1)'
+        return 'rgba(255, 132, 0, 1)'
       } else {
         if (flashStatus > flashWait) {
           flashStatus = 0

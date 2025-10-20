@@ -35,7 +35,6 @@ const Stars = ({ widthOfScene, height }) => {
         starCtx.shadowColor = 'white'
       }
 
-      // const alpha = getRandomIntInclusive(1, 85)
       const fill = `rgba(255, 255, 255, .${getRandomIntInclusive(1, 85)})`
 
       starCtx.fillStyle = fill;

@@ -8,7 +8,7 @@ export const Logo = (scrollDist) => {
   const [min, setMin] = useState(false)
 
   useEffect(() => {
-    if (scrollDist.scrollDist >= 10) {
+    if (scrollDist.scrollDist >= 25) {
       setMin(true)
     } else {
       setMin(false)
@@ -16,11 +16,11 @@ export const Logo = (scrollDist) => {
   }, [scrollDist])
 
   return (
-    <div className="hmb-logoNameContainer" style={{ height: min ? '50px' : '' }}>
-      <img id="hmb-logo" src={HBIcon} style={{ width: min ? '40px' : '65px' }} alt="HBIcon" />
+    <div className="hmb-logoNameContainer" style={ { height: min ? '50px' : '' } }>
+      <img id="hmb-logo" src={ HBIcon } style={ { width: min ? '40px' : '65px' } } alt="HBIcon" />
       <div id="hmb-text">
-        <img src={HeathBishop} alt="HeathBishop" />
-        <img src={FEdeveloper} style={{ display: scrollDist.scrollDist >= 7 ? 'none' : 'inline' }} alt="FEdeveloper" />
+        <img src={ HeathBishop } alt="HeathBishop" />
+        <img src={ FEdeveloper } style={ { display: scrollDist.scrollDist >= 25 ? 'none' : 'inline' } } alt="FEdeveloper" />
       </div>
     </div>
   )

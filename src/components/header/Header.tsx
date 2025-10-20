@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react'
-import { NavLink } from 'react-router'
+import {useEffect, useState} from 'react'
+import {NavLink} from 'react-router'
 import './collapseMenu'
 import CollapseMenu from './collapseMenu'
 import './header.scss'
-import { Logo } from './images/Logo'
+import {Logo} from './images/Logo'
 
 interface iHeader {
   scrollDist: number
   showAbout: () => void
 }
 
-const Header = ({ scrollDist, showAbout }: iHeader) => {
+const Header = ({scrollDist, showAbout}: iHeader) => {
   const [headerMin, setHeaderMin] = useState(false)
   const [canvOpacity, setcanvOpacity] = useState(false)
 
@@ -68,7 +68,7 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
   }
 
   useEffect(() => {
-    if (scrollDist >= 10) {
+    if (scrollDist >= 25) {
       updateHeader(true)
     } else {
       updateHeader(false)
@@ -84,17 +84,17 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
     link: string
   }
 
-  const HeaderButton = ({ maxw, minw, title, id, link }: iHeaderButton) => {
+  const HeaderButton = ({maxw, minw, title, id, link}: iHeaderButton) => {
     const maxWidth = maxw ? maxw : '370'
     const minWidth = minw ? minw : '200'
 
     if (link) {
       return (
-        <div className="hmb-headerButtonContainer" style={{ maxWidth: `${maxWidth}px`, minWidth: `${minWidth}px` }}>
+        <div className="hmb-headerButtonContainer" style={{maxWidth: `${maxWidth}px`, minWidth: `${minWidth}px`}}>
           <NavLink
             id={id}
             to={link}
-            className={({ isActive }) => {
+            className={({isActive}) => {
               if (isActive) {
                 return 'hmb-navLinkActive'
               } else {
@@ -102,7 +102,7 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
               }
             }}
           >
-            <div className='hmb-linkBox' style={{ 'backgroundColor': canvOpacity ? "#00000000" : "#000000" }}>{title}</div>
+            <div className="hmb-linkBox">{title}</div>
           </NavLink>
         </div>
       )
@@ -111,15 +111,15 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
   // --------------------------------------------------------------------
 
   return (
-    <nav id="hmb-header" style={{ height: headerMin ? '50px' : '75px' }}>
+    <nav id="hmb-header" style={{height: headerMin ? '50px' : '75px'}}>
       <div id="hmb-header-container">
-        <NavLink className={'hmb-navLink '.concat('justify-content-start')} style={{ width: 'auto' }} to="/">
+        <NavLink className={'hmb-navLink '.concat('justify-content-start')} style={{width: 'auto'}} to="/">
           <div id="hmb-logoBtn">
             <Logo scrollDist={scrollDist} />
           </div>
         </NavLink>
         <div className="hmb-headerNavigation">
-          <div className="hmb-headerButtonsRow" style={{ height: headerMin ? '28px' : '50px' }}>
+          <div className="hmb-headerButtonsRow" style={{height: headerMin ? '28px' : '50px'}}>
             <div className="HMB-column">
               <HeaderButton id="about" link="/about" title="ABOUT" maxw="110" minw="75" />
             </div>
@@ -139,7 +139,7 @@ const Header = ({ scrollDist, showAbout }: iHeader) => {
             <span className="hmb-tooltiptext">About this site</span>
           </button>
         </div>
-        <canvas id="hmb-headerCanvas" width="1030" height="87" style={{ width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: canvOpacity ? 1 : 0 }} />
+        <canvas id="hmb-headerCanvas" width="1030" height="87" style={{width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: canvOpacity ? 1 : 0}} />
       </div>
     </nav>
   )

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const Switch = ({ passedIn, onOff }) => {
-  const [on, setOn] = useState(true)
+  const [on, setOn] = useState(false)
 
   useEffect(() => {
     if (onOff) {

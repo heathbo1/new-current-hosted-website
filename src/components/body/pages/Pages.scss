@@ -12,14 +12,16 @@
   .hmb-sectionText {
     box-shadow: 0px 0px 10px 6px #0000004a;
     border: 1px solid #27bae9;
-    border-bottom: 1px solid #ffffff;
-    background-color: #0000004a;
     background-color: #005580;
     padding: 2px 4px 3px 4px;
     color: #ffffff;
     font-weight: bold;
     font-size: 1.25em;
     text-shadow: 2px 2px 5px #000000;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    position: relative;
+    bottom: 1px;
   }
 }
 
@@ -41,9 +43,9 @@
 }
 
 .hmb-whiteText {
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   padding: 0px 0.25rem;
-  text-shadow: 1px 1px #000000;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%), -1px -1px 1px rgb(0 0 0 / 50%);
 }
 
 #hmb-resume {
@@ -152,7 +154,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px 125px;
+    gap: 20px 25px;
     transition: opacity 1s;
     padding: 10px;
     padding-top: 55px;
@@ -163,7 +165,7 @@
       display: flex;
       justify-content: flex-start;
 
-      #hmb-aboutLeftSpacer {
+      .hmb-aboutSpacer {
         width: 50%;
         display: flex;
         justify-content: center;
@@ -173,7 +175,13 @@
     #hmb-aboutRight {
       width: 45%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
+
+      .hmb-aboutSpacer {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+      }
     }
 
     .hmb-aboutContainer {
@@ -238,12 +246,6 @@
   }
 }
 
-@media screen and (max-width: 1269px) {
-  #hmb-aboutLeft {
-    justify-content: center !important;
-  }
-}
-
 @media screen and (max-width: 730px) {
   #dateSpacer {
     display: none;
@@ -253,6 +255,18 @@
     .hmb-aboutPanels {
       width: 100% !important;
     }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  #hmb-aboutLeft {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  #hmb-aboutRight {
+    width: 100% !important;
+    justify-content: center !important;
   }
 }
 

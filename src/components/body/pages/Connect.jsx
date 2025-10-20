@@ -136,52 +136,18 @@ const Connect = () => {
           </div>
           <div className="hmb-connect">
             <div className="hmb-whiteText"><b>Phone: </b>(314) 609-9176</div>
-            <div>
+            <div className="hmb-whiteText">
               <span><b>Email: </b></span>
               <a style={ { color: '#ffffff' } } href="mailto:hbishop@heathbishop.com" className="hmb-whiteText">
                 hbishop@heathbishop.com
               </a>
             </div>
-            <div>
+            <div className="hmb-whiteText">
               <span><b>LinkedIn: </b></span>
               <a style={ { color: '#ffffff' } } target='_blank' href='https://www.linkedin.com/in/heath-bishop-757a3b5/' className='hmb-whiteText'>Profile</a>
             </div>
             <div className="hmb-whiteText"><b>Location: </b>St. Louis, Mo, USA</div>
           </div>
-          {/* <form>
-            <div className="hmb-formLine">
-              <label htmlFor="formName" className="hmb-formLabel">
-                <span className="hmb-whiteText">Your Name </span>
-                <span style={ { color: 'var(--HMB-orange)' } }>*</span>
-              </label>
-              <input id="formName" placeholder="Enter name" className="hmb-formInput" type="text" onChange={ onNameChange } />
-            </div>
-            <div className="hmb-formLine">
-              <label htmlFor="formPhone" className="hmb-formLabel">
-                <span className="hmb-whiteText">Phone# </span>
-                <span style={ { color: 'var(--HMB-orange)' } }>*</span>
-              </label>
-              <input id="formPhone" placeholder="Enter your phone number" className="hmb-formInput" type="tel" onChange={ onPhoneChange }></input>
-            </div>
-            <div className="hmb-formLine">
-              <label htmlFor="formEmail" className="hmb-formLabel">
-                <span className="hmb-whiteText">Email Address </span>
-                <span style={ { color: 'var(--HMB-orange)' } }>*</span>
-              </label>
-              <input id="formEmail" placeholder="Enter your email address" className="hmb-formInput" type="email" onChange={ onEmailChange }></input>
-            </div>
-            <div className="hmb-formLine">
-              <label htmlFor="formMessage" className="hmb-formLabel">
-                <span className="hmb-whiteText">Message </span>
-                <span style={ { color: 'var(--HMB-orange)' } }>*</span>
-              </label>
-              <textarea id="formMessage" className="hmb-formInput" onChange={ onMessageChange } />
-            </div>
-            <div className="hmb-formLine">
-              <button onClick={ submit }>Submit</button>
-              <button onClick={ resetAll }>Reset Form</button>
-            </div>
-          </form> */}
         </BluePanel>
       </div>
     </div>

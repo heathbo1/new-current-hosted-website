@@ -23,7 +23,7 @@ const About = ({ appRef }) => {
   }, [])
 
   return (
-    <div key="aboutBody" id="about" className="hmb-flexContainer pages hmb-aboutPage" style={ { letterSpacing: '1.5px' } }>
+    <div key="aboutBody" id="about" className="hmb-flexContainer pages hmb-aboutPage">
       <div key="aboutMain" className="hmb-column">
         <BluePanel>
           <div className="hmb-whiteText">

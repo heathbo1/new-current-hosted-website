@@ -42,13 +42,13 @@ const Project = ({Pkey, data, modalOpen}: iProject) => {
   }, [])
 
   return (
-    <BluePanel key={Pkey} className="hmb-panels portPanel">
+    <BluePanel key={Pkey} className="hmb-panels">
       <div className="hmb-sectionHeader-Line hmb-porfolio-header">
         <div className="hmb-project-name">{data.name}</div>
         <div className="hmb-company-name">{data.client}</div>
       </div>
       <div className="hmb-infoContainer">
-        <div className="hmb-infoHalf">
+        <div className="hmb-infoHalf hmb-whiteText">
           <div>
             <b>Technologies Used:</b> {data.technology}
           </div>
