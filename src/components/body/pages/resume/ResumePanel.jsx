@@ -1,4 +1,4 @@
-import CollapsiblePanel from "./components/CollapsiblePanel"
+import CollapsiblePanel from "../components/CollapsiblePanel"
 
 
 const ResumePanel = ({ exp }) => {

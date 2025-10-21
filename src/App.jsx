@@ -8,7 +8,7 @@ import Modal from './components/body/pages/components/Modal'
 import Connect from './components/body/pages/Connect'
 import Home from './components/body/pages/Home'
 import Portfolio from './components/body/pages/portfolio/Portfolio'
-import Resume from './components/body/pages/Resume'
+import Resume from './components/body/pages/resume/Resume'
 import Header from './components/header/Header'
 
 const App = () => {

@@ -190,17 +190,25 @@
       ]
     }
   ],
-  "Education": {
-    "Master Of Fine Arts. Interactive Media": {
-      "name": "Memphis College of Art",
-      "location": "Memphis Tennessee"
+  "Education": [
+    {
+      "Degree": "Master Of Fine Arts",
+      "Major": "INTERACTIVE MEDIA",
+      "University": "Memphis College of Art",
+      "Location": "Memphis Tennessee"
     },
-    "Bachelor Of Fine Arts. Graphic Design": {
-      "name": "University of Missouri Saint Louis",
-      "location": "Saint Louis, Missouri"
+    {
+      "Degree": "Bachelor Of Fine Arts",
+      "Major": " GRAPHIC DESIGN",
+      "University":"University of Missouri Saint Louis",
+      "Location": "Saint Louis, Missouri"
     }
-  },
-  "Achievements": {
-    "a1": "Eagle Scout, Boy Scouts of America, (1993)"
-  }
+  ],
+  "Achievements": [
+    {
+      "award": "EAGLE SCOUT",
+      "date": "1993",
+      "organization": "Boy Scouts of America"
+    }
+  ]
 }

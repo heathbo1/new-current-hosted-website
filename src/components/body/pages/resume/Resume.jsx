@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import '../Body.scss'
-import BluePanel from './components/BluePanel'
-import Data from './data/resume.json'
-import './Pages.scss'
+import '../../Body.scss'
+import BluePanel from '../components/BluePanel'
+import Data from '../data/resume.json'
+import '../Pages.scss'
+import AchievementPanel from './AchievementPanel.jsx'
+import EducationPanel from './EducationPanel'
 import ResumePanel from './ResumePanel'
 
 const callBacks = []
@@ -83,6 +85,15 @@ const Resume = ({ appRef }) => {
           <ResumePanel exp={ Data.Experience[7] } />
           <ResumePanel exp={ Data.Experience[8] } />
           <ResumePanel exp={ Data.Experience[9] } />
+        </BluePanel>
+        <BluePanel key="experience" className="hmb-panels">
+          <div className='hmb-sectionHeader-Line'>Education</div>
+          <EducationPanel edu={ Data.Education[0] } />
+          <EducationPanel edu={ Data.Education[1] } />
+        </BluePanel>
+        <BluePanel key="experience" className="hmb-panels">
+          <div className='hmb-sectionHeader-Line'>Achievements</div>
+          <AchievementPanel ach={ Data.Achievements[0] } />
         </BluePanel>
       </div>
     </div>
