@@ -10,6 +10,7 @@
     "name": "Prayer Cards website",
     "client": "Lutheran Church Missouri Synod",
     "technology": "React, Material, TypeScript, SCSS, HTML5",
+    "designedUsing":"Adobe XD, Illustrator, Photoshop",
     "description": "This is redesign of the Prayer Cards website that allows users to find the missionaries they want to support.",
     "images": ["LCMS/LCMS1.png", "LCMS/LCMS2.png"]
   },

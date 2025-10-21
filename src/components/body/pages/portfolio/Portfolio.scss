@@ -108,6 +108,11 @@
   width: 50%;
   display: inline-block;
   padding: 0px;
+
+  .hmb-lineHeader {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 }
 
 .hmb-infoDescript {
@@ -121,6 +126,10 @@
 
 .hmb-panels {
   transition: width 0.5s;
+}
+
+.hmb-designedUsing {
+  padding-bottom: 10px;
 }
 
 // 1300px or less

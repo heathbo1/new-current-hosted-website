@@ -13,10 +13,6 @@ const Resume = ({ appRef }) => {
   const [clicked, setClicked] = useState()
   const [onOff, setOnOff] = useState(false)
 
-  // useEffect(() => {
-  //   setOnOff(false)
-  // }, [])
-
   const turnSwitch = (value) => { // function called by switch
     setOnOff(value)
   }
@@ -28,9 +24,6 @@ const Resume = ({ appRef }) => {
   }
 
   const openPanel = (id) => { // function called by CollapsiblePanel
-    console.log('openPanel = ', id)
-    console.log('onOff = ', onOff)
-
     callBacks.forEach((func) => {
       func(id, onOff)
     })

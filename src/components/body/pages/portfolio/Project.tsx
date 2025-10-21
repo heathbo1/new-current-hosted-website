@@ -7,6 +7,7 @@ interface idata {
   name: string
   client: string
   technology: string
+  designedUsing: string
   description: string
   images: Array<unknown>
 }
@@ -41,6 +42,7 @@ const Project = ({Pkey, data, modalOpen}: iProject) => {
     setImages(temp)
   }, [])
 
+  console.log('test = ', data)
   return (
     <BluePanel key={Pkey} className="hmb-panels">
       <div className="hmb-sectionHeader-Line hmb-porfolio-header">
@@ -49,8 +51,13 @@ const Project = ({Pkey, data, modalOpen}: iProject) => {
       </div>
       <div className="hmb-infoContainer">
         <div className="hmb-infoHalf hmb-whiteText">
+          <div className="hmb-designedUsing" style={{display: data.designedUsing ? data.designedUsing : 'none'}}>
+            <span className="hmb-lineHeader">Designed Using</span>
+            {`: ${data.designedUsing}`}
+          </div>
           <div>
-            <b>Technologies Used:</b> {data.technology}
+            <span className="hmb-lineHeader">Technologies Used</span>
+            {`: ${data.technology}`}
           </div>
           <div className="hmb-infoDescript">{data.description}</div>
         </div>
