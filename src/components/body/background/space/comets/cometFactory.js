@@ -29,10 +29,11 @@ function topOrRight() {
 function getRandomFillStyle() {
   const colorList = [
     'rgba(162, 165, 206, 1)', // calcium
-    'rgba(183, 216, 237, 1)', // iron
-    'rgba(190, 219, 178, 1)', // magnesium
-    // 'rgba(213, 167, 128, 1)', // sodium
-    'rgba(173, 246, 251, 1)' // carbon
+    'rgba(245, 228, 187, 1)', // iron
+    'rgba(185, 235, 243, 1)', // magnesium
+    'rgba(204, 145, 123, 1)', // sodium
+    'rgba(173, 246, 251, 1)', // carbon
+    'rgba(231, 167, 168, 1)' // nitrogen
   ]
 
   return colorList[getRandomIntInclusive(0, colorList.length - 1)]

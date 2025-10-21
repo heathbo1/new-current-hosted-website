@@ -2,7 +2,7 @@ class SateliteFactory {
   static generateSatellite(height) {
     let satellite = {}
 
-    satellite.y = height * 0.25
+    satellite.y = height * 0.25 + 3
     satellite.x = 0
     satellite.speedX = 0.25
     satellite.radius = 2
