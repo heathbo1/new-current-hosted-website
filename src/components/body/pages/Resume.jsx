@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import '../Body.scss'
 import BluePanel from './components/BluePanel'
-import Switch from './components/Switch'
 import Data from './data/resume.json'
 import './Pages.scss'
 import ResumePanel from './ResumePanel'
@@ -11,6 +10,10 @@ const callBacks = []
 const Resume = ({ appRef }) => {
   const [clicked, setClicked] = useState()
   const [onOff, setOnOff] = useState(false)
+
+  // useEffect(() => {
+  //   setOnOff(false)
+  // }, [])
 
   const turnSwitch = (value) => { // function called by switch
     setOnOff(value)
@@ -23,6 +26,9 @@ const Resume = ({ appRef }) => {
   }
 
   const openPanel = (id) => { // function called by CollapsiblePanel
+    console.log('openPanel = ', id)
+    console.log('onOff = ', onOff)
+
     callBacks.forEach((func) => {
       func(id, onOff)
     })
@@ -67,19 +73,16 @@ const Resume = ({ appRef }) => {
           <span className="hmb-sectionText">EXPERIENCE</span>
         </div>
         <BluePanel key="experience" className="hmb-row hmb-dataRows experienceContainer">
-          <label id='hmb-resume-switch'>
-            <span>Open One At A Time </span><Switch passedIn={ onOff } onOff={ turnSwitch } />
-          </label>
-          <ResumePanel exp={ Data.Experience[0] } id={ 1 } opened={ openPanel } register={ registerFunc } />
-          <ResumePanel exp={ Data.Experience[1] } id={ 2 } opened={ openPanel } register={ registerFunc } />
-          <ResumePanel exp={ Data.Experience[2] } id={ 3 } opened={ openPanel } register={ registerFunc } />
-          <ResumePanel exp={ Data.Experience[3] } id={ 4 } opened={ openPanel } register={ registerFunc } />
-          <ResumePanel exp={ Data.Experience[4] } id={ 5 } opened={ openPanel } register={ registerFunc } />
-          <ResumePanel exp={ Data.Experience[5] } id={ 6 } opened={ openPanel } register={ registerFunc } />
-          <ResumePanel exp={ Data.Experience[6] } id={ 7 } opened={ openPanel } register={ registerFunc } />
-          <ResumePanel exp={ Data.Experience[7] } id={ 8 } opened={ openPanel } register={ registerFunc } />
-          <ResumePanel exp={ Data.Experience[8] } id={ 9 } opened={ openPanel } register={ registerFunc } />
-          <ResumePanel exp={ Data.Experience[9] } id={ 10 } opened={ openPanel } register={ registerFunc } />
+          <ResumePanel exp={ Data.Experience[0] } />
+          <ResumePanel exp={ Data.Experience[1] } />
+          <ResumePanel exp={ Data.Experience[2] } />
+          <ResumePanel exp={ Data.Experience[3] } />
+          <ResumePanel exp={ Data.Experience[4] } />
+          <ResumePanel exp={ Data.Experience[5] } />
+          <ResumePanel exp={ Data.Experience[6] } />
+          <ResumePanel exp={ Data.Experience[7] } />
+          <ResumePanel exp={ Data.Experience[8] } />
+          <ResumePanel exp={ Data.Experience[9] } />
         </BluePanel>
       </div>
     </div>

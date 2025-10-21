@@ -1,13 +1,13 @@
 {
-  "Profile": "Seasoned Front-End Web Developer with over 20 years of experience delivering high-quality, user-centered digital solutions across diverse industries including healthcare, finance, education, and technology. Proven expertise in React, JavaScript, TypeScript, HTML/CSS, and modern UI frameworks such as Next.js and AngularJS. Skilled in building scalable, accessible interfaces, leading development teams, and implementing reusable component libraries. Adept at driving performance, mentoring junior engineers, and streamlining development through Agile methodologies and testing best practices. Passionate about continuous learning, innovation, and delivering seamless user experiences across platforms.",
+  "Profile": "Seasoned Front-End Web Developer with over 15+ years of experience delivering high-quality, user-centered digital solutions across diverse industries and technology. Proven expertise in React, JavaScript, TypeScript, HTML/CSS, and modern UI frameworks such as Next.js and AngularJS. Skilled in building scalable, accessible interfaces, leading development teams, and implementing reusable component libraries. Adept at driving performance, mentoring junior engineers, and streamlining development through Agile methodologies and testing best practices. Passionate about continuous learning, innovation, and delivering seamless user experiences across platforms.",
   "Technologies": {
-    "Languages": "TypeScript, JavaScript, HTML, HTML5, CSS3, JSON, XML",
-    "Tools / Libraries": "React, Redux, Next.js, WordPress, AngularJS, Material, Bootstrap, SCSS, Tailwind, jQuery, ESLint, Node, NPM, Express, Webpack, Jest, GIT, GitLab, GraphQL, Bitbucket, Jasmine, Jenkins, Agile, Scrum, Kanban Methodologies",
-    "Software": "WebStorm, Visual Studio Code, Eclipse, IntelliJ, Fiddler, Postman, Adobe Photoshop, Adobe Illustrator, Adobe XD, Confluence, JIRA, Figma",
+    "Languages": "TypeScript, JavaScript, HTML, CSS, JSON, XML",
+    "Tools / Libraries": "React, Redux, NextJS, AngularJS, SCSS, WordPress, Node, Express, Tailwind, jQuery, Bootstrap, Material, Formik, ESLint, Webpack, Jest, GIT, GitLab, Bitbucket, Agile, Scrum, Kanban Methodologies",
+    "Software": "WebStorm, Visual Studio Code, Fiddler, Postman, Adobe Photoshop, Adobe Illustrator, Adobe XD, Confluence, JIRA",
     "Operating Systems": "Windows, Mac OS"
   },
   "IndustryExperience": "Energy, Restaurant, Communication, Commodity Trading, Sports, Healthcare, Pharmacy Tech, Insurance, Integrated Digital Technologies, Marketing, Financial, Education, Automotive, Railroad, and Beverage",
-  "Competencies": "My competencies encompass a broad spectrum of UI Design and Development, UI Architecture, Project Design and Development, Framework Development, Object-Oriented Programming, User Experience (UX), and Usability. This comprehensive skill set enables me to deliver high-quality solutions across various projects.",
+  "Competencies": "My competencies encompass a broad spectrum of UI Design and Development, UI Architecture, Project Design and Development, Framework Development, Object-Oriented Programming, User Experience (UX), and Usability. This comprehensive skill set enables me to deliver high-quality solutions across various platforms.",
   "Experience": [
     {
       "company": "Optum Rx",
@@ -15,16 +15,15 @@
       "position": "Front-end Developer",
       "location": "St. Louis, MO",
       "date": "February 2025 - June 2025",
-      "description": "Led the building of the front end for an AI project.",
+      "description": "Participated in the building of the front end for an AI project.",
       "details": [
-        "Collaborated with a team of UI developers to design and implement a user interface for an AI-driven application using Agile methodologies.",
-        "Mentored and supported junior developers, providing guidance on best practices and code reviews.",
-        "Developed custom, reusable UI components to enhance consistency and efficiency across the engineering team.",
-        "Engineered a creative solution to integrate a non-native dropdown menu with the Formik library, demonstrating problem-solving and adaptability."
+        "Collaborated with a team of UI developers to implement a Next.js UI for an AI-driven application using Agile methodologies.",
+        "Mentored a junior developer, by teaching React and component strategies, provided guidance on best practices and code reviews.",
+        "Engineered a creative solution to integrate a non-native dropdown menu with the Formik library, demonstrating creative problem-solving and adaptability."
       ],
       "clients": [],
       "key": 10,
-      "used": "Agile Development, React, Nextjs, TypeScript, ESLINT, Prettier, Tailwind, MSW, Storybook, and Playright"
+      "used": "Agile, Nextjs, Bootstrap, TypeScript, Tailwind, ESLINT, Playright, Formik, GitHub"
     },
     {
       "company": "Lutheran Church Missouri Synod",
@@ -34,14 +33,14 @@
       "date": "June 2023 - October 2023",
       "description": "Led the redesign and development of their Prayer Cards website.",
       "details": [
-        "Led the redesign of the Prayer Cards website, significantly improving usability and visual design; presented to stakeholders and received strong approval.",
+        "Led the redesign of the Prayer Cards website, significantly improving usability, accessibility, and visual design; presented to stakeholders and received strong approval.",
         "Resolved major Bootstrap and mobile compatibility issues across four public-facing websites, boosting accessibility and user experience.",
-        "Refactored and updated Bootstrap codebase while creating custom CSS to fix grid-related bugs, ensuring consistent performance across devices",
+        "Refactored and updated the Bootstrap codebase to fix grid-related bugs with custom CSS, ensuring consistent performance across devices.",
         "Utilized design tools like Adobe XD, Illustrator, and Photoshop to align UI/UX improvements with brand and accessibility standards."
       ],
       "clients": [],
       "key": 9,
-      "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
+      "used": "Agile, React, HTML, Bootstrap, TypeScript, SCSS, CSS, ESLint, Jest, Git, Adobe XD, Illustrator, Photoshop"
     },
     {
       "company": "Charter Spectrum",
@@ -51,14 +50,14 @@
       "date": "November 2022 - December 2022",
       "description": "Led and mentored a team of software engineers to update an older class based Reactjs project with new functionality and better performance.",
       "details": [
-        "Led a development team at Spectrum to optimize React.js and Next.js applications, cutting development time by 32% through testing strategies and adoption of best practices.",
-        "Mentored developers by teaching modern workflows, CSS fundamentals, and legacy React concepts to revive and accelerate a stalled project.",
-        "Improved code quality and consistency by integrating tools like ESLint, Prettier, and Jest into the development pipeline.",
+        "Led a team to optimize React.js and Next.js applications, cutting development time by 32% through testing strategies and adoption of best practices.",
+        "Mentored developers by teaching modern workflows, CSS fundamentals, and legacy React concepts to revive a stalled project.",
+        "Improved code quality and consistency by integrating ESLint, Prettier, and Jest into the development pipeline.",
         "Applied Agile methodologies to enhance team collaboration, increase productivity, and ensure timely project delivery."
       ],
       "clients": [],
       "key": 8,
-      "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Jest"
+      "used": "Agile, NextJS, TypeScript, Module.CSS, HTML, ESLint, Prettier, Jest, Git"
     },
     {
       "company": "FLASHPOINT",
@@ -75,7 +74,7 @@
       ],
       "clients": [],
       "key": 7,
-      "used": "Agile Development, React, Webpack, Node.js, Module.CSS, HTML, TypeScript, ESLint, Prettier, Storybook"
+      "used": "Agile, NextJS, React, TypeScript, Module.CSS, HTML, Bootstrap, ESLint, Jest, Git"
     },
     {
       "company": "QUES",
@@ -85,14 +84,13 @@
       "date": "October 2021 - July 2022",
       "description": "I worked with a team of developers to build and maintain different SAAS projects.",
       "details": [
-        "Spearheaded the development of a React-based UML display tool, allowing users to build, edit, and save diagrams efficiently.",
-        "Contributed to the architecture of a new React project, enhancing overall system functionality and scalability.",
+        "Participated in the development of a React-based UML display tool, allowing users to build, edit, and save diagrams.",
         "Maintained and upgraded legacy AngularJS applications to ensure smooth integration with new React-based components.",
         "Implemented performance and UX improvements through strategic upgrades, maintaining high code quality with ESLint and Jest."
       ],
       "clients": [],
       "key": 6,
-      "used": "Agile Development, React, Angular, Webpack, Node.js, Sass, HTML, CSS, TypeScript, ESLint, Prettier"
+      "used": "Agile, React, AngularJS, TypeScript, SCSS, HTML, Bootstrap, ESLint, Jest, Git"
     },
     {
       "company": "Edward Jones",
@@ -103,13 +101,12 @@
       "description": "I worked with a team of Senior developers to mentor and aid other UI development teams using React.",
       "details": [
         "Spearheaded the development of reusable animated components, enhancing UI consistency and promoting code efficiency across multiple teams.",
-        "Delivered training on React accessibility standards, improving inclusivity and usability in codebases.",
         "Led workshops on React best practices, driving performance optimizations, and elevating code quality.",
         "Designed screen architectures and established testing standards, reducing redundant code while increasing test coverage and reliability."
       ],
       "clients": [],
       "key": 5,
-      "used": "Agile Development, React, Redux, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint"
+      "used": "Agile, React, JavaScript, CSS, HTML, Redux, Bootstrap, ESLint, Prettier, Jest, Git"
     },
     {
       "company": "RGA",
@@ -119,14 +116,14 @@
       "date": "July 2019 - March 2020",
       "description": "Led a team of software engineers to update the Aurora project from AngularJS to Reactjs and Redux, and give it a modern look using Material design.",
       "details": [
-        "Lead the charge to improve User Experience by bringing to light potential usability issues and offering solutions before they became a problem.",
-        "Lead the team to improve accessibility by running international accessibility compliance tests and fixing all found issues.",
-        "Sped up development by teaching the other developers React, CSS, and good coding practices.",
-        "Sped up development by updating all obsolete NPM packages and upgrading to a multithreaded version of Nodejs."
+        "Led the team in migrating the Aurora project from AngularJS to React, significantly improving UI performance and system efficiency.",
+        "Enhanced accessibility by resolving compliance issues, ensuring a more inclusive user experience.",
+        "Provided hands-on training in React, CSS, and coding best practices to accelerate development timelines.",
+        "Utilized Agile methodologies and testing frameworks like Jest to maintain high code quality and streamline workflows."
       ],
       "clients": [],
       "key": 4,
-      "used": "Agile Development, React, AngularJS, TypeScript, Jasmine, Webpack, Node.js, Sass, HTML, CSS, JavaScript, ESLint, TSLint"
+      "used": "Agile, React, AngularJS, JavaScript, TypeScript, HTML, CSS, Bootstrap, JSON, Jest, ESLint, Git"
     },
     {
       "company": "NECES",
@@ -136,14 +133,14 @@
       "date": "March 2019 - July 2019",
       "description": "Led a team of onshore and offshore UI software engineers to build the AUROS Command and AUROS Site Manger projects.",
       "details": [
-        "Led the UI team to enhance AUROS projects by establishing standards and comprehensive documentation, boosting development efficiency.",
-        "Implemented testing frameworks such as Jest, Jasmine, and Karma to reduce bugs and improve overall software quality.",
+        "Led the UI team to enhance AUROS project by establishing standards and comprehensive documentation, boosting development efficiency.",
+        "Implemented Jest, Jasmine, and Karma to reduce bugs and improve overall software quality.",
         "Conducted operational reviews to streamline development processes, significantly decreasing post-production changes.",
         "Guided the team through architecture improvements and Angular 7 upgrades, successfully achieving key project milestones."
       ],
       "clients": [],
       "key": 3,
-      "used": "Agile Development, Angular, TypeScript, Jasmine, Karma, Protractor, Webpack, Node.js, Sass, HTML, CSS, JavaScript"
+      "used": "Agile, Angular, TypeScript, CSS, HTML, Jasmine, Karma, Protractor, Webpack, Node"
     },
     {
       "company": "Panera Bread",
@@ -153,12 +150,12 @@
       "date": "March 2018 - March 2019",
       "description": "Development of Panera's new Point-of-Sale devices.",
       "details": [
-        "Collaborated on developing the UI, enhancing usability and efficiency for the Point-of-Sale system used in their restaurants.",
+        "Collaborated with the team of designers, frontend, and backend developers, and worked on developing the UI for the Point-of-Sale system used in their restaurants.",
         "Led the initiative to reorganize the code, standardize code patterns, and implement Jest to increase code coverage."
       ],
       "clients": [],
       "key": 2,
-      "used": "React.js, Redux,js, Axios.js, Saga.js, Jest, JavaScript, JSON, HTML, CSS, LESS, Webpack, Node.js, Intellij"
+      "used": "Agile, React, Redux, Bootstrap, Axios, Saga, HTML, CSS, JavaScript, Jest"
     },
     {
       "company": "Daugherty Business Solutions",
@@ -175,44 +172,35 @@
           "company": "Charter Communications",
           "description": "Redeveloped their Customer Service Management website.",
           "details": [
-            "Redeveloped the Customer Service Management website as part of the Gateway Project, improving functionality and user experience.",
-            "Resolved a complex Bootstrap dropdown menu bug by implementing a unique solution that enhanced UI usability. - Became usable no matter where on the screen it was placed and no matter how many items where in the menu. (2016)",
-            "Developed a custom event-based library for global state management using React, JavaScript, and HTML, demonstrating strong front-end expertise"
+            "Redeveloped the Customer Service Management website as part of the Gateway Project, improving functionality, usability, and user experience.",
+            "Resolved a complex Bootstrap dropdown menu bug by implementing a creative solution that allowed the dropdown to be used anywhere on the screen, regardless of how large the dropdown menu is, with the menu never going off screen. ---This was before Bootstrap’s dropdown had the built in functionality.",
+            "Developed a custom event-based library for global state management using React, and JavaScript."
           ],
-          "used": "Agile Development, React.js, JavaScript, HTML, CSS, Node, Webpack, NPM, Bootstrap, JSON"
+          "used": "Agile, React, JavaScript, HTML, CSS, Bootstrap, JSON, ESLINT, Git"
         },
         {
           "company": "Metal Exchange Corporation",
           "description": "Redeveloped their Trading System.",
           "details": [
-            "Collaborated to rewrite two major components of the Trading System, the Pricing Engine and Broker Invoice Engine.",
-            "Rewrote multiple SQL stored procedures to move business logic from SQL to managed .Net code.",
-            "Built unit test and / or integration test for new and existing code.",
-            "Collaborated on rewriting critical Trading System components, migrating business logic to managed .NET code to boost system efficiency and maintainability"
+            "Collaborated on rewriting critical Trading System components, migrating business logic to managed .NET code to boost system efficiency and maintainability.",
+            "Styled HTML screens with CSS to improve user experience."
           ],
-          "used": "Agile Development, Dependency Injection, Design Patterns, Moq, MVC, C#, VB, MS SQL, ASP, HTML, JavaScript, Visual Studio 2010, MS SQL Server Management Studio, Fiddler"
-        },
-        {
-          "company": "Express Scripts",
-          "description": "Redeveloped their Automated Prescription Processing System.",
-          "details": ["Developed key functionality for the new system."],
-          "used": "Agile development, dependency injection, design patterns, C#, WPF, ASP, HTML, Oracle, Visual Studio"
+          "used": "Agile, .NET, C#, MSSQL Server, HTML, CSS, Visual Studio 2010, Fiddler"
         }
       ]
     }
   ],
   "Education": {
-    "M.F.A. Interactive Media": {
+    "Master Of Fine Arts. Interactive Media": {
       "name": "Memphis College of Art",
-      "location": "Memphis Tennessee (2004)"
+      "location": "Memphis Tennessee"
     },
-    "B.F.A. Graphic Design": {
+    "Bachelor Of Fine Arts. Graphic Design": {
       "name": "University of Missouri Saint Louis",
-      "location": "Saint Louis, Missouri (2002)"
+      "location": "Saint Louis, Missouri"
     }
   },
   "Achievements": {
-    "a1": "Eagle Scout, Boy Scouts of America, (1993)",
-    "a2": "Chair of the Emerging Professionals Group, (2017-2018)"
+    "a1": "Eagle Scout, Boy Scouts of America, (1993)"
   }
 }

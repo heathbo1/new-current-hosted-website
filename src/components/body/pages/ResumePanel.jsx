@@ -1,10 +1,10 @@
 import CollapsiblePanel from "./components/CollapsiblePanel"
 
 
-const ResumePanel = ({ exp, id, opened, register }) => {
+const ResumePanel = ({ exp }) => {
   const clients = exp.clients.length >= 1
   return (
-    <CollapsiblePanel id={ id } opened={ opened } register={ register }
+    <CollapsiblePanel
       header={
         <>
           <div className="hmb-expRow">
