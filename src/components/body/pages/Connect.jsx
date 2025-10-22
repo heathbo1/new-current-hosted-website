@@ -48,11 +48,6 @@ const Connect = () => {
   const submit = (e) => {
     e.preventDefault()
     const valid = validate()
-    console.log('valid = ', valid)
-    // if (validate()) {
-    //   console.log('window.open')
-    //   // window.open(`mailto:hbishop@heathbishop.com?subject=Connect Communication&body=${body}`)
-    // }
   }
 
   const resetAll = () => {
@@ -122,7 +117,6 @@ const Connect = () => {
   const onMessageChange = (e) => {
     clearTimeout(phoneTimer)
     phoneTimer = setTimeout(() => {
-      console.log('message = ', e.target.value)
       setMessage(e.target.value)
     }, 500)
   }

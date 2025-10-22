@@ -42,7 +42,6 @@ const Project = ({Pkey, data, modalOpen}: iProject) => {
     setImages(temp)
   }, [])
 
-  console.log('test = ', data)
   return (
     <BluePanel key={Pkey} className="hmb-panels">
       <div className="hmb-sectionHeader-Line hmb-porfolio-header">
