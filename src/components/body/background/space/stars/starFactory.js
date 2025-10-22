@@ -9,6 +9,7 @@ const GenerateNewStar = (canvasWidth, canvasHeight) => {
   star.randomX = Math.floor(Math.random() * canvasWidth + 1)
   star.randomY = Math.floor(Math.random() * canvasHeight + 1)
   star.randomSize = getRandomSize()
+  star.fill = `rgba(255, 255, 255, .${getRandomIntInclusive(1, 85)})`
   return star
 }
 

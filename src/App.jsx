@@ -3,6 +3,7 @@ import { useRef, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.scss'
 import Background from './components/body/background/Background'
+import { drawStars } from './components/body/background/space/stars/Stars'
 import About from './components/body/pages/About'
 import Modal from './components/body/pages/components/Modal'
 import Connect from './components/body/pages/Connect'
@@ -21,6 +22,7 @@ const App = () => {
 
   const openCloseAboutModal = () => {
     setShowAbout(!showAbout)
+    drawStars();
   }
 
   const ref = useRef()

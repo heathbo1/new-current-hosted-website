@@ -1,16 +1,36 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react"
-import GenerateNewStar, { getRandomIntInclusive } from "./starFactory"
+import { useEffect, useLayoutEffect, useRef } from "react";
+import GenerateNewStar from "./starFactory";
+
+let stars = []
+
+export const drawStars = () => {
+  starCtx.clearRect(0, 0, starCtx.canvas.width, starCtx.canvas.height);
+  stars.forEach((star) => {
+    if (star.randomSize > 1) {
+      starCtx.shadowBlur = Math.floor(Math.random())
+      starCtx.shadowColor = 'white'
+    }
+
+    const fill = star.fill
+
+    starCtx.fillStyle = fill;
+    starCtx.beginPath();
+    starCtx.arc(star.randomX, star.randomY, star.randomSize, 0, Math.PI * 2);
+    starCtx.fill();
+
+  })
+}
+
+let starCtx = null
 
 const Stars = ({ widthOfScene, height }) => {
-  const [stars, setStars] = useState([])
 
   const starsCanvas = useRef(null)
 
-  let starCtx = null
 
   useEffect(() => {
     starCtx = starsCanvas.current.getContext('2d')
-    drawStars()
+    drawStars(stars)
   }, [stars])
 
   useLayoutEffect(() => {
@@ -24,25 +44,7 @@ const Stars = ({ widthOfScene, height }) => {
       const newStar = GenerateNewStar(1782, height)
       newStars.push(newStar)
     }
-    setStars(newStars)
-  }
-
-  const drawStars = () => {
-    starCtx.clearRect(0, 0, starCtx.canvas.width, starCtx.canvas.height);
-    stars.forEach((star) => {
-      if (star.randomSize > 1) {
-        starCtx.shadowBlur = Math.floor(Math.random())
-        starCtx.shadowColor = 'white'
-      }
-
-      const fill = `rgba(255, 255, 255, .${getRandomIntInclusive(1, 85)})`
-
-      starCtx.fillStyle = fill;
-      starCtx.beginPath();
-      starCtx.arc(star.randomX, star.randomY, star.randomSize, 0, Math.PI * 2);
-      starCtx.fill();
-
-    })
+    stars = newStars
   }
 
   return (
