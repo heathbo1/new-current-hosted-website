@@ -17,7 +17,7 @@ export const GenerateNewComet = (canvasWidth, canvasHeight) => {
   comet.speedY = comet.speedX
   comet.radius = getRandomDecimalInclusive(0.75, 2)
   comet.color = getRandomFillStyle()
-  comet.tailLength = getRandomIntInclusive(7, 7 * comet.speedX)
+  comet.tailLength = getRandomIntInclusive(10, 10 * comet.speedX)
   comet.tail = []
   return comet
 }
@@ -32,8 +32,6 @@ function getRandomFillStyle() {
     'rgba(245, 228, 187, 1)', // iron
     'rgba(185, 235, 243, 1)', // magnesium
     'rgba(204, 145, 123, 1)', // sodium
-    'rgba(173, 246, 251, 1)', // carbon
-    'rgba(231, 167, 168, 1)' // nitrogen
   ]
 
   return colorList[getRandomIntInclusive(0, colorList.length - 1)]

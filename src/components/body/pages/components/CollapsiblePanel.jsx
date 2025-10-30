@@ -14,7 +14,7 @@ const CollapsiblePanel = ({ children, width, className = '', header }) => {
 
 
   return (
-    <div style={ width ? { width: width } : {} } className={ ` hmb-collapsiblePanel ${className}` }>
+    <div style={ width ? { width: width } : {} } className={ `hmb-collapsiblePanel ${className}` }>
       <button
         type="button"
         onClick={ () => {

@@ -2,7 +2,7 @@ class SateliteFactory {
   static generateSatellite(height) {
     let satellite = {}
 
-    satellite.y = height * 0.25 + 3
+    satellite.y = height * 0.30 + 3
     satellite.x = 0
     satellite.speedX = 0.25
     satellite.radius = 2
@@ -10,7 +10,7 @@ class SateliteFactory {
 
     const getFlashState = () => {
       flashStatus++
-      let flashWait = 120
+      let flashWait = 100
       if (flashStatus === flashWait + 4) {
         flashStatus = 0
       }

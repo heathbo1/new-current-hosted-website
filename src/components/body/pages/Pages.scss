@@ -44,7 +44,7 @@
 
 .hmb-whiteText {
   letter-spacing: 1px;
-  text-shadow: 1px 1px 1px rgb(0 0 0 / 50%), -1px -1px 1px rgb(0 0 0 / 50%);
+  text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0), -0.5px -0.5px 1px rgb(0, 0, 0), 0.5px -0.5px 1px rgb(0, 0, 0), -0.5px 0.5px 1px rgb(0, 0, 0);
   color: #ffffff;
 }
 
@@ -122,7 +122,7 @@
 }
 
 #hmb-homePage {
-  padding-top: calc((100vh - 875px) / 2);
+  padding-top: 30px;
   height: calc(100vh - 102px);
 
   .hmb-homeTextStyle {

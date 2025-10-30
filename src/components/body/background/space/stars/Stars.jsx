@@ -3,6 +3,8 @@ import GenerateNewStar from "./starFactory";
 
 let stars = []
 
+let starCtx = null
+
 export const drawStars = () => {
   starCtx.clearRect(0, 0, starCtx.canvas.width, starCtx.canvas.height);
   stars.forEach((star) => {
@@ -21,8 +23,6 @@ export const drawStars = () => {
   })
 }
 
-let starCtx = null
-
 const Stars = ({ widthOfScene, height }) => {
 
   const starsCanvas = useRef(null)
@@ -30,7 +30,7 @@ const Stars = ({ widthOfScene, height }) => {
 
   useEffect(() => {
     starCtx = starsCanvas.current.getContext('2d')
-    drawStars(stars)
+    drawStars()
   }, [stars])
 
   useLayoutEffect(() => {
