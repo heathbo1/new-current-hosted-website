@@ -1,25 +1,36 @@
-import { useEffect } from 'react'
+import {useContext, useEffect} from 'react'
 import '../Body.scss'
+import {ScrollContext} from '../ScrollProvider'
 import './Pages.scss'
 import BluePanel from './components/BluePanel'
 import Data from './data/about.json'
 
-const Testimonials = ({ Name }) => {
+interface iName {
+  Name: {
+    name: string
+    quote: string
+    company: string
+  }
+}
+
+const Testimonials = ({Name}: iName) => {
   return (
     <div>
-      <div className="hmb-sectionHeader-Line">{ Name.name }</div>
-      <div className="hmb-whiteText">{ Name.quote }</div>
+      <div className="hmb-sectionHeader-Line">{Name.name}</div>
+      <div className="hmb-whiteText">{Name.quote}</div>
       <br />
-      <div className="hmb-whiteText">{ Name.name }</div>
-      <div className="hmb-whiteText">{ Name.company }</div>
+      <div className="hmb-whiteText">{Name.name}</div>
+      <div className="hmb-whiteText">{Name.company}</div>
     </div>
   )
 }
 
-const About = ({ appRef }) => {
+const About = () => {
+  //@ts-ignore
+  const {setScrollDist} = useContext(ScrollContext)
 
   useEffect(() => {
-    appRef.current.scrollTo(0, 0)
+    setScrollDist(0)
   }, [])
 
   return (
@@ -27,16 +38,16 @@ const About = ({ appRef }) => {
       <div key="aboutMain" className="hmb-column">
         <BluePanel>
           <div className="hmb-whiteText">
-            { Data.About.Me.part1 }
+            {Data.About.Me.part1}
             <br />
             <br />
-            { Data.About.Me.part2 }
+            {Data.About.Me.part2}
             <br />
             <br />
-            { Data.About.Me.part3 }
+            {Data.About.Me.part3}
             <br />
             <br />
-            { Data.About.Me.part4 }
+            {Data.About.Me.part4}
           </div>
         </BluePanel>
       </div>
@@ -45,19 +56,19 @@ const About = ({ appRef }) => {
       </div>
       <div key="abSide" className="hmb-row hmb-dataRows">
         <BluePanel className="hmb-aboutPanels">
-          <Testimonials Name={ Data.Testimonials.ChandlerPrince } />
+          <Testimonials Name={Data.Testimonials.ChandlerPrince} />
         </BluePanel>
         <BluePanel className="hmb-aboutPanels">
-          <Testimonials Name={ Data.Testimonials.StevenWilliams } />
+          <Testimonials Name={Data.Testimonials.StevenWilliams} />
         </BluePanel>
         <BluePanel className="hmb-aboutPanels">
-          <Testimonials Name={ Data.Testimonials.AmandaPozzo } />
+          <Testimonials Name={Data.Testimonials.AmandaPozzo} />
         </BluePanel>
         <BluePanel className="hmb-aboutPanels">
-          <Testimonials Name={ Data.Testimonials.RobertWade } />
+          <Testimonials Name={Data.Testimonials.RobertWade} />
         </BluePanel>
         <BluePanel className="hmb-aboutPanels">
-          <Testimonials Name={ Data.Testimonials.JamesJervis } />
+          <Testimonials Name={Data.Testimonials.JamesJervis} />
         </BluePanel>
       </div>
     </div>

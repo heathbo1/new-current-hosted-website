@@ -1,6 +1,11 @@
+import {Ref} from 'react'
 import Forground from './images/forgroundNEW3.png'
 
-const City = ({ city }) => {
+interface iCity {
+  city: Ref<HTMLDivElement>
+}
+
+const City = ({city}: iCity) => {
   return (
     <div ref={city} id="hmb-cityContainer">
       <div id="hmb-citWrapper">

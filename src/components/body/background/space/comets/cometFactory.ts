@@ -1,6 +1,18 @@
 
-export const GenerateNewComet = (canvasWidth, canvasHeight) => {
-  let comet = {}
+interface iComet{
+  start: string,
+  y: number,
+  x: number,
+  speedX: number,
+  speedY: number,
+  radius: number,
+  color: string,
+  tailLength: number,
+  tail: Array<any>
+}
+
+export const GenerateNewComet = (canvasWidth:number, canvasHeight:number) => {
+  const comet:iComet = {start:'', y:0, x:0, speedX:0, speedY:0, radius:0, color:'', tailLength:0, tail:[]}
 
   // Top or Right side of screen
   if (topOrRight() === 'top') {
@@ -37,13 +49,13 @@ function getRandomFillStyle() {
   return colorList[getRandomIntInclusive(0, colorList.length - 1)]
 }
 
-export function getRandomIntInclusive(min, max) {
+export function getRandomIntInclusive(min:number, max:number) {
   min = Math.ceil(min)
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min + 1)) + min //The maximum is inclusive and the minimum is inclusive
 }
 
-function getRandomDecimalInclusive(min, max) {
+function getRandomDecimalInclusive(min:number, max:number) {
   // Ensure min and max are numbers
   min = Number(min);
   max = Number(max);

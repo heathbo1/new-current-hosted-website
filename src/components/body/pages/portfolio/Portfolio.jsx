@@ -1,15 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import '../../Body.scss'
+import { ScrollContext } from '../../ScrollProvider'
 import Modal from '../components/Modal'
 import '../Pages.scss'
 import dataJSON from './data.json'
 import './Portfolio.scss'
 import Project from './Project'
 
-const Portfolio = ({ appRef }) => {
+const Portfolio = () => {
   const [selectedProj, setSelectedProj] = useState(null)
   const [selectedPictIndex, setSelectedPicIndex] = useState(0)
   const [projects, setProjects] = useState([])
+  const { setScrollDist } = useContext(ScrollContext)
 
   const setModal = (project) => {
     if (selectedProj) {
@@ -31,7 +33,7 @@ const Portfolio = ({ appRef }) => {
   }
 
   useEffect(() => {
-    appRef.current.scrollTo(0, 0)
+    setScrollDist(0)
     const temp = []
     for (const key in dataJSON) {
       temp.push(<Project key={ key } modalOpen={ setModal } data={ dataJSON[key] } />)

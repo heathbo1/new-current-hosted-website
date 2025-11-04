@@ -1,18 +1,20 @@
-import {useEffect, useState} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import {NavLink} from 'react-router'
+import {ScrollContext} from '../body/ScrollProvider'
 import './collapseMenu'
 import CollapseMenu from './collapseMenu'
 import './header.scss'
 import {Logo} from './images/Logo'
 
 interface iHeader {
-  scrollDist: number
   showAbout: () => void
 }
 
-const Header = ({scrollDist, showAbout}: iHeader) => {
+const Header = ({showAbout}: iHeader) => {
   const [headerMin, setHeaderMin] = useState(false)
   const [canvOpacity, setcanvOpacity] = useState(false)
+  //@ts-ignore
+  const {scrollDist} = useContext(ScrollContext)
 
   const headerCanvas = document.getElementById('hmb-headerCanvas') as HTMLCanvasElement
 

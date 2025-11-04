@@ -122,7 +122,7 @@
 }
 
 #hmb-homePage {
-  padding-top: 30px;
+  padding-top: calc((100vh - 875px) / 2);
   height: calc(100vh - 102px);
 
   .hmb-homeTextStyle {

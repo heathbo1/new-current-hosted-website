@@ -134,14 +134,14 @@
     }
 
     .hmb-downArrow {
-      transition: rotate 0.25s ease-in-out;
+      transition: rotate 0.35s ease-in-out;
       width: 1.5rem;
       height: 1.5rem;
     }
   }
 
   .hmb-collapsibleContainer {
-    transition: height 0.25s ease-in-out;
+    transition: height 0.35s ease-in-out;
     height: auto;
     height: calc-size(auto, size);
     overflow-y: hidden;

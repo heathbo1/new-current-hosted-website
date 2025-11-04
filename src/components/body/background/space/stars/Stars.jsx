@@ -2,7 +2,6 @@ import { useEffect, useLayoutEffect, useRef } from "react";
 import GenerateNewStar from "./starFactory";
 
 let stars = []
-
 let starCtx = null
 
 export const drawStars = () => {

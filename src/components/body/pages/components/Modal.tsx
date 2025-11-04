@@ -10,7 +10,7 @@ interface iModal {
   children: ReactNode
   title: any
   title2?: string
-  size: 'lg' | 'sm' | 'xl'
+  size?: 'lg' | 'sm' | 'xl'
 }
 
 const ModalComponent = ({open, openClose, children, title, title2 = '', size = 'lg'}: iModal) => {
