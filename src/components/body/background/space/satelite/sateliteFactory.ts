@@ -23,7 +23,7 @@ class SateliteFactory {
       if (flashStatus > flashWait && flashStatus < flashWait + 10) {
         return 'rgb(254, 175, 59)'
       } else {
-        if (flashStatus > flashWait + 4) {
+        if (flashStatus > flashWait + 10) {
           flashStatus = 0
         }
         return 'rgba(255,255,255, 1)'
