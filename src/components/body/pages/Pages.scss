@@ -42,9 +42,11 @@
   width: 100%;
 }
 
+$textShadow: rgb(50, 50, 50);
+
 .hmb-whiteText {
   letter-spacing: 1px;
-  text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0), -0.5px -0.5px 1px rgb(0, 0, 0), 0.5px -0.5px 1px rgb(0, 0, 0), -0.5px 0.5px 1px rgb(0, 0, 0);
+  text-shadow: 0.5px 0.5px 1px $textShadow, -0.5px -0.5px 1px $textShadow, 0.5px -0.5px 1px $textShadow, -0.5px 0.5px 1px $textShadow;
   color: #ffffff;
 }
 
