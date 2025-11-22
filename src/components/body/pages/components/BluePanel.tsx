@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import {ReactNode} from 'react'
 import './Components.scss'
 
 interface WrapperProps {
@@ -7,11 +7,12 @@ interface WrapperProps {
   width?: string
   Bkey?: string
   className?: string
+  id?: string
 }
 
-const BluePanel = ({ children, width, Bkey = '', className = '' }: WrapperProps) => {
+const BluePanel = ({children, width, Bkey = '', className = '', id}: WrapperProps) => {
   return (
-    <div key={Bkey} style={width ? { width: width } : {}} className={`hmb-bluePanel ${className}`}>
+    <div key={Bkey} id={id} style={width ? {width: width} : {}} className={`hmb-bluePanel ${className}`}>
       {children}
     </div>
   )

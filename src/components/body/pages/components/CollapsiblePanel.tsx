@@ -27,9 +27,7 @@ const CollapsiblePanel = ({children, width, className = '', header}: iCollapsibl
         className={open == false ? 'hmb-button' : 'hmb-button-selected'}
       >
         <div className="hmb-headerGrid">
-          <span className="hmb-info">
-            <span>{header}</span>
-          </span>
+          <span className="hmb-info">{header}</span>
           <span className="hmb-close">
             <img src={Arrow} alt="downArrow" className="hmb-downArrow" style={{rotate: open ? '180deg' : '0deg'}} />
           </span>

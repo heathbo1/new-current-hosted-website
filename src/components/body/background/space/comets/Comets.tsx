@@ -20,11 +20,7 @@ interface iCometObject {
 }
 
 const Comets = ({height, widthOfScene}: iComet) => {
-  // const [cometNumb, setCometNumb] = useState<string>('')
-
   const cometCanvas = useRef<HTMLCanvasElement>(null)
-
-  // let comet: iCometObject = {start: '', x: 0, y: 0, speedX: 0, speedY: 0, radius: 0, color: '', tailLength: 0, tail: []}
 
   const comets: Array<iCometObject> = []
 
@@ -36,8 +32,6 @@ const Comets = ({height, widthOfScene}: iComet) => {
     for (let i = 0; i < 5; i++) {
       comets.push(GenerateNewComet(widthOfScene, height))
     }
-    // comet = GenerateNewComet(widthOfScene, height)
-    // setCometNumb(`cometCanvas${cometNumber.toString()}`)
   }, [])
 
   function animateComet() {
@@ -77,7 +71,6 @@ const Comets = ({height, widthOfScene}: iComet) => {
             ctx.beginPath()
             ctx.arc(tailSegment.x, tailSegment.y, comet.radius * (i / comet.tail.length), 0, Math.PI * 2) // Smaller segments at the end
             ctx.fill()
-            // ctx.filter = `${comet.speedX > 2 ? 'blur(1px)' : comet.speedX > 1 ? 'blur(0.5px)' : 'none'}`
           }
 
           ctx.fillStyle = color
