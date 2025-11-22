@@ -36,10 +36,14 @@ const Home = () => {
       </div>
       <div id="hmb-aboutStyle" style={{opacity: opacity4}}>
         <div id="hmb-aboutLeft">
-          <BluePanel className="hmb-aboutContainer hmb-whiteText">I've been building front-end user interfaces for 15+ years. Including 10 years of experience with React.js.</BluePanel>
+          <BluePanel className="hmb-aboutContainer hmb-whiteText">
+            <p>I've been building front-end user interfaces for 15+ years. Including 10 years of experience with React.js.</p>
+          </BluePanel>
         </div>
         <div id="hmb-aboutRight">
-          <BluePanel className="hmb-aboutContainer hmb-whiteText">I possess extensive knowledge and expertise in JavaScript, HTML, CSS, and a long list of other UI technologies.</BluePanel>
+          <BluePanel className="hmb-aboutContainer hmb-whiteText">
+            <p>I possess extensive knowledge and expertise in JavaScript, HTML, CSS, and a long list of other UI technologies.</p>
+          </BluePanel>
         </div>
       </div>
     </div>
