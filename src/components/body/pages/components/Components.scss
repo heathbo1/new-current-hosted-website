@@ -11,7 +11,6 @@
   min-height: 178px;
   color: white;
   font-size: 1em;
-  line-height: 150%;
 }
 
 .hmb-bluePanel:after {
@@ -115,6 +114,16 @@
     color: #ffffff;
     width: 100%;
     padding-right: 0px;
+  }
+
+  .hmb-button:hover {
+    background-color: initial;
+    color: initial;
+  }
+
+  .hmb-button-selected {
+    @extend .hmb-button;
+    background: rgba(27, 27, 27, 0.25);
   }
 
   .hmb-headerGrid {

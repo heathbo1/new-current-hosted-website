@@ -51,19 +51,15 @@ const ResumePanel = ({exp}: iExp) => {
       children={
         <div className="hmb-companies">
           <div className="hmb-whiteText">{exp.description}</div>
-          <div style={{padding: '10px', display: exp.details.length > 0 ? 'block' : 'none'}}>
+          <ul className="hmb-unorderedList" style={{display: exp.details.length > 0 ? 'block' : 'none'}}>
             {!clients &&
               exp.details.map((det, i) => (
-                <div key={`det-${i}`} className="hmb-row hmb-whiteText">
-                  &#x2022; {det}
-                </div>
+                <li key={`det-${i}`} className="hmb-list hmb-whiteText">
+                  {det}
+                </li>
               ))}
-          </div>
-          {!clients && (
-            <div className="hmb-row hmb-whiteText" style={{marginTop: '20px'}}>
-              Skills: {exp.used}
-            </div>
-          )}
+          </ul>
+          {!clients && <p className="hmb-row hmb-whiteText">Skills: {exp.used}</p>}
           <>
             {exp.clients.map((c, i) => (
               <div key={`c-${i}`} className="hmb-clients hmb-bottomLine">
@@ -71,16 +67,14 @@ const ResumePanel = ({exp}: iExp) => {
                   <span style={{fontWeight: '700', color: 'var(--HMB-orange)'}}>{c.company}</span>
                   <span style={{paddingLeft: '10px'}}>{c.description}</span>
                 </div>
-                <div style={{padding: '10px'}}>
+                <ul className="hmb-unorderedList">
                   {c.details.map((det, i) => (
-                    <div key={`det2-${i}`} className="hmb-row hmb-whiteText">
-                      &#x2022; {det}
-                    </div>
+                    <li key={`det2-${i}`} className="hmb-list hmb-whiteText">
+                      {det}
+                    </li>
                   ))}
-                </div>
-                <div className="hmb-row hmb-whiteText" style={{padding: '10px'}}>
-                  Skills: {c.used}
-                </div>
+                </ul>
+                <p className="hmb-row hmb-whiteText">Skills: {c.used}</p>
               </div>
             ))}
           </>

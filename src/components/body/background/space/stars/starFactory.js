@@ -18,7 +18,7 @@ const getRandomSize = () => {
   const ran = getRandomIntInclusive(1, 50)
   let randomSize = 0
   if (ran === 50) {
-    randomSize = 2
+    randomSize = 1.5
   } else {
     randomSize = getRandomDecimalInclusive(0.25, 1)
   }

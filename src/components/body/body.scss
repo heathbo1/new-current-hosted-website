@@ -23,11 +23,22 @@
   flex-wrap: wrap;
 }
 
+.hmb-unorderedList {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hmb-list {
+  @extend .hmb-row;
+  display: list-item;
+}
+
 .hmb-sectionHeader {
   color: var(--HMB-orange);
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 16px;
+  line-height: 1.5rem
 }
 
 .hmb-sectionHeader-Line {

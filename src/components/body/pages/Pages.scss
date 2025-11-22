@@ -16,7 +16,7 @@
     padding: 2px 4px 3px 4px;
     color: #ffffff;
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     text-shadow: 2px 2px 5px #000000;
     border-radius: 5px 5px 0px 0px;
     letter-spacing: 1px;
@@ -48,6 +48,8 @@ $textShadow: rgb(50, 50, 50);
   letter-spacing: 1px;
   text-shadow: 0.5px 0.5px 1px $textShadow, -0.5px -0.5px 1px $textShadow, 0.5px -0.5px 1px $textShadow, -0.5px 0.5px 1px $textShadow;
   color: #ffffff;
+  // line-height: 1.395;
+  font-size: 1.05rem;
 }
 
 #hmb-resume {
@@ -213,7 +215,6 @@ $textShadow: rgb(50, 50, 50);
 
 .hmb-connectPage {
   .hmb-connect {
-    font-size: 1.1em;
     display: flex;
     flex-direction: column;
     gap: 10px;

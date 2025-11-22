@@ -21,33 +21,33 @@ const Resume = () => {
       <div key="resumeMain" className="hmb-column">
         <BluePanel Bkey="resBP1">
           <div className="hmb-sectionHeader-Line">PROFILE</div>
-          <div className="hmb-whiteText">{Data.Profile}</div>
+          <p className="hmb-whiteText">{Data.Profile}</p>
         </BluePanel>
       </div>
       <div key="resumeData" className="hmb-row hmb-dataRows">
         <BluePanel Bkey="resBP2" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Industry Experience</div>
-          <div className="hmb-whiteText">{Data.IndustryExperience}</div>
+          <p className="hmb-whiteText">{Data.IndustryExperience}</p>
         </BluePanel>
         <BluePanel Bkey="resBP3" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Competencies</div>
-          <div className="hmb-whiteText">{Data.Competencies}</div>
+          <p className="hmb-whiteText">{Data.Competencies}</p>
         </BluePanel>
         <BluePanel Bkey="resBP4" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Languages</div>
-          <div>{Data.Technologies.Languages}</div>
+          <p>{Data.Technologies.Languages}</p>
         </BluePanel>
         <BluePanel Bkey="resBP5" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Tools / Libraries</div>
-          <div className="hmb-whiteText">{Data.Technologies['Tools / Libraries']}</div>
+          <p className="hmb-whiteText">{Data.Technologies['Tools / Libraries']}</p>
         </BluePanel>
         <BluePanel Bkey="resBP6" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Software</div>
-          <div className="hmb-whiteText">{Data.Technologies.Software}</div>
+          <p className="hmb-whiteText">{Data.Technologies.Software}</p>
         </BluePanel>
         <BluePanel Bkey="resBP7" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Operating Systems</div>
-          <div className="hmb-whiteText">{Data.Technologies['Operating Systems']}</div>
+          <p className="hmb-whiteText">{Data.Technologies['Operating Systems']}</p>
         </BluePanel>
         <div className="hmb-sectionTitle">
           <span className="hmb-sectionText">EXPERIENCE</span>

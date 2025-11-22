@@ -58,7 +58,7 @@ const Project = ({Pkey, data, modalOpen}: iProject) => {
             <span className="hmb-lineHeader">Technologies Used</span>
             {`: ${data.technology}`}
           </div>
-          <div className="hmb-infoDescript">{data.description}</div>
+          <p className="hmb-infoDescript">{data.description}</p>
         </div>
         <div className="hmb-photoHalf">
           <button onClick={openModal} className="hmb-photoPlacer">

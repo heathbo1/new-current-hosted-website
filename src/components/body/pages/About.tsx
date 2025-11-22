@@ -17,7 +17,7 @@ const Testimonials = ({Name}: iName) => {
   return (
     <div>
       <div className="hmb-sectionHeader-Line">{Name.name}</div>
-      <div className="hmb-whiteText">{Name.quote}</div>
+      <p className="hmb-whiteText">{Name.quote}</p>
       <br />
       <div className="hmb-whiteText">{Name.name}</div>
       <div className="hmb-whiteText">{Name.company}</div>
@@ -37,7 +37,7 @@ const About = () => {
     <div key="aboutBody" id="about" className="hmb-flexContainer pages hmb-aboutPage">
       <div key="aboutMain" className="hmb-column">
         <BluePanel>
-          <div className="hmb-whiteText">
+          <p className="hmb-whiteText">
             {Data.About.Me.part1}
             <br />
             <br />
@@ -48,7 +48,7 @@ const About = () => {
             <br />
             <br />
             {Data.About.Me.part4}
-          </div>
+          </p>
         </BluePanel>
       </div>
       <div className="hmb-sectionTitle">
