@@ -78,17 +78,6 @@ const Comets = ({height, widthOfScene}: iComet) => {
           ctx.arc(comet.x, comet.y, comet.radius, 0, Math.PI * 2)
           ctx.fill()
 
-          // blur filter
-          const finalTail = comet.tail[comet.tailLength - 1]
-          if (finalTail) {
-            ctx.save()
-            ctx.beginPath()
-            ctx.rect(comet.x - comet.radius, finalTail.y, finalTail.x - comet.x, comet.y - finalTail.y)
-            ctx.clip()
-            ctx.filter = 'blur(5px)'
-            ctx.restore()
-          }
-
           // Handle comet going off-screen
           if (comet.y > height || comet.x > widthOfScene) {
             comet.x = getRandomIntInclusive(widthOfScene * 0.08, widthOfScene)
