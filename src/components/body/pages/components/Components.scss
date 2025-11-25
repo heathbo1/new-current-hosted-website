@@ -126,6 +126,10 @@
     background: rgba(27, 27, 27, 0.25);
   }
 
+  .hmb-Buttons {
+    transition: background-color 0.20s linear;
+  }
+
   .hmb-headerGrid {
     display: grid;
     grid-template-columns: 20fr 1fr;
