@@ -24,7 +24,7 @@ const CollapsiblePanel = ({children, width, className = '', header}: iCollapsibl
         onClick={() => {
           openClose()
         }}
-        className={`hmb-Buttons ${open == false ? 'hmb-button' : 'hmb-button-selected'}`}
+        className={`hmb-Buttons hmb-button`}
       >
         <div className="hmb-headerGrid">
           <span className="hmb-info">{header}</span>

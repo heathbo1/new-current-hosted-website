@@ -35,7 +35,7 @@ const Resume = () => {
         </BluePanel>
         <BluePanel Bkey="resBP4" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Languages</div>
-          <p>{Data.Technologies.Languages}</p>
+          <p className="hmb-whiteText">{Data.Technologies.Languages}</p>
         </BluePanel>
         <BluePanel Bkey="resBP5" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Tools / Libraries</div>

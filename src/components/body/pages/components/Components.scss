@@ -68,6 +68,10 @@
   color: #ffffff;
   font-size: 2em;
   transition: all 100ms ease-out;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 .hmb-closeBtn:hover {
