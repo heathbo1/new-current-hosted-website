@@ -15,16 +15,17 @@ class SateliteFactory {
     satellite.speedX = 0.25
     satellite.radius = 2
     let flashStatus = 0
-    const flashWait = 100
+    const flashWait = 200
+    const showFlash = 20
 
     const getFlashState = () => {
-      flashStatus++
+      flashStatus = flashStatus + 1
 
       // turns it on 10 steps after it's great than flashWait
-      if (flashStatus > flashWait && flashStatus < flashWait + 10) {
+      if (flashStatus > flashWait && flashStatus < flashWait + showFlash) {
         return 'rgba(255, 23, 23, 1)'
       } else {
-        if (flashStatus > flashWait + 10) {
+        if (flashStatus > flashWait + showFlash) {
           flashStatus = 0
         }
         return 'rgba(255,255,255, 1)'
