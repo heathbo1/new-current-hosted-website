@@ -1,27 +1,28 @@
-interface iSatellite{
+interface iSatellite {
   y: number,
   x: number,
   speedX: number,
   radius: number,
-  draw: (ctx:CanvasRenderingContext2D)=>void
+  draw: (ctx: CanvasRenderingContext2D) => void
 }
 
 class SateliteFactory {
-  static generateSatellite(height:number) {
-    const satellite: iSatellite = {y:0, x:0, speedX:0, radius:0, draw: ()=>{}}
+  static generateSatellite(height: number) {
+    const satellite: iSatellite = { y: 0, x: 0, speedX: 0, radius: 0, draw: () => { } }
 
     satellite.y = height * 0.30 + 3
     satellite.x = 0
     satellite.speedX = 0.25
     satellite.radius = 2
     let flashStatus = 0
+    const flashWait = 100
 
     const getFlashState = () => {
       flashStatus++
-      const flashWait:number = 100
 
+      // turns it on 10 steps after it's great than flashWait
       if (flashStatus > flashWait && flashStatus < flashWait + 10) {
-        return 'rgb(254, 175, 59)'
+        return 'rgba(255, 23, 23, 1)'
       } else {
         if (flashStatus > flashWait + 10) {
           flashStatus = 0
