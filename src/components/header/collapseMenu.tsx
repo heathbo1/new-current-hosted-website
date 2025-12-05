@@ -48,26 +48,19 @@ const CollapseMenu = ({headermin}: Menu) => {
       <div id="hmb-dropDownContainer" style={{height: menuOpen ? '189px' : 0, top: headermin ? '43px' : '60px'}}>
         <div id="hmb-dropDown">
           <div className="hmb-linkContainer">
-            <NavLink id="menu-about" style={{background: `${currentPage === 'about' ? '#ffaf19' : ''}`}} className={`hmb-menuBarNavigation ${currentPage !== 'about' ? 'hmb-menuBarNavigation-hover' : ''}`} to="/about" onClick={scrollTop}>
+            <NavLink id="menu-about" className={`hmb-menuBarNavigation ${currentPage !== 'about' ? 'hmb-menuBarNavigation-hover' : ''} ${currentPage === 'about' ? 'hmb-menuBarNavigation-selected' : ''}`} to="/about" onClick={scrollTop}>
               About
             </NavLink>
           </div>
           <div className="hmb-linkContainer">
-            <NavLink
-              id="menu-resume"
-              style={{background: `${currentPage === 'resume' ? '#ffaf19' : ''}`}}
-              className={`hmb-menuBarNavigation ${currentPage !== 'resume' ? 'hmb-menuBarNavigation-hover' : ''}`}
-              to="/resume"
-              onClick={scrollTop}
-            >
+            <NavLink id="menu-resume" className={`hmb-menuBarNavigation ${currentPage !== 'resume' ? 'hmb-menuBarNavigation-hover' : ''} ${currentPage === 'resume' ? 'hmb-menuBarNavigation-selected' : ''}`} to="/resume" onClick={scrollTop}>
               Resume
             </NavLink>
           </div>
           <div className="hmb-linkContainer">
             <NavLink
               id="menu-portfolio"
-              style={{background: `${currentPage === 'portfolio' ? '#ffaf19' : ''}`}}
-              className={`hmb-menuBarNavigation ${currentPage !== 'portfolio' ? 'hmb-menuBarNavigation-hover' : ''}`}
+              className={`hmb-menuBarNavigation ${currentPage !== 'portfolio' ? 'hmb-menuBarNavigation-hover' : ''} ${currentPage === 'portfolio' ? 'hmb-menuBarNavigation-selected' : ''}`}
               to="/portfolio"
               onClick={scrollTop}
             >
@@ -77,8 +70,7 @@ const CollapseMenu = ({headermin}: Menu) => {
           <div className="hmb-linkContainer">
             <NavLink
               id="menu-contact"
-              style={{background: `${currentPage === 'connect' ? '#ffaf19' : ''}`}}
-              className={`hmb-menuBarNavigation ${currentPage !== 'connect' ? 'hmb-menuBarNavigation-hover' : ''}`}
+              className={`hmb-menuBarNavigation ${currentPage !== 'connect' ? 'hmb-menuBarNavigation-hover' : ''} ${currentPage === 'connect' ? 'hmb-menuBarNavigation-selected' : ''}`}
               to="/connect"
               onClick={scrollTop}
             >
