@@ -45,25 +45,43 @@ const CollapseMenu = ({headermin}: Menu) => {
       <div id="hmb-menuBars" className={`${menuOpen === true ? 'hmb-menuBarsClicked' : null}`} onClick={menuToggle}>
         <i className="fas fa-bars" />
       </div>
-      <div id="hmb-dropDownContainer" style={{height: menuOpen ? '186px' : 0, top: headermin ? '50px' : '60px'}}>
+      <div id="hmb-dropDownContainer" style={{height: menuOpen ? '189px' : 0, top: headermin ? '43px' : '60px'}}>
         <div id="hmb-dropDown">
           <div className="hmb-linkContainer">
-            <NavLink id="menu-about" style={{color: `${currentPage === 'about' ? '#ffaf19' : '#FFFFFF'}`}} className="hmb-menuBarNavigation" to="/about" onClick={scrollTop}>
+            <NavLink id="menu-about" style={{background: `${currentPage === 'about' ? '#ffaf19' : ''}`}} className={`hmb-menuBarNavigation ${currentPage !== 'about' ? 'hmb-menuBarNavigation-hover' : ''}`} to="/about" onClick={scrollTop}>
               About
             </NavLink>
           </div>
           <div className="hmb-linkContainer">
-            <NavLink id="menu-resume" style={{color: `${currentPage === 'resume' ? '#ffaf19' : '#FFFFFF'}`}} className="hmb-menuBarNavigation" to="/resume" onClick={scrollTop}>
+            <NavLink
+              id="menu-resume"
+              style={{background: `${currentPage === 'resume' ? '#ffaf19' : ''}`}}
+              className={`hmb-menuBarNavigation ${currentPage !== 'resume' ? 'hmb-menuBarNavigation-hover' : ''}`}
+              to="/resume"
+              onClick={scrollTop}
+            >
               Resume
             </NavLink>
           </div>
           <div className="hmb-linkContainer">
-            <NavLink id="menu-portfolio" style={{color: `${currentPage === 'portfolio' ? '#ffaf19' : '#FFFFFF'}`}} className="hmb-menuBarNavigation" to="/portfolio" onClick={scrollTop}>
+            <NavLink
+              id="menu-portfolio"
+              style={{background: `${currentPage === 'portfolio' ? '#ffaf19' : ''}`}}
+              className={`hmb-menuBarNavigation ${currentPage !== 'portfolio' ? 'hmb-menuBarNavigation-hover' : ''}`}
+              to="/portfolio"
+              onClick={scrollTop}
+            >
               Portfolio
             </NavLink>
           </div>
           <div className="hmb-linkContainer">
-            <NavLink id="menu-contact" style={{color: `${currentPage === 'connect' ? '#ffaf19' : '#FFFFFF'}`}} className="hmb-menuBarNavigation" to="/connect" onClick={scrollTop}>
+            <NavLink
+              id="menu-contact"
+              style={{background: `${currentPage === 'connect' ? '#ffaf19' : ''}`}}
+              className={`hmb-menuBarNavigation ${currentPage !== 'connect' ? 'hmb-menuBarNavigation-hover' : ''}`}
+              to="/connect"
+              onClick={scrollTop}
+            >
               Connect
             </NavLink>
           </div>
