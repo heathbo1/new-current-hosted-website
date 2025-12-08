@@ -23,6 +23,18 @@
 .hmb-imgContainer {
   width: 100%;
   text-align: center;
+
+  .hmb-bottom-arrows {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+
+    .hmb-buttons-container {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+    }
+  }
 }
 
 .hmb-imageDisplayContainer {
@@ -32,6 +44,7 @@
   justify-content: center;
   gap: 10px;
   user-select: none;
+  -webkit-user-select: none;
 
   .hmb-portImageDisplay {
     flex-direction: column;
@@ -43,6 +56,7 @@
     &--small {
       @extend .hmb-portImageDisplay;
       max-height: 60vh;
+      height: fit-content;
     }
   }
 
@@ -69,6 +83,33 @@
   }
 
   .hmb-arrows:active {
+    color: var(--HMB-active-orange);
+    filter: drop-shadow(4px 6px 8px black);
+  }
+
+  .hmb-arrows-bottom {
+    position: relative;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 200ms ease-out;
+    line-height: 50px;
+    background: none;
+    border: none;
+    vertical-align: top;
+    align-items: center;
+    height: 60px;
+    padding: 0px;
+    width: 39px;
+    font-size: 2em !important;
+  }
+
+  .hmb-arrows-bottom:hover {
+    filter: drop-shadow(2px 4px 6px black);
+    color: var(--HMB-orange);
+  }
+
+  .hmb-arrows-bottom:active {
     color: var(--HMB-active-orange);
     filter: drop-shadow(4px 6px 8px black);
   }
@@ -140,7 +181,7 @@
 
   .hmb-photoHalf {
     width: 100%;
-    justify-content: flex-end;
+    // justify-content: flex-end;
   }
 
   .hmb-photoPlacer {
@@ -167,8 +208,28 @@
   }
 }
 
+@media screen and (max-width: 575px) {
+  .hmb-arrows {
+    display: none !important;
+  }
+
+  // .hmb-bottom-arrows {
+  //   display: flex !important;
+  // }
+
+  .hmb-snapshots {
+    .snapshot {
+      width: 100px;
+    }
+  }
+}
+
 @media screen and (max-width: 525px) {
   .hmb-panels {
     width: 100% !important;
   }
+
+  // .hmb-arrows-bottom {
+  //   display: flex !important;
+  // }
 }

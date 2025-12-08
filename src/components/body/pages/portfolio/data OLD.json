@@ -35,6 +35,13 @@
     "description": "This is a website for ATT that I helped build while working at Fleishman Hillard",
     "images": ["ATT_Sustainability.jpg"]
   },
+  "6": {
+    "name": "Bacon Brains",
+    "client": "University of Missouri",
+    "technology": "Adobe Flash",
+    "description": "A shooter game that utilizes a physics engine and teaches children about genetics and chromosomes.",
+    "images": ["BaconBrains.jpg"]
+  },
   "7": {
     "name": "Chevy MyLink Simulator",
     "client": "Chevy",
@@ -49,11 +56,25 @@
     "description": "This a site that I built while working at Fleishman Hillard.",
     "images": ["GoldCorp/GoldCorp1.jpg", "GoldCorp/GoldCorp2.jpg", "GoldCorp/GoldCorp3.jpg", "GoldCorp/GoldCorp4.jpg"]
   },
+  "9": {
+    "name": "Equipment Selection Tool",
+    "client": "Coca-Cola",
+    "technology": "Adobe Flash, Adobe Air",
+    "description": "An iPad and Windows application designed to help Coco-Cola's salesforce find the right equipment to meet their customer's needs.",
+    "images": ["Coke/Coke1.jpg", "Coke/Coke2.jpg", "Coke/Coke3.jpg", "Coke/Coke4.jpg"]
+  },
   "10": {
     "name": "Panda Power Funds: Careers",
     "client": "Panda Power Funds",
     "technology": "HTML5, CSS, Javascript, jQuery",
     "description": "This is a site that I help build while working at Fleishman Hillard.",
     "images": ["PandaFunds.jpg"]
+  },
+  "11": {
+    "name": "Razor Clubs",
+    "client": "Callaway",
+    "technology": "Adobe Flash, HTML",
+    "description": "An e-Learning course that educates customers on the qualities of Callaway's Razor line of clubs.",
+    "images": ["Callaway/Callaway1.jpg", "Callaway/Callaway2.jpg", "Callaway/Callaway3.jpg", "Callaway/Callaway4.jpg"]
   }
 }

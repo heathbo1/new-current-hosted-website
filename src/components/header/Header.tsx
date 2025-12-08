@@ -113,7 +113,7 @@ const Header = ({showAbout}: iHeader) => {
   // --------------------------------------------------------------------
 
   return (
-    <nav id="hmb-header" style={{height: headerMin ? '50px' : '75px'}}>
+    <header id="hmb-header" style={{height: headerMin ? '50px' : '75px'}}>
       <div id="hmb-header-container">
         <NavLink className={'hmb-navLink '.concat('justify-content-start')} style={{width: 'auto'}} to="/">
           <div id="hmb-logoBtn">
@@ -136,14 +136,14 @@ const Header = ({showAbout}: iHeader) => {
             </div>
           </div>
           <CollapseMenu headermin={headerMin} />
-          <button className="hmb-info-icon" onClick={showModal}>
+          <button type="button" className="hmb-info-icon" onClick={showModal}>
             <i>i</i>
             <span className="hmb-tooltiptext">About this site</span>
           </button>
         </div>
         <canvas id="hmb-headerCanvas" width="1030" height="87" style={{width: '100%', height: headerMin ? '75px' : '87px', position: 'fixed', left: '0px', top: '-25px', opacity: canvOpacity ? 1 : 0}} />
       </div>
-    </nav>
+    </header>
   )
 }
 

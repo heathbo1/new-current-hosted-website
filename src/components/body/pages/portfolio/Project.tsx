@@ -34,7 +34,7 @@ const Project = ({Pkey, data, modalOpen}: iProject) => {
       }
       temp.push(
         <div key={`${key}-d`} className="hmb-portImageContainer">
-          <img key={`${key}-i`} className="hmb-portImages" src={'/' + data.images[key]} style={style} />
+          <img key={`${key}-i`} className="hmb-portImages" src={'/' + data.images[key]} style={style} alt={`hmb-portImage ${data.images[key]}`} />
         </div>
       )
     }
@@ -61,7 +61,7 @@ const Project = ({Pkey, data, modalOpen}: iProject) => {
           <p className="hmb-infoDescript">{data.description}</p>
         </div>
         <div className="hmb-photoHalf">
-          <button onClick={openModal} className="hmb-photoPlacer">
+          <button onClick={openModal} className="hmb-photoPlacer" type="button">
             {images}
           </button>
         </div>
