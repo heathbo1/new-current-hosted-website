@@ -17,10 +17,10 @@ export const Logo = (scrollDist) => {
 
   return (
     <div className="hmb-logoNameContainer" style={ { height: min ? '50px' : '' } }>
-      <img id="hmb-logo" src={ HBIcon } style={ { width: min ? '40px' : '65px' } } alt="HBIcon" />
+      <img id="hmb-logo" src={ HBIcon } style={ { width: min ? '40px' : '20%' } } alt="HBIcon" />
       <div id="hmb-text">
-        <img src={ HeathBishop } alt="HeathBishop" />
-        <img src={ FEdeveloper } style={ { display: scrollDist.scrollDist >= 25 ? 'none' : 'inline' } } alt="FEdeveloper" />
+        <img id="hmb-name" src={ HeathBishop } alt="HeathBishop" />
+        <img id="hmb-position" src={ FEdeveloper } style={ { display: scrollDist.scrollDist >= 25 ? 'none' : 'inline' } } alt="FEdeveloper" />
       </div>
     </div>
   )
