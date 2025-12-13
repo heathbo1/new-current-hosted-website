@@ -25,7 +25,7 @@ export const GenerateNewComet = (canvasWidth:number, canvasHeight:number) => {
     comet.x = canvasWidth
   }
 
-  comet.speedX = getRandomDecimalInclusive(.75, 3)
+  comet.speedX = getRandomDecimalInclusive(.75, 2)
   comet.speedY = comet.speedX
   comet.radius = getRandomDecimalInclusive(0.75, 2)
   comet.color = getRandomFillStyle()
