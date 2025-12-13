@@ -17,7 +17,7 @@ const Resume = () => {
   }, [])
 
   return (
-    <div id="hmb-resume" key="resumeBody" className="hmb-flexContainer pages" style={{letterSpacing: '1.5px'}}>
+    <div id="hmb-resume" key="resumeBody" className="hmb-flexContainer pages">
       <div key="resumeMain" className="hmb-column">
         <BluePanel Bkey="resBP1">
           <div className="hmb-sectionHeader-Line">PROFILE</div>

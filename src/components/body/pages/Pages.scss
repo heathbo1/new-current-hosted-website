@@ -48,7 +48,6 @@ $textShadow: rgb(50, 50, 50);
   letter-spacing: 1px;
   text-shadow: 0.5px 0.5px 1px $textShadow, -0.5px -0.5px 1px $textShadow, 0.5px -0.5px 1px $textShadow, -0.5px 0.5px 1px $textShadow;
   color: #ffffff;
-  // line-height: 1.395;
   font-size: 1.05rem;
 }
 
@@ -75,6 +74,7 @@ $textShadow: rgb(50, 50, 50);
     text-shadow: 1px 1px 1px #000000;
     text-transform: uppercase;
     padding-right: 10px;
+    letter-spacing: 1.5px;
   }
 
   .hmb-companies {
