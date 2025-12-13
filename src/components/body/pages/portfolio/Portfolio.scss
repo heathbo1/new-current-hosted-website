@@ -165,10 +165,6 @@
   cursor: pointer;
 }
 
-.hmb-panels {
-  transition: width 0.5s;
-}
-
 .hmb-designedUsing {
   padding-bottom: 10px;
 }
@@ -181,7 +177,6 @@
 
   .hmb-photoHalf {
     width: 100%;
-    // justify-content: flex-end;
   }
 
   .hmb-photoPlacer {
@@ -213,10 +208,6 @@
     display: none !important;
   }
 
-  // .hmb-bottom-arrows {
-  //   display: flex !important;
-  // }
-
   .hmb-snapshots {
     .snapshot {
       width: 100px;
@@ -228,8 +219,4 @@
   .hmb-panels {
     width: 100% !important;
   }
-
-  // .hmb-arrows-bottom {
-  //   display: flex !important;
-  // }
 }

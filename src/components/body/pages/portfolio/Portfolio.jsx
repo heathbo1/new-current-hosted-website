@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import '../../Body.scss'
 import { ScrollContext } from '../../ScrollProvider'
-import Modal from '../components/Modal'
+import ModalComponent from '../components/Modal'
 import '../Pages.scss'
 import dataJSON from './data.json'
 import './Portfolio.scss'
@@ -68,18 +68,19 @@ const Portfolio = () => {
 
   return (
     <>
-      <Modal
+      <ModalComponent
         open={ selectedProj !== null }
         openClose={ setModal }
         title={
           selectedProj && (
-            <span>
-              <span>{ `${selectedProj.name}: ` } </span>
-              <span style={ { color: '#ffffff' } }>{ selectedProj.client }</span>
-            </span>
+            `${selectedProj.name}:`
           )
         }
-        style={ { maxWidth: '1250px' } }
+        title2={
+          selectedProj && (
+            `${selectedProj.client}`
+          )
+        }
       >
         { selectedProj ? (
           <div className="hmb-imageDisplayContainer">
@@ -104,7 +105,7 @@ const Portfolio = () => {
               return <img id={ i } key={ i } onClick={ selectImage } style={ Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' } } className="snapshot" src={ '/' + value } />
             }) }
         </div>
-      </Modal>
+      </ModalComponent>
       <div className="hmb-flexContainer pages">
         <div className="hmb-row hmb-dataRows">{ projects }</div>
       </div>
