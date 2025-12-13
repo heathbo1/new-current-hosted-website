@@ -9,11 +9,12 @@ interface iModal {
   openClose: () => void
   children: ReactNode
   title: any
-  title2?: string
+  title2?: string | null
+  title2Small?: string | null
   size?: 'lg' | 'sm' | 'xl'
 }
 
-const ModalComponent = ({open, openClose, children, title, title2 = '', size = 'lg'}: iModal) => {
+const ModalComponent = ({open, openClose, children, title, title2 = null, title2Small = null, size = 'lg'}: iModal) => {
   const close = () => {
     openClose()
   }
@@ -25,8 +26,15 @@ const ModalComponent = ({open, openClose, children, title, title2 = '', size = '
           <div className="hmb-modalHeader">
             <div className="hmb-titleContent">
               <div className="hmb-modalTitle">
-                <h5>{title}</h5>
-                <span className="hmb-title2">{` ${title2}`}</span>
+                <span className="hmb-title">
+                  <h5>{title}</h5>
+                </span>
+                {title2Small && <span className="hmb-titleSmall">{`${title2Small}`}</span>}
+                {title2 && (
+                  <span className="hmb-title2">
+                    <h5>{`${title2}`}</h5>
+                  </span>
+                )}
               </div>
             </div>
             <div className="hmb-titleContent" style={{position: 'absolute', right: '0px', top: '1px'}}>
