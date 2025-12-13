@@ -115,7 +115,7 @@ const Header = ({showAbout}: iHeader) => {
   return (
     <header id="hmb-header" style={{height: headerMin ? '50px' : '75px'}}>
       <div id="hmb-header-container">
-        <NavLink className={'hmb-navLink '.concat('justify-content-start')} style={{width: 'auto'}} to="/">
+        <NavLink id="hmb-logoNavLink" className="hmb-navLink justify-content-start" to="/">
           <div id="hmb-logoBtn">
             <Logo scrollDist={scrollDist} />
           </div>

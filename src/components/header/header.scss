@@ -8,17 +8,29 @@ a {
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
-  width: 340px;
+  width: 100%;
   height: 98px;
   line-height: 26px;
 
   #hmb-logo {
     transition: width 200ms;
-    width: 69px;
+    max-width: 65px;
   }
 
   #hmb-text {
     text-align: left;
+    width: 80%;
+    max-width: 260px;
+
+    #hmb-name {
+      width: 100%;
+      max-width: 260px;
+    }
+
+    #hmb-position {
+      width: 100%;
+      max-width: 260px;
+    }
   }
 }
 
@@ -33,14 +45,11 @@ a {
   box-sizing: border-box;
   display: flex;
   flex-wrap: nowrap;
-  height: 75px;
   justify-content: flex-start;
   margin: 0px;
   padding: 0px 0.5rem;
   position: absolute;
   top: 0;
-  transition-behavior: normal;
-  transition-delay: 0s;
   transition: height 75ms;
   width: 100%;
   z-index: 3;
@@ -87,7 +96,6 @@ a {
       width: 150px;
       font-size: 1rem;
       text-align: center;
-      // transition: opacity 200ms ease-out;
     }
   }
 
@@ -126,6 +134,7 @@ a {
     z-index: 1;
     transition: height 75ms;
     width: 100%;
+    padding-right: 5px;
 
     .hmb-headerButtonsRow {
       display: flex;
@@ -140,6 +149,7 @@ a {
       flex-grow: 1;
       flex-shrink: 0;
       flex-basis: 0px;
+      justify-content: center;
     }
 
     a {
@@ -203,7 +213,6 @@ a {
             .hmb-menuBarNavigation {
               cursor: pointer;
               color: #ffffff;
-              // font-weight: bold;
               font-size: 1em;
               line-height: 150%;
               letter-spacing: 2px;
@@ -267,14 +276,11 @@ a {
 
 .hmb-headerButtonContainer {
   display: flex;
-  position: relative;
   bottom: 0;
-  flex: 1;
   z-index: 1;
   background-size: cover;
   height: 96%;
   max-height: 96px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -301,6 +307,11 @@ a {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5)
 }
 
+#hmb-logoNavLink {
+  max-width: 350px !important;
+  min-width: 350px !important;
+}
+
 .hmb-navLinkActive {
   @extend .hmb-navLink;
   color: var(--HMB-orange);
@@ -312,7 +323,7 @@ a {
 }
 
 .hmb-navLinkActive::after {
-  width: 85% !important;
+  width: 95% !important;
   transform: scale(1);
   opacity: 1 !important;
 }
@@ -346,6 +357,10 @@ a:hover::after {
   display: inline-block;
 }
 
+#hmb-logoBtn {
+  width: 100%;
+}
+
 @media screen and (max-width: 420px) {
   #hmb-header {
     padding: 0px !important;
@@ -368,6 +383,14 @@ a:hover::after {
 
   .hmb-headerNavigation {
     justify-content: flex-end !important;
+    width: 20% !important;
+  }
+}
+
+@media screen and (max-width: 845px) {
+  #hmb-logoNavLink {
+    width: 80%;
+    min-width: 270px !important;
   }
 }
 
