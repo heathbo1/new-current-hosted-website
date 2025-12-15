@@ -33,6 +33,7 @@ const Portfolio = () => {
   }
 
   useEffect(() => {
+    console.log('width Test = ', screen.width)
     setScrollDist(0)
     const temp = []
     for (const key in dataJSON) {
@@ -85,7 +86,8 @@ const Portfolio = () => {
         { selectedProj ? (
           <div className="hmb-imageDisplayContainer">
             <div className="hmb-imgContainer">
-              <img id="mainPortImage" className={ `${selectedProj.images.length > 1 ? 'hmb-portImageDisplay--small' : 'hmb-portImageDisplay'}` } src={ '/' + selectedProj.images[selectedPictIndex] } />
+              <img id="mainPortImage" alt='hmb-portImage'
+                className={ `${selectedProj.images.length > 1 ? 'hmb-portImageDisplay--small' : 'hmb-portImageDisplay'}` } src={ '/' + selectedProj.images[selectedPictIndex] } />
               <div className='hmb-bottom-arrows'>
                 <div className='hmb-buttons-container'>
                   <button className="hmb-arrows-bottom" type='button' style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('previous') }>❮</button>
@@ -102,7 +104,7 @@ const Portfolio = () => {
           { selectedProj &&
             selectedProj.images.length > 1 &&
             selectedProj.images.map((value, i) => {
-              return <img id={ i } key={ i } onClick={ selectImage } style={ Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' } } className="snapshot" src={ '/' + value } />
+              return <img id={ i } key={ i } onClick={ selectImage } alt='hmb-portImage' style={ Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' } } className="snapshot" src={ '/' + value } />
             }) }
         </div>
       </ModalComponent>
