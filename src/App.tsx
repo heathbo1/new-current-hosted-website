@@ -29,7 +29,7 @@ const App = () => {
           <Modal open={showAbout} openClose={openCloseAboutModal} title={'About This Site'} title2Small="v2.8" size="sm">
             <ul id="siteInformation">
               <li>This site was designed and developed by Heath Bishop.</li>
-              <li>The background stars are randomly generated. Refresh your browser to see them regenerated.</li>
+              <li>The background stars are randomly generated. Refresh your browser to see them regenerate.</li>
               <li>The comets have random start and stop locations, colors, velocities, and sizes.</li>
               <li>This site was built using TypeScript, React, SCSS, Bootstrap, Prettier, React Router, ESLint, Node.js, and Vite.</li>
               <ul>
