@@ -11,7 +11,7 @@
     "client": "Lutheran Church Missouri Synod",
     "technology": "React, Material, TypeScript, SCSS, HTML5",
     "designedUsing":"Adobe XD, Illustrator, Photoshop",
-    "description": "This is redesign of the Prayer Cards website that allows users to find the missionaries they want to support.",
+    "description": "This is a redesign of the Prayer Cards website that allows users to find the missionaries they want to support.",
     "images": ["LCMS/LCMS1.png", "LCMS/LCMS2.png"]
   },
   "3": {
@@ -39,21 +39,21 @@
     "name": "Chevy MyLink Simulator",
     "client": "Chevy",
     "technology": "HTML5, Javascript, jQuery, CSS",
-    "description": "MyLink Simulator that I helped build while working at Fleishman Hillard. It ran on Chevy's Facebook page.",
+    "description": "MyLink Simulator, which helped build while working at Fleishman Hillard. It ran on Chevy's Facebook page.",
     "images": ["MyLink.jpg"]
   },
   "8": {
     "name": "Gold Corp: Simulator",
     "client": "Gold Corp",
     "technology": "HTML5, CSS, Javascript, ASP.NET",
-    "description": "This a site that I built while working at Fleishman Hillard.",
+    "description": "This is a site that I built while working at Fleishman Hillard.",
     "images": ["GoldCorp/GoldCorp1.jpg", "GoldCorp/GoldCorp2.jpg", "GoldCorp/GoldCorp3.jpg", "GoldCorp/GoldCorp4.jpg"]
   },
   "10": {
     "name": "Panda Power Funds: Careers",
     "client": "Panda Power Funds",
     "technology": "HTML5, CSS, Javascript, jQuery",
-    "description": "This is a site that I help build while working at Fleishman Hillard.",
+    "description": "This is a site that I helped build while working at Fleishman Hillard.",
     "images": ["PandaFunds.jpg"]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "Profile": "Seasoned Front-End Web Developer with over 15+ years of experience delivering high-quality, user-centered digital solutions across diverse industries and technology. Proven expertise in React, JavaScript, TypeScript, HTML/CSS, and modern UI frameworks such as Next.js and AngularJS. Skilled in building scalable, accessible interfaces, leading development teams, and implementing reusable component libraries. Adept at driving performance, mentoring junior engineers, and streamlining development through Agile methodologies and testing best practices. Passionate about continuous learning, innovation, and delivering seamless user experiences across platforms.",
+  "Profile": "Seasoned Front-End Web Developer with over 15+ years of experience delivering high-quality, user-centered digital solutions across diverse industries and technologies. Proven expertise in React, JavaScript, TypeScript, HTML/CSS, and modern UI frameworks such as Next.js and AngularJS. Skilled in building scalable, accessible interfaces, leading development teams, and implementing reusable component libraries. Adept at driving performance, mentoring junior engineers, and streamlining development through Agile methodologies and testing best practices. Passionate about continuous learning, innovation, and delivering seamless user experiences across platforms.",
   "Technologies": {
     "Languages": "TypeScript, JavaScript, HTML, CSS, JSON, XML",
     "Tools / Libraries": "React, Redux, NextJS, AngularJS, SCSS, WordPress, Node, Express, Tailwind, jQuery, Bootstrap, Material, Formik, ESLint, Webpack, Jest, GIT, GitLab, Bitbucket, Agile, Scrum, Kanban Methodologies",
@@ -18,7 +18,7 @@
       "description": "Participated in the building of the front end for an AI project.",
       "details": [
         "Collaborated with a team of UI developers to implement a Next.js UI for an AI-driven application using Agile methodologies.",
-        "Mentored a junior developer, by teaching React and component strategies, provided guidance on best practices and code reviews.",
+        "Mentored a junior developer by teaching React and component strategies, and guided best practices and code reviews.",
         "Engineered a creative solution to integrate a non-native dropdown menu with the Formik library, demonstrating creative problem-solving and adaptability."
       ],
       "clients": [],
@@ -48,7 +48,7 @@
       "position": "Senior Software Engineer 1",
       "location": "St. Louis, MO",
       "date": "November 2022 - December 2022",
-      "description": "Led and mentored a team of software engineers to update an older class based Reactjs project with new functionality and better performance.",
+      "description": "Led and mentored a team of software engineers to update an older class-based Reactjs project with new functionality and better performance.",
       "details": [
         "Led a team to optimize React.js and Next.js applications, cutting development time by 32% through testing strategies and adoption of best practices.",
         "Mentored developers by teaching modern workflows, CSS fundamentals, and legacy React concepts to revive a stalled project.",
