@@ -44,10 +44,13 @@
   line-height: 150%;
   text-shadow: 1px 1px 1px #000000;
   text-transform: uppercase;
+  letter-spacing: 1px;
 
   .hmb-title {
     display: inline-block;
     color: var(--HMB-orange) !important;
+    font-weight: 700;
+    font-size: 1.25rem;
   }
 
   .hmb-titleSmall {
@@ -58,6 +61,8 @@
   .hmb-title2 {
     display: inline-block;
     margin-left: 10px;
+    font-weight: 700;
+    font-size: 1.25rem;
   }
 }
 
@@ -163,8 +168,8 @@
   }
 
   .hmb-collapsibleContainer {
-    transition: height 0.3s ease-in-out;
-    -webkit-transition: height 0.3s ease-in-out;
+    transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    -webkit-transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     height: auto;
     height: calc-size(auto, size);
     overflow-y: hidden;
@@ -183,7 +188,7 @@
   }
 }
 
-.hmb-collapsiblePanel:hover {
+.hmb-collapsiblePanel-selected {
   button {
     background: rgb(27 27 27 / 25%) !important;
   }

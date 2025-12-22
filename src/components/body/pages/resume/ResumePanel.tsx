@@ -20,12 +20,18 @@ interface iExp {
     key: number
     used: string
   }
+  id?: string
+  update?(open: boolean, id: string): void
+  isOpen?: {id?: string; open: boolean}
 }
 
-const ResumePanel = ({exp}: iExp) => {
+const ResumePanel = ({exp, id, update, isOpen}: iExp) => {
   const clients = exp.clients.length >= 1
   return (
     <CollapsiblePanel
+      id={id}
+      update={update}
+      isOpen={isOpen}
       header={
         <>
           <div className="hmb-expRow">
@@ -62,10 +68,10 @@ const ResumePanel = ({exp}: iExp) => {
           {!clients && <p className="hmb-row hmb-whiteText">Skills: {exp.used}</p>}
           <>
             {exp.clients.map((c, i) => (
-              <div key={`c-${i}`} className="hmb-clients hmb-bottomLine">
+              <div key={`c-${i}`} className="hmb-clients hmb-topLine">
                 <div className="hmb-row hmb-nameDescription">
-                  <span style={{fontWeight: '700', color: 'var(--HMB-orange)'}}>{c.company}</span>
-                  <span style={{paddingLeft: '10px'}}>{c.description}</span>
+                  <span className="hmb-companyName">{c.company}</span>
+                  <span className="hmb-companyDescription">{c.description}</span>
                 </div>
                 <ul className="hmb-unorderedList">
                   {c.details.map((det, i) => (

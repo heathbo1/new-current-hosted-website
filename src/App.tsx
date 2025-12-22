@@ -33,9 +33,7 @@ const App = () => {
               <li>The comets have random start and stop locations, colors, velocities, and sizes.</li>
               <li>This site was built using TypeScript, React, SCSS, Bootstrap, Prettier, React Router, ESLint, Node.js, and Vite.</li>
               <ul>
-                <li>
-                  <b>Bootstrap is only used in the root level of the Modals.</b> Everything else is custom. - If you look in your browser's dev tools. You'll find my initials HMB at the start of every custom CSS class name.
-                </li>
+                <li>Bootstrap is only used in the root level of the Modals. Everything else is custom. - If you look in your browser's dev tools. You'll find my initials HMB at the start of every custom CSS class name.</li>
               </ul>
             </ul>
           </Modal>

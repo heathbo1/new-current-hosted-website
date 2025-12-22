@@ -71,7 +71,10 @@ $textShadow: rgb(50, 50, 50);
   .hmb-expRole {
     color: var(--HMB-orange);
     font-weight: 700;
-    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0),
+      -0.5px -0.5px 1px rgb(0, 0, 0),
+      0.5px -0.5px 1px rgb(0, 0, 0),
+      -0.5px 0.5px 1px rgb(0, 0, 0);
     text-transform: uppercase;
     padding-right: 10px;
     letter-spacing: 1.5px;
@@ -89,6 +92,17 @@ $textShadow: rgb(50, 50, 50);
 
     .hmb-nameDescription {
       flex-wrap: nowrap;
+
+      .hmb-companyName {
+        font-weight: 700;
+        color: var(--HMB-orange);
+        @extend .hmb-whiteText
+      }
+
+      .hmb-companyDescription {
+        padding-left: 10px;
+        @extend .hmb-whiteText
+      }
     }
 
     .hmb-clients {
@@ -96,8 +110,9 @@ $textShadow: rgb(50, 50, 50);
     }
   }
 
-  .hmb-bottomLine {
-    border-bottom: 0.75px solid #ffffff6e;
+  .hmb-topLine {
+    border-top: 0.75px solid #ffffff6e;
+    padding-top: 10px;
   }
 
   #hmb-resume-switch {

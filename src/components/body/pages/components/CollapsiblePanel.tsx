@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 import './Components.scss'
 import Arrow from './images/downArrow.svg'
@@ -8,17 +8,31 @@ interface iCollapsiblePanel {
   width?: number
   className?: string
   header: React.ReactNode
+  id?: string
+  update?(open: boolean, id: string): void
+  isOpen?: {id?: string; open: boolean}
 }
 
-const CollapsiblePanel = ({children, width, className = '', header}: iCollapsiblePanel) => {
+const CollapsiblePanel = ({children, width, className = '', header, id, update, isOpen}: iCollapsiblePanel) => {
   const [open, setOpen] = useState(false)
 
   const openClose = () => {
     setOpen(!open)
+    if (update && id) {
+      update(!open, id)
+    }
   }
 
+  useEffect(() => {
+    if (isOpen) {
+      if (isOpen.id !== id && open === true) {
+        setOpen(false)
+      }
+    }
+  }, [isOpen])
+
   return (
-    <div style={width ? {width: width} : {}} className={`hmb-collapsiblePanel ${className}`}>
+    <div style={width ? {width: width} : {}} className={`hmb-collapsiblePanel ${className} ${open ? 'hmb-collapsiblePanel-selected' : ''}`}>
       <button
         type="button"
         onClick={() => {

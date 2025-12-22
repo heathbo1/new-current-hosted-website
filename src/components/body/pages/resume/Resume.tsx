@@ -1,4 +1,4 @@
-import {useContext, useEffect} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import '../../Body.scss'
 import {ScrollContext} from '../../ScrollProvider.js'
 import BluePanel from '../components/BluePanel.js'
@@ -9,12 +9,17 @@ import EducationPanel from './EducationPanel.jsx'
 import ResumePanel from './ResumePanel.jsx'
 
 const Resume = () => {
+  const [open, setOpen] = useState({open: false, id: ''})
   //@ts-ignore
   const {setScrollDist} = useContext(ScrollContext)
 
   useEffect(() => {
     setScrollDist(0)
   }, [])
+
+  const collapseUpdate = (open: boolean, id: string) => {
+    setOpen({open: open, id: id})
+  }
 
   return (
     <div id="hmb-resume" key="resumeBody" className="hmb-flexContainer pages">
@@ -53,16 +58,16 @@ const Resume = () => {
           <span className="hmb-sectionText">EXPERIENCE</span>
         </div>
         <BluePanel key="experience" className="hmb-row hmb-dataRows experienceContainer">
-          <ResumePanel exp={Data.Experience[0]} />
-          <ResumePanel exp={Data.Experience[1]} />
-          <ResumePanel exp={Data.Experience[2]} />
-          <ResumePanel exp={Data.Experience[3]} />
-          <ResumePanel exp={Data.Experience[4]} />
-          <ResumePanel exp={Data.Experience[5]} />
-          <ResumePanel exp={Data.Experience[6]} />
-          <ResumePanel exp={Data.Experience[7]} />
-          <ResumePanel exp={Data.Experience[8]} />
-          <ResumePanel exp={Data.Experience[9]} />
+          <ResumePanel exp={Data.Experience[0]} id="0" update={collapseUpdate} isOpen={open} />
+          <ResumePanel exp={Data.Experience[1]} id="1" update={collapseUpdate} isOpen={open} />
+          <ResumePanel exp={Data.Experience[2]} id="2" update={collapseUpdate} isOpen={open} />
+          <ResumePanel exp={Data.Experience[3]} id="3" update={collapseUpdate} isOpen={open} />
+          <ResumePanel exp={Data.Experience[4]} id="4" update={collapseUpdate} isOpen={open} />
+          <ResumePanel exp={Data.Experience[5]} id="5" update={collapseUpdate} isOpen={open} />
+          <ResumePanel exp={Data.Experience[6]} id="6" update={collapseUpdate} isOpen={open} />
+          <ResumePanel exp={Data.Experience[7]} id="7" update={collapseUpdate} isOpen={open} />
+          <ResumePanel exp={Data.Experience[8]} id="8" update={collapseUpdate} isOpen={open} />
+          <ResumePanel exp={Data.Experience[9]} id="9" update={collapseUpdate} isOpen={open} />
         </BluePanel>
         <BluePanel key="education" className="hmb-panels">
           <div className="hmb-sectionHeader-Line">Education</div>
