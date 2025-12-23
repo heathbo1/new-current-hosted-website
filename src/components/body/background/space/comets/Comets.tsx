@@ -29,7 +29,7 @@ const Comets = ({height, widthOfScene}: iComet) => {
   }, [])
 
   useLayoutEffect(() => {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       comets.push(GenerateNewComet(widthOfScene, height))
     }
   }, [])
