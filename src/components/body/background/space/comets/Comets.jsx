@@ -14,11 +14,9 @@ const Comets = ({ height, widthOfScene }) => {
 
   useLayoutEffect(() => {
     comet = GenerateNewComet(widthOfScene, height)
-    console.log('test = ', cometCanvas)
   }, [])
 
   function animateComet() {
-    console.log('canvas = ', cometCanvas)
     if (cometCanvas.current) {
       const canvas = cometCanvas.current
       const ctx = canvas.getContext('2d')
@@ -33,7 +31,13 @@ const Comets = ({ height, widthOfScene }) => {
         comet.x -= comet.speedX
         comet.y += comet.speedY
 
-        const currentPos = { x: comet.x, y: comet.y }
+        let cometX = comet.x
+        let cometY = comet.y
+        if (comet.speedX > 3 || comet.speedY > 3) {
+          cometX = comet.x - 2
+          cometY = comet.y - 2
+        }
+        const currentPos = { x: cometX, y: cometY }
         comet.tail.push(currentPos)
         if (comet.tail.length > comet.tailLength) {
           comet.tail.shift() // Remove oldest position if tail is too long
@@ -73,7 +77,7 @@ const Comets = ({ height, widthOfScene }) => {
     requestAnimationFrame(animateComet)
   }
 
-  return <canvas id="hmb-comets" ref={ cometCanvas } width={ widthOfScene } height={ height } />
+  return <canvas className="hmb-comets" ref={ cometCanvas } width={ widthOfScene } height={ height } />
 }
 
 export default Comets
