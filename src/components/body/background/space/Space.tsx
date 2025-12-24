@@ -11,6 +11,10 @@ const Space = () => {
     <div id="hmb-spaceContainer">
       <div id="space-align">
         <Comets widthOfScene={widthOfScene} height={height} />
+        <Comets widthOfScene={widthOfScene} height={height} />
+        <Comets widthOfScene={widthOfScene} height={height} />
+        <Comets widthOfScene={widthOfScene} height={height} />
+        <Comets widthOfScene={widthOfScene} height={height} />
         <Satelite height={height} widthOfScene={widthOfScene} />
         <Stars height={height} widthOfScene={widthOfScene} />
       </div>
