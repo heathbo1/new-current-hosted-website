@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import './../header.scss'
-import FEdeveloper from './New Name Logo/Front-End-Developer.svg'
-import HBIcon from './New Name Logo/HBIcon.svg'
-import HeathBishop from './New Name Logo/HeathBishop.svg'
+import FEdeveloper from './Designer-Developer.svg'
+import HBIcon from './HBIcon.svg'
+import HeathBishop from './HeathBishop.svg'
 
 export const Logo = (scrollDist) => {
   const [min, setMin] = useState(false)
