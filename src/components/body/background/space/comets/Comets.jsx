@@ -61,7 +61,7 @@ const Comets = ({ height, widthOfScene }) => {
         ctx.fill()
 
         // Handle comet going off-screen
-        if (comet.y > height || comet.x > widthOfScene) {
+        if (comet.y > height - 325 || comet.x > widthOfScene) {
           const newCom = GenerateNewComet(widthOfScene, height)
           comet.x = newCom.x
           comet.y = newCom.y
