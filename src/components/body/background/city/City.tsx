@@ -1,5 +1,5 @@
 import {Ref} from 'react'
-import Forground from './images/forgroundNEW3.png'
+import Forground from './images/city.png'
 
 interface iCity {
   city: Ref<HTMLDivElement>
