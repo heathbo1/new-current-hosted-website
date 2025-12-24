@@ -25,19 +25,19 @@ export const GenerateNewComet = (canvasWidth: number, canvasHeight: number) => {
     comet.x = canvasWidth
   }
 
-  comet.speedX = getRandomDecimalInclusive(0.5, 3)
+  comet.speedX = getRandomDecimalInclusive(0.75, 3)
   comet.speedY = comet.speedX
   comet.radius = getRandomDecimalInclusive(1, 2)
-  const tailC = getRandomFillStyle()
 
+  const tailC = getRandomFillStyle()
   comet.tailColor = `rgba(${tailC.red}, ${tailC.green}, ${tailC.blue}, ${getRandomDecimalInclusive(0.25, 0.75)})`
 
   const red = (255 - tailC.red) / 2 + tailC.red
   const green = (255 - tailC.green) / 2 + tailC.green
   const blue = (255 - tailC.blue) / 2 + tailC.blue
-
   comet.color = `rgba(${red}, ${green}, ${blue}, ${getRandomDecimalInclusive(0.25, 0.75)})`
-  comet.tailLength = getRandomIntInclusive(10, 10 * comet.speedX)
+
+  comet.tailLength = getRandomIntInclusive(10, 15 * comet.speedX)
   comet.tail = []
   return comet
 }
