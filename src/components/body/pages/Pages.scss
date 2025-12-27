@@ -9,7 +9,7 @@
   padding-left: 15px;
   width: 100%;
 
-  .hmb-sectionText {
+  .hmb-descriptionText {
     box-shadow: 0px 0px 10px 6px #0000004a;
     border: 1px solid #27bae9;
     background-color: #005580;
@@ -17,7 +17,7 @@
     color: #ffffff;
     font-weight: bold;
     font-size: 1.25rem;
-    text-shadow: 2px 2px 5px #000000;
+    text-shadow: var(--HMB-text-shadow);
     border-radius: 5px 5px 0px 0px;
     letter-spacing: 1px;
     position: relative;
@@ -42,11 +42,9 @@
   width: 100%;
 }
 
-$textShadow: rgb(0, 0, 0);
-
 .hmb-whiteText {
   letter-spacing: 1px;
-  text-shadow: 0.5px 0.5px .5px $textShadow, -0.5px -0.5px .5px $textShadow, 0.5px -0.5px .5px $textShadow, -0.5px 0.5px .5px $textShadow;
+  text-shadow: var(--HMB-text-shadow);
   color: #ffffff;
   font-size: 1.063rem;
 }
@@ -66,19 +64,7 @@ $textShadow: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-
-  .hmb-expRole {
-    color: var(--HMB-orange);
-    font-weight: 700;
-    text-shadow: 0.5px 0.5px 1px rgb(0, 0, 0),
-      -0.5px -0.5px 1px rgb(0, 0, 0),
-      0.5px -0.5px 1px rgb(0, 0, 0),
-      -0.5px 0.5px 1px rgb(0, 0, 0);
-    text-transform: uppercase;
     padding-right: 10px;
-    letter-spacing: 1.5px;
-    font-size: 1.063rem;
   }
 
   .hmb-companies {
@@ -133,10 +119,7 @@ $textShadow: rgb(0, 0, 0);
     padding: 15px 7px 10px 7px;
 
     .hmb-eduMajor {
-      color: #ffffff;
       font-weight: 700;
-      font-size: 1em;
-      text-shadow: 1px 1px 1px #000000;
     }
   }
 }
@@ -167,8 +150,7 @@ $textShadow: rgb(0, 0, 0);
         align-self: flex-end;
         color: #ffffff;
         line-height: 1em;
-        text-shadow: 1px 0px 3px #000000, -1px 0px 3px #000000,
-          0px 1px 3px #000000, 0px -1px 3px #000000;
+        text-shadow: var(--HMB-text-shadow);
       }
 
       .hmb-boldText {
@@ -177,8 +159,7 @@ $textShadow: rgb(0, 0, 0);
         font-weight: bold;
         font-size: 1.5em;
         line-height: 1em;
-        text-shadow: 1px 0px 3px #000000, -1px 0px 3px #000000,
-          0px 1px 3px #000000, 0px -1px 3px #000000;
+        text-shadow: var(--HMB-text-shadow);
       }
     }
   }
@@ -249,6 +230,19 @@ $textShadow: rgb(0, 0, 0);
 
   .hmb-blue {
     max-width: 700px;
+  }
+
+  .hmb-link {
+    text-decoration: none;
+    font-size: 1.063rem;
+    letter-spacing: 1px;
+    font-weight: 200;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .hmb-link:hover {
+    color: var(--HMB-orange);
+    font-weight: 500;
   }
 
   .hmb-formLine {

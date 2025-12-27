@@ -35,7 +35,7 @@ const ResumePanel = ({exp, id, update, isOpen}: iExp) => {
       header={
         <>
           <div className="hmb-expRow">
-            <div className="hmb-expColumn hmb-expRole">
+            <div className="hmb-expColumn hmb-sectionHeader">
               <span>{exp.position}</span>
             </div>
             <div className="hmb-whiteText">

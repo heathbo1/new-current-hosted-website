@@ -52,7 +52,7 @@ const About = () => {
         </BluePanel>
       </div>
       <div className="hmb-sectionTitle">
-        <span className="hmb-sectionText">TESTIMONIALS</span>
+        <span className="hmb-descriptionText">TESTIMONIALS</span>
       </div>
       <div key="abSide" className="hmb-row hmb-dataRows">
         <BluePanel className="hmb-aboutPanels">

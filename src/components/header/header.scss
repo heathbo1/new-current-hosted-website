@@ -218,7 +218,7 @@ a {
               letter-spacing: 2px;
               text-align: left;
               text-decoration: none;
-              text-shadow: 1px 1px 1px #000000;
+              text-shadow: var(--HMB-text-shadow);
               width: 100%;
               display: block;
               padding-left: 4px;
@@ -231,6 +231,7 @@ a {
             .hmb-menuBarNavigation-selected {
               background-color: #eda110;
               font-weight: bold;
+              text-shadow: 1px 1px 1px #000000;
             }
           }
         }
@@ -250,13 +251,12 @@ a {
     transform: translate(-50%, 0);
   }
 
+  // selected and hovered
   .hmb-headerButtonContainer:hover a:hover {
     transition:
       font-size 225ms ease-in,
       letter-spacing 225ms ease-in;
-    font-size: 1.4rem;
-
-
+    font-size: 1.3rem;
     letter-spacing: 3px;
   }
 
@@ -284,6 +284,18 @@ a {
   text-align: center;
 }
 
+.hmb-linkBox {
+  height: 18px;
+  align-self: flex-end;
+  line-height: 15px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5)
+}
+
+#hmb-logoNavLink {
+  max-width: 350px !important;
+  min-width: 350px !important;
+}
+
 .hmb-navLink {
   display: flex;
   position: relative;
@@ -300,22 +312,10 @@ a {
   transition: color 50ms ease-out;
 }
 
-.hmb-linkBox {
-  height: 18px;
-  align-self: flex-end;
-  line-height: 15px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5)
-}
-
-#hmb-logoNavLink {
-  max-width: 350px !important;
-  min-width: 350px !important;
-}
-
 .hmb-navLinkActive {
   @extend .hmb-navLink;
   color: var(--HMB-orange);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-shadow: 0 1px 5px #000000;
   text-decoration: none;
   transition: color 50ms ease-out;

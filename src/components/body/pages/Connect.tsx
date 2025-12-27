@@ -16,13 +16,13 @@ const Connect = () => {
             </div>
             <div className="hmb-whiteText">
               <b>Email: </b>
-              <a style={{color: '#ffffff'}} href="mailto:hbishop@heathbishop.com" className="hmb-whiteText">
+              <a href="mailto:hbishop@heathbishop.com" className="hmb-whiteText, hmb-link">
                 hbishop@heathbishop.com
               </a>
             </div>
             <div className="hmb-whiteText">
               <b>LinkedIn: </b>
-              <a style={{color: '#ffffff'}} target="_blank" href="https://www.linkedin.com/in/heath-bishop-757a3b5/" className="hmb-whiteText">
+              <a target="_blank" href="https://www.linkedin.com/in/heath-bishop-757a3b5/" className="hmb-whiteText, hmb-link">
                 Profile
               </a>
             </div>

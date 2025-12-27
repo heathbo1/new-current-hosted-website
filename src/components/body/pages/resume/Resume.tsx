@@ -55,7 +55,7 @@ const Resume = () => {
           <p className="hmb-whiteText">{Data.Technologies['Operating Systems']}</p>
         </BluePanel>
         <div className="hmb-sectionTitle">
-          <span className="hmb-sectionText">EXPERIENCE</span>
+          <span className="hmb-descriptionText">EXPERIENCE</span>
         </div>
         <BluePanel key="experience" className="hmb-row hmb-dataRows experienceContainer">
           <ResumePanel exp={Data.Experience[0]} id="0" update={collapseUpdate} isOpen={open} />
