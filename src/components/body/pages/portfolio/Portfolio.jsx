@@ -33,7 +33,6 @@ const Portfolio = () => {
   }
 
   useEffect(() => {
-    console.log('width Test = ', screen.width)
     setScrollDist(0)
     const temp = []
     for (const key in dataJSON) {
@@ -87,7 +86,7 @@ const Portfolio = () => {
           <div className="hmb-imageDisplayContainer">
             <div className="hmb-imgContainer">
               <img id="mainPortImage" alt='hmb-portImage'
-                className={ `${selectedProj.images.length > 1 ? 'hmb-portImageDisplay--small' : 'hmb-portImageDisplay'}` } src={ '/' + selectedProj.images[selectedPictIndex] } />
+                className={ `${selectedProj.images.length || window.innerWidth <= 375 ? 'hmb-portImageDisplay--small' : 'hmb-portImageDisplay'}` } src={ '/' + selectedProj.images[selectedPictIndex] } />
               <div className='hmb-bottom-arrows'>
                 <div className='hmb-buttons-container'>
                   <button className="hmb-arrows-bottom" type='button' style={ { display: selectedProj.images.length > 1 ? 'flex' : 'none' } } onClick={ () => nextPreviousImage('previous') }>❮</button>

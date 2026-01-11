@@ -15,11 +15,11 @@
     background-color: #005580;
     padding: 2px 4px 3px 4px;
     color: #ffffff;
-    font-weight: bold;
-    font-size: 1.25rem;
+    font-weight: 900;
+    font-size: 1.35rem;
     text-shadow: var(--HMB-text-shadow);
     border-radius: 5px 5px 0px 0px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     position: relative;
     bottom: 1px;
   }
@@ -243,6 +243,7 @@
   .hmb-link:hover {
     color: var(--HMB-orange);
     font-weight: 500;
+    border-bottom: 1px solid var(--HMB-orange);
   }
 
   .hmb-formLine {

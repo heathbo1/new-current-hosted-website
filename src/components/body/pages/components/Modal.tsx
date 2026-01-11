@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal'
 import '../Pages.scss'
 import BluePanel from './BluePanel'
 import './Components.scss'
+import X from './images/close_btn.svg'
 
 interface iModal {
   open: boolean
@@ -21,20 +22,20 @@ const ModalComponent = ({open, openClose, children, title, title2 = null, title2
 
   return (
     <>
-      <Modal show={open} onHide={close} size={size} className="mw-100">
+      <Modal show={open} onHide={close} size={size} className={`mw-100 ${window.innerWidth <= 525 ? 'hmb-fullScreen' : ''}`}>
         <BluePanel>
           <div className="hmb-modalHeader">
             <div className="hmb-titleContent">
               <div className="hmb-modalTitle">
-                <span className="hmb-title">{title}</span>
+                <span className="hmb-title1 hmb-titles">{title}</span>
                 {title2Small && <span className="hmb-titleSmall">{`${title2Small}`}</span>}
-                {title2 && <span className="hmb-title2">{`${title2}`}</span>}
+                {title2 && <span className="hmb-title2 hmb-titles">{`${title2}`}</span>}
+                <div className="hmb-modalButton">
+                  <button type="button" aria-label="Close" className="hmb-closeBtn" onClick={close}>
+                    <img src={X} />
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="hmb-titleContent" style={{position: 'absolute', right: '0px', top: '1px'}}>
-              <button type="button" aria-label="Close" className="hmb-closeBtn" onClick={close}>
-                &times;
-              </button>
             </div>
           </div>
           <div className="hmb-modalContent hmb-whiteText">{children}</div>
