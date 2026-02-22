@@ -11,6 +11,7 @@ function Portfolio() {
   const [selectedProj, setSelectedProj] = useState(null)
   const [selectedPictIndex, setSelectedPicIndex] = useState(0)
   const [projects, setProjects] = useState([])
+  const [hovered, setHovered] = useState(null)
   const { setScrollDist } = useContext(ScrollContext)
 
   function setModal(project) {
@@ -103,7 +104,7 @@ function Portfolio() {
           { selectedProj &&
             selectedProj.images.length > 1 &&
             selectedProj.images.map((value, i) => {
-              return <img id={ i } key={ i } onClick={ selectImage } alt='hmb-portImage' style={ Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' } } className="snapshot" src={ '/' + value } />
+              return <img id={ i } key={ i } onClick={ selectImage } onMouseEnter={ (e) => setHovered(Number(e.target.id)) } onMouseLeave={ (e) => setHovered(null) } alt='hmb-portImage' style={ Number(selectedPictIndex) == i || i == hovered ? { filter: 'brightness(1)' } : { filter: 'brightness(0.65)' } } className="snapshot" src={ '/' + value } />
             }) }
         </div>
       </ModalComponent>

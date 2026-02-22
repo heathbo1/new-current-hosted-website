@@ -207,6 +207,7 @@
   .hmb-snapshots {
     .snapshot {
       width: 100px;
+      transition: filter 1s;
     }
   }
 }
