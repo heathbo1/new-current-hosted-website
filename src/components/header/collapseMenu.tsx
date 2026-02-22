@@ -5,7 +5,7 @@ interface Menu {
   headermin: boolean
 }
 
-const CollapseMenu = ({headermin}: Menu) => {
+function CollapseMenu({headermin}: Menu) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [currentPage, setCurrentPage] = useState<string>()
 
@@ -30,11 +30,11 @@ const CollapseMenu = ({headermin}: Menu) => {
     }
   })
 
-  const menuToggle = () => {
+  function menuToggle() {
     setMenuOpen(menuOpen === false)
   }
 
-  const scrollTop = () => {
+  function scrollTop() {
     setMenuOpen(false)
     const container = document.getElementById('hmb-pageContainer')
     container?.scrollTo({top: 0})

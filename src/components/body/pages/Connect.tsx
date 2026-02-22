@@ -2,7 +2,7 @@ import '../body.scss'
 import './Pages.scss'
 import BluePanel from './components/BluePanel'
 
-const Connect = () => {
+function Connect() {
   return (
     <div style={{height: 'calc(100vh-96px'}} className="hmb-flexContainer hmb-connectPage">
       <div className="hmb-container">

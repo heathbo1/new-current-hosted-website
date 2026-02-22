@@ -7,13 +7,13 @@ import dataJSON from './data.json'
 import './Portfolio.scss'
 import Project from './Project'
 
-const Portfolio = () => {
+function Portfolio() {
   const [selectedProj, setSelectedProj] = useState(null)
   const [selectedPictIndex, setSelectedPicIndex] = useState(0)
   const [projects, setProjects] = useState([])
   const { setScrollDist } = useContext(ScrollContext)
 
-  const setModal = (project) => {
+  function setModal(project) {
     if (selectedProj) {
       setSelectedProj(null)
       setSelectedPicIndex(0)
@@ -41,7 +41,7 @@ const Portfolio = () => {
     setProjects(temp)
   }, [])
 
-  const nextPreviousImage = (direction) => {
+  function nextPreviousImage(direction) {
     const imgLength = selectedProj.images.length - 1
     const index = Number(selectedPictIndex)
 
@@ -61,7 +61,7 @@ const Portfolio = () => {
     }
   }
 
-  const selectImage = (e) => {
+  function selectImage(e) {
     const index = Number(e.target.id)
     setSelectedPicIndex(index)
   }

@@ -14,7 +14,7 @@ import Resume from './components/body/pages/resume/Resume'
 import ScrollProvider from './components/body/ScrollProvider'
 import Header from './components/header/Header'
 
-const App = () => {
+function App() {
   const [showAbout, setShowAbout] = useState(false)
 
   const openCloseAboutModal = () => {

@@ -3,7 +3,7 @@ import './background.scss'
 import City from './city/City'
 import Space from './space/Space'
 
-const Background = () => {
+function Background() {
   const cityRef = useRef<HTMLDivElement | null>(null)
   return (
     <div id="hmb-background">

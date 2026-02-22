@@ -13,10 +13,10 @@ interface iCollapsiblePanel {
   isOpen?: {id?: string; open: boolean}
 }
 
-const CollapsiblePanel = ({children, width, className = '', header, id, update, isOpen}: iCollapsiblePanel) => {
+function CollapsiblePanel({children, width, className = '', header, id, update, isOpen}: iCollapsiblePanel) {
   const [open, setOpen] = useState(false)
 
-  const openClose = () => {
+  function openClose() {
     setOpen(!open)
     if (update && id) {
       update(!open, id)

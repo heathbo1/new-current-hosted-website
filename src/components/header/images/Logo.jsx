@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './../header.scss'
-import FEdeveloper from './Designer-Developer.svg'
+import FEdeveloper from './OLD images/Front-End-Developer.svg'
 import HBIcon from './HBIcon.svg'
 import HeathBishop from './HeathBishop.svg'
 

@@ -34,8 +34,8 @@ const Comets = ({ height, widthOfScene }) => {
         let cometX = comet.x
         let cometY = comet.y
         if (comet.speedX > 3 || comet.speedY > 3) {
-          cometX = comet.x - 2
-          cometY = comet.y - 2
+          cometX = comet.x - 1
+          cometY = comet.y - 1
         }
         const currentPos = { x: cometX, y: cometY }
         comet.tail.push(currentPos)

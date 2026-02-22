@@ -8,7 +8,7 @@ import AchievementPanel from './AchievementPanel.jsx'
 import EducationPanel from './EducationPanel.jsx'
 import ResumePanel from './ResumePanel.jsx'
 
-const Resume = () => {
+function Resume() {
   const [open, setOpen] = useState({open: false, id: ''})
   //@ts-ignore
   const {setScrollDist} = useContext(ScrollContext)

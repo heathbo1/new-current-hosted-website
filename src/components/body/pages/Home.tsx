@@ -3,7 +3,7 @@ import '../body.scss'
 import BluePanel from './components/BluePanel'
 import './Pages.scss'
 
-const Home = () => {
+function Home() {
   const [opacity1, setOpacity1] = useState(0)
   const [opacity2, setOpacity2] = useState(0)
   const [opacity3, setOpacity3] = useState(0)

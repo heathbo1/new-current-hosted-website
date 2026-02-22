@@ -12,8 +12,8 @@ class SateliteFactory {
 
     satellite.y = height * 0.30 + 3
     satellite.x = 0
-    satellite.speedX = 0.25
-    satellite.radius = 2
+    satellite.speedX = 0.15
+    satellite.radius = 2.5
     let flashStatus = 0
     const flashWait = 200
     const showFlash = 20

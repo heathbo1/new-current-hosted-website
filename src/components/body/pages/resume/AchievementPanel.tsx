@@ -6,7 +6,7 @@ interface iAchievementPanel {
   }
 }
 
-const AchievementPanel = ({ach}: iAchievementPanel) => {
+function AchievementPanel({ach}: iAchievementPanel) {
   return (
     <div className="hmb-educationLine hmb-whiteText">
       <div>

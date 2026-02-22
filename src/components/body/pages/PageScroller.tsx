@@ -5,7 +5,7 @@ interface iPageScroller {
   children: React.ReactNode
 }
 
-const PageScroller = ({children}: iPageScroller) => {
+function PageScroller({children}: iPageScroller) {
   //@ts-ignore
   const {setScrollDist, scrollDist} = useContext(ScrollContext)
 

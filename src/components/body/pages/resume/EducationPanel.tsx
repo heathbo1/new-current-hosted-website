@@ -9,7 +9,7 @@ interface iEductionPanel {
   }
 }
 
-const EducationPanel = ({edu}: iEductionPanel) => {
+function EducationPanel({edu}: iEductionPanel) {
   return (
     <div className="hmb-educationLine hmb-whiteText">
       <div>
