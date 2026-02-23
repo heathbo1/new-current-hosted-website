@@ -41,7 +41,7 @@ function Header({showAbout}: iHeader) {
         const ctx = headerCanvas.getContext('2d')
         if (ctx) {
           const style = ctx.createRadialGradient(600, 800, 50, 515, 800, 700)
-          style.addColorStop(0, 'rgba(0, 92, 138,1)')
+          style.addColorStop(0, 'rgba(0, 92, 138, 0.75)')
           style.addColorStop(1, '#00070A')
 
           const rectW = 1030
@@ -70,7 +70,7 @@ function Header({showAbout}: iHeader) {
   }
 
   useEffect(() => {
-    if (scrollDist ? scrollDist : 0 >= 25) {
+    if (scrollDist ? scrollDist : 0 >= 1) {
       updateHeader(true)
     } else {
       updateHeader(false)
