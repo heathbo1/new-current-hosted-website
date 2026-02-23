@@ -21,8 +21,8 @@ function Header({showAbout}: iHeader) {
   const updateHeader = (show: boolean) => {
     if (headerCanvas) {
       if (show == true) {
-        setcanvOpacity(true)
         if (headerMin === false) {
+          setcanvOpacity(true)
           setHeaderMin(true)
         }
       } else {
@@ -70,7 +70,7 @@ function Header({showAbout}: iHeader) {
   }
 
   useEffect(() => {
-    if (scrollDist ? scrollDist : 0 >= 1) {
+    if (scrollDist && scrollDist >= 30) {
       updateHeader(true)
     } else {
       updateHeader(false)
@@ -117,7 +117,7 @@ function Header({showAbout}: iHeader) {
       <div id="hmb-header-container">
         <NavLink id="hmb-logoNavLink" className="hmb-navLink justify-content-start" to="/">
           <div id="hmb-logoBtn">
-            <Logo scrollDist={scrollDist} />
+            <Logo minimize={headerMin} />
           </div>
         </NavLink>
         <div className="hmb-headerNavigation">

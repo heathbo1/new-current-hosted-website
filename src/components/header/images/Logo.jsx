@@ -4,23 +4,14 @@ import FEdeveloper from './OLD images/Front-End-Developer.svg'
 import HBIcon from './HBIcon.svg'
 import HeathBishop from './HeathBishop.svg'
 
-export const Logo = (scrollDist) => {
-  const [min, setMin] = useState(false)
-
-  useEffect(() => {
-    if (scrollDist.scrollDist >= 1) {
-      setMin(true)
-    } else {
-      setMin(false)
-    }
-  }, [scrollDist])
+export const Logo = (minimize) => {
 
   return (
-    <div className="hmb-logoNameContainer" style={ { height: min ? '50px' : '' } }>
-      <img id="hmb-logo" src={ HBIcon } style={ { width: min ? '40px' : '20%' } } alt="HBIcon" />
+    <div className="hmb-logoNameContainer" style={ { height: minimize.minimize ? '50px' : '' } }>
+      <img id="hmb-logo" src={ HBIcon } style={ { width: minimize.minimize ? '40px' : '20%' } } alt="HBIcon" />
       <div id="hmb-text">
         <img id="hmb-name" src={ HeathBishop } alt="HeathBishop" />
-        <img id="hmb-position" src={ FEdeveloper } style={ { display: scrollDist.scrollDist >= 1 ? 'none' : 'inline' } } alt="FEdeveloper" />
+        <img id="hmb-position" src={ FEdeveloper } style={ { display: minimize.minimize ? 'none' : 'inline' } } alt="FEdeveloper" />
       </div>
     </div>
   )
