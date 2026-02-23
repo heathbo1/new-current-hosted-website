@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const Switch = ({ passedIn, onOff }) => {
+function Switch({ passedIn, onOff }) {
   const [on, setOn] = useState(false)
 
   useEffect(() => {

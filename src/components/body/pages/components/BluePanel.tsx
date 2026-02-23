@@ -10,7 +10,7 @@ interface WrapperProps {
   id?: string
 }
 
-const BluePanel = ({children, width, Bkey = '', className = '', id}: WrapperProps) => {
+function BluePanel({children, width, Bkey = '', className = '', id}: WrapperProps) {
   return (
     <div key={Bkey} id={id} style={width ? {width: width} : {}} className={`hmb-bluePanel ${className}`}>
       {children}

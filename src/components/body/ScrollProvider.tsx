@@ -12,7 +12,7 @@ interface iValue {
 
 export const ScrollContext = React.createContext<iValue | null>(null)
 
-const ScrollProvider = ({children}: iProvider) => {
+function ScrollProvider({children}: iProvider) {
   const [scrollDist, setScrollDist] = useState(0)
 
   const updateScroll = (e: number) => {

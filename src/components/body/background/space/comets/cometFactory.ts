@@ -12,7 +12,7 @@ export interface iComet {
 }
 
 export const GenerateNewComet = (canvasWidth: number, canvasHeight: number) => {
-  const comet: iComet = {start: '', y: 0, x: 0, speedX: 0, speedY: 0, radius: 0, color: '', tailLength: 0, tailColor: '', tail: []}
+  const comet: iComet = { start: '', y: 0, x: 0, speedX: 0, speedY: 0, radius: 0, color: '', tailLength: 0, tailColor: '', tail: [] }
 
   // Top or Right side of screen
   if (topOrRight() === 'top') {
@@ -25,19 +25,19 @@ export const GenerateNewComet = (canvasWidth: number, canvasHeight: number) => {
     comet.x = canvasWidth
   }
 
-  comet.speedX = getRandomDecimalInclusive(0.75, 3)
+  comet.speedX = getRandomDecimalInclusive(0.75, 2.75)
   comet.speedY = comet.speedX
   comet.radius = getRandomDecimalInclusive(1, 2)
 
   const tailC = getRandomFillStyle()
-  comet.tailColor = `rgba(${tailC.red}, ${tailC.green}, ${tailC.blue}, ${getRandomDecimalInclusive(0.25, 0.75)})`
+  comet.tailColor = `rgba(${tailC.red}, ${tailC.green}, ${tailC.blue}, ${getRandomDecimalInclusive(0.5, 0.75)})`
 
   const red = (255 - tailC.red) / 2 + tailC.red
   const green = (255 - tailC.green) / 2 + tailC.green
   const blue = (255 - tailC.blue) / 2 + tailC.blue
-  comet.color = `rgba(${red}, ${green}, ${blue}, ${getRandomDecimalInclusive(0.25, 0.75)})`
+  comet.color = `rgba(${red}, ${green}, ${blue}, ${getRandomDecimalInclusive(0.5, 0.75)})`
 
-  comet.tailLength = getRandomIntInclusive(10, 15 * comet.speedX)
+  comet.tailLength = getRandomIntInclusive(10, 10 * comet.speedX)
   comet.tail = []
   return comet
 }
@@ -48,8 +48,8 @@ function topOrRight() {
 
 export function getRandomFillStyle() {
   const colorList = [
-    {color: 'rgb(89, 98, 97)', red: 89, green: 98, blue: 97},
-    {color: 'rgb(62, 159, 209)', red: 62, green: 159, blue: 209},
+    { color: 'rgb(89, 98, 97)', red: 89, green: 98, blue: 97 },
+    { color: 'rgb(62, 159, 209)', red: 62, green: 159, blue: 209 },
   ]
 
   return colorList[getRandomIntInclusive(0, colorList.length - 1)]

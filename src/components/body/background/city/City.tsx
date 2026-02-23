@@ -5,7 +5,7 @@ interface iCity {
   city: Ref<HTMLDivElement>
 }
 
-const City = ({city}: iCity) => {
+function City({city}: iCity) {
   return (
     <div ref={city} id="hmb-cityContainer">
       <div id="hmb-citWrapper">

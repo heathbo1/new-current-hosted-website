@@ -18,7 +18,7 @@ interface iProject {
   modalOpen: (data: idata) => void
 }
 
-const Project = ({Pkey, data, modalOpen}: iProject) => {
+function Project({Pkey, data, modalOpen}: iProject) {
   const [images, setImages] = useState<any>([])
 
   const openModal = () => {

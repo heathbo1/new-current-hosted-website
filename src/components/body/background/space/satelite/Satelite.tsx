@@ -39,8 +39,6 @@ const Satelite = ({height, widthOfScene}: iSatelite) => {
         sateliteCtx.globalCompositeOperation = 'destination-over'
         sateliteCtx.clearRect(0, 0, widthOfScene, height)
 
-        sateliteCtx.fillStyle = 'rgba(0, 0, 0, 0.15)'
-        sateliteCtx.fillRect(0, 0, widthOfScene, height)
         sateliteCtx.filter = 'none'
 
         satelite.x += satelite.speedX

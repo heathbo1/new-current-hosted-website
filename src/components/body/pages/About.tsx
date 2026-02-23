@@ -13,7 +13,7 @@ interface iName {
   }
 }
 
-const Testimonials = ({Name}: iName) => {
+function Testimonials({Name}: iName) {
   return (
     <div>
       <div className="hmb-sectionHeader-Line">{Name.name}</div>
@@ -25,7 +25,7 @@ const Testimonials = ({Name}: iName) => {
   )
 }
 
-const About = () => {
+function About() {
   //@ts-ignore
   const {setScrollDist} = useContext(ScrollContext)
 

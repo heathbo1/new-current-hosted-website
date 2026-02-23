@@ -7,13 +7,14 @@ import dataJSON from './data.json'
 import './Portfolio.scss'
 import Project from './Project'
 
-const Portfolio = () => {
+function Portfolio() {
   const [selectedProj, setSelectedProj] = useState(null)
   const [selectedPictIndex, setSelectedPicIndex] = useState(0)
   const [projects, setProjects] = useState([])
+  const [hovered, setHovered] = useState(null)
   const { setScrollDist } = useContext(ScrollContext)
 
-  const setModal = (project) => {
+  function setModal(project) {
     if (selectedProj) {
       setSelectedProj(null)
       setSelectedPicIndex(0)
@@ -41,7 +42,7 @@ const Portfolio = () => {
     setProjects(temp)
   }, [])
 
-  const nextPreviousImage = (direction) => {
+  function nextPreviousImage(direction) {
     const imgLength = selectedProj.images.length - 1
     const index = Number(selectedPictIndex)
 
@@ -61,7 +62,7 @@ const Portfolio = () => {
     }
   }
 
-  const selectImage = (e) => {
+  function selectImage(e) {
     const index = Number(e.target.id)
     setSelectedPicIndex(index)
   }
@@ -103,7 +104,7 @@ const Portfolio = () => {
           { selectedProj &&
             selectedProj.images.length > 1 &&
             selectedProj.images.map((value, i) => {
-              return <img id={ i } key={ i } onClick={ selectImage } alt='hmb-portImage' style={ Number(selectedPictIndex) !== i ? { filter: 'brightness(0.65)' } : { filter: 'brightness(1)' } } className="snapshot" src={ '/' + value } />
+              return <img id={ i } key={ i } onClick={ selectImage } onMouseEnter={ (e) => setHovered(Number(e.target.id)) } onMouseLeave={ (e) => setHovered(null) } alt='hmb-portImage' style={ Number(selectedPictIndex) == i || i == hovered ? { filter: 'brightness(1)' } : { filter: 'brightness(0.65)' } } className="snapshot" src={ '/' + value } />
             }) }
         </div>
       </ModalComponent>

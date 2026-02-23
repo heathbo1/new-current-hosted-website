@@ -10,11 +10,11 @@ interface iHeader {
   showAbout: () => void
 }
 
-const Header = ({showAbout}: iHeader) => {
+function Header({showAbout}: iHeader) {
   const [headerMin, setHeaderMin] = useState(false)
   const [canvOpacity, setcanvOpacity] = useState(false)
-  //@ts-ignore
-  const {scrollDist} = useContext(ScrollContext)
+
+  const scrollDist = useContext(ScrollContext)?.scrollDist
 
   const headerCanvas = document.getElementById('hmb-headerCanvas') as HTMLCanvasElement
 
@@ -41,7 +41,7 @@ const Header = ({showAbout}: iHeader) => {
         const ctx = headerCanvas.getContext('2d')
         if (ctx) {
           const style = ctx.createRadialGradient(600, 800, 50, 515, 800, 700)
-          style.addColorStop(0, 'rgba(0, 92, 138,1)')
+          style.addColorStop(0, 'rgba(0, 92, 138, 0.75)')
           style.addColorStop(1, '#00070A')
 
           const rectW = 1030
@@ -70,7 +70,7 @@ const Header = ({showAbout}: iHeader) => {
   }
 
   useEffect(() => {
-    if (scrollDist >= 25) {
+    if (scrollDist ? scrollDist : 0 >= 1) {
       updateHeader(true)
     } else {
       updateHeader(false)
@@ -86,7 +86,7 @@ const Header = ({showAbout}: iHeader) => {
     link: string
   }
 
-  const HeaderButton = ({maxw, minw, title, id, link}: iHeaderButton) => {
+  function HeaderButton({maxw, minw, title, id, link}: iHeaderButton) {
     const maxWidth = maxw ? maxw : '370'
     const minWidth = minw ? minw : '200'
 

@@ -15,7 +15,7 @@ interface iModal {
   size?: 'lg' | 'sm' | 'xl'
 }
 
-const ModalComponent = ({open, openClose, children, title, title2 = null, title2Small = null, size = 'lg'}: iModal) => {
+function ModalComponent({open, openClose, children, title, title2 = null, title2Small = null, size = 'lg'}: iModal) {
   const close = () => {
     openClose()
   }

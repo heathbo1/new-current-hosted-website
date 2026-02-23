@@ -25,7 +25,7 @@ interface iExp {
   isOpen?: {id?: string; open: boolean}
 }
 
-const ResumePanel = ({exp, id, update, isOpen}: iExp) => {
+function ResumePanel({exp, id, update, isOpen}: iExp) {
   const clients = exp.clients.length >= 1
   return (
     <CollapsiblePanel
