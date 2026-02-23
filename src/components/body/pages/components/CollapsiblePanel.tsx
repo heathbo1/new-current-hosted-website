@@ -33,22 +33,24 @@ const CollapsiblePanel = ({children, width, className = '', header, id, update, 
 
   return (
     <div style={width ? {width: width} : {}} className={`hmb-collapsiblePanel ${className} ${open ? 'hmb-collapsiblePanel-selected' : ''}`}>
-      <button
-        type="button"
-        onClick={() => {
-          openClose()
-        }}
-        className={`hmb-Buttons hmb-button`}
-      >
-        <div className="hmb-headerGrid">
-          <span className="hmb-info">{header}</span>
-          <span className="hmb-close">
-            <img src={Arrow} alt="downArrow" className="hmb-downArrow" style={{rotate: open ? '180deg' : '0deg'}} />
-          </span>
+      <div className={`hmb-panelBody ${open ? 'hmb-panelBody-open' : ''}`}>
+        <button
+          type="button"
+          onClick={() => {
+            openClose()
+          }}
+          className={`hmb-Buttons hmb-button`}
+        >
+          <div className="hmb-headerGrid">
+            <span className="hmb-info">{header}</span>
+            <span className="hmb-close">
+              <img src={Arrow} alt="downArrow" className="hmb-downArrow" style={{rotate: open ? '180deg' : '0deg'}} />
+            </span>
+          </div>
+        </button>
+        <div className={`${open ? 'hmb-collapsibleContainer' : 'hmb-collapsibleContainer--close'}`}>
+          <div className="hmb-collapsibleBody">{children}</div>
         </div>
-      </button>
-      <div className={`${open ? 'hmb-collapsibleContainer' : 'hmb-collapsibleContainer--close'}`}>
-        <div className="hmb-collapsibleBody">{children}</div>
       </div>
     </div>
   )

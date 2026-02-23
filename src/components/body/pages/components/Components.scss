@@ -148,9 +148,24 @@
   color: #ffffff;
   font-size: 1em;
   line-height: 150%;
+  // background-color: #2a2a2a;
+
+  // .hmb-panelBody {
+  //   background: var(--HMB-blue-background);
+  //   transition: margin 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  //   margin: 0;
   border: 1.15px solid rgba(255, 255, 255, 0.4);
   border-bottom: none;
   border-right-color: #000000;
+  //   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+  //     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  //     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  //   ;
+  // }
+
+  // .hmb-panelBody-open {
+  //   margin: 16px 0;
+  // }
 
   .hmb-button {
     border: none;
@@ -199,8 +214,8 @@
   }
 
   .hmb-collapsibleContainer {
-    transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    -webkit-transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
     height: auto;
     height: calc-size(auto, size);
     overflow-y: hidden;
